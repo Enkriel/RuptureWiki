@@ -1,4 +1,4 @@
-[
+ï»¿[
   {
     "id": 1,
     "name": "Aspicot",
@@ -10,7 +10,7 @@
     "type": ["Insecte/Poison"],
     "major_weakness": [""],
     "weakness": ["Roche","Feu","Vol","Psy"],
-    "resistance": ["Poison", "Insecte", "Fée"],
+    "resistance": ["Poison", "Insecte", "FÃ©e"],
     "major_resistance": ["Plante", "Combat"],
     "immunity": [""],
     "attacks": ["Dard-Venin", "Secretion"]
@@ -26,7 +26,7 @@
     "type": ["Insecte/Poison"],
     "major_weakness": [""],
     "weakness": ["Roche","Feu","Vol","Psy"],
-    "resistance": ["Poison", "Insecte", "Fée"],
+    "resistance": ["Poison", "Insecte", "FÃ©e"],
     "major_resistance": ["Plante", "Combat"],
     "immunity": [""],
     "attacks": ["Dard-Venin", "Secretion", "Armure"]
@@ -42,9 +42,25 @@
     "type": ["Insecte/Poison"],
     "major_weakness": [""],
     "weakness": ["Roche","Feu","Vol","Psy"],
-    "resistance": ["Poison", "Insecte", "Fée"],
+    "resistance": ["Poison", "Insecte", "FÃ©e"],
     "major_resistance": ["Plante", "Combat"],
     "immunity": [""],
     "attacks": ["Dard-Venin", "Secretion", "Armure", "Double-Dard"]
+  },
+  {
+    "id": 4,
+    "name": "Bulbizare",
+    "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/bulbasaur.avif",
+    "tier": 2,
+    "hp": 6,
+    "difficulty": "10",
+    "armor": "4/8/15",
+    "type": ["Grass/Poison"],
+    "major_weakness": [""],
+    "weakness": ["Feu","Glace","Vol","Psy"],
+    "resistance": ["Eau", "Electric", "Combat", "FÃ©e"],
+    "major_resistance": ["Plante"],
+    "immunity": [""],
+    "attacks": ["Fouet Liane", "Poudre Toxic", "Balle Graine"]
   }
 ]

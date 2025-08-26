@@ -341,8 +341,20 @@
         ];
 
         // VERSION CORRIGÉE DE TON CODE
-        async function loadMonsters() {           
-            initUI(sampleData);
+        async function loadMonsters() {
+            try {
+                const res = await fetch('pokemon.json'); // <-- ici
+                if (!res.ok) {
+                    throw new Error(`Erreur HTTP: ${res.status}`);
+                }
+        
+                const monsters = await res.json();
+                initUI(monsters);
+            } catch (err) {
+                console.error('Erreur de chargement:', err);
+                showError(`Impossible de charger pokemon.json: ${err.message}`);
+                initUI(sampleData); // fallback
+            }
         }
 
         function showError(message) {
