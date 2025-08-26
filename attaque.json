@@ -5,7 +5,7 @@
     "type": "Normal",
     "tier" : 1,
     "portée" : "-",
-    "description" : "Inflige 1d10 + 3 à tout les entité à 1déplacement ou moins de vous, parler si fort que tout le monde à 500 m peut vous entendre"
+    "description" : "Inflige 1d10 + 3 à toutes les entités à 1 déplacement ou moins de vous, vous parlez si fort que tout le monde à 500m peut vous entendre"
   },
   {
     "id": 2,

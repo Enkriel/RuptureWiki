@@ -452,3 +452,36 @@ select:focus {
     object-fit: contain;
 }
 
+.attack-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.attack-item:hover::after {
+    content: attr(data-desc);
+    position: absolute;
+    left: 105%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    white-space: pre-line;
+    width: 250px;
+    z-index: 10;
+    box-shadow: 0 0 5px #000;
+}
+
+.attack-item:hover::before {
+    content: attr(data-type) " | " attr(data-range);
+    position: absolute;
+    left: 105%;
+    bottom: 100%;
+    background: rgba(255,255,255,0.9);
+    color: #000;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-size: 0.85em;
+    white-space: nowrap;
+}

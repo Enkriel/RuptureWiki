@@ -10,9 +10,9 @@
      <!-- Navbar injectée -->
     <div id="navbar-container"></div>
     <script src="navbar.js"></script>
-    
+
     <div class="header">
-        <h1>🔥 Pokédex Interactif</h1>
+        <h1>Pokédex Interactif</h1>
         <p>Cliquez sur les cartes pour découvrir les détails</p>
     </div>
 
@@ -71,6 +71,19 @@
                 console.error('Erreur de chargement:', err);
                 showError(`Impossible de charger pokemon.json: ${err.message}`);
                 initUI(sampleData); // fallback
+            }
+        }
+
+        let attaqueData = [];
+
+        async function loadAttacks() {
+            try {
+                const res = await fetch('attaque.json');
+                if (!res.ok) throw new Error(`Erreur HTTP: ${res.status}`);
+                attaqueData = await res.json();
+            } catch (err) {
+                console.error('Erreur de chargement attaques:', err);
+                attaqueData = [];
             }
         }
 
@@ -171,13 +184,44 @@
             });
         }
 
+        function setupAttackTooltips() {
+            const tooltip = document.getElementById('attack-tooltip');
+
+            document.addEventListener('mouseover', (e) => {
+                const target = e.target.closest('.attack-item');
+                if (!target) return;
+
+                const type = target.dataset.type || '—';
+                const range = target.dataset.range || '—';
+                const desc = target.dataset.desc || '—';
+
+                tooltip.innerHTML = `<strong>${target.textContent}</strong><br>
+                                    <em>Type:</em> ${type} | <em>Portée:</em> ${range}<br>
+                                    ${desc}`;
+                tooltip.style.display = 'block';
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (tooltip.style.display === 'block') {
+                    tooltip.style.left = e.pageX + 15 + 'px';
+                    tooltip.style.top = e.pageY + 15 + 'px';
+                }
+            });
+
+            document.addEventListener('mouseout', (e) => {
+                if (e.target.closest('.attack-item')) {
+                    tooltip.style.display = 'none';
+                }
+            });
+        }
+
         function createCard(pokemon) {
             const card = document.createElement('div');
             card.className = 'card';
             card.tabIndex = 0;
             card.setAttribute('role', 'button');
             card.setAttribute('aria-pressed', 'false');
-            card.title = `${pokemon.name} - Cliquer pour voir les détails`;
+            card.title = ``;
 
             // CORRECTION 7: Fonction améliorée pour gérer les tableaux
             const joinOrDash = (arr) => {
@@ -214,7 +258,20 @@
                         <h4>Attaques</h4>
                         <ul class="attacks">
                             ${(pokemon.attacks && pokemon.attacks.length) 
-                                ? pokemon.attacks.map(a => `<li>${a}</li>`).join('') 
+                                ? pokemon.attacks.map(a => {
+                                    // Cherche l'attaque dans attaqueData
+                                    const atk = attaqueData.find(atk => atk.Nom === a);
+                                    if (atk) {
+                                        return `<li class="attack-item" 
+                                                    data-type="${atk.type}" 
+                                                    data-range="${atk.portée}" 
+                                                    data-desc="${atk.description}">
+                                                    ${atk.Nom}
+                                                </li>`;
+                                    } else {
+                                        return `<li>${a}</li>`;
+                                    }
+                                }).join('') 
                                 : '<li>—</li>'
                             }
                         </ul>
@@ -246,7 +303,12 @@
         }
 
         // Initialisation
-        document.addEventListener('DOMContentLoaded', loadMonsters);
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadAttacks();
+            await loadMonsters();
+            setupAttackTooltips();
+        });
     </script>
+    <div id="attack-tooltip" style="position:absolute; display:none; pointer-events:none; z-index:1000; max-width:300px; padding:8px; background:rgba(0,0,0,0.85); color:#fff; border-radius:5px; font-size:0.9em; box-shadow:0 0 5px #000;"></div>
 </body>
 </html>
