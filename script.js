@@ -4,7 +4,7 @@
 
 async function loadMonsters() {
   try {
-    const res = await fetch('monsters.json');
+    const res = await fetch('pokemon.json');
     if (!res.ok) throw new Error('Impossible de charger monsters.json');
     const monsters = await res.json();
     initUI(monsters);
