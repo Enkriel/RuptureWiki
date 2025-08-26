@@ -341,30 +341,8 @@
         ];
 
         // VERSION CORRIGÉE DE TON CODE
-        async function loadMonsters() {
-            /*try {
-                // CORRECTION 1: Gestion d'erreur améliorée
-                const res = await fetch('pokemon.json');
-                if (!res.ok) {
-                    throw new Error(`Erreur HTTP: ${res.status}`);
-                }
-                
-                const monsters = await res.json();
-                
-                // CORRECTION 2: Validation des données
-                if (!Array.isArray(monsters)) {
-                    throw new Error('Le fichier JSON doit contenir un tableau');
-                }
-                
-                initUI(monsters);
-            } catch (err) {
-                console.error('Erreur de chargement:', err);
-                showError(`Impossible de charger pokemon.json: ${err.message}`);
-                
-                // CORRECTION 3: Fallback avec données d'exemple
-                console.log('Utilisation des données d\'exemple...');*/
-                initUI(sampleData);
-            //}
+        async function loadMonsters() {           
+            initUI(sampleData);
         }
 
         function showError(message) {
