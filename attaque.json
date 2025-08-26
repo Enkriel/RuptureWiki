@@ -4,24 +4,24 @@
     "Nom" : "Echo",
     "type": "Normal",
     "tier" : 1,
-    "portée" : "",
-    "description" : "Parler si fort que tout le monde à 500 m peut vous entendre",
+    "portée" : "-",
+    "description" : "Inflige 1d10 + 3 à tout les entité à 1déplacement ou moins de vous, parler si fort que tout le monde à 500 m peut vous entendre"
   },
   {
     "id": 2,
     "Nom" : "Liliput",
     "type": "Normal",
     "tier" : 1,
-    "portée" : "",
-    "description" : "Permet de réduire sa taille de moitié pendant 1 min (peut être cumulé)",
+    "portée" : "-",
+    "description" : "Permet de réduire sa taille de moitié pendant 1 min (peut être cumulé)"
   },
   {
     "id": 3,
     "Nom" : "Griffe",
     "type": "Normal",
     "tier" : 1,
-    "portée" : "Au Contact",
-    "description" : "inflige 2d6 + 1",
+    "portée" : "Au Contact - Dex",
+    "description" : "inflige 2d6 + 1"
   },
   {
     "id": 4,
@@ -29,14 +29,94 @@
     "type": "Normal",
     "tier" : 2,
     "portée" : "Eloigné",
-    "description" : "lancez 1d20 si le résultat est pair soigner une blessure mineure si il est impair infliger une blessure mineure si c’est 1 infliger une blessure majeure si c’est 20 soigner une blessure majeure",
+    "description" : "lancez 1d20 si le résultat est pair soigner une blessure mineure si il est impair infliger une blessure mineure si c’est 1 infliger une blessure majeure si c’est 20 soigner une blessure majeure"
   },
   {
     "id": 5,
     "Nom" : "Charge",
     "type": "Normal",
     "tier" : 2,
-    "portée" : "Proche",
-    "description" : "2d6 + 1 dégâts, déplacez vous dans la zone (Au contact)",
+    "portée" : "Proche - Cons",
+    "description" : "2d6 + 1 dégâts, déplacez vous dans la zone (Au contact)"
+  },
+  {
+    "id": 6,
+    "Nom" : "Ball'Météo",
+    "type": "Normal",
+    "tier" : 2,
+    "portée" : "A Distance - Int",
+    "description" : "(À distance) Inflige 2d6 + 1 avec un élément par les 18 selon la météo. (un jet de nature peut être tenter en amont pour tenter de savoir quel élément vous aurez)"
+  },
+  {
+    "id": 7,
+    "Nom" : "Combo Griffe",
+    "type": "Normal",
+    "tier" : 3,
+    "portée" : "Au Contact - Dex",
+    "description" : "Lancez 1d8. Si le résultat est inférieur à 6, lancez un nouveau dé. Continuez jusqu’à échouer, puis additionnez tous les résultats pour déterminer vos dégâts"
+  },
+  {
+    "id": 8,
+    "Nom" : "Jackpot",
+    "type": "Normal",
+    "tier" : 3,
+    "portée" : "A Distance - Int",
+    "description" : "nflige 3d6 dégâts. Chaque 6 vous fait gagner 1 poignée de pièces ; chaque 1 vous en fait perdre 1."
+  },
+  {
+    "id": 9,
+    "Nom" : "Metronome",
+    "type": "Normal",
+    "tier" : 3,
+    "portée" : "-",
+    "description" : "Lancez 1d20… et priez"
+  },
+  {
+    "id": 10,
+    "Nom" : "Vive Attaque",
+    "type": "Normal",
+    "tier" : 4,
+    "portée" : "Eloigné - Cons",
+    "description" : "3d6 dégâts, vous déplacer dans la zone (Au contact)"
+  },
+  {
+    "id": 11,
+    "Nom" : "Abri",
+    "type": "Normal",
+    "tier" : 4,
+    "portée" : "Action / Action Bonus sous condition",
+    "description" : "Réduisez toute blessure subie d’un cran gratuitement jusqu'à votre prochain tour (vous pouvez utiliser un point d’armure pour diminuer une seconde fois), si vous avez une arme avec le mot clef protection c'est une Action Bonus"
+  },
+  {
+    "id": 12,
+    "Nom" : "Météores",
+    "type": "Normal",
+    "tier" : 5,
+    "portée" : "Très Loin - Int",
+    "description" : "Inflige 2d8 + 4 ne peut pas etre esquivé"
+  },
+  {
+    "id": 13,
+    "Nom" : "Barrage",
+    "type": "Normal",
+    "tier" : 5,
+    "portée" : "Proche - Reaction",
+    "description" : "empêche une manoeuvre de déplacement de l’ennemi"
+  },
+  {
+    "id": 14,
+    "Nom" : "Chant Canon",
+    "type": "Normal",
+    "tier" : 6,
+    "portée" : "A distance - Int",
+    "description" : "inflige 3d8 + 6 touche toute les zones entre vous et votre cible dans le cadran. JS Cons"
+  },
+  {
+    "id": 15,
+    "Nom" : "Explosion",
+    "type": "Normal",
+    "tier" : 6,
+    "portée" : "-",
+    "description" : "Infligez vous 2 blessures sévère, toute entité se trouvant à 2 déplacements ou moins de vous subi 5d10 + 10 dégâts"
   }
 ]

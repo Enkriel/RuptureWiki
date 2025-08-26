@@ -3,109 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spelldex</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Liste des Sorts</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* Juste un peu de style rapide pour la démo */
-        .filter-container {
+        /* Styles spécifiques aux sorts */
+        .filters {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             margin-bottom: 20px;
+            justify-content: center;
+        }
+        .filters label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(255,255,255,0.1);
+            padding: 5px 10px;
+            border-radius: 12px;
+            cursor: pointer;
         }
         .tier-section {
             margin-bottom: 30px;
-            background: rgba(255,255,255,0.1);
-            padding: 15px;
-            border-radius: 10px;
         }
         .attack-card {
-            background: rgba(255,255,255,0.2);
-            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.1);
+            margin-bottom: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .attack-card img.type-icon {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+        }
+        .tier-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
             margin-bottom: 10px;
-            border-radius: 8px;
         }
     </style>
 </head>
 <body>
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+    <script src="navbar.js"></script>
 
-    <h1>Liste des attaques</h1>
+    <div class="header">
+        <h1>Liste des Sorts</h1>
+        <p>Filtrez par type et parcourez par tier</p>
+    </div>
 
-    <!-- Filtres par type -->
-    <div class="filter-container" id="type-filters"></div>
+    <!-- Filtres -->
+    <div class="filters" id="type-filters"></div>
 
-    <!-- Contenu trié par tier -->
-    <div id="spell-list"></div>
+    <!-- Contenu -->
+    <div id="content"></div>
 
     <script>
-        const typesPokemon = [
-            "Normal", "Feu", "Eau", "Plante", "Électrik", "Glace",
-            "Combat", "Poison", "Sol", "Vol", "Psy", "Insecte",
-            "Roche", "Spectre", "Dragon", "Ténèbres", "Acier", "Fée"
-        ];
+    // Mapping type -> icône
+    const typeIcons = {
+        "Normal": "https://archives.bulbagarden.net/media/upload/thumb/9/95/Normal_icon_SwSh.png/48px-Normal_icon_SwSh.png",
+        "Combat": "https://archives.bulbagarden.net/media/upload/thumb/c/c2/Fighting_icon_HOME3.png/48px-Fighting_icon_HOME3.png",
+        "Vol": "https://archives.bulbagarden.net/media/upload/thumb/b/b5/Flying_icon_SwSh.png/48px-Flying_icon_SwSh.png",
+        "Poison": "https://archives.bulbagarden.net/media/upload/thumb/8/8d/Poison_icon_SwSh.png/48px-Poison_icon_SwSh.png",
+        "Sol": "https://archives.bulbagarden.net/media/upload/thumb/2/27/Ground_icon_SwSh.png/48px-Ground_icon_SwSh.png",
+        "Roche": "https://archives.bulbagarden.net/media/upload/thumb/1/11/Rock_icon_SwSh.png/48px-Rock_icon_SwSh.png",
+        "Insecte": "https://archives.bulbagarden.net/media/upload/thumb/9/9c/Bug_icon_SwSh.png/48px-Bug_icon_SwSh.png",
+        "Spectre": "https://archives.bulbagarden.net/media/upload/thumb/0/01/Ghost_icon_SwSh.png/48px-Ghost_icon_SwSh.png",
+        "Acier": "https://archives.bulbagarden.net/media/upload/thumb/0/09/Steel_icon_SwSh.png/48px-Steel_icon_SwSh.png",
+        "Feu": "https://archives.bulbagarden.net/media/upload/thumb/a/ab/Fire_icon_SwSh.png/48px-Fire_icon_SwSh.png",
+        "Eau": "https://archives.bulbagarden.net/media/upload/thumb/8/80/Water_icon_SwSh.png/48px-Water_icon_SwSh.png",
+        "Plante": "https://archives.bulbagarden.net/media/upload/thumb/a/a8/Grass_icon_SwSh.png/48px-Grass_icon_SwSh.png",
+        "Electric": "https://archives.bulbagarden.net/media/upload/thumb/c/cf/Electric_icon_HOME3.png/48px-Electric_icon_HOME3.png",
+        "Psy": "https://archives.bulbagarden.net/media/upload/thumb/2/2d/Psychic_icon_HOME3.png/48px-Psychic_icon_HOME3.png",
+        "Glace": "https://archives.bulbagarden.net/media/upload/thumb/1/15/Ice_icon_SwSh.png/48px-Ice_icon_SwSh.png",
+        "Dragon": "https://archives.bulbagarden.net/media/upload/thumb/7/70/Dragon_icon_SwSh.png/48px-Dragon_icon_SwSh.png",
+        "Ténèbres": "https://archives.bulbagarden.net/media/upload/thumb/7/71/Dark_icon_HOME3.png/48px-Dark_icon_HOME3.png",
+        "Fée": "https://archives.bulbagarden.net/media/upload/thumb/c/c6/Fairy_icon_SwSh.png/48px-Fairy_icon_SwSh.png"
+    };
 
-        let attaques = [];
+    let attacks = [];
 
-        // Charger le JSON
-        fetch("attaque.json")
-            .then(res => res.json())
-            .then(data => {
-                attaques = data;
-                initFilters();
-                renderAttacks();
-            });
-
-        // Créer les cases à cocher
-        function initFilters() {
-            const container = document.getElementById("type-filters");
-            typesPokemon.forEach(type => {
-                const label = document.createElement("label");
-                label.innerHTML = `<input type="checkbox" value="${type}" checked> ${type}`;
-                container.appendChild(label);
-            });
-
-            // Écouter les changements
-            container.addEventListener("change", renderAttacks);
+    async function loadAttacks() {
+        try {
+            const res = await fetch('attaque.json');
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            attacks = await res.json();
+        } catch(err) {
+            console.error(err);
+            attacks = []; // fallback vide
         }
+        initUI();
+    }
 
-        // Afficher les attaques triées par tier
-        function renderAttacks() {
-            const selectedTypes = Array.from(
-                document.querySelectorAll("#type-filters input:checked")
-            ).map(cb => cb.value);
+    function initUI() {
+        createTypeFilters();
+        renderAttacks();
+    }
 
-            const container = document.getElementById("spell-list");
-            container.innerHTML = "";
+    function createTypeFilters() {
+        const container = document.getElementById('type-filters');
+        const types = Object.keys(typeIcons);
+        types.forEach(type => {
+            const label = document.createElement('label');
+            label.innerHTML = `<input type="checkbox" value="${type}" checked> <img src="${typeIcons[type]}" class="type-icon" alt="${type}"> ${type}`;
+            container.appendChild(label);
+        });
 
-            // Trier les attaques par tier
-            const tiers = [...new Set(attaques.map(a => a.tier))].sort((a,b) => a-b);
+        container.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+            cb.addEventListener('change', renderAttacks);
+        });
+    }
 
-            tiers.forEach(tier => {
-                const tierSection = document.createElement("div");
-                tierSection.className = "tier-section";
-                tierSection.innerHTML = `<h2>Tier ${tier}</h2>`;
+    function renderAttacks() {
+        const container = document.getElementById('content');
+        container.innerHTML = '';
 
-                const filteredAttacks = attaques.filter(a => a.tier === tier && selectedTypes.includes(a.type));
+        const checkedTypes = Array.from(document.querySelectorAll('.filters input:checked')).map(cb => cb.value);
 
-                if (filteredAttacks.length === 0) {
-                    tierSection.innerHTML += `<p style="opacity:0.7"><i>Aucune attaque disponible</i></p>`;
-                } else {
-                    filteredAttacks.forEach(attaque => {
-                        const card = document.createElement("div");
-                        card.className = "attack-card";
-                        card.innerHTML = `
-                            <h3>${attaque.Nom} (${attaque.type})</h3>
-                            <p><b>Portée:</b> ${attaque.portée || "Non spécifiée"}</p>
-                            <p>${attaque.description}</p>
-                        `;
-                        tierSection.appendChild(card);
-                    });
-                }
+        // Créer 9 sections
+        for(let t=1; t<=9; t++){
+            const tierAttacks = attacks.filter(a => a.tier === t && checkedTypes.includes(a.type));
+            const section = document.createElement('div');
+            section.className = 'tier-section';
 
-                container.appendChild(tierSection);
+            section.innerHTML = `<div class="tier-header"><h2>Tier ${t}</h2><span>${tierAttacks.length} sorts</span></div>`;
+
+            tierAttacks.forEach(a => {
+                section.appendChild(createAttackCard(a));
             });
+
+            if(tierAttacks.length === 0){
+                const empty = document.createElement('p');
+                empty.style.color='rgba(255,255,255,0.7)';
+                empty.textContent = 'Aucun sort dans ce tier';
+                section.appendChild(empty);
+            }
+
+            container.appendChild(section);
         }
+    }
+
+    function createAttackCard(a){
+        const div = document.createElement('div');
+        div.className='attack-card';
+        const iconUrl = typeIcons[a.type] || 'https://via.placeholder.com/32?text=?';
+        div.innerHTML = `
+            <img src="${iconUrl}" class="type-icon" alt="${a.type}">
+            <div>
+                <strong>${a.Nom}</strong> <em>(Tier ${a.tier})</em><br>
+                <span>${a.portée || ''}</span><br>
+                <p>${a.description}</p>
+            </div>
+        `;
+        return div;
+    }
+
+    document.addEventListener('DOMContentLoaded', loadAttacks);
     </script>
-
 </body>
 </html>

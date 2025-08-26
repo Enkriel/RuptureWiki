@@ -65,18 +65,18 @@
   },
   {
     "id": 5,
-    "name": "Herbizare",
-    "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/ivysaur.avif",
-    "tier": 2,
-    "hp": 6,
+    "name": "Chuchmur",
+    "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/whismur.avif",
+    "tier": 1,
+    "hp": 5,
     "difficulty": "10",
-    "armor": "4/8/15",
-    "type": ["Grass/Poison"],
+    "armor": "1/2/8",
+    "type": ["Normal"],
     "major_weakness": [""],
-    "weakness": ["Feu","Glace","Vol","Psy"],
-    "resistance": ["Eau", "Electric", "Combat", "Fée"],
-    "major_resistance": ["Plante"],
+    "weakness": ["Combat"],
+    "resistance": [""],
+    "major_resistance": [""],
     "immunity": [""],
-    "attacks": ["Fouet Liane", "Poudre Toxic", "Balle Graine"]
+    "attacks": ["Charge", "Echo"]
   }
 ]

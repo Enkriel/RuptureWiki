@@ -434,3 +434,21 @@ select:focus {
     /* marge interne pour respirer */
     padding: 8px 0; 
 }
+
+.attack-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.1);
+    margin-bottom: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.attack-card img.type-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
