@@ -326,7 +326,7 @@
 
         // VERSION CORRIGÉE DE TON CODE
         async function loadMonsters() {
-            try {
+            /*try {
                 // CORRECTION 1: Gestion d'erreur améliorée
                 const res = await fetch('pokemon.json');
                 if (!res.ok) {
@@ -341,14 +341,14 @@
                 }
                 
                 initUI(monsters);
-            } catch (err) {
+            } catch (err) {*/
                 console.error('Erreur de chargement:', err);
                 showError(`Impossible de charger pokemon.json: ${err.message}`);
                 
                 // CORRECTION 3: Fallback avec données d'exemple
                 console.log('Utilisation des données d\'exemple...');
                 initUI(sampleData);
-            }
+            //}
         }
 
         function showError(message) {
