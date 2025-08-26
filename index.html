@@ -1,14 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Monstres</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RuptureWiki — Pokémons</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Mes cartes de monstres v3</h1>
-  <div id="cards-container"></div>
+  <header class="site-header">
+    <h1>RuptureWiki — Pokémons</h1>
+    <div class="controls">
+      <label for="tier-filter">Afficher :</label>
+      <select id="tier-filter" aria-label="Filtrer par tier">
+        <option value="all">Tous les tiers</option>
+        <option value="1">Tier 1</option>
+        <option value="2">Tier 2</option>
+        <option value="3">Tier 3</option>
+        <option value="4">Tier 4</option>
+        <option value="5">Tier 5</option>
+        <option value="6">Tier 6</option>
+        <option value="7">Tier 7</option>
+        <option value="8">Tier 8</option>
+        <option value="9">Tier 9</option>
+      </select>
+    </div>
+  </header>
 
-  <script src="script.js"></script>
+  <main id="content">
+    <!-- Les sections par tier seront générées dynamiquement par script.js -->
+  </main>
+
+  <footer class="site-footer">
+    <small>Fichiers JSON = <code>monsters.json</code></small>
+  </footer>
+
+  <script defer src="script.js"></script>
 </body>
 </html>
