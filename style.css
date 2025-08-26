@@ -236,3 +236,201 @@ select:focus {
         font-size: 2rem;
     }
 }
+
+/* ===== Navbar ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.navbar li .dropdown {
+    display: none;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    min-width: 180px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.navbar li:hover .dropdown,
+.navbar li:focus-within .dropdown {
+    display: flex;
+}
+
+.navbar .dropdown a {
+    padding: 10px 15px;
+    white-space: nowrap;
+}
+
+/* Mobile menu toggle */
+.navbar .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar .menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+    border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(255,255,255,0.1);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+        border-radius: 0 0 15px 15px;
+        backdrop-filter: blur(10px);
+    }
+
+    .navbar ul.show {
+        display: flex;
+    }
+
+    .navbar .menu-toggle {
+        display: flex;
+    }
+
+    .navbar li .dropdown {
+        position: static;
+        box-shadow: none;
+    }
+
+    .navbar li:hover .dropdown {
+        display: none;
+    }
+
+    .navbar li.open .dropdown {
+        display: flex;
+    }
+}
+
+/* Bouton dropdown */
+.dropdown-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Menu déroulant */
+.navbar li .dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: rgba(255,255,255,0.15);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    min-width: 200px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    flex-direction: column;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* Apparition au hover/focus */
+.navbar li:hover .dropdown,
+.navbar li:focus-within .dropdown {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Liens internes */
+.navbar .dropdown a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    transition: background 0.2s ease, padding-left 0.2s ease;
+}
+
+.navbar .dropdown a:hover {
+    background: rgba(255, 255, 255, 0.25);
+    padding-left: 20px; /* petit effet slide */
+}
+
+.navbar li .dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: rgba(255,255,255,0.15);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    min-width: 200px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    flex-direction: column;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+
+    /* marge interne pour respirer */
+    padding: 8px 0; 
+}
