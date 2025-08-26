@@ -1,8 +1,42 @@
 ﻿[
   {
     "id": 1,
-    "type": "Aspicot",
+    "Nom" : "Echo",
+    "type": "Normal",
+    "tier" : 1,
     "portée" : "",
-    "description" : "https://img.pokemondb.net/sprites/home/normal/2x/avif/weedle.avif",
+    "description" : "Parler si fort que tout le monde à 500 m peut vous entendre",
+  },
+  {
+    "id": 2,
+    "Nom" : "Liliput",
+    "type": "Normal",
+    "tier" : 1,
+    "portée" : "",
+    "description" : "Permet de réduire sa taille de moitié pendant 1 min (peut être cumulé)",
+  },
+  {
+    "id": 3,
+    "Nom" : "Griffe",
+    "type": "Normal",
+    "tier" : 1,
+    "portée" : "Au Contact",
+    "description" : "inflige 2d6 + 1",
+  },
+  {
+    "id": 4,
+    "Nom" : "Présent",
+    "type": "Normal",
+    "tier" : 2,
+    "portée" : "Eloigné",
+    "description" : "lancez 1d20 si le résultat est pair soigner une blessure mineure si il est impair infliger une blessure mineure si c’est 1 infliger une blessure majeure si c’est 20 soigner une blessure majeure",
+  },
+  {
+    "id": 5,
+    "Nom" : "Charge",
+    "type": "Normal",
+    "tier" : 2,
+    "portée" : "Proche",
+    "description" : "2d6 + 1 dégâts, déplacez vous dans la zone (Au contact)",
   }
 ]

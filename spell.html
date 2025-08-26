@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spelldex</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Juste un peu de style rapide pour la démo */
+        .filter-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .tier-section {
+            margin-bottom: 30px;
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .attack-card {
+            background: rgba(255,255,255,0.2);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Liste des attaques</h1>
+
+    <!-- Filtres par type -->
+    <div class="filter-container" id="type-filters"></div>
+
+    <!-- Contenu trié par tier -->
+    <div id="spell-list"></div>
+
+    <script>
+        const typesPokemon = [
+            "Normal", "Feu", "Eau", "Plante", "Électrik", "Glace",
+            "Combat", "Poison", "Sol", "Vol", "Psy", "Insecte",
+            "Roche", "Spectre", "Dragon", "Ténèbres", "Acier", "Fée"
+        ];
+
+        let attaques = [];
+
+        // Charger le JSON
+        fetch("attaque.json")
+            .then(res => res.json())
+            .then(data => {
+                attaques = data;
+                initFilters();
+                renderAttacks();
+            });
+
+        // Créer les cases à cocher
+        function initFilters() {
+            const container = document.getElementById("type-filters");
+            typesPokemon.forEach(type => {
+                const label = document.createElement("label");
+                label.innerHTML = `<input type="checkbox" value="${type}" checked> ${type}`;
+                container.appendChild(label);
+            });
+
+            // Écouter les changements
+            container.addEventListener("change", renderAttacks);
+        }
+
+        // Afficher les attaques triées par tier
+        function renderAttacks() {
+            const selectedTypes = Array.from(
+                document.querySelectorAll("#type-filters input:checked")
+            ).map(cb => cb.value);
+
+            const container = document.getElementById("spell-list");
+            container.innerHTML = "";
+
+            // Trier les attaques par tier
+            const tiers = [...new Set(attaques.map(a => a.tier))].sort((a,b) => a-b);
+
+            tiers.forEach(tier => {
+                const tierSection = document.createElement("div");
+                tierSection.className = "tier-section";
+                tierSection.innerHTML = `<h2>Tier ${tier}</h2>`;
+
+                const filteredAttacks = attaques.filter(a => a.tier === tier && selectedTypes.includes(a.type));
+
+                if (filteredAttacks.length === 0) {
+                    tierSection.innerHTML += `<p style="opacity:0.7"><i>Aucune attaque disponible</i></p>`;
+                } else {
+                    filteredAttacks.forEach(attaque => {
+                        const card = document.createElement("div");
+                        card.className = "attack-card";
+                        card.innerHTML = `
+                            <h3>${attaque.Nom} (${attaque.type})</h3>
+                            <p><b>Portée:</b> ${attaque.portée || "Non spécifiée"}</p>
+                            <p>${attaque.description}</p>
+                        `;
+                        tierSection.appendChild(card);
+                    });
+                }
+
+                container.appendChild(tierSection);
+            });
+        }
+    </script>
+
+</body>
+</html>
