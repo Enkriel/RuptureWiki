@@ -1,25 +1,42 @@
-// script.js
-// Charge monsters.json, crée 9 sections (Tier 1..9) et affiche les cartes
+// script.js - Version corrigée
+// Charge pokemon.json, crée 9 sections (Tier 1..9) et affiche les cartes
 // Interaction: hover / click / clavier (Enter/Space) pour retourner la carte
 
 async function loadMonsters() {
   try {
+    // CORRECTION 1: Gestion d'erreur améliorée
     const res = await fetch('pokemon.json');
-    if (!res.ok) throw new Error('Impossible de charger monsters.json');
+    if (!res.ok) {
+      throw new Error(`Erreur HTTP: ${res.status}`);
+    }
+    
     const monsters = await res.json();
+    
+    // CORRECTION 2: Validation des données
+    if (!Array.isArray(monsters)) {
+      throw new Error('Le fichier JSON doit contenir un tableau');
+    }
+    
     initUI(monsters);
   } catch (err) {
-    console.error(err);
-    document.getElementById('content').innerHTML =
-      `<p style="color:#c00">Erreur: impossible de charger monsters.json (vérifie le chemin).</p>`;
+    console.error('Erreur de chargement:', err);
+    showError(`Impossible de charger pokemon.json: ${err.message}`);
   }
+}
+
+function showError(message) {
+  const content = document.getElementById('content');
+  content.innerHTML = `<div class="error-message">${message}</div>`;
 }
 
 function initUI(monsters) {
   const content = document.getElementById('content');
+  content.innerHTML = ''; // Nettoyer le contenu
 
+  // CORRECTION 3: Cache des sections pour améliorer les performances
+  const sectionsMap = new Map();
+  
   // Créer 9 sections (Tier 1..9)
-  const sections = [];
   for (let t = 1; t <= 9; t++) {
     const section = document.createElement('section');
     section.className = 'tier-section';
@@ -34,48 +51,74 @@ function initUI(monsters) {
       <div class="empty-note" style="display:none">Aucun Pokémon dans ce tier</div>
     `;
     content.appendChild(section);
-    sections.push(section);
+    sectionsMap.set(t, section);
   }
 
-  // Trier les pokemons par tier puis par name
-  monsters.sort((a,b) => {
+  // CORRECTION 4: Validation et nettoyage des données
+  const validMonsters = monsters.filter(p => {
+    if (!p.name || !p.tier || p.tier < 1 || p.tier > 9) {
+      console.warn('Pokémon invalide ignoré:', p);
+      return false;
+    }
+    return true;
+  });
+
+  // Trier les pokémons par tier puis par nom
+  validMonsters.sort((a, b) => {
     if (a.tier !== b.tier) return a.tier - b.tier;
-    return a.name.localeCompare(b.name, 'fr', {sensitivity:'base'});
+    return a.name.localeCompare(b.name, 'fr', {sensitivity: 'base'});
   });
 
   // Remplir les sections
-  monsters.forEach(p => {
-    const sec = sections[p.tier - 1];
-    if (!sec) return; // au cas où tier hors plage
-    const grid = sec.querySelector('.cards-grid');
-
-    const card = createCard(p);
-    grid.appendChild(card);
+  validMonsters.forEach(p => {
+    const section = sectionsMap.get(p.tier);
+    if (section) {
+      const grid = section.querySelector('.cards-grid');
+      const card = createCard(p);
+      grid.appendChild(card);
+    }
   });
 
-  // Mettre à jour compteurs et messages empty
-  sections.forEach(sec => {
-    const countSpan = sec.querySelector('.count');
-    const grid = sec.querySelector('.cards-grid');
-    const emptyNote = sec.querySelector('.empty-note');
+  // Mettre à jour compteurs et messages vides
+  sectionsMap.forEach(section => {
+    const countSpan = section.querySelector('.count');
+    const grid = section.querySelector('.cards-grid');
+    const emptyNote = section.querySelector('.empty-note');
     const count = grid.children.length;
+    
     countSpan.textContent = count;
     emptyNote.style.display = count === 0 ? 'block' : 'none';
   });
 
-  // Setup filtre
+  // CORRECTION 5: Setup filtre optimisé
+  setupFilter(sectionsMap);
+}
+
+function setupFilter(sectionsMap) {
   const filter = document.getElementById('tier-filter');
+  if (!filter) return; // Sécurité au cas où l'élément n'existe pas
+  
   filter.addEventListener('change', (e) => {
     const val = e.target.value;
+    
     if (val === 'all') {
-      sections.forEach(s => s.style.display = '');
-    } else {
-      sections.forEach(s => {
-        s.style.display = (s.dataset.tier === val) ? '' : 'none';
+      sectionsMap.forEach(section => {
+        section.style.display = '';
       });
-      // scroller vers la section choisie
-      const target = document.querySelector(`.tier-section[data-tier="${val}"]`);
-      if (target) target.scrollIntoView({behavior:'smooth', block:'start'});
+    } else {
+      const tierNum = parseInt(val);
+      sectionsMap.forEach((section, tier) => {
+        section.style.display = (tier === tierNum) ? '' : 'none';
+      });
+      
+      // Scroll vers la section choisie
+      const targetSection = sectionsMap.get(tierNum);
+      if (targetSection) {
+        targetSection.scrollIntoView({
+          behavior: 'smooth', 
+          block: 'start'
+        });
+      }
     }
   });
 }
@@ -86,15 +129,22 @@ function createCard(pokemon) {
   card.tabIndex = 0;
   card.setAttribute('role', 'button');
   card.setAttribute('aria-pressed', 'false');
-  card.title = pokemon.name;
+  card.title = `${pokemon.name} - Cliquer pour voir les détails`;
 
-  // Protéger les valeurs vides et formater les listes
-  const joinOrDash = (arr) => (arr && arr.length && arr.some(x => x && x.trim() !== '')) ? arr.join(', ') : '—';
+  // CORRECTION 6: Fonction améliorée pour gérer les tableaux
+  const joinOrDash = (arr) => {
+    if (!arr || !Array.isArray(arr)) return '—';
+    const filtered = arr.filter(x => x && typeof x === 'string' && x.trim() !== '');
+    return filtered.length > 0 ? filtered.join(', ') : '—';
+  };
+
+  // CORRECTION 7: Gestion d'images cassées
+  const imageUrl = pokemon.image || 'https://via.placeholder.com/120x120?text=?';
 
   card.innerHTML = `
     <div class="card-inner">
       <div class="card-front">
-        <img src="${pokemon.image}" alt="${pokemon.name}">
+        <img src="${imageUrl}" alt="${pokemon.name}" onerror="this.src='https://via.placeholder.com/120x120?text=?'">
         <h3>${pokemon.name}</h3>
       </div>
 
@@ -114,29 +164,29 @@ function createCard(pokemon) {
 
         <h4>Attaques</h4>
         <ul class="attacks">
-          ${ (pokemon.attacks && pokemon.attacks.length) ? pokemon.attacks.map(a => `<li>${a}</li>`).join('') : '<li>—</li>' }
+          ${(pokemon.attacks && pokemon.attacks.length) 
+            ? pokemon.attacks.map(a => `<li>${a}</li>`).join('') 
+            : '<li>—</li>'
+          }
         </ul>
       </div>
     </div>
-  ;
+  `;
 
-  // Click -> toggle flip
-  card.addEventListener('click', (ev) => {
-    // si on clique sur un lien interne évite toggle (pas de liens ici pour l'instant)
+  // CORRECTION 8: Gestion d'événements optimisée
+  const toggleFlip = () => {
     card.classList.toggle('is-flipped');
     const pressed = card.classList.contains('is-flipped');
     card.setAttribute('aria-pressed', pressed ? 'true' : 'false');
-  });
+  };
 
-  // Keyboard: Space / Enter pour flip
+  card.addEventListener('click', toggleFlip);
+
   card.addEventListener('keydown', (ev) => {
     if (ev.key === 'Enter' || ev.key === ' ') {
       ev.preventDefault();
-      card.classList.toggle('is-flipped');
-      const pressed = card.classList.contains('is-flipped');
-      card.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+      toggleFlip();
     }
-    // Escape pour retourner la carte
     if (ev.key === 'Escape') {
       card.classList.remove('is-flipped');
       card.setAttribute('aria-pressed', 'false');
@@ -146,4 +196,5 @@ function createCard(pokemon) {
   return card;
 }
 
+// Initialisation
 document.addEventListener('DOMContentLoaded', loadMonsters);

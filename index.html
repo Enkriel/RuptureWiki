@@ -1,39 +1,73 @@
-<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>RuptureWiki - Pokemons</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Card Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Preconnect pour optimiser le chargement des images -->
+    <link rel="preconnect" href="https://img.pokemondb.net">
+    
+    <!-- Meta tags pour le SEO et partage -->
+    <meta name="description" content="Visualiseur de cartes Pokémon interactif avec système de tiers">
+    <meta name="author" content="Votre nom">
+    
+    <!-- Favicon (optionnel) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
 </head>
 <body>
-  <header class="site-header">
-    <h1>RuptureWiki - Pokemons</h1>
+    <!-- En-tête principal -->
+    <header class="header">
+        <h1>🔥 Pokédex Interactif</h1>
+        <p>Cliquez sur les cartes pour découvrir les détails de chaque Pokémon</p>
+    </header>
+
+    <!-- Contrôles et filtres -->
     <div class="controls">
-      <label for="tier-filter">Afficher :</label>
-      <select id="tier-filter" aria-label="Filtrer par tier">
-        <option value="all">Tous les tiers</option>
-        <option value="1">Tier 1</option>
-        <option value="2">Tier 2</option>
-        <option value="3">Tier 3</option>
-        <option value="4">Tier 4</option>
-        <option value="5">Tier 5</option>
-        <option value="6">Tier 6</option>
-        <option value="7">Tier 7</option>
-        <option value="8">Tier 8</option>
-        <option value="9">Tier 9</option>
-      </select>
+        <div class="filter-group">
+            <label for="tier-filter">Filtrer par Tier :</label>
+            <select id="tier-filter" aria-label="Sélectionner un tier à afficher">
+                <option value="all">Tous les tiers</option>
+                <option value="1">Tier 1</option>
+                <option value="2">Tier 2</option>
+                <option value="3">Tier 3</option>
+                <option value="4">Tier 4</option>
+                <option value="5">Tier 5</option>
+                <option value="6">Tier 6</option>
+                <option value="7">Tier 7</option>
+                <option value="8">Tier 8</option>
+                <option value="9">Tier 9</option>
+            </select>
+        </div>
     </div>
-  </header>
 
-  <main id="content">
-    <!-- Les sections par tier seront g�n�r�es dynamiquement par script.js -->
-  </main>
+    <!-- Zone de contenu principal -->
+    <main id="content" role="main">
+        <!-- Les sections de tiers seront générées dynamiquement par JavaScript -->
+    </main>
 
-  <footer class="site-footer">
-    <small>Fichiers JSON = <code>pokemon.json</code></small>
-  </footer>
+    <!-- Instructions pour les utilisateurs (masquées visuellement mais accessibles) -->
+    <div class="sr-only" aria-live="polite" id="instructions">
+        Utilisez les flèches pour naviguer entre les cartes, Entrée ou Espace pour retourner une carte, Échap pour la remettre en position initiale.
+    </div>
 
-  <script defer src="script.js"></script>
+    <!-- Script principal -->
+    <script src="script.js"></script>
+
+    <!-- Style pour les éléments cachés mais accessibles -->
+    <style>
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
 </body>
 </html>
