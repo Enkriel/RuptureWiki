@@ -1,6 +1,6 @@
 ﻿[
   {
-    "id": 101,
+    "id": 1101,
     "Nom" : "Echo",
     "type": "Normal",
     "tier" : 1,
@@ -8,7 +8,7 @@
     "description" : "Inflige 1d10 + 3 à toutes les entités à 1 déplacement ou moins de vous, vous parlez si fort que tout le monde à 500m peut vous entendre"
   },
   {
-    "id": 102,
+    "id": 1102,
     "Nom" : "Liliput",
     "type": "Normal",
     "tier" : 1,
@@ -16,7 +16,7 @@
     "description" : "Permet de réduire sa taille de moitié pendant 1 min (peut être cumulé)"
   },
   {
-    "id": 103,
+    "id": 1103,
     "Nom" : "Griffe",
     "type": "Normal",
     "tier" : 1,
@@ -24,15 +24,15 @@
     "description" : "inflige 2d6 + 1"
   },
   {
-    "id": 103,
+    "id": 1104,
     "Nom" : "Ecras'Face",
     "type": "Normal",
     "tier" : 1,
-    "portée" : "Proche - Contondante - Dex",
+    "portée" : "Proche - Contondante - For",
     "description" : "inflige 2d6"
   },
   {
-    "id": 121,
+    "id": 1201,
     "Nom" : "Présent",
     "type": "Normal",
     "tier" : 2,
@@ -40,7 +40,7 @@
     "description" : "lancez 1d20 si le résultat est pair soigner une blessure mineure si il est impair infliger une blessure mineure si c’est 1 infliger une blessure majeure si c’est 20 soigner une blessure majeure"
   },
   {
-    "id": 122,
+    "id": 1202,
     "Nom" : "Charge",
     "type": "Normal",
     "tier" : 2,
@@ -48,7 +48,7 @@
     "description" : "2d6 + 1 dégâts, déplacez vous dans la zone (Au contact)"
   },
   {
-    "id": 123,
+    "id": 1203,
     "Nom" : "Ball'Météo",
     "type": "Normal",
     "tier" : 2,
@@ -56,7 +56,7 @@
     "description" : "(À distance) Inflige 2d6 + 1 avec un élément par les 18 selon la météo. (un jet de nature peut être tenter en amont pour tenter de savoir quel élément vous aurez)"
   },
   {
-    "id": 131,
+    "id": 1301,
     "Nom" : "Combo Griffe",
     "type": "Normal",
     "tier" : 3,
@@ -64,7 +64,7 @@
     "description" : "Lancez 1d8. Si le résultat est inférieur à 6, lancez un nouveau dé. Continuez jusqu’à échouer, puis additionnez tous les résultats pour déterminer vos dégâts"
   },
   {
-    "id": 132,
+    "id": 1302,
     "Nom" : "Jackpot",
     "type": "Normal",
     "tier" : 3,
@@ -72,7 +72,7 @@
     "description" : "nflige 3d6 dégâts. Chaque 6 vous fait gagner 1 poignée de pièces ; chaque 1 vous en fait perdre 1."
   },
   {
-    "id": 133,
+    "id": 1303,
     "Nom" : "Metronome",
     "type": "Normal",
     "tier" : 3,
@@ -80,7 +80,7 @@
     "description" : "Lancez 1d20… et priez"
   },
   {
-    "id": 141,
+    "id": 1401,
     "Nom" : "Vive Attaque",
     "type": "Normal",
     "tier" : 4,
@@ -88,7 +88,7 @@
     "description" : "3d6 dégâts, vous déplacer dans la zone (Au contact)"
   },
   {
-    "id": 142,
+    "id": 1402,
     "Nom" : "Abri",
     "type": "Normal",
     "tier" : 4,
@@ -96,7 +96,7 @@
     "description" : "Réduisez toute blessure subie d’un cran gratuitement jusqu'à votre prochain tour (vous pouvez utiliser un point d’armure pour diminuer une seconde fois), si vous avez une arme avec le mot clef protection c'est une Action Bonus"
   },
   {
-    "id": 151,
+    "id": 1501,
     "Nom" : "Météores",
     "type": "Normal",
     "tier" : 5,
@@ -104,7 +104,7 @@
     "description" : "Inflige 2d8 + 4 ne peut pas etre esquivé"
   },
   {
-    "id": 152,
+    "id": 1502,
     "Nom" : "Barrage",
     "type": "Normal",
     "tier" : 5,
@@ -112,7 +112,7 @@
     "description" : "empêche une manoeuvre de déplacement de l’ennemi"
   },
   {
-    "id": 161,
+    "id": 1601,
     "Nom" : "Chant Canon",
     "type": "Normal",
     "tier" : 6,
@@ -120,7 +120,7 @@
     "description" : "inflige 3d8 + 6 touche toute les zones entre vous et votre cible dans le cadran. JS Cons"
   },
   {
-    "id": 162,
+    "id": 1602,
     "Nom" : "Explosion",
     "type": "Normal",
     "tier" : 6,
