@@ -32,6 +32,7 @@
     "major_resistance": ["Plante", "Combat"],
     "immunity": [""],
     "attacks": ["Dard-Venin", "Secretion"],
+    "passifs": ["Leger"], 
     "status" : "unlock"
   },
   {

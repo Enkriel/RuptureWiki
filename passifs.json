@@ -45,6 +45,16 @@
     "description" : "Les attaques contondante contre vous ne marche pas."
   },
   {
+    "id": 10,
+    "Nom" : "Leger",
+    "description" : "Les projection deplace d'une zone supplémentaire"
+  },
+  {
+    "id": 10,
+    "Nom" : "Lourd",
+    "description" : "Les projection deplace d'une zone en moins"
+  },
+  {
     "id": 20,
     "Nom" : "Grosse voix",
     "description" : "Les attaques sonore gagne 1 de portée"

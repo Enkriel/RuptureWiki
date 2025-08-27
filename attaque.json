@@ -20,7 +20,7 @@
     "Nom" : "Griffe",
     "type": "Normal",
     "tier" : 1,
-    "portée" : "Au Contact - Coupante - Dex",
+    "portée" : "Au Contact - Coupant - Dex",
     "description" : "inflige 2d6 + 1"
   },
   {
@@ -28,7 +28,7 @@
     "Nom" : "Ecras'Face",
     "type": "Normal",
     "tier" : 1,
-    "portée" : "Proche - Contondante - For",
+    "portée" : "Proche - Contondant - For",
     "description" : "inflige 2d6"
   },
   {
@@ -44,7 +44,7 @@
     "Nom" : "Charge",
     "type": "Normal",
     "tier" : 2,
-    "portée" : "Proche - Cons",
+    "portée" : "Proche - Con",
     "description" : "2d6 + 1 dégâts, déplacez vous dans la zone (Au contact)"
   },
   {
@@ -126,5 +126,93 @@
     "tier" : 6,
     "portée" : "-",
     "description" : "Infligez vous 2 blessures sévère, toute entité se trouvant à 2 déplacements ou moins de vous subi 5d10 + 10 dégâts"
+  },
+  {
+    "id": 2101,
+    "Nom" : "Double pied",
+    "type": "Combat",
+    "tier" : 1,
+    "portée" : "Proche - Contondant - For",
+    "description" : "inflige 1d6 puis 1D6 degat"
+  },
+  {
+    "id": 2101,
+    "Nom" : "Double pied",
+    "type": "Combat",
+    "tier" : 1,
+    "portée" : "Proche - Contondant - For",
+    "description" : "inflige 1d6 puis 1D6 degat"
+  },
+  {
+    "id": 2102,
+    "Nom" : "Frappe Atlas",
+    "type": "Combat",
+    "tier" : 1,
+    "portée" : "Au contact - For - Action + Action Deplacement",
+    "description" : "Vous donne l'etat Fixé, puis projete votre adversaire de 1 zone. Inflige 1d6 + votre level"
+  },
+  {
+    "id": 2201,
+    "Nom" : "Mach Punch",
+    "type": "Combat",
+    "tier" : 2,
+    "portée" : "Proche - Contondant - For",
+    "description" : "2d6 + 1 dégâts, déplacez vous dans la zone (Au contact)"
+  },
+  {
+    "id": 2202,
+    "Nom" : "Onde Vide",
+    "type": "Combat",
+    "tier" : 2,
+    "portée" : "Eloigné - Int",
+    "description" : "2d4 + 2 dégâts, vous poussez de 1 zone votre cible par rapport à vous"
+  },
+  {
+    "id": 2203,
+    "Nom" : "Balayage",
+    "type": "Combat",
+    "tier" : 2,
+    "portée" : "Proche - Dex",
+    "description" : "2d6 si votre Adversaire est a le passif <b>Lourd</b> infliger 3D6 si il a le passif <b>Leger</b> infliger 1D6"
+  },
+  {
+    "id": 2301,
+    "Nom" : "Contre",
+    "type": "Combat",
+    "tier" : 3,
+    "portée" : "Au contact - Reaction",
+    "description" : "Après avoir subbit une blessure  frappé votre adversaire avec votre poing infligeant 5 + 1D10 degat"
+  },
+  {
+    "id": 2302,
+    "Nom" : "Forte-Paume",
+    "type": "Combat",
+    "tier" : 3,
+    "portée" : "Au contact - Dex",
+    "description" : "Infliger 2D6 + 2 si c'est un double votre adversaire est paralysé"
+  },
+  {
+    "id": 2303,
+    "Nom" : "Eclate-Roc",
+    "type": "Combat",
+    "tier" : 3,
+    "portée" : "Proche - Contondant - Dex",
+    "description" : "2d6 + 3 sur une cible faible au combat cette attaque augmente ses dés de degat une fois de plus"
+  },
+  {
+    "id": 2401,
+    "Nom" : "Triple-Pied",
+    "type": "Combat",
+    "tier" : 4,
+    "portée" : "Proche - Contondant - For",
+    "description" : "inflige 1d8 puis 1D8 degat puis 1D8 degat"
+  },
+  {
+    "id": 2401,
+    "Nom" : "Lame-Ointe",
+    "type": "Combat",
+    "tier" : 4,
+    "portée" : "Eloigné - Coupant - Int",
+    "description" : "Crée une lame de lumière inflige 3d6 + 4"
   }
 ]
