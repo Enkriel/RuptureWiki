@@ -37,6 +37,34 @@
     <div id="content"></div>
 
     <script>
+        const typeIcons = {
+            "Normal": "https://archives.bulbagarden.net/media/upload/thumb/9/95/Normal_icon_SwSh.png/48px-Normal_icon_SwSh.png",
+            "Combat": "https://archives.bulbagarden.net/media/upload/thumb/c/c2/Fighting_icon_HOME3.png/48px-Fighting_icon_HOME3.png",
+            "Vol": "https://archives.bulbagarden.net/media/upload/thumb/b/b5/Flying_icon_SwSh.png/48px-Flying_icon_SwSh.png",
+            "Poison": "https://archives.bulbagarden.net/media/upload/thumb/8/8d/Poison_icon_SwSh.png/48px-Poison_icon_SwSh.png",
+            "Sol": "https://archives.bulbagarden.net/media/upload/thumb/2/27/Ground_icon_SwSh.png/48px-Ground_icon_SwSh.png",
+            "Roche": "https://archives.bulbagarden.net/media/upload/thumb/1/11/Rock_icon_SwSh.png/48px-Rock_icon_SwSh.png",
+            "Insecte": "https://archives.bulbagarden.net/media/upload/thumb/9/9c/Bug_icon_SwSh.png/48px-Bug_icon_SwSh.png",
+            "Spectre": "https://archives.bulbagarden.net/media/upload/thumb/0/01/Ghost_icon_SwSh.png/48px-Ghost_icon_SwSh.png",
+            "Acier": "https://archives.bulbagarden.net/media/upload/thumb/0/09/Steel_icon_SwSh.png/48px-Steel_icon_SwSh.png",
+            "Feu": "https://archives.bulbagarden.net/media/upload/thumb/a/ab/Fire_icon_SwSh.png/48px-Fire_icon_SwSh.png",
+            "Eau": "https://archives.bulbagarden.net/media/upload/thumb/8/80/Water_icon_SwSh.png/48px-Water_icon_SwSh.png",
+            "Plante": "https://archives.bulbagarden.net/media/upload/thumb/a/a8/Grass_icon_SwSh.png/48px-Grass_icon_SwSh.png",
+            "Electric": "https://archives.bulbagarden.net/media/upload/thumb/c/cf/Electric_icon_HOME3.png/48px-Electric_icon_HOME3.png",
+            "Psy": "https://archives.bulbagarden.net/media/upload/thumb/2/2d/Psychic_icon_HOME3.png/48px-Psychic_icon_HOME3.png",
+            "Glace": "https://archives.bulbagarden.net/media/upload/thumb/1/15/Ice_icon_SwSh.png/48px-Ice_icon_SwSh.png",
+            "Dragon": "https://archives.bulbagarden.net/media/upload/thumb/7/70/Dragon_icon_SwSh.png/48px-Dragon_icon_SwSh.png",
+            "Ténèbres": "https://archives.bulbagarden.net/media/upload/thumb/7/71/Dark_icon_HOME3.png/48px-Dark_icon_HOME3.png",
+            "Fée": "https://archives.bulbagarden.net/media/upload/thumb/c/c6/Fairy_icon_SwSh.png/48px-Fairy_icon_SwSh.png"
+        };
+
+        function renderTypeIcons(arr) {
+            if (!Array.isArray(arr) || arr.length === 0) return '—';
+            return arr
+                .filter(type => type && typeIcons[type])
+                .map(type => `<img src="${typeIcons[type]}" alt="${type}" title="${type}" style="width:24px; height:24px; vertical-align:middle;">`)
+                .join(' ');
+        }
         // Données d'exemple intégrées (remplace le fetch)
         const sampleData = [
             {
@@ -75,6 +103,7 @@
         }
 
         let attaqueData = [];
+        let passifData = [];
 
         async function loadAttacks() {
             try {
@@ -82,8 +111,17 @@
                 if (!res.ok) throw new Error(`Erreur HTTP: ${res.status}`);
                 attaqueData = await res.json();
             } catch (err) {
-                console.error('Erreur de chargement attaques:', err);
+                console.error('Erreur de chargement attaques.json::', err);
                 attaqueData = [];
+            }
+
+            try {
+                const res = await fetch('passifs.json');
+                if (!res.ok) throw new Error(`Erreur HTTP: ${res.status}`);
+                passifData = await res.json();
+            } catch (err) {
+                console.error('Erreur de chargement passifs.json:', err);
+                passifData = [];
             }
         }
 
@@ -96,15 +134,12 @@
             const content = document.getElementById('content');
             content.innerHTML = ''; // Nettoyer le contenu
 
-            // CORRECTION 4: Cache des sections pour améliorer les performances
+            // Création des sections (Tier 1..9)
             const sectionsMap = new Map();
-            
-            // Créer 9 sections (Tier 1..9)
             for (let t = 1; t <= 9; t++) {
                 const section = document.createElement('section');
                 section.className = 'tier-section';
                 section.dataset.tier = `${t}`;
-
                 section.innerHTML = `
                     <div class="tier-header">
                         <h2>Tier ${t}</h2>
@@ -117,8 +152,9 @@
                 sectionsMap.set(t, section);
             }
 
-            // CORRECTION 5: Validation et nettoyage des données
-            const validMonsters = monsters.filter(p => {
+            // 1️⃣ Filtrer : on enlève les "hide"
+            let validMonsters = monsters.filter(p => {
+                if (p.status === "hide") return false;
                 if (!p.name || !p.tier || p.tier < 1 || p.tier > 9) {
                     console.warn('Pokémon invalide ignoré:', p);
                     return false;
@@ -126,13 +162,13 @@
                 return true;
             });
 
-            // Trier les pokémons par tier puis par nom
+            // 2️⃣ Trier par tier puis par id
             validMonsters.sort((a, b) => {
                 if (a.tier !== b.tier) return a.tier - b.tier;
-                return a.name.localeCompare(b.name, 'fr', {sensitivity: 'base'});
+                return (a.id ?? 0) - (b.id ?? 0);
             });
 
-            // Remplir les sections
+            // 3️⃣ Remplir les sections
             validMonsters.forEach(p => {
                 const section = sectionsMap.get(p.tier);
                 if (section) {
@@ -142,7 +178,7 @@
                 }
             });
 
-            // Mettre à jour compteurs et messages vides
+            // 4️⃣ Mettre à jour compteurs et messages vides
             sectionsMap.forEach(section => {
                 const countSpan = section.querySelector('.count');
                 const grid = section.querySelector('.cards-grid');
@@ -153,9 +189,10 @@
                 emptyNote.style.display = count === 0 ? 'block' : 'none';
             });
 
-            // CORRECTION 6: Setup filtre optimisé
+            // Filtre
             setupFilter(sectionsMap);
         }
+
 
         function setupFilter(sectionsMap) {
             const filter = document.getElementById('tier-filter');
@@ -188,16 +225,23 @@
             const tooltip = document.getElementById('attack-tooltip');
 
             document.addEventListener('mouseover', (e) => {
-                const target = e.target.closest('.attack-item');
+                const target = e.target.closest('.attack-item, .passif-item');
                 if (!target) return;
 
-                const type = target.dataset.type || '—';
-                const range = target.dataset.range || '—';
-                const desc = target.dataset.desc || '—';
+                if (target.classList.contains('attack-item')) {
+                    // Attaque
+                    const type = target.dataset.type || '—';
+                    const range = target.dataset.range || '—';
+                    const desc = target.dataset.desc || '—';
+                    tooltip.innerHTML = `<strong>${target.textContent}</strong><br>
+                                        <em>Type:</em> ${type} | <em>Portée:</em> ${range}<br>
+                                        ${desc}`;
+                } else {
+                    // Passif
+                    const desc = target.dataset.desc || '—';
+                    tooltip.innerHTML = `<strong>${target.textContent}</strong><br>${desc}`;
+                }
 
-                tooltip.innerHTML = `<strong>${target.textContent}</strong><br>
-                                    <em>Type:</em> ${type} | <em>Portée:</em> ${range}<br>
-                                    ${desc}`;
                 tooltip.style.display = 'block';
             });
 
@@ -209,7 +253,7 @@
             });
 
             document.addEventListener('mouseout', (e) => {
-                if (e.target.closest('.attack-item')) {
+                if (e.target.closest('.attack-item, .passif-item')) {
                     tooltip.style.display = 'none';
                 }
             });
@@ -222,6 +266,10 @@
             card.setAttribute('role', 'button');
             card.setAttribute('aria-pressed', 'false');
             card.title = ``;
+
+            if (pokemon.status === "seen") {
+                card.style.filter = "grayscale(100%) brightness(70%)";
+            }
 
             // CORRECTION 7: Fonction améliorée pour gérer les tableaux
             const joinOrDash = (arr) => {
@@ -248,11 +296,6 @@
                             <li><strong>Difficulté:</strong> ${pokemon.difficulty ?? '—'}</li>
                             <li><strong>Armure:</strong> ${pokemon.armor ?? '—'}</li>
                             <li><strong>Type:</strong> ${joinOrDash(pokemon.type)}</li>
-                            <li><strong>Faiblesse majeure:</strong> ${joinOrDash(pokemon.major_weakness)}</li>
-                            <li><strong>Faiblesses:</strong> ${joinOrDash(pokemon.weakness)}</li>
-                            <li><strong>Résistances:</strong> ${joinOrDash(pokemon.resistance)}</li>
-                            <li><strong>Résistances majeures:</strong> ${joinOrDash(pokemon.major_resistance)}</li>
-                            <li><strong>Immunités:</strong> ${joinOrDash(pokemon.immunity)}</li>
                         </ul>
 
                         <h4>Attaques</h4>
@@ -275,29 +318,57 @@
                                 : '<li>—</li>'
                             }
                         </ul>
+
+                        <h4>Passifs</h4>
+                        <ul class="attacks">
+                            ${(pokemon.passifs && pokemon.passifs.length)
+                                ? pokemon.passifs.map(pName => {
+                                    const pas = passifData.find(pas => pas.Nom === pName);
+                                    if (pas) {
+                                        return `<li class="passif-item" data-desc="${pas.description}">
+                                                    ${pas.Nom}
+                                                </li>`;
+                                    } else {
+                                        return `<li>${pName}</li>`;
+                                    }
+                                }).join('')
+                                : '<li>—</li>'
+                            }
+                        </ul>
+
+                        <h4> Faiblesses </h4>
+                        <ul class="attacks">
+                            <li><strong>Faiblesse majeure:</strong> ${renderTypeIcons(pokemon.major_weakness)}</li>
+                            <li><strong>Faiblesses:</strong> ${renderTypeIcons(pokemon.weakness)}</li>
+                            <li><strong>Résistances:</strong> ${renderTypeIcons(pokemon.resistance)}</li>
+                            <li><strong>Résistances majeures:</strong> ${renderTypeIcons(pokemon.major_resistance)}</li>
+                            <li><strong>Immunités:</strong> ${renderTypeIcons(pokemon.immunity)}</li>
+                        </ul>
                     </div>
                 </div>
             `;
 
             // CORRECTION 9: Gestion d'événements optimisée
-            const toggleFlip = () => {
-                card.classList.toggle('is-flipped');
-                const pressed = card.classList.contains('is-flipped');
-                card.setAttribute('aria-pressed', pressed ? 'true' : 'false');
-            };
+            if (pokemon.status === "unlock") {
+                const toggleFlip = () => {
+                    card.classList.toggle('is-flipped');
+                    const pressed = card.classList.contains('is-flipped');
+                    card.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+                };
 
-            card.addEventListener('click', toggleFlip);
+                card.addEventListener('click', toggleFlip);
 
-            card.addEventListener('keydown', (ev) => {
-                if (ev.key === 'Enter' || ev.key === ' ') {
-                    ev.preventDefault();
-                    toggleFlip();
-                }
-                if (ev.key === 'Escape') {
-                    card.classList.remove('is-flipped');
-                    card.setAttribute('aria-pressed', 'false');
-                }
-            });
+                card.addEventListener('keydown', (ev) => {
+                    if (ev.key === 'Enter' || ev.key === ' ') {
+                        ev.preventDefault();
+                        toggleFlip();
+                    }
+                    if (ev.key === 'Escape') {
+                        card.classList.remove('is-flipped');
+                        card.setAttribute('aria-pressed', 'false');
+                    }
+                });
+            }
 
             return card;
         }

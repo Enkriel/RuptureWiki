@@ -59,10 +59,13 @@
         <h1>Liste des Sorts</h1>
         <p>Filtrer par type et parcourer par tier</p>
     </div>
-
+    
     <!-- Filtres -->
     <div class="filters" id="type-filters"></div>
 
+    <div class="filters" style="justify-content:center;">
+        <button id="uncheck-btn" class="btn-clear">❌ Décocher tout</button>
+    </div>
     <!-- Contenu -->
     <div id="content"></div>
 
@@ -167,6 +170,16 @@
     }
 
     document.addEventListener('DOMContentLoaded', loadAttacks);
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('uncheck-btn');
+        if (btn) {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('#type-filters input[type="checkbox"]').forEach(cb => cb.checked = false);
+                renderAttacks();
+            });
+        }
+    });
     </script>
 </body>
 </html>

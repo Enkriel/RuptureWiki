@@ -1,0 +1,52 @@
+﻿[
+  {
+    "id": 1,
+    "Nom" : "Fragilité Coupante",
+    "description" : "Les attaques coupante contre vous voit leur dé de degat augmenté d'un cran"
+  },
+  {
+    "id": 2,
+    "Nom" : "Fragilité Percante",
+    "description" : "Les attaques percante contre vous voit leur dé de degat augmenté d'un cran"
+  },
+  {
+    "id": 3,
+    "Nom" : "Fragilité Contondante",
+    "description" : "Les attaques contondante contre vous voit leur dé de degat augmenté d'un cran"
+  },
+  {
+    "id": 4,
+    "Nom" : "Resistance Coupante",
+    "description" : "Les attaques coupante contre vous voit leur dé de degat diminué d'un cran"
+  },
+  {
+    "id": 5,
+    "Nom" : "Resistance Percante",
+    "description" : "Les attaques percante contre vous voit leur dé de degat diminué d'un cran"
+  },
+  {
+    "id": 6,
+    "Nom" : "Resistance Contondante",
+    "description" : "Les attaques contondante contre vous voit leur dé de degat diminué d'un cran"
+  },
+  {
+    "id": 7,
+    "Nom" : "Immunité Coupante",
+    "description" : "Les attaques coupante contre vous vous ne marche pas."
+  },
+  {
+    "id": 8,
+    "Nom" : "Immunité Percante",
+    "description" : "Les attaques percante contre vous vous ne marche pas."
+  },
+  {
+    "id": 9,
+    "Nom" : "Immunité Contondante",
+    "description" : "Les attaques contondante contre vous ne marche pas."
+  },
+  {
+    "id": 20,
+    "Nom" : "Grosse voix",
+    "description" : "Les attaques sonore gagne 1 de portée"
+  }
+]
