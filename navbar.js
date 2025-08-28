@@ -2,30 +2,21 @@
   const container = document.getElementById("navbar-container");
   if (!container) return;
 
-  // Chemin de base du site = /RuptureWiki/
-  const basePath = "/RuptureWiki/";
+  // Détecte si on est sur GitHub Pages
+  const isGithubPages = window.location.hostname === "enkriel.github.io";
+  const basePath = isGithubPages ? "/RuptureWiki" : "";
 
-  // Chemin relatif depuis la page actuelle vers la base
-  const depth = window.location.pathname
-    .replace(basePath, "")
-    .split("/")
-    .length - 1;
-
-  const relativePrefix = depth > 0 ? "../".repeat(depth) : "";
-
-  const fetchPath = relativePrefix + "navbar.html";
-
-  fetch(fetchPath)
-  .then(res => {
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    return res.text();
-  })
-  .then(html => {
-    container.innerHTML = html;
-    setupMenuToggle();
-    fixNavbarLinks(); // 🔹 On corrige les liens après injection
-  })
-  .catch(err => console.error("Erreur lors du chargement de la navbar :", err));
+  fetch(`${basePath}/navbar.html`)
+    .then(res => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.text();
+    })
+    .then(html => {
+      container.innerHTML = html;
+      setupMenuToggle();
+      fixNavbarLinks(basePath); // 🔹 On corrige les liens avec le bon basePath
+    })
+    .catch(err => console.error("Erreur lors du chargement de la navbar :", err));
 });
 
 function setupMenuToggle() {
@@ -42,15 +33,10 @@ function setupMenuToggle() {
   });
 }
 
-
-function fixNavbarLinks() {
-  const basePath = "/RuptureWiki/";
+function fixNavbarLinks(basePath) {
   document.querySelectorAll(".navbar a").forEach(link => {
     const href = link.getAttribute("href");
     if (!href || href.startsWith("http") || href.startsWith("#")) return;
-    // On corrige uniquement si on est sur GitHub Pages
-    if (location.hostname === "enkriel.github.io") {
-      link.setAttribute("href", basePath + href.replace(/^\/+/, ""));
-    }
+    link.setAttribute("href", `${basePath}/${href.replace(/^\/+/, "")}`);
   });
 }
