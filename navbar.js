@@ -5,7 +5,7 @@
     // Détecte si on est sur GitHub Pages
     const isGithubPages = window.location.hostname === "enkriel.github.io";
     const basePath = isGithubPages ? "/RuptureWiki" : "";
-
+    console.log("Chargement navbar depuis :", `${basePath}/navbar.html`);
     fetch(`${basePath}/navbar.html`)
         .then(res => {
             if (!res.ok) throw new Error(`HTTP ${res.status}`);
