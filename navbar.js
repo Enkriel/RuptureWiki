@@ -20,10 +20,13 @@
 });
 
 function setupMenuToggle() {
-  const toggle = document.getElementById("menu-toggle");
+  const toggle = document.getElementById("nav-toggle"); // ou menu-toggle
   const ul = document.querySelector(".navbar ul");
   if (toggle && ul) {
-    toggle.addEventListener("click", () => ul.classList.toggle("show"));
+    toggle.addEventListener("click", () => {
+      const isOpen = ul.classList.toggle("show");
+      toggle.setAttribute("aria-expanded", isOpen);
+    });
   }
 
   document.querySelectorAll(".navbar li.nav-dropdown").forEach(li => {
@@ -32,6 +35,7 @@ function setupMenuToggle() {
     });
   });
 }
+
 
 function fixNavbarLinks(basePath) {
   document.querySelectorAll(".navbar a").forEach(link => {
