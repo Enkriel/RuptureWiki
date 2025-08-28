@@ -691,10 +691,44 @@ select:focus {
     .navbar li.open .dropdown { display: flex; }
 }
 
-.nav-menu {
-    display: none;
+/* Mobile: cache le menu par défaut, affiche-le si .open */
+@media (max-width: 768px) {
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(255,255,255,0.1);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+        border-radius: 0 0 15px 15px;
+        backdrop-filter: blur(10px);
+    }
+    #nav-menu.open {
+        display: flex;
+    }
+    #menu-toggle {
+        display: inline-block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+    }
 }
-.nav-menu.active {
-    display: block;
+
+/* Desktop: toujours afficher le menu, cacher le bouton */
+@media (min-width: 769px) {
+    #nav-menu {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: none;
+        padding: 0;
+    }
+    #menu-toggle {
+        display: none;
+    }
 }
 
