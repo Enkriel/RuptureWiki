@@ -12,37 +12,34 @@
 
     <div class="content-wrapper">
         <div class="header">
-            <h1>Ranger</h1>
-            <p>Maître du dressage et des liens avec les Pokémon</p>
+            <h1>Hunter</h1>
+            <p>Maitre d'arme, selon sa voie il est capable d'utiliser ses différents potentiels</p>
         </div>
 
         <div class="stats-section">
             <h2>Statistiques de base</h2>
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-value">10</div>
+                    <div class="stat-value">9</div>
                     <div class="stat-label">Évasion</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-value">6</div>
+                    <div class="stat-value">7</div>
                     <div class="stat-label">PV</div>
                 </div>
             </div>
             <h2>Maitrises</h2>
             <div class="mastery-list">
-                <span class="mastery-item">Fouet</span>
-                <span class="mastery-item">Dressage</span>
-                <span class="mastery-item">Armure légère</span>
+                <span class="mastery-item">Arme au choix</span>
+                <span class="mastery-item">Athlétisme</span>           
                 <span class="mastery-item">Armure moyenne</span>
+                <span class="mastery-item">Armure Lourde</span>
             </div>
             <br>
             <h2>Équipement de départ</h2>
             <ul id="equipment-list">
-                <li>Un starter parmis 3 selon les maitrise élémentaire</li>
-                <li>Un Fouet tier 1 au choix</li>
+                <li>Une Arme tier 1 au choix</li>
                 <li>Une Armure tier 1 au choix</li>
-                <li>Des jumelles</li>
-                <li>un Pokedex</li>
             </ul>
         </div>
 
@@ -53,12 +50,8 @@
                 </div>
                 <ul class="ability-list">
                     <li class="ability-item">
-                        <div class="ability-name">Étude</div>
-                        <div class="ability-description">1 fois par repos long, faites un jet de Connaissance Pokémon sur votre Sag ou Int. Selon le résultat, vous obtenez plus ou moins d'indices sur la condition secrète de dressage d'un Pokémon.</div>
-                    </li>
-                    <li class="ability-item">
-                        <div class="ability-name">Ordre simple - Action Bonus</div>
-                        <div class="ability-description">(nécessite une arme avec le mot-clef dressant) : vous pouvez donner un ordre simple en combat à un Pokémon allié.</div>
+                        <div class="ability-name">Second souffle - Action Bonus</div>
+                        <div class="ability-description">Regagner un nombre de pv égal à 1d10 + votre niveau de Hunter. Une fois cette capacité utilisée, vous devez terminer un repos court ou long pour pouvoir l'utiliser de nouveau.</div>
                     </li>
                 </ul>
             </div>
@@ -69,8 +62,8 @@
                 </div>
                 <ul class="ability-list">
                     <li class="ability-item">
-                        <div class="ability-name">Don de déplacement - Action de Déplacement et Action Bonus</div>
-                        <div class="ability-description">(nécessite une arme avec le mot-clef dressant) : insufflez votre motivation à un allié pour lui offrir une action de déplacement bonus. Si c'est un Pokémon allié que vous contrôlez, cela ne coûte pas d'action bonus.</div>
+                        <div class="ability-name">Don de déplacement</div>
+                        <div class="ability-description">(action de déplacement et action bonus) : insufflez votre motivation à un allié pour lui offrir une action de déplacement bonus. Si c'est un Pokémon allié que vous contrôlez, cela ne coûte pas d'action bonus.</div>
                     </li>
                     <li class="ability-item">
                         <div class="ability-name">Soin Pokémon</div>
@@ -82,13 +75,13 @@
             <div class="archetype-buttons">
                 <p>Choisissez un archétype pour débloquer ses capacités :</p>
                 <button class="archetype-btn archetype-unique" data-archetype="unique">
-                    Lien Unique <br><span>Se concentrer sur un seul Pokémon puissant</span>
+                    Lame Elementaire <br><span>Les lames elementaires se concentre sur les maitrises Elementaires pour exploiter au maximum les comptétences des armes</span>
                 </button>
                 <button class="archetype-btn archetype-meute" data-archetype="meute">
-                    Lien de la Meute <br><span>Submerger l’ennemi avec plusieurs Pokémon</span>
+                    Lame Protectrice <br><span>Les Lames protectrices protege leur alliés et risposte violamment</span>
                 </button>
                 <button class="archetype-btn archetype-pacte" data-archetype="pacte">
-                    Lien du Pacte <br><span>Créer des pactes temporaires avec des Pokémon sauvages</span>
+                    Lame Multiple <br><span>Créer des pactes temporaires avec des Pokémon sauvages</span>
                 </button>
             </div>
             <div id="arch-levels" style="display:none;">

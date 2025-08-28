@@ -405,7 +405,8 @@ select:focus {
 
 .ability-name {
     font-weight: bold;
-    color: #00b894;
+    color: rgb(0, 184, 147);
+    text-shadow: rgb(4, 73, 26) 2px 2px;
     margin-bottom: 5px;
 }
 
