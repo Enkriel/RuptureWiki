@@ -690,3 +690,11 @@ select:focus {
     .navbar li:hover .dropdown { display: none; }
     .navbar li.open .dropdown { display: flex; }
 }
+
+.nav-menu {
+    display: none;
+}
+.nav-menu.active {
+    display: block;
+}
+
