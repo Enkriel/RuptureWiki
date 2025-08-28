@@ -16,15 +16,16 @@
   const fetchPath = relativePrefix + "navbar.html";
 
   fetch(fetchPath)
-    .then(res => {
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return res.text();
-    })
-    .then(html => {
-      container.innerHTML = html;
-      setupMenuToggle();
-    })
-    .catch(err => console.error("Erreur lors du chargement de la navbar :", err));
+  .then(res => {
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return res.text();
+  })
+  .then(html => {
+    container.innerHTML = html;
+    setupMenuToggle();
+    fixNavbarLinks(); // 🔹 On corrige les liens après injection
+  })
+  .catch(err => console.error("Erreur lors du chargement de la navbar :", err));
 });
 
 function setupMenuToggle() {
@@ -38,5 +39,18 @@ function setupMenuToggle() {
     li.addEventListener("click", () => {
       if (window.innerWidth <= 768) li.classList.toggle("open");
     });
+  });
+}
+
+
+function fixNavbarLinks() {
+  const basePath = "/RuptureWiki/";
+  document.querySelectorAll(".navbar a").forEach(link => {
+    const href = link.getAttribute("href");
+    if (!href || href.startsWith("http") || href.startsWith("#")) return;
+    // On corrige uniquement si on est sur GitHub Pages
+    if (location.hostname === "enkriel.github.io") {
+      link.setAttribute("href", basePath + href.replace(/^\/+/, ""));
+    }
   });
 }
