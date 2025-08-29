@@ -523,16 +523,20 @@ select:focus {
 }
 
 .archetype-unique {
-    background: linear-gradient(135deg, #e874ff, #e309ac);
+    background: linear-gradient(135deg, #ff74f3, #96465a);
 }
 
 .archetype-meute {
-    background: linear-gradient(135deg, #efe055, #b8ac00);
+    background: linear-gradient(135deg, #faf8a0, rgb(129, 123, 42));
 }
 
 .archetype-pacte {
     background: linear-gradient(135deg, #fab1a0, #e17055);
 }
+
+.ability-name-unique { color: #ff74f3; }
+.ability-name-meute  { color: #faf8a0; }
+.ability-name-pacte  { color: #fab1a0; }
 
 #arch-levels {
     transition: all 0.4s ease;
@@ -731,5 +735,18 @@ select:focus {
     #menu-toggle {
         display: none;
     }
+}
+
+/* Corrige l'alignement des listes dans les abilities */
+.ability-description ul,
+.ability-description ol {
+    margin: 8px 0 8px 18px;
+    padding-left: 18px;
+}
+
+.ability-description li {
+    margin-bottom: 4px;
+    /* Optionnel : couleur ou style de puce */
+    /* list-style-type: disc; */
 }
 

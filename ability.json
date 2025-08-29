@@ -1,0 +1,177 @@
+﻿[
+    {
+        "id": 1,
+        "Name": "Expertise Élémentaire",
+        "description": "Transformez une maîtrise élémentaire en expertise ou obtenez une nouvelle maîtrise élémentaire."
+    },
+    {
+        "id": 14,
+        "Name": "Expertise Martiale",
+        "description": "Transformez une maîtrise d'arme ou d'armure en expertise ou obtenez une nouvelle maîtrise d'arme ou d'armure."
+    },
+    {
+        "id": 15,
+        "Name": "Expertise Libre",
+        "description": "Transformez une maîtrise de votre choix en expertise ou obtenez une nouvelle maîtrise de votre choix."
+    },
+    {
+        "id": 2,
+        "Name": "Piratage de Pouvoir",
+        "description": "Vous pouvez utiliser la compétence d'une arme que vous ne portez pas en respectant 3 conditions :<ul><li>1. Vous devez respecter les conditions d'utilisation de la compétence.</li><li>2. L'arme doit se trouver à 2 déplacements ou moins de vous.</li><li>3. Vous devez énoncer la compétence que vous souhaitez utiliser. Si l'arme visée n'a pas cette compétence, vous perdez votre action.</li></ul> Si toutes les conditions sont réunies, le piratage ne peut pas échouer."
+    },
+    {
+        "id": 3,
+        "Name": "Puissance Cachée",
+        "description": "Les dés de dégâts des compétences d'armes que vous utilisez augmentent d’un tiers."
+    },
+    {
+        "id": 4,
+        "Name": "Relance Élémentaire - Réaction - Repos Court",
+        "description": "Vous pouvez relancer un jet de compétence d’arme échoué une fois par repos court."
+    },
+    {
+        "id": 5,
+        "Name": "Recharge Élémentaire - Action Bonus - Repos Court",
+        "description": "Rechargez une compétence de votre arme, une fois par repos court."
+    },
+    {
+        "id": 6,
+        "Name": "Second Souffle - Action Bonus - Repos Court",
+        "description": "Regagnez un nombre de PV égal à 1d4. Une fois cette capacité utilisée, vous devez terminer un repos court ou long pour pouvoir l'utiliser de nouveau."
+    },
+    {
+        "id": 7,
+        "Name": "Étude",
+        "description": "Une fois par repos long, faites un jet de Connaissance Pokémon sur votre Sagesse ou Intelligence. Selon le résultat, vous obtenez plus ou moins d'indices sur la condition secrète de dressage d'un Pokémon sauvage."
+    },
+    {
+        "id": 8,
+        "Name": "Ordre Simple",
+        "description": "(Nécessite une arme avec le mot-clé dressant) : vous pouvez donner un ordre simple en combat à un Pokémon allié. ('Attaque', 'Fuis', 'Cherche'...)"
+    },
+    {
+        "id": 9,
+        "Name": "Don de Déplacement - Action de Déplacement et Action Bonus",
+        "description": "(Nécessite une arme avec le mot-clé dressant) : insufflez votre motivation à un allié pour lui offrir une action de déplacement bonus. Si c'est un Pokémon allié que vous contrôlez, cela ne coûte pas d'action bonus."
+    },
+    {
+        "id": 10,
+        "Name": "Soin Pokémon - Action Bonus - Repos Court",
+        "description": "(Nécessite une arme avec le mot-clé dressant) : à votre tour, vous pouvez utiliser une action bonus pour soigner un Pokémon dans votre zone, lui rendant 1d4 PV. Nécessite un repos court ou long pour être réutilisée."
+    },
+    {
+        "id": 11,
+        "Name": "Slot Puissant",
+        "description": "Votre slot devient puissant."
+    },
+    {
+        "id": 12,
+        "Name": "Amélioration de Caractéristiques",
+        "description": "Augmentez une caractéristique de +2 ou deux caractéristiques de +1 (maximum 20)."
+    },
+    {
+        "id": 13,
+        "Name": "Amélioration Défensive",
+        "description": "+1 PV ou +1 évasion."
+    },
+    {
+        "id": 16,
+        "Name": "Connexion Totale",
+        "description": "(Nécessite une arme avec le mot-clé dressant) : vous pouvez prendre le contrôle d'un Pokémon allié avec qui vous avez un lien ou un pacte. Votre corps reste alors immobile et vulnérable."
+    },
+    {
+        "id": 17,
+        "Name": "Slot Basique",
+        "description": "Un de vos slots de dressage faible passe à basique."
+    },
+    {
+        "id": 18,
+        "Name": "Ordre Complexe",
+        "description": "<b>Ordre simple</b> devient Ordre complexe : (nécessite une arme dressant) vous pouvez donner des ordres précis à votre Pokémon, comme choisir quelle attaque il doit utiliser."
+    },
+    {
+        "id": 19,
+        "Name": "Diversité",
+        "description": "(Nécessite une arme dressant) Votre Pokémon peut utiliser vos compétences d'armes. Vos Pokémon ont l'expertise de leur élément."
+    },
+    {
+        "id": 20,
+        "Name": "Plein Potentiel - Repos Long",
+        "description": "(Nécessite une arme dressant) Votre Pokémon apprend une nouvelle attaque inédite utilisable une fois par repos long. Donner l’ordre de l’utiliser consomme votre action et celle de votre Pokémon."
+    },
+    {
+        "id": 21,
+        "Name": "Slot Puissant",
+        "description": "Votre slot devient puissant."
+    },
+    {
+        "id": 22,
+        "Name": "Double Slot",
+        "description": "Gagnez un deuxième slot de dressage faible."
+    },
+    {
+        "id": 23,
+        "Name": "Attaque sur Plusieurs Flancs",
+        "description": "(Nécessite une arme dressant) Si un <b>membre de la meute</b> (vous ou vos Pokémon) est attaqué, tous les Pokémon de la meute situés dans des cadrans différents augmentent leur dé de dégâts d’un tiers pour ce tour."
+    },
+    {
+        "id": 23,
+        "Name": "Slot Basique Supplémentaire",
+        "description": "Gagnez un slot de dressage basique."
+    },
+    {
+        "id": 24,
+        "Name": "Placement de la Meute",
+        "description": "<b>Don de déplacement</b> devient Don de déplacement amélioré : (nécessite une arme dressant) vous pouvez donner une action de déplacement bonus à un allié dans votre zone, et si c'est un Pokémon allié que vous contrôlez, cela ne coûte pas d'action bonus."
+    },
+    {
+        "id": 25,
+        "Name": "Attaque Unisson",
+        "description": "(Nécessite une arme dressant) Une fois par repos long, tous les <b>membres de la meute</b> utilisent une attaque sur la même cible (cela consomme l’action et l’action de déplacement de tous). La cible ne peut esquiver que les attaques provenant d’un seul cadran ; les autres touchent automatiquement et leurs dés de dégâts sont augmentés d’un tiers (non cumulatif avec Attaque sur Plusieurs Flancs)."
+    },
+    {
+        "id": 26,
+        "Name": "Pacte",
+        "description": "Vous pouvez former un pacte avec un Pokémon sauvage. Vous ne pouvez avoir qu'un seul pacte à la fois. Un pacte vous permet de communiquer télépathiquement avec le Pokémon, et de le contrôler en combat comme s'il était dressé."
+    },
+    {
+        "id": 27,
+        "Name": "Appel",
+        "description": "Vous pouvez appeler votre Pokémon pactisé à tout moment, où que vous soyez, et il viendra à vous. Si le Pokémon est loin, cela peut prendre plusieurs minutes."
+    },
+    {
+        "id": 28,
+        "Name": "Dresseur sans Fouet",
+        "description": "Vous gagnez la maîtrise d'une arme de votre choix. Le mot-clé dressant est sur toutes les armes que vous maniez."
+    },
+    {
+        "id": 29,
+        "Name": "Sifflement Sauvage",
+        "description": "Vous sifflez aussi fort que possible, ce qui transmet 3 mots aux alentours. Si un groupe de Pokémon sauvages l’entend, il répondra à l’appel en tentant au maximum de respecter ces 3 mots selon leur interprétation."
+    },
+    {
+        "id": 30,
+        "Name": "Pacte de la Zone",
+        "description": "Vous pouvez communiquer télépathiquement avec votre Pokémon pactisé, où que vous soyez, tant que vous êtes dans la même zone."
+    },
+    {
+        "id": 31,
+        "Name": "Rugissement du Roi",
+        "description": "Poussez un cri tonitruant qui va attirer un Pokémon sauvage très puissant en lui transmettant 2 mots. Il tentera au maximum de respecter ces mots selon son interprétation."
+    },
+    {
+        "id": 32,
+        "Name": "Fougue - Repos Court",
+        "description": "Gagnez une seconde action."
+    },
+    {
+        "id": 33,
+        "Name": "Inflexible - Réaction - Repos Long",
+        "description": "Vous pouvez relancer un jet de sauvegarde que vous avez raté. Si vous le faites, vous devez obligatoirement utiliser le nouveau résultat, et ne pouvez pas utiliser de nouveau cette capacité avant d'avoir terminé un repos long."
+    },
+    {
+        "id": 34,
+        "Name": "Combo Élémentaire - Action Bonus",
+        "description": "Après une compétence d'arme, vous pouvez utiliser une autre compétence en action bonus si elle est d’un élément différent de la première. Augmentez d’un tiers ses dés de dégâts."
+    }
+]

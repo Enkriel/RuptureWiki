@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranger - Rupture JDR</title>
+    <title>Hunter - Rupture JDR</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -13,264 +13,185 @@
     <div class="content-wrapper">
         <div class="header">
             <h1>Hunter</h1>
-            <p>Maitre d'arme, selon sa voie il est capable d'utiliser ses différents potentiels</p>
+            <p>Maître des armes il peut se spécialiser pour augmenter ses différents potentiels</p>
         </div>
 
         <div class="stats-section">
             <h2>Statistiques de base</h2>
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-value">9</div>
+                    <div class="stat-value">10</div>
                     <div class="stat-label">Évasion</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-value">7</div>
+                    <div class="stat-value">6</div>
                     <div class="stat-label">PV</div>
                 </div>
             </div>
             <h2>Maitrises</h2>
             <div class="mastery-list">
-                <span class="mastery-item">Arme au choix</span>
-                <span class="mastery-item">Athlétisme</span>           
+                <span class="mastery-item">Fouet</span>
+                <span class="mastery-item">Dressage</span>
+                <span class="mastery-item">Armure légère</span>
                 <span class="mastery-item">Armure moyenne</span>
-                <span class="mastery-item">Armure Lourde</span>
             </div>
             <br>
             <h2>Équipement de départ</h2>
             <ul id="equipment-list">
-                <li>Une Arme tier 1 au choix</li>
+                <li>Un starter parmi 3 selon les maîtrises élémentaires</li>
+                <li>Un Fouet tier 1 au choix</li>
                 <li>Une Armure tier 1 au choix</li>
+                <li>Des jumelles</li>
+                <li>un Pokedex</li>
             </ul>
         </div>
 
-        <div class="level-progression">
-            <div class="level-card">
-                <div class="level-header">
-                    <div class="level-number">Level 1</div>
-                </div>
-                <ul class="ability-list">
-                    <li class="ability-item">
-                        <div class="ability-name">Second souffle - Action Bonus</div>
-                        <div class="ability-description">Regagner un nombre de pv égal à 1d10 + votre niveau de Hunter. Une fois cette capacité utilisée, vous devez terminer un repos court ou long pour pouvoir l'utiliser de nouveau.</div>
-                    </li>
-                </ul>
-            </div>
+        <!-- BOUTONS ARCHETYPE TOUJOURS VISIBLES -->
+        <div class="archetype-buttons" id="archetype-buttons">
+            <p>Choisissez un archétype pour débloquer ses capacités :</p>
+            <button class="archetype-btn archetype-unique" data-archetype="unique">
+                Lame Elémentaire <br><span>Les lames elementaires se concentre sur les maitrises Elementaires pour exploiter au maximum les comptétences des armes</span>
+            </button>
+            <button class="archetype-btn archetype-meute" data-archetype="meute">                
+                Lame Protectrice  <br><span>Experte en bouclier les Lames protectrices protége leur alliés et risposte violamment</span>
+            </button>
+            <button class="archetype-btn archetype-pacte" data-archetype="pacte">
+                Lame Multiple<br><span>Ils peuvent porter plusieurs armes pour s'adapter à leur ennemi</span>
+            </button>
+        </div>
 
-            <div class="level-card">
-                <div class="level-header">
-                    <div class="level-number">Level 2</div>
-                </div>
-                <ul class="ability-list">
-                    <li class="ability-item">
-                        <div class="ability-name">Don de déplacement</div>
-                        <div class="ability-description">(action de déplacement et action bonus) : insufflez votre motivation à un allié pour lui offrir une action de déplacement bonus. Si c'est un Pokémon allié que vous contrôlez, cela ne coûte pas d'action bonus.</div>
-                    </li>
-                    <li class="ability-item">
-                        <div class="ability-name">Soin Pokémon</div>
-                        <div class="ability-description">(nécessite une arme avec le mot-clef dressant) : à votre tour, vous pouvez utiliser une action bonus pour soigner un Pokémon dans votre zone, lui rendant 1d10 + votre niveau de Ranger PV. Nécessite un repos court ou long pour être réutilisée.</div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="archetype-buttons">
-                <p>Choisissez un archétype pour débloquer ses capacités :</p>
-                <button class="archetype-btn archetype-unique" data-archetype="unique">
-                    Lame Elementaire <br><span>Les lames elementaires se concentre sur les maitrises Elementaires pour exploiter au maximum les comptétences des armes</span>
-                </button>
-                <button class="archetype-btn archetype-meute" data-archetype="meute">
-                    Lame Protectrice <br><span>Les Lames protectrices protege leur alliés et risposte violamment</span>
-                </button>
-                <button class="archetype-btn archetype-pacte" data-archetype="pacte">
-                    Lame Multiple <br><span>Se spécialise dans capacité de charge et les maitrise d'arme il peuvent porter plusieur armes pour s'adapter à leur ennemi</span>
-                </button>
-            </div>
-            <div id="arch-levels" style="display:none;">
-                <div class="level-card" data-level="3">
-                    <div class="level-header">
-                        <div class="level-number">Level 3</div>
-                    </div>
-                    <ul class="ability-list">
-                    </ul>
-                </div>
-
-                <div class="level-card" data-level="4">
-                    <div class="level-header">
-                        <div class="level-number">Level 4</div>
-                    </div>
-                    <ul class="ability-list">
-                        <li class="ability-item">
-                            <div class="ability-name">Amélioration de caractéristiques</div>
-                            <div class="ability-description">Augmentez une caractéristique de +2 ou deux caractéristiques de +1 (maximum 20).</div>
-                        </li>
-                        <li class="ability-item">
-                            <div class="ability-name">Amélioration Défensive</div>
-                            <div class="ability-description">+1 PV ou +1 évasion.</div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="level-card" data-level="5">
-                    <div class="level-header">
-                        <div class="level-number">Level 5</div>
-                    </div>
-                    <ul class="ability-list">
-                        <li class="ability-item">
-                            <div class="ability-name">Expertise élémentaire</div>
-                            <div class="ability-description">expertise dans un élément que vous maîtrisez déjà, ou obtention d’une nouvelle maîtrise élémentaire.
-                        </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="level-card" data-level="6">
-                    <div class="level-header">
-                        <div class="level-number">Level 6</div>
-                    </div>
-                    <ul class="ability-list">
-                        <li class="ability-item">
-                            <div class="ability-name">Amélioration de caractéristiques</div>
-                            <div class="ability-description">Augmentez une caractéristique de +2 ou deux caractéristiques de +1 (maximum 20).</div>
-                        </li>
-                        <li class="ability-item">
-                            <div class="ability-name">Amélioration Défensive</div>
-                            <div class="ability-description">+1 PV ou +1 évasion.</div>
-                        </li>
-                        <li class="ability-item">
-                            <div class="ability-name">Expertise martiale</div>
-                            <div class="ability-description">expertise dans une arme ou une armure que vous maîtrisez déjà, ou obtention d’une nouvelle maîtrise d’arme ou armure.</div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="level-card" data-level="7">
-                    <div class="level-header">
-                        <div class="level-number">Level 7</div>
-                    </div>
-                    <ul class="ability-list">
-                    </ul>
-                </div>
-
-                <div class="level-card" data-level="8">
-                    <div class="level-header">
-                        <div class="level-number">Level 8</div>
-                    </div>
-                    <ul class="ability-list">
-                        <li class="ability-item">
-                            <div class="ability-name">Amélioration de caractéristiques</div>
-                            <div class="ability-description">Augmentez une caractéristique de +2 ou deux caractéristiques de +1 (maximum 20).</div>
-                        </li>
-                        <li class="ability-item">
-                            <div class="ability-name">Amélioration Défensive</div>
-                            <div class="ability-description">+1 PV ou +1 évasion.</div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="level-card" data-level="9">
-                    <div class="level-header">
-                        <div class="level-number">Level 9</div>
-                    </div>
-                    <ul class="ability-list">
-                        <li class="ability-item">
-                            <div class="ability-name">Connexion totale</div>
-                            <div class="ability-description">(nécessite une arme avec le mot-clef dressant): vous pouvez prendre le contrôle d'un Pokémon allié avec qui vous avez un lien ou un pacte. Votre corps reste alors immobile et vulnérable.</div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="level-card" data-level="10">
-                    <div class="level-header">
-                        <div class="level-number">Level 10</div>
-                    </div>
-                    <ul class="ability-list">
-                        <li class="ability-item">
-                            <div class="ability-name">Capacité d'archétype Ranger</div>
-                            <div class="ability-description">Vous débloquer votre capacité de niveau 7 lié à votre archétype </div>                   
-                        </li>
-                        <li class="ability-item">
-                            <div class="ability-name">Expertise libre</div>
-                            <div class="ability-description">Passer n'importe quelle maitrise en expertise</div>                  
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <div class="level-progression" id="level-progression">
+            <!-- Les niveaux et abilities seront générés ici -->
         </div>
     </div>
     <script>
-        const archetypeAbilities = {
-            unique: {
-                3: [{name: "Slot Basique", desc: "Votre slot de dressage passe à basique."}, 
-                    {name: "Ordre Complexe", desc: "Ordre simple devient Ordre complexe ; vous pouvez donner des ordres précis à votre Pokémon, comme choisir quelle attaque il doit utiliser."}],
-                5: [{name: "Diversité", desc: "Votre Pokémon peut apprendre jusqu'à 5 attaques différentes."}],
-                7: [{name: "Plein potentiel", desc: "Votre Pokémon apprend une nouvelle attaque inédite utilisable 1 fois par repos long. Donner l’ordre de l’utiliser consomme votre action et celle de votre Pokémon"}],
-                10:[{name: "Slot Puissant", desc: "Votre slot devient Puissant."}]
-            },
-            meute: {
-                3: [{name: "Double Slot", desc: "Gagnez un deuxième slot de dressage faible."}],
-                5: [{name: "Attaque sur plusieurs flancs", desc: "Si un <b>membre de la meute</b> (vous ou vos Pokémon) est attaqué, tous les Pokémon de la meute situés dans des cadrans différents augmentent leur dé de dégâts d’un tiers pour ce tour."}],
-                7: [{name: "Slot Basique", desc: "Gagnez un slot de dressage basique."},
-                    {name: "Placemnt de la meute", desc: "<b>Don de déplacement</b> s’applique sur 1 de vos pokémon supplémentaire gratuitement"}
-                ],
-                10:[{name: "Attaque Unisson", desc: "1 fois par repos long, tous les <b>membre de la meute</b> utilisent une attaque sur la même cible (cela consomme l’action et l’action de déplacement de tous). La cible ne peut esquiver que les attaques provenant d’un seul cadran ; les autres touchent automatiquement et leurs dés de dégâts sont augmentés d’un tiers (non cumulatif avec Attaque sur plusieurs flancs)."}]
-            },
-            pacte: {
-                3: [{name: "Pacte", desc: " vous pouvez faire un jet de Dressage sur un Pokémon pour lui imposer un pacte (sauvegarde de Sagesse). Un Pokémon avec qui vous avez un lien (même léger) peut accepter le pacte sans jet. Un Pokémon affaibli est plus facile à pactiser. Si le pacte échoue, vous ne pouvez pas retenter sur cette cible."}, 
-                    {name: "Appel", desc: "Vous pouvez appeler magiquement jusqu'à une distance de 1km à un pokémon avec qui vous avez fait un pacte et lui transmettre 3 mots, il tentera au maximum de respecter ces 3 mots selon son interprétation. Une fois Appel fini le pacte peut se briser ou non."}, 
-                    {name: "Dresseur sans fouet", desc: "Vous gagner la maitrise d'une arme de votre choix, Le mot-clef dressant est sur toutes vos armes."}],
-                5: [{name: "Sifflement sauvage", desc: "Vous sifflez aussi fort que possible ce qui transmet 3 mots aux alentours. Si un groupe de pokemon sauvage l’entend il répondront à l’appel en tentant au maximum de respecter ces 3 mots selon leur interprétation"}],
-                7: [{name: "Pacte de la zone", desc: "Lors d’un repos court au lieu ajouter l’action Pacte de la zone, crée un pacte avec 2 pokemon aléatoire de la zone."}],
-                10:[{name: "Rugissement du roi", desc: "Poussez un cri tonitruant qui va attirer un pokémon sauvage très puissant en lui transmettant 2 mot, il tentera au maximum de respecter ce mot selon son interprétation. "}]
-            }
-        };
+    // filepath: c:\Users\arthu\Documents\GitHub\RuptureWiki\Classes\ranger.html
 
-        const buttons = document.querySelectorAll(".archetype-btn");
-        buttons.forEach(btn => {
-            btn.addEventListener("click", () => {
-                const archetype = btn.dataset.archetype;
-                applyArchetype(archetype);
+    const levelAbilities = {
+        1: [
+            "Second Souffle - Action Bonus - Repos Court",
+        ],
+        2: [
+            "Fougue - Repos Court",
+        ],
+        4: [
+            "Amélioration de Caractéristiques",
+            "Amélioration Défensive"
+        ],
+        5: [
+            "Expertise Martiale"
+        ],
+        6: [
+            "Amélioration de Caractéristiques",
+            "Amélioration Défensive",
+            "Expertise Élémentaire"
+        ],
+        8: [
+            "Amélioration de Caractéristiques",
+            "Amélioration Défensive"
+        ],
+        9: [
+            "Inflexible - Réaction - Repos Long"
+        ],
+        10: [
+            "Expertise Libre"
+        ]
+    };
+
+    const archetypeAbilities = {
+        unique: {
+            3: ["Expertise Élémentaire", "Piratage de Pouvoir"],
+            5: ["Puissance Cachée" , "Relance Élémentaire - Réaction - Repos Court"],
+            7: ["Recharge Élémentaire - Action Bonus - Repos Court"],
+            10:["Combo Élémentaire - Action Bonus"]
+        },
+        meute: {
+            3: ["Double Slot"],
+            5: ["Attaque sur plusieurs flancs"],
+            7: ["Slot Basique Supplémentaire", "Placement de la meute"],
+            10: ["Attaque Unisson"]
+        },
+        pacte: {
+            3: ["Pacte", "Appel", "Dresseur sans Fouet"],
+            5: ["Sifflement Sauvage"],
+            7: ["Pacte de la zone"],
+            10: ["Rugissement du roi"]
+        }
+    };
+
+    function renderBaseLevels(abilityDescriptions) {
+        const progression = document.getElementById("level-progression");
+        progression.innerHTML = "";
+
+        [1,2,3,4,5,6,7,8,9,10].forEach(level => {
+            const card = document.createElement("div");
+            card.className = "level-card";
+            card.dataset.level = level;
+            card.innerHTML = `
+                <div class="level-header">
+                    <div class="level-number">Level ${level}</div>
+                </div>
+                <ul class="ability-list"></ul>
+            `;
+            const ul = card.querySelector(".ability-list");
+            (levelAbilities[level] || []).forEach(name => {
+                const desc = abilityDescriptions[name] || "";
+                ul.innerHTML += `
+                    <li class="ability-item">
+                        <div class="ability-name">${name}</div>
+                        <div class="ability-description">${desc}</div>
+                    </li>
+                `;
+            });
+            progression.appendChild(card);
+        });
+    }
+
+    function applyArchetype(archetype, abilityDescriptions) {
+        // Pour chaque niveau d'archétype
+        Object.keys(archetypeAbilities[archetype]).forEach(levelStr => {
+            const level = parseInt(levelStr);
+            // Trouve la carte de niveau correspondante
+            const card = document.querySelector(`.level-card[data-level="${level}"]`);
+            if (!card) return;
+            const ul = card.querySelector(".ability-list");
+            // Supprime les anciennes abilities d'archétype (pour changer d'archétype)
+            ul.querySelectorAll(".arch").forEach(el => el.remove());
+            // Ajoute les abilities d'archétype
+            archetypeAbilities[archetype][level].forEach(name => {
+                const desc = abilityDescriptions[name] || "";
+                const li = document.createElement("li");
+                li.className = `ability-item arch ${archetype}`;
+                li.innerHTML = `
+                    <div class="ability-name ability-name-${archetype}">${name}</div>
+                    <div class="ability-description">${desc}</div>
+                `;
+                ul.appendChild(li);
             });
         });
+    }
 
-        function applyArchetype(archetype) {
-            // Affiche tous les niveaux 3 à 10
-            const archLevelsDiv = document.getElementById("arch-levels");
-            archLevelsDiv.style.display = "block";
+    fetch('../ability.json')
+    .then(res => res.json())
+    .then(data => {
+        const abilityDescriptions = {};
+        data.forEach(ability => {
+            if (ability.Name) abilityDescriptions[ability.Name.trim()] = ability.description;
+        });
 
-            // Parcours tous les level-card dans arch-levels
-            archLevelsDiv.querySelectorAll(".level-card").forEach(card => {
-                const level = parseInt(card.dataset.level);
+        renderBaseLevels(abilityDescriptions);
 
-                // Supprimer anciennes abilities d'archétype
-                card.querySelectorAll(".ability-item.arch").forEach(el => el.remove());
+        document.querySelectorAll(".archetype-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                document.querySelectorAll(".archetype-btn").forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
 
-                // Ajouter les abilities de l'archetype pour ce niveau si elles existent
-                if (archetypeAbilities[archetype][level]) {
-                    const abilityList = card.querySelector(".ability-list");
-                    archetypeAbilities[archetype][level].forEach(ability => {
-                        const li = document.createElement("li");
-                        li.className = `ability-item arch ${archetype}`;
-                        li.innerHTML = `<div class="ability-name">${ability.name}</div>
-                                        <div class="ability-description">${ability.desc}</div>`;
-                        // On met un fond de couleur selon l'archétype
-                        li.querySelector(".ability-name").style.color = getArchetypeColor(archetype);
-                        abilityList.appendChild(li);
-                    });
-                }
+                // NE PAS rappeler renderArchLevels ici !
+                const archetype = btn.dataset.archetype;
+                applyArchetype(archetype, abilityDescriptions);
             });
-        }
-
-        // Fonction pour récupérer la couleur de fond selon l'archétype
-        function getArchetypeColor(archetype) {
-            switch(archetype) {
-                case "unique": return "#e874ff";
-                case "meute": return "#faFFa0";
-                case "pacte": return "#fab1a0";
-                default: return "rgba(255,255,255,0.1)";
-            }
-        }
-
-
-        document.getElementById("arch-levels").classList.add("show");
-</script>
+        });
+    });
+    </script>
 </body>
 </html>
