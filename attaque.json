@@ -4,8 +4,8 @@
     "Nom": "Echo",
     "type": "Normal",
     "tier": 1,
-    "portée": "-",
-    "description": "Inflige 1d10 + 3 à toutes les entités à 1 déplacement ou moins de vous. Vous parlez si fort que tout le monde à 500 m peut vous entendre."
+    "portée": "0 - AoE 1 circulaire - Int",
+    "description": "Inflige 1d10 + 3. Vous parlez si fort que tout le monde à 500 m peut vous entendre."
   },
   {
     "id": 1102,
@@ -20,7 +20,7 @@
     "Nom": "Griffe",
     "type": "Normal",
     "tier": 1,
-    "portée": "Au Contact - Coupant - Dex",
+    "portée": "0 - Coupant - Dex",
     "description": "Inflige 2d6 + 1."
   },
   {
@@ -28,7 +28,7 @@
     "Nom": "Ecras'Face",
     "type": "Normal",
     "tier": 1,
-    "portée": "Proche - Contondant - For",
+    "portée": "1 - Contondant - For",
     "description": "Inflige 2d6."
   },
   {
@@ -36,7 +36,7 @@
     "Nom": "Présent",
     "type": "Normal",
     "tier": 2,
-    "portée": "Eloigné",
+    "portée": "2 - Projectile",
     "description": "Lancez 1d20 : si le résultat est pair, soignez une blessure mineure ; s’il est impair, infligez une blessure mineure ; si c’est 1, infligez une blessure majeure ; si c’est 20, soignez une blessure majeure."
   },
   {
@@ -44,7 +44,7 @@
     "Nom": "Charge",
     "type": "Normal",
     "tier": 2,
-    "portée": "Proche - Con",
+    "portée": "1 - Con",
     "description": "2d6 + 1 dégâts, déplacez-vous dans la zone (au contact)."
   },
   {
@@ -52,7 +52,7 @@
     "Nom": "Ball'Météo",
     "type": "Normal",
     "tier": 2,
-    "portée": "A Distance - Int",
+    "portée": "3 - Int - Projectile",
     "description": "(À distance) Inflige 2d6 + 1 avec un élément parmi les 18 selon la météo. (Un jet de nature peut être tenté en amont pour savoir quel élément vous aurez.)"
   },
   {
@@ -60,7 +60,7 @@
     "Nom": "Combo Griffe",
     "type": "Normal",
     "tier": 3,
-    "portée": "Au Contact - Dex",
+    "portée": "0 - Dex",
     "description": "Lancez 1d8. Si le résultat est inférieur à 6, lancez un nouveau dé. Continuez jusqu’à échouer, puis additionnez tous les résultats pour déterminer vos dégâts."
   },
   {
@@ -68,7 +68,7 @@
     "Nom": "Jackpot",
     "type": "Normal",
     "tier": 3,
-    "portée": "A Distance - Int",
+    "portée": "3 - Int - Projectile",
     "description": "Inflige 3d6 dégâts. Chaque 6 vous fait gagner 1 poignée de pièces ; chaque 1 vous en fait perdre 1."
   },
   {
@@ -84,7 +84,7 @@
     "Nom": "Vive Attaque",
     "type": "Normal",
     "tier": 4,
-    "portée": "Eloigné - Con",
+    "portée": "2 - Con",
     "description": "3d6 dégâts, vous vous déplacez dans la zone (au contact)."
   },
   {
@@ -92,15 +92,15 @@
     "Nom": "Abri",
     "type": "Normal",
     "tier": 4,
-    "portée": "Action / Action Bonus sous condition",
-    "description": "Réduisez toute blessure subie d’un cran gratuitement jusqu'à votre prochain tour (vous pouvez utiliser un point d’armure pour diminuer une seconde fois). Si vous avez une arme avec le mot-clé protection, c'est une action bonus."
+    "portée": "",
+    "description": "(Action bonus avec une arme avec le mot-clef protecteur) Réduisez toute blessure subie d’un cran gratuitement jusqu'à votre prochain tour (vous pouvez utiliser un point d’armure pour diminuer une seconde fois)."
   },
   {
     "id": 1501,
     "Nom": "Météores",
     "type": "Normal",
     "tier": 5,
-    "portée": "Très Loin - Int",
+    "portée": "4 - Int - Projectile",
     "description": "Inflige 2d8 + 4. Ne peut pas être esquivé."
   },
   {
@@ -108,7 +108,7 @@
     "Nom": "Barrage",
     "type": "Normal",
     "tier": 5,
-    "portée": "Proche - Reaction",
+    "portée": "1 - Reaction",
     "description": "Empêche une manœuvre de déplacement de l’ennemi."
   },
   {
@@ -116,7 +116,7 @@
     "Nom": "Chant Canon",
     "type": "Normal",
     "tier": 6,
-    "portée": "A distance - Int",
+    "portée": "3 - AoE 3 Ligne - Int",
     "description": "Inflige 3d8 + 6 et touche toutes les zones entre vous et votre cible dans le cadran. JS Cons."
   },
   {
@@ -124,15 +124,15 @@
     "Nom": "Explosion",
     "type": "Normal",
     "tier": 6,
-    "portée": "-",
-    "description": "Infligez-vous 2 blessures sévères. Toute entité se trouvant à 2 déplacements ou moins de vous subit 5d10 + 10 dégâts."
+    "portée": "0 - AoE 2",
+    "description": "Inflige 5d10 + 10 dégâts, infligez-vous 2 blessures sévères."
   },
   {
     "id": 2101,
     "Nom": "Double pied",
     "type": "Combat",
     "tier": 1,
-    "portée": "Proche - Contondant - For",
+    "portée": "1 - Contondant - For",
     "description": "Inflige 1d6 puis 1d6 dégâts."
   },
   {
@@ -140,15 +140,15 @@
     "Nom": "Frappe Atlas",
     "type": "Combat",
     "tier": 1,
-    "portée": "Au contact - For - Action + Action Deplacement",
-    "description": "Vous donne l'état Fixé, puis projette votre adversaire d’1 zone. Inflige 1d6 + votre niveau."
+    "portée": "0 - For - Action + Action Deplacement",
+    "description": "Vous donne l'état Fixé, puis projette votre adversaire de 1. Inflige 1d6 + votre niveau."
   },
   {
     "id": 2201,
     "Nom": "Mach Punch",
     "type": "Combat",
     "tier": 2,
-    "portée": "Proche - Contondant - For",
+    "portée": "1 - Contondant - For",
     "description": "2d6 + 1 dégâts, déplacez-vous dans la zone <b>au contact</b>."
   },
   {
@@ -156,7 +156,7 @@
     "Nom": "Onde Vide",
     "type": "Combat",
     "tier": 2,
-    "portée": "Eloigné - Int",
+    "portée": "2 - Int - Projectile",
     "description": "2d4 + 2 dégâts, vous poussez votre cible d’1 zone par rapport à vous."
   },
   {
@@ -164,7 +164,7 @@
     "Nom": "Balayage",
     "type": "Combat",
     "tier": 2,
-    "portée": "Proche - Dex",
+    "portée": "1 - Dex",
     "description": "2d6. Si votre adversaire a le passif <b>Lourd</b>, infligez 3d6 ; s’il a le passif <b>Léger</b>, infligez 1d6."
   },
   {
@@ -172,7 +172,7 @@
     "Nom": "Contre",
     "type": "Combat",
     "tier": 3,
-    "portée": "Au contact - Reaction",
+    "portée": "0 - Reaction",
     "description": "Après avoir subi une blessure, frappez votre adversaire avec votre poing, infligeant 5 + 1d10 dégâts."
   },
   {
@@ -180,7 +180,7 @@
     "Nom": "Forte-Paume",
     "type": "Combat",
     "tier": 3,
-    "portée": "Au contact - Dex",
+    "portée": "0 - Dex",
     "description": "Inflige 2d6 + 2 si <b>paralysé</b> en cas de double."
   },
   {
@@ -188,7 +188,7 @@
     "Nom": "Eclate-Roc",
     "type": "Combat",
     "tier": 3,
-    "portée": "Proche - Contondant - Dex",
+    "portée": "1 - Contondant - Dex",
     "description": "2d6 + 3 sur une cible faible au combat. Cette attaque augmente ses dés de dégâts d’un cran supplémentaire."
   },
   {
@@ -196,7 +196,7 @@
     "Nom": "Triple-Pied",
     "type": "Combat",
     "tier": 4,
-    "portée": "Proche - Contondant - For",
+    "portée": "1 - Contondant - For",
     "description": "Inflige 1d8 puis 1d8 dégâts, puis 1d8 dégâts."
   },
   {
@@ -204,7 +204,7 @@
     "Nom": "Lame-Ointe",
     "type": "Combat",
     "tier": 4,
-    "portée": "Eloigné - Coupant - Int",
+    "portée": "2 - Coupant - Int - Projectile",
     "description": "Crée une lame de lumière. Inflige 3d6 + 4."
   },
   {
@@ -212,7 +212,7 @@
     "Nom": "Picpic",
     "type": "Vol",
     "tier": 1,
-    "portée": "Proche - Percant - Dex",
+    "portée": "2 - Percant - Dex",
     "description": "2d6."
   },
   {
@@ -220,8 +220,8 @@
     "Nom": "Aspiration",
     "type": "Vol",
     "tier": 1,
-    "portée": "Action Bonus",
-    "description": "Attire une cible à 3 déplacements ou moins d’1 zone ou 1 cadran vers soi."
+    "portée": "3 - Action Bonus",
+    "description": "Attire une cible de 1 vers soi."
   },
   {
     "id": 3103,
@@ -236,7 +236,7 @@
     "Nom": "Acrobatie",
     "type": "Vol",
     "tier": 2,
-    "portée": "Au contact - Dex",
+    "portée": "0 - Dex",
     "description": "2d6 + 2. Vous pouvez vous replacer dans le cadran <b>proche</b> de votre choix."
   },
   {
@@ -244,7 +244,7 @@
     "Nom": "Double volée",
     "type": "Vol",
     "tier": 2,
-    "portée": "A distance - Percant - Dex",
+    "portée": "3 - Percant - Dex - Projectile",
     "description": "2d6 + 2."
   },
   {
@@ -252,15 +252,15 @@
     "Nom": "Tranch'air",
     "type": "Vol",
     "tier": 2,
-    "portée": "Coupant - Int",
-    "description": "2d6. Touche toutes les entités sur 4 déplacements devant vous. JS Dex."
+    "portée": "0 - AoE 3 Ligne - Coupant - Int",
+    "description": "2d6 JS Dex."
   },
   {
     "id": 3301,
     "Nom": "Rebond",
     "type": "Vol",
     "tier": 3,
-    "portée": "Eloigné - Contondant - Dex - Action + Action de Déplacement",
+    "portée": "2 - Contondant - Dex - Action + Action de Déplacement",
     "description": "2d6. Sautez sur votre cible et placez-vous symétriquement à elle."
   },
   {
@@ -268,7 +268,7 @@
     "Nom": "Picore",
     "type": "Vol",
     "tier": 3,
-    "portée": "Eloigné - Percant - Dex",
+    "portée": "3 - Percant - Dex",
     "description": "1d10 + 6. Si vous infligez une blessure avec ce sort sur un Pokémon Insecte ou Plante, vous vous soignez d’1 blessure mineure."
   },
   {
@@ -276,7 +276,7 @@
     "Nom": "Cru-Ailes",
     "type": "Vol",
     "tier": 3,
-    "portée": "Proche - Coupant - For",
+    "portée": "1 - Coupant - For",
     "description": "2d8 + 4."
   },
   {
@@ -284,23 +284,23 @@
     "Nom": "Tornade",
     "type": "Vol",
     "tier": 4,
-    "portée": "A distance - Int",
-    "description": "2d10 + 3. Touche toutes les entités dans la zone <b>au contact</b> de la cible. JS Con."
+    "portée": "3 - AoE 0 - Int",
+    "description": "2d10 + 3 JS Con les entité à 1 portée sont attiré sur la zone sans prendre de degat"
   },
   {
     "id": 3402,
     "Nom": "Vent arrière",
     "type": "Vol",
     "tier": 4,
-    "portée": "Action bonus",
-    "description": "Vos actions de déplacement comptent double ce tour-ci."
+    "portée": "2 - AoE 0 - Action bonus",
+    "description": "toutes les entités de la zone ciblé gagne une action de déplacements."
   },
   {
     "id": 3501,
     "Nom": "Lame d'air",
     "type": "Vol",
     "tier": 5,
-    "portée": "A distance - Coupant - Int",
+    "portée": "3 - Coupant - Int - Projectile",
     "description": "3d6 + 5."
   },
   {
@@ -308,7 +308,7 @@
     "Nom": "Poudre Toxic",
     "type": "Poison",
     "tier": 1,
-    "portée": "A distance",
+    "portée": "3",
     "description": "Empoisonne la cible. Peut aussi être utilisé sur une arme ; son prochain coup empoisonnera si une blessure est infligée."
   },
   {
@@ -316,7 +316,7 @@
     "Nom": "Dard-Venin",
     "type": "Poison",
     "tier": 1,
-    "portée": "A distance - Percant - Dex",
+    "portée": "3 - Percant - Dex - Projectile",
     "description": "2d4. <b>Empoisonne</b> en cas de double."
   },
   {
@@ -324,7 +324,7 @@
     "Nom": "Acide",
     "type": "Poison",
     "tier": 1,
-    "portée": "A distance - Int",
+    "portée": "3 - Int - Projectile",
     "description": "2d4 + 2."
   },
   {
@@ -332,7 +332,7 @@
     "Nom": "Crochet Venin",
     "type": "Poison",
     "tier": 2,
-    "portée": "Au Contact - Contondant - For",
+    "portée": "0 - Contondant - For",
     "description": "2d6 + 2. <b>Empoisonne gravement</b> en cas de double."
   },
   {
@@ -340,23 +340,23 @@
     "Nom": "Purée de pois",
     "type": "Poison",
     "tier": 2,
-    "portée": "Eloignée - Int",
-    "description": "2d6. <b>Aveugle</b> toutes les entités <b>au contact</b>. JS Sag."
+    "portée": "3 - AoE 0 - Int",
+    "description": "2d6. <b>Aveugle</b> toutes les entités. JS Sag."
   },
   {
     "id": 4203,
     "Nom": "Bain de smog",
     "type": "Poison",
     "tier": 2,
-    "portée": "A distance - Int",
-    "description": "Crée une flaque de poison sur la cible, qui touche toute sa zone <b>au contact</b>. Chaque entité commençant dans cette zone subit 1 blessure mineure. La zone disparaît si le Pokémon fait une manœuvre de désengagement."
+    "portée": "3 - Int  - Projectile",
+    "description": "Crée une flaque de poison sur la zone. Chaque entité commençant dans cette zone subit 1 blessure mineure."
   },
   {
     "id": 4301,
     "Nom": "Multitoxik",
     "type": "Poison",
     "tier": 3,
-    "portée": "A distance - Int",
+    "portée": "3 - Int - Projectile",
     "description": "2d6 + 2. Augmente les dés de dégâts d’1 cran si la cible est empoisonnée, de 2 crans si elle est gravement empoisonnée."
   }
 ]

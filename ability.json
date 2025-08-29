@@ -87,17 +87,17 @@
     {
         "id": 18,
         "Name": "Ordre Complexe",
-        "description": "<b>Ordre simple</b> devient Ordre complexe : (nécessite une arme dressant) vous pouvez donner des ordres précis à votre Pokémon, comme choisir quelle attaque il doit utiliser."
+        "description": "<b>Ordre simple</b> devient Ordre complexe : (Nécessite une arme avec le mot-clé dressant) vous pouvez donner des ordres précis à votre Pokémon, comme choisir quelle attaque il doit utiliser."
     },
     {
         "id": 19,
         "Name": "Diversité",
-        "description": "(Nécessite une arme dressant) Votre Pokémon peut utiliser vos compétences d'armes. Vos Pokémon ont l'expertise de leur élément."
+        "description": "(Nécessite une arme avec le mot-clé dressant) Votre Pokémon peut utiliser vos compétences d'armes. Vos Pokémon ont l'expertise de leur élément."
     },
     {
         "id": 20,
         "Name": "Plein Potentiel - Repos Long",
-        "description": "(Nécessite une arme dressant) Votre Pokémon apprend une nouvelle attaque inédite utilisable une fois par repos long. Donner l’ordre de l’utiliser consomme votre action et celle de votre Pokémon."
+        "description": "(Nécessite une arme avec le mot-clé dressant) Votre Pokémon apprend une nouvelle attaque inédite utilisable une fois par repos long. Donner l’ordre de l’utiliser consomme votre action et celle de votre Pokémon."
     },
     {
         "id": 21,
@@ -112,7 +112,7 @@
     {
         "id": 23,
         "Name": "Attaque sur Plusieurs Flancs",
-        "description": "(Nécessite une arme dressant) Si un <b>membre de la meute</b> (vous ou vos Pokémon) est attaqué, tous les Pokémon de la meute situés dans des cadrans différents augmentent leur dé de dégâts d’un tiers pour ce tour."
+        "description": "(Nécessite une arme avec le mot-clé dressant) Si un <b>membre de la meute</b> (vous ou vos Pokémon) est attaqué, tous les Pokémon de la meute situés dans des cadrans différents augmentent leur dé de dégâts d’un tiers pour ce tour."
     },
     {
         "id": 23,
@@ -122,12 +122,12 @@
     {
         "id": 24,
         "Name": "Placement de la Meute",
-        "description": "<b>Don de déplacement</b> devient Don de déplacement amélioré : (nécessite une arme dressant) vous pouvez donner une action de déplacement bonus à un allié dans votre zone, et si c'est un Pokémon allié que vous contrôlez, cela ne coûte pas d'action bonus."
+        "description": "<b>Don de déplacement</b> devient Don de déplacement amélioré : (Nécessite une arme avec le mot-clé dressant) vous pouvez donner une action de déplacement bonus à un allié dans votre zone, et si c'est un Pokémon allié que vous contrôlez, cela ne coûte pas d'action bonus."
     },
     {
         "id": 25,
         "Name": "Attaque Unisson",
-        "description": "(Nécessite une arme dressant) Une fois par repos long, tous les <b>membres de la meute</b> utilisent une attaque sur la même cible (cela consomme l’action et l’action de déplacement de tous). La cible ne peut esquiver que les attaques provenant d’un seul cadran ; les autres touchent automatiquement et leurs dés de dégâts sont augmentés d’un tiers (non cumulatif avec Attaque sur Plusieurs Flancs)."
+        "description": "(Nécessite une arme avec le mot-clé dressant) Une fois par repos long, tous les <b>membres de la meute</b> utilisent une attaque sur la même cible (cela consomme l’action et l’action de déplacement de tous). La cible ne peut esquiver que les attaques provenant d’un seul cadran ; les autres touchent automatiquement et leurs dés de dégâts sont augmentés d’un tiers (non cumulatif avec Attaque sur Plusieurs Flancs)."
     },
     {
         "id": 26,
@@ -173,5 +173,40 @@
         "id": 34,
         "Name": "Combo Élémentaire - Action Bonus",
         "description": "Après une compétence d'arme, vous pouvez utiliser une autre compétence en action bonus si elle est d’un élément différent de la première. Augmentez d’un tiers ses dés de dégâts."
+    },
+    {
+        "id": 35,
+        "Name": "Gardien d'acier - Réaction - Repos Court",
+        "description": "(Nécessite une arme avec le mot-clé protecteur) : vous pouvez prendre une attaque à la place d’un allié à portée 1, deux fois par repos court."
+    },
+    {
+        "id": 36,
+        "Name": "Épaule d'acier",
+        "description": "Vous gagnez une maîtrise au choix parmi « armure extrêmement lourde », « arme légère et bouclier », « lance et bouclier » ou « bouclier géant »."
+    },
+    {
+        "id": 37,
+        "Name": "Contre-Attaque",
+        "description": "Après avoir utilisé <b>Gardien d’acier</b>, vous pouvez immédiatement effectuer une action d’attaque gratuitement."
+    },
+    {
+        "id": 38,
+        "Name": "Poids de Charge",
+        "description": "Augmentez votre maximum de poids de charge de 1."
+    },
+    {
+        "id": 39,
+        "Name": "Absorption Élémentaire - Réaction - Repos Court",
+        "description": "(Nécessite une arme avec le mot-clé protecteur) : lorsqu’une attaque vous vise, si elle est d’un élément dont vous avez l’expertise, vous pouvez l’absorber, ce qui annule complètement l’attaque. Votre arme brille alors et la prochaine attaque de cet élément voit son dé de dégâts augmenté d’un cran."
+    },
+    {
+        "id": 40,
+        "Name": "Épaule de Titane",
+        "description": "Vous gagnez une expertise au choix parmi « armure extrêmement lourde », « arme légère et bouclier », « lance et bouclier » ou « bouclier géant ». Si cela est impossible, gagnez une maîtrise au choix."
+    },
+    {
+        "id": 41,
+        "Name": "Défi Tyrannique - Repos Long",
+        "description": "(Nécessite une arme avec le mot-clé protecteur) : provoquez votre cible, votre palier d’armure est doublé et tous vos dés d’attaque sur cette cible sont augmentés d’un tiers jusqu’à votre prochain tour."
     }
 ]

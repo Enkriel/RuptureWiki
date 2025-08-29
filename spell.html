@@ -162,7 +162,7 @@
             <img src="${iconUrl}" class="type-icon" alt="${a.type}">
             <div>
                 <strong>${a.Nom}</strong> <em>(Tier ${a.tier})</em><br>
-                <span>${a.portée || ''}</span><br>
+                <span>${"Portée : " + a.portée || ''}</span><br>
                 <p>${a.description}</p>
             </div>
         `;
