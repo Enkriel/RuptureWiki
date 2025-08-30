@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Système d'Action - Rupture JDR</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <script src="../navbar.js"></script>
+
+    <div class="content-wrapper">
+        <div class="header">
+            <h1>Système d’Action</h1>
+            <p>Résumé des actions possibles à chaque tour de jeu</p>
+        </div>
+
+        <div class="tier-note" style="margin-bottom: 24px;">
+            À chaque tour, un personnage dispose de : <b>1 Action</b>, <b>1 Action Bonus</b> (si disponible), <b>1 Déplacement</b> et <b>1 Réaction</b> (hors de son tour, si déclenchée).
+        </div>
+
+        <section class="tier-section">
+            <h2>Actions principales</h2>
+            <table class="action-table">
+                <thead>
+                    <tr>
+                        <th>Action</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Attaquer</td>
+                        <td>Porter un coup avec une arme, lancer un sort d’incantation « 1 action », ou utiliser une attaque spéciale.</td>
+                    </tr>
+                    <tr>
+                        <td>Esquiver</td>
+                        <td>Jusqu’au début de votre prochain tour, les attaques contre vous ont désavantage et vos jets de sauvegarde de Dextérité ont avantage.</td>
+                    </tr>
+                    <tr>
+                        <td>Se désengager</td>
+                        <td>Quitter une zone de menace sans provoquer d’attaque d’opportunité (coûte aussi l’action de déplacement).</td>
+                    </tr>
+                    <tr>
+                        <td>Se précipiter (Dash)</td>
+                        <td>Obtenez une action de mouvement supplémentaire.</td>
+                    </tr>
+                    <tr>
+                        <td>Se cacher</td>
+                        <td>Tenter de devenir invisible aux yeux des ennemis (jet de Dextérité (Discrétion)).</td>
+                    </tr>
+                    <tr>
+                        <td>Aider</td>
+                        <td>Donner l’avantage à un allié pour une action ou une attaque.</td>
+                    </tr>
+                    <tr>
+                        <td>Utiliser un objet</td>
+                        <td>Interagir avec un objet nécessitant plus qu’une interaction gratuite.</td>
+                    </tr>
+                    <tr>
+                        <td>Prendre en main</td>
+                        <td>Agripper ou repousser une créature (jet de Force (Athlétisme) vs Force ou Dextérité de la cible).</td>
+                    </tr>
+                    <tr>
+                        <td>Préparer une action</td>
+                        <td>Définir une action à effectuer plus tard, lorsqu’une condition spécifique est remplie.</td>
+                    </tr>
+                    <tr>
+                        <td>Changer d’arme</td>
+                        <td>Permet de changer d’arme avec une autre dans son inventaire.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="tier-section">
+            <h2>Actions Bonus</h2>
+            <p>
+                Utilisées uniquement si une capacité, un sort ou une règle l’autorise.<br>
+                <b>Exemples :</b>
+            </p>
+            <ul>
+                <li>Changement de posture du katana ou de la faux</li>
+                <li>Second souffle du hunter</li>
+            </ul>
+        </section>
+
+        <section class="tier-section">
+            <h2>Réactions</h2>
+            <p>
+                Utilisées hors de votre tour lorsqu’un événement précis se produit.<br>
+                <b>Exemples :</b>
+            </p>
+            <ul>
+                <li>Attaque d’opportunité (lorsqu’un ennemi quitte votre portée)</li>
+                <li>Sorts comme <i>Bouclier</i> ou <i>Contresort</i></li>
+                <li>Capacités spéciales déclenchées par un ennemi</li>
+            </ul>
+        </section>
+
+        <section class="tier-section">
+            <h2>Déplacement</h2>
+            <p>
+                Vous pouvez changer de zone ou de cadran en respectant les <a href="deplacement.html">règles de déplacement</a>.
+            </p>
+        </section>
+    </div>
+</body>
+</html>
