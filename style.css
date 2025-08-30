@@ -750,3 +750,9 @@ select:focus {
     /* list-style-type: disc; */
 }
 
+@media (max-width: 900px) {
+  .tier-section {
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+}
