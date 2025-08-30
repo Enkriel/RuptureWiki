@@ -802,3 +802,11 @@ select:focus {
 .tier-section ul li::after {
     content: none;
 }
+
+.table-scroll {
+    width: 100%;
+    overflow-x: auto;
+}
+.table-scroll .armor-table {
+    min-width: 600px;
+}
