@@ -15,6 +15,16 @@
         "description": "Transformez une maîtrise de votre choix en expertise ou obtenez une nouvelle maîtrise de votre choix."
     },
     {
+        "id": 42,
+        "Name": "Maîtrise d'arme",
+        "description": "Gagnez la maîtrise d'une arme de votre choix."
+    },
+    {
+        "id": 48,
+        "Name": "Poids de Charge",
+        "description": "Augmentez votre maximum de poids de charge de 1."
+    },
+    {
         "id": 2,
         "Name": "Piratage de Pouvoir",
         "description": "Vous pouvez utiliser la compétence d'une arme que vous ne portez pas en respectant 3 conditions :<ul><li>1. Vous devez respecter les conditions d'utilisation de la compétence.</li><li>2. L'arme doit se trouver à 2 déplacements ou moins de vous.</li><li>3. Vous devez énoncer la compétence que vous souhaitez utiliser. Si l'arme visée n'a pas cette compétence, vous perdez votre action.</li></ul> Si toutes les conditions sont réunies, le piratage ne peut pas échouer."
@@ -208,5 +218,30 @@
         "id": 41,
         "Name": "Défi Tyrannique - Repos Long",
         "description": "(Nécessite une arme avec le mot-clé protecteur) : provoquez votre cible, votre palier d’armure est doublé et tous vos dés d’attaque sur cette cible sont augmentés d’un tiers jusqu’à votre prochain tour."
+    },
+    {
+        "id": 43,
+        "Name": "Fougue Diversifiée",
+        "description": "Lorsque vous utilisez <b>Fougue</b>, entre votre première et votre deuxième action, vous pouvez effectuer l’action <b>Changer d’arme</b> gratuitement. Si vous le faites et que votre nouvelle arme est d’un autre style que la première, ses dés de dégâts sont augmentés d’un tiers."
+    },
+    {
+        "id": 44,
+        "Name": "Changement Mobile",
+        "description": "Quand vous effectuez une action <b>Changer d’arme</b>, vous pouvez effectuer une action de déplacement gratuite."
+    },
+    {
+        "id": 45,
+        "Name": "Chasseur Casseur - Action Bonus - Repos Court",
+        "description": "Quand vous cassez une partie de monstre, regagnez <b>Fougue</b>."
+    },
+    {
+        "id": 46,
+        "Name": "Analyse des Géants - Action Bonus - Repos Court",
+        "description": "Vous pouvez obtenir l'information sur le type d’arme nécessaire pour casser une partie d’un Pokémon et connaître le nombre de blessures restantes avant la section de celle-ci."
+    },
+    {
+        "id": 47,
+        "Name": "Frénésie de Gilgamesh - Action de Déplacement - Repos Long",
+        "description": "Lors de votre prochaine utilisation de <b>Fougue</b>, vous gagnez une action bonus supplémentaire et le bonus de changement d’arme se cumule."
     }
 ]
