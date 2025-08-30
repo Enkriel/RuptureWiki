@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Points de Vie & Blessures - Rupture JDR</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .armor-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            background: rgba(255,255,255,0.08);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+        .armor-table th, .armor-table td {
+            padding: 12px 10px;
+            text-align: left;
+        }
+        .armor-table th {
+            background: rgba(116,185,255,0.25);
+            color: #fff;
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+        .armor-table tr:nth-child(even) {
+            background: rgba(255,255,255,0.05);
+        }
+        .armor-table tr:nth-child(odd) {
+            background: rgba(255,255,255,0.12);
+        }
+        @media (max-width: 700px) {
+            .armor-table th, .armor-table td { padding: 7px 3px; font-size: 0.97rem; }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <script src="../navbar.js"></script>
+
+    <div class="content-wrapper">
+        <div class="header">
+            <h1>Points de Vie & Blessures</h1>
+            <p>Gestion des dégâts, armures et gravité des blessures</p>
+        </div>
+
+        <section class="tier-section">
+            <h2>💀 Points de Vie (PV)</h2>
+            <ul>
+                <li>Dans ce JDR, les PV sont relativement bas : un personnage de niveau 1 tourne autour de 6 PV.</li>
+                <li>Les attaques ne retirent pas directement des PV. Elles infligent des <b>blessures</b> de gravité variable, qui entraînent la perte de PV.</li>
+            </ul>
+        </section>
+
+        <section class="tier-section">
+            <h2>🛡️ Palier d’Armure</h2>
+            <ul>
+                <li>Chaque joueur et créature possède <b>2 paliers d’armure</b>, déterminés par leur niveau et leur armure.</li>
+            </ul>
+            <p>
+                <b>Exemple :</b> Personnage niveau 2 portant une armure en laine du Keunotor :
+            </p>
+            <ul>
+                <li>Premier palier : 5 + 2 = <b>7</b></li>
+                <li>Second palier : 11 + 2 = <b>13</b></li>
+            </ul>
+            <table class="armor-table">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Paliers</th>
+                        <th>Armure / Mod. Éva</th>
+                        <th>Type</th>
+                        <th>Effet</th>
+                        <th>Élément</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Laine du Keunotor</td>
+                        <td>5 / 11</td>
+                        <td>3</td>
+                        <td>Légère</td>
+                        <td>Inflammable : vous avez aussi la faiblesse Feu</td>
+                        <td>Normal</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                <b>Notre personnage a donc les paliers 7 / 13</b>
+            </p>
+        </section>
+
+        <section class="tier-section">
+            <h2>⚔️ Gravité des Blessures</h2>
+            <ul>
+                <li>Si l’attaque inflige moins que le premier palier (<b>7</b>) → <b>Blessure mineure</b> → perte de 1 PV</li>
+                <li>Si l’attaque inflige entre le premier et le second palier (<b>7–12</b>) → <b>Blessure majeure</b> → perte de 2 PV</li>
+                <li>Si l’attaque inflige le second palier ou plus (<b>13+</b>) → <b>Blessure sévère</b> → perte de 3 PV</li>
+            </ul>
+        </section>
+
+        <section class="tier-section">
+            <h2>🛡️ Troisième palier – Armures très lourdes et Pokémon puissants</h2>
+            <ul>
+                <li>Certains gros Pokémon ou les personnages portant une armure extrêmement lourde avec Expertise peuvent bénéficier d’un <b>troisième palier</b> de protection.</li>
+                <li>
+                    <b>Calcul du palier supplémentaire :</b><br>
+                    Palier supplémentaire = plus petit palier d’armure / 2 (arrondi à l’inférieur)<br>
+                    Ce palier supplémentaire bloque complètement les blessures mineures.
+                </li>
+            </ul>
+            <p>
+                <b>Exemple :</b> Avec un plastron Racaillou, d’un hunter niveau 3, les paliers passent de 11 / 20 à <b>5 / 11 / 20</b>.<br>
+                Une attaque infligeant moins de 5 dégâts est complètement ignorée.
+            </p>
+            <table class="armor-table">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Paliers</th>
+                        <th>Armure / Mod. Éva</th>
+                        <th>Type</th>
+                        <th>Effet</th>
+                        <th>Élément</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Plastron de Racaillou</td>
+                        <td>8 / 17</td>
+                        <td>4 / -2 évasion</td>
+                        <td>Extrêmement lourde</td>
+                        <td>—</td>
+                        <td>Roche / Sol</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
