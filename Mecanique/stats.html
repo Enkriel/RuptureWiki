@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Système de Stats & Dés - Rupture JDR</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <script src="../navbar.js"></script>
+
+    <div class="content-wrapper">
+        <div class="header">
+            <h1>Système de Stats & Dés</h1>
+            <p>Caractéristiques, compétences et gestion des jets dans Rupture JDR</p>
+        </div>
+
+        <section class="tier-section" id="Caracteristiques">
+            <h2>Caractéristiques principales <a class="anchor-link" href="#Caracteristiques">#</a></h2>
+            <p>Ce JDR utilise le même système de stats que D&D, avec 6 caractéristiques principales :</p>
+            <div class="table-scroll">
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Statistique</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Force (For)</td>
+                            <td>Puissance physique, combat au corps à corps</td>
+                        </tr>
+                        <tr>
+                            <td>Dextérité (Dex)</td>
+                            <td>Arme de finesse, attaques à distance, réflexes</td>
+                        </tr>
+                        <tr>
+                            <td>Constitution (Con)</td>
+                            <td>Endurance, capacité de charge, résistance aux maladies/poisons</td>
+                        </tr>
+                        <tr>
+                            <td>Intelligence (Int)</td>
+                            <td>Logique, connaissances, sorts</td>
+                        </tr>
+                        <tr>
+                            <td>Sagesse (Sag)</td>
+                            <td>Perception, intuition, dressage</td>
+                        </tr>
+                        <tr>
+                            <td>Charisme (Cha)</td>
+                            <td>Persuasion, influence sociale</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="tier-section" id="Modificateur">
+            <h2>Calcul du modificateur <a class="anchor-link" href="#Modificateur">#</a></h2>
+            <p>
+                Chaque caractéristique a un modificateur, calculé ainsi :<br>
+                <b>Modificateur = (Score - 10) / 2</b> arrondi à l’inférieur.
+            </p>
+            <p>
+                <b>Exemple :</b> STR 15 → modificateur +2, DEX 8 → modificateur -1.
+            </p>
+        </section>
+
+        <section class="tier-section" id="DesUtilises">
+            <h2>Dés utilisés <a class="anchor-link" href="#DesUtilises">#</a></h2>
+            <ul>
+                <li>D&D utilise principalement le <b>d20</b> (dé à 20 faces) pour les jets de compétence, jets d’attaque et sauvegardes.</li>
+                <li>Autres dés : d4, d6, d8, d10, d12 et d20 pour les dégâts et certaines capacités.</li>
+            </ul>
+        </section>
+
+        <section class="tier-section" id="JetsCaracteristique">
+            <h2>Jets de caractéristique (hors combat) <a class="anchor-link" href="#JetsCaracteristique">#</a></h2>
+            <p>
+                Un jet de caractéristique sert à tester une statistique dans une situation non combative, souvent contre une DC (Difficulty Class) fixée par le MJ.<br>
+                <b>Formule :</b> Jet = d20 + modificateur de la stat + bonus de maîtrise (+2/+4)
+            </p>
+            <p>
+                <b>Exemple hors combat :</b><br>
+                Le MJ demande un test de Force pour soulever une lourde pierre.<br>
+                Dé : d20 → résultat 12<br>
+                Personnage : STR 15 (+2)<br>
+                Le personnage maîtrise l’athlétisme (+2)<br>
+                Jet total : 12 + 2 + 2 = 16<br>
+                Si la DC = 15, l’action réussit.
+            </p>
+            <p>
+                <b>Exemple en combat :</b><br>
+                Dé : d20 → résultat 11<br>
+                Personnage : DEX 13 (+1)<br>
+                Jet total : 11 + 1 = 12<br>
+                Comparé à l’Esquive (Esq) de l’ennemi, par ex. 13 → attaque ratée.
+            </p>
+        </section>
+
+        <section class="tier-section" id="Competences">
+            <h2>Compétences <a class="anchor-link" href="#Competences">#</a></h2>
+            <p>
+                Ce JDR utilise un système de compétences très inspiré de D&D.<br>
+                Il y a 18 compétences : avoir la maîtrise de l’une d’entre elles permet d’obtenir +2 à ces jets, l’expertise ajoute +4.
+            </p>
+            <div class="table-scroll">
+                <table class="skills-table">
+                    <thead>
+                        <tr>
+                            <th>Compétence</th>
+                            <th>Stat associée</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Acrobaties</td><td>Dex</td></tr>
+                        <tr><td>Athlétisme</td><td>For</td></tr>
+                        <tr><td>Connaissance Pokémon</td><td>Int</td></tr>
+                        <tr><td>Discrétion</td><td>Dex</td></tr>
+                        <tr><td>Dressage</td><td>Sag</td></tr>
+                        <tr><td>Escamotage</td><td>Dex</td></tr>
+                        <tr><td>Histoire</td><td>Int</td></tr>
+                        <tr><td>Intimidation</td><td>Cha/Con</td></tr>
+                        <tr><td>Intuition</td><td>Sag</td></tr>
+                        <tr><td>Investigation</td><td>Int</td></tr>
+                        <tr><td>Médecine</td><td>Sag/Int/Dex</td></tr>
+                        <tr><td>Nature</td><td>Int</td></tr>
+                        <tr><td>Perception</td><td>Sag</td></tr>
+                        <tr><td>Persuasion</td><td>Cha</td></tr>
+                        <tr><td>Religion</td><td>Int</td></tr>
+                        <tr><td>Représentation</td><td>Cha</td></tr>
+                        <tr><td>Survie</td><td>Sag</td></tr>
+                        <tr><td>Tromperie</td><td>Cha</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="tier-section" id="CapaciteCharge">
+            <h2>Capacité de Charge <a class="anchor-link" href="#CapaciteCharge">#</a></h2>
+            <p>
+                Le poids fonctionne de façon particulière dans Rupture : quasiment tous les objets n’ont pas de poids, sauf les armes, les armures et quelques matériaux de monstre.
+            </p>
+            <ul>
+                <li>Tous les personnages ont 2 de capacité de charge, puis on y ajoute le modificateur de Constitution (même s’il est négatif).</li>
+                <li>Les armes pèsent 1 ; si elles ont le mot-clé <b>lourd</b> elles pèsent 2, et si elles ont le mot-clé <b>extrêmement lourd</b> elles pèsent 3.</li>
+                <li>Les armures pèsent 0 pour les légères, 1 pour les légères (probablement une erreur, à corriger si besoin), 2 pour les lourdes et 3 pour les extrêmement lourdes.</li>
+                <li>Si un personnage dépasse de 1 sa capacité de charge, il perd son action de déplacement en combat, et se déplace difficilement hors combat.</li>
+                <li>Si un personnage dépasse de 2, il est totalement immobile.</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
