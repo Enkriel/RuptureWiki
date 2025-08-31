@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hunter - Rupture JDR</title>
+    <title>Ranger - Rupture JDR</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -12,8 +12,8 @@
 
     <div class="content-wrapper">
         <div class="header">
-            <h1>Hunter</h1>
-            <p>Maître des armes il peut se spécialiser pour augmenter ses différents potentiels</p>
+            <h1>Ranger</h1>
+            <p>Maître du dressage et des liens avec les Pokémon</p>
         </div>
 
         <div class="stats-section">
@@ -28,10 +28,10 @@
                     <div class="stat-label">PV</div>
                 </div>
             </div>
+
             <h2>Maitrises</h2>
             <div class="mastery-list">
                 <span class="mastery-item">Fouet</span>
-                <span class="mastery-item">Dressage</span>
                 <span class="mastery-item">Armure légère</span>
                 <span class="mastery-item">Armure moyenne</span>
             </div>
@@ -39,8 +39,8 @@
             <h2>Équipement de départ</h2>
             <ul id="equipment-list">
                 <li>Un starter parmi 3 selon les maîtrises élémentaires</li>
-                <li>Un Fouet tier 1 au choix</li>
-                <li>Une Armure tier 1 au choix</li>
+                <li>Un Fouet tier 0 au choix</li>
+                <li>Une Armure tier 0 au choix</li>
                 <li>Des jumelles</li>
                 <li>un Pokedex</li>
             </ul>
@@ -50,13 +50,13 @@
         <div class="archetype-buttons" id="archetype-buttons">
             <p>Choisissez un archétype pour débloquer ses capacités :</p>
             <button class="archetype-btn archetype-unique" data-archetype="unique">
-                Lame Élémentaire <br><span>Les Lames Élémentaire se concentrent sur les maitrises élémentaires pour exploiter au maximum les comptétences d'arme</span>
+                Lien Unique <br><span>Se concentrer sur un seul Pokémon puissant</span>
             </button>
-            <button class="archetype-btn archetype-meute" data-archetype="meute">                
-                Lame Protectrice  <br><span>Experte en bouclier les Lames Protectrices protégent leur alliés et risposte violamment</span>
+            <button class="archetype-btn archetype-meute" data-archetype="meute">
+                Lien de la Meute <br><span>Submerger l’ennemi avec plusieurs Pokémon</span>
             </button>
             <button class="archetype-btn archetype-pacte" data-archetype="pacte">
-                Lame Multiple<br><span>Ils peuvent porter plusieurs armes pour s'adapter à leur ennemi</span>
+                Lien du Pacte <br><span>Créer des pactes temporaires avec des Pokémon sauvages</span>
             </button>
         </div>
 
@@ -69,29 +69,31 @@
 
     const levelAbilities = {
         1: [
-            "Second Souffle - Action Bonus - Repos Court",
+            "Étude",
+            "Ordre Simple"
         ],
         2: [
-            "Fougue - Repos Court",
+            "Don de Déplacement - Action de Déplacement et Action Bonus",
+            "Soin Pokémon - Action Bonus - Repos Court"
         ],
         4: [
             "Amélioration de Caractéristiques",
             "Amélioration Défensive"
         ],
         5: [
-            "Expertise Martiale"
+            "Expertise Élémentaire"
         ],
         6: [
             "Amélioration de Caractéristiques",
             "Amélioration Défensive",
-            "Expertise Élémentaire"
+            "Expertise Martiale"
         ],
         8: [
             "Amélioration de Caractéristiques",
             "Amélioration Défensive"
         ],
         9: [
-            "Inflexible - Réaction - Repos Long"
+            "Connexion Totale"
         ],
         10: [
             "Expertise Libre"
@@ -100,22 +102,22 @@
 
     const archetypeAbilities = {
         unique: {
-            3: ["Expertise Élémentaire", "Piratage de Pouvoir"],
-            5: ["Puissance Cachée" , "Relance Élémentaire - Réaction - Repos Court"],
-            7: ["Recharge Élémentaire - Action Bonus - Repos Court"],
-            10:["Combo Élémentaire - Action Bonus"]
+            3: ["Slot Basique", "Ordre Complexe"],
+            5: ["Diversité"],
+            7: ["Plein Potentiel - Repos Long"],
+            10: ["Slot Puissant"]
         },
         meute: {
-            3: ["Gardien d'acier - Réaction - Repos Court", "Épaule d'acier"],
-            5: ["Contre-Attaque", "Poids de Charge"],
-            7: ["Absorption Élémentaire - Réaction - Repos Court", "Épaule de Titane"],
-            10: ["Défi Tyrannique - Repos Long"]
+            3: ["Double Slot"],
+            5: ["Attaque sur Plusieurs Flancs"],
+            7: ["Slot Basique Supplémentaire", "Placement de la Meute"],
+            10: ["Attaque Unisson"]
         },
         pacte: {
-            3: ["Poids de Charge", "Maîtrise d'arme", "Fougue Diversifiée"],
-            5: ["Changement Mobile", "Chasseur Casseur - Action Bonus - Repos Court"],
-            7: ["Analyse des Géants - Action Bonus - Repos Court", "Expertise Martiale"],
-            10: ["Maîtrise d'arme", "Frénésie de Gilgamesh - Action de Déplacement - Repos Long"]
+            3: ["Pacte", "Appel", "Dresseur sans Fouet"],
+            5: ["Sifflement Sauvage"],
+            7: ["Pacte de la zone"],
+            10: ["Rugissement du roi"]
         }
     };
 
