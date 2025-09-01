@@ -211,7 +211,7 @@ select:focus {
     margin-bottom: 15px;
 }
 
-.stats li, .attacks li {
+ li, .attacks li {
     padding: 3px 0;
     font-size: 0.9rem;
     border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -943,14 +943,21 @@ select:focus {
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* <-- changement ici */
     gap: 0;
 }
+
 
 .clan-section > div, .clan-section > p, .clan-section > h2, .clan-section > blockquote {
     width: 100%;
     min-width: 0;
     flex: unset;
+}
+
+.clan-section ul{
+    list-style: disc inside;
+    padding-left: 1.5em;
+    margin: 12px 0;
 }
 
 .clan-img-block {
@@ -1023,4 +1030,13 @@ select:focus {
     .clan-img {
         max-width: 98vw;
     }
+}
+
+.atre-img {
+    display: block;
+    height: 100%; /* L'image remplit la div */
+    max-height: 300px; /* Largeur maximale de l'image */
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+    margin: 0 auto;
 }
