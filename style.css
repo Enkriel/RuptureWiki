@@ -899,3 +899,128 @@ select:focus {
 @media (max-width: 700px) {
     .palier-table th, .palier-table td { padding: 6px 2px; font-size: 0.97rem; }
 }
+
+.clan-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.clan-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.clan-main-img {
+    max-width: 420px;
+    width: 100%;
+    border-radius: 22px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    margin-bottom: 18px;
+}
+
+.clan-header h1 {
+    font-size: 2.7rem;
+    margin-bottom: 8px;
+    background: linear-gradient(45deg, #ffeaa7, #fdcb6e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.clan-types {
+    font-size: 1.2rem;
+    color: #ffeaa7;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.clan-section {
+    background: rgba(255,255,255,0.09);
+    border-radius: 18px;
+    padding: 28px 28px 18px 28px;
+    margin-bottom: 38px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.clan-section > div, .clan-section > p, .clan-section > h2, .clan-section > blockquote {
+    width: 100%;
+    min-width: 0;
+    flex: unset;
+}
+
+.clan-img-block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.clan-img {
+    max-width: 480px;
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+    display: block;
+    margin: 0 auto;
+}
+
+.clan-img-side {
+    display: flex;
+    align-items: center; /* Aligne l'image en haut du texte */
+    gap: 32px;
+    margin: 28px 0;
+}
+.clan-img-side .clan-img-block {
+    flex: 0 0 320px;
+    max-width: 320px;
+}
+.clan-img-side .clan-img {
+    max-width: 320px;
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+}
+.clan-img-side > div:last-child {
+    flex: 1 1 0;
+}
+@media (max-width: 900px) {
+    .clan-img-side {
+        flex-direction: column;
+        gap: 0;
+    }
+    .clan-img-side .clan-img-block,
+    .clan-img-side .clan-img {
+        max-width: 98vw;
+    }
+}
+
+.clan-section h2 {
+    color: #ffeaa7;
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+}
+
+.clan-section blockquote {
+    background: rgba(255,255,255,0.13);
+    border-left: 5px solid #fdcb6e;
+    margin: 18px 0;
+    padding: 14px 18px;
+    font-style: italic;
+    color: #ffeaa7;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+    .clan-section {
+        padding: 18px 8px 10px 8px;
+    }
+    .clan-img {
+        max-width: 98vw;
+    }
+}
