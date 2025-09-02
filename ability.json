@@ -17,7 +17,12 @@
     {
         "id": 42,
         "Name": "Maîtrise d'arme",
-        "description": "Gagnez la maîtrise d'une arme de votre choix."
+        "description": "Gagnez la maîtrise d'arme de votre choix."
+    },
+    {
+        "id": 75,
+        "Name": "Maîtrise d'armure",
+        "description": "Gagnez la maîtrise d'armure de votre choix."
     },
     {
         "id": 48,
@@ -230,9 +235,9 @@
         "description": "Quand vous effectuez une action <b>Changer d’arme</b>, vous pouvez effectuer une action de déplacement gratuite."
     },
     {
-        "id": 45,
-        "Name": "Chasseur Casseur - Action Bonus - Repos Court",
-        "description": "Quand vous cassez une partie de monstre, regagnez <b>Fougue</b>."
+    "id": 45,
+    "Name": "Chasseur Casseur - Action Bonus - Repos Court",
+    "description": "Quand vous cassez une partie de monstre, regagnez <b>Fougue</b>."
     },
     {
         "id": 46,
@@ -243,5 +248,155 @@
         "id": 47,
         "Name": "Frénésie de Gilgamesh - Action de Déplacement - Repos Long",
         "description": "Lors de votre prochaine utilisation de <b>Fougue</b>, vous gagnez une action bonus supplémentaire et le bonus de changement d’arme se cumule."
+    },
+    {
+        "id": 48,
+        "Name": "Quête",
+        "description": "Votre divinité intervient parfois dans votre tête pour vous donner une mission; quand vous la réussissez, vous recevez une récompense."
+    },
+    {
+        "id": 49,
+        "Name": "Don de soi",
+        "description": "Parfois votre divinité va vous demander l'accès à votre corps pour une action; si vous acceptez, vous gagnerez votre niveau / 2 en faveur."
+    },
+    {
+        "id": 50,
+        "Name": "Réceptacle idéal",
+        "description": "Quand votre divinité contrôle votre corps, il s’endurcit, vos jets sont facilités et vos attaques gagnent 1 dé de dégâts supplémentaire."
+    },
+    {
+        "id": 51,
+        "Name": "Unisson - Action Bonus - Repos Court",
+        "description": "(nécessite arme avec le mot clef conducteur) Gagnez une seconde action, mais c’est votre divinité qui vous contrôle et agit à votre place."
+    },
+    {
+        "id": 52,
+        "Name": "Seconde Divinité",
+        "description": "Vous pouvez choisir une seconde divinité si au moins un de ses éléments correspond à un que vous maîtrisez."
+    },
+    {
+        "id": 54,
+        "Name": "Sculpteur",
+        "description": "Lors de vos repos, vous pouvez créer 1 totem par action (2 en cas de repos long). Un totem doit être à l’effigie d’un dieu auquel vous êtes lié. Vous pouvez les planter et les animer en combat pour 1 action. Les totems ont 1 PV."
+    },
+    {
+        "id": 55,
+        "Name": "Écho du bois",
+        "description": "(nécessite arme avec le mot clef conducteur) Lorsqu’un totem prend une attaque, vous pouvez décider de vous lier à ce totem et prendre l’attaque à sa place. Si vous le faites, votre divinité vous remercie en vous accordant 2 faveurs."
+    },
+    {
+        "id": 56,
+        "Name": "Modification Totémique",
+        "description": "(nécessite arme avec le mot clef conducteur) Vous pouvez changer l’apparence d’un totem pour une autre - 2 faveurs."
+    },
+    {
+        "id": 57,
+        "Name": "Troisième Divinité",
+        "description": "Vous pouvez choisir une troisième divinité si au moins un de ses éléments correspond à un que vous maîtrisez."
+    },
+    {
+        "id": 58,
+        "Name": "Relais Totémique",
+        "description": "(nécessite arme avec le mot clef conducteur) Vous pouvez désormais lancer vos sorts directement depuis vos totems; le coût augmente de 1 ferveur. Vous pouvez aussi vous y connecter gratuitement pour voir à travers eux"
+    },
+    {
+        "id": 59,
+        "Name": "Arme sacrée",
+        "description": "Lors d'un repos court vous pouvez prié les dieux pour qu'il impregne votre arme, elle gagne alors le mot clef <b>communicant</b>."
+    },
+    {
+        "id": 60,
+        "Name": "Imprégnation - Action Bonus",
+        "description": "(nécessite arme avec le mot clef conducteur) Si votre arme est d’un élément de votre divinité, vous pouvez dépenser 2 ferveurs pour ajouter un dé de dégâts à votre prochaine action ce tour-ci. Si elle n’a pas le même élément, vous pouvez changer son élément pour 1 tour pour le même prix."
+    },
+    {
+        "id": 61,
+        "Name": "Vengeance divine - Réaction",
+        "description": "(nécessite arme avec le mot clef conducteur) Quand vous utilisez un point d’armure, vous pouvez créer une AoE d’un élément de votre divinité de taille 0 infligeant 1d6 + votre niveau, pour un coût de 2 ferveurs."
+    },
+    {
+        "id": 62,
+        "Name": "Forme Divine - Action Bonus - Repos Long",
+        "description": "(nécessite arme avec le mot clef conducteur) Changez de forme et portez des traits visuels reconnaissables de votre divinité ; vos attaques gagnent +2 de portée et infligent toutes +1d8 de dégâts supplémentaires. Dure 2 tours - 8 ferveurs."
+    },
+    {
+        "id": 53,
+        "Name": "Choix d'une divinité",
+        "description": "Choisissez une divinité dont vous avez au moins un élément maîtrisé et devenez un croyant de celle ci"
+    },
+    {
+        "id": 63,
+        "Name": "Ferveur",
+        "description": "Vous êtes maintenant capable de gagner et utiliser la ferveur une ressource lié à la matérialisation des pouvoirs des divinités votre maximum de ferveur est égale à votre niveau + 2"
+    },
+    {
+        "id": 64,
+        "Name": "Question Divine",
+        "description": "(nécessite arme avec le mot clef conducteur) Lors de d’un repos court vous gagnerez l’action <b>Question</b> vous pouvez méditer en pensant particulièrement fort à une question votre divinité vous fera paraître une image plus ou moins claire pour vous aiguiller. Lors de repos long vous pouvez poser 2 questions."
+    },
+    {
+        "id": 64,
+        "Name": "Intervention Divine",
+        "description": "nécessite arme avec le mot clef conducteur)  Vous pouvez désormais faire appel au pouvoir de votre divinité selon votre <b>palier de rapprochement</b>."
+    },
+    {
+        "id": 64,
+        "Name": "Magie Divine",
+        "description": "(nécessite arme avec le mot clef conducteur) Vous pouvez utilsé les un sort d'élément associé à votre divinité et que vous maîtrisé en payant un coup en ferveur égale à sont tier, vous ne pouvez pas lancé un sort d’un tier supérieur à 2 les sorts d'Intélligence utilise la sagesse à la place."
+    },
+    {
+        "id": 65,
+        "Name": "Magie Divine tier 3",
+        "description": "<b>Magie divine</b> permet d'utiliser des sorts jusqu'au tier 3."
+    },
+    {
+        "id": 65,
+        "Name": "Magie Divine tier 4",
+        "description": "<b>Magie divine</b> permet d'utiliser des sorts jusqu'au tier 4."
+    },
+    {
+        "id": 66,
+        "Name": "Magie Divine tier 5",
+        "description": "<b>Magie divine</b> permet d'utiliser des sorts jusqu'au tier 5."
+    },
+    {
+        "id": 67,
+        "Name": "Magie Divine tier 6",
+        "description": "<b>Magie divine</b> permet d'utiliser des sorts jusqu'au tier 6."
+    },
+    {
+        "id": 68,
+        "Name": "Magie Divine tier 7",
+        "description": "<b>Magie divine</b> permet d'utiliser des sorts jusqu'au tier 7."
+    },
+    {
+        "id": 69,
+        "Name": "Magie Divine tier 8",
+        "description": "<b>Magie divine</b> permet d'utiliser des sorts jusqu'au tier 8."
+    },
+    {
+        "id": 70,
+        "Name": "Magie Divine tier 9",
+        "description": "<b>Magie divine</b> permet d'utiliser des sorts jusqu'au tier 9."
+    },
+    {
+        "id": 71,
+        "Name": "Audient",
+        "description": "Votre <b>palier de rapprochement</b> passe à Audient."
+    },
+    {
+        "id": 72,
+        "Name": "Chuchoteur",
+        "description": "Votre <b>palier de rapprochement</b> passe à Chuchoteur."
+    },
+    {
+        "id": 73,
+        "Name": "Portevoix",
+        "description": "Votre <b>palier de rapprochement</b> passe à Portevoix."
+    },
+    {
+        "id": 74,
+        "Name": "Émissaire",
+        "description": "Votre <b>palier de rapprochement</b> passe à Émissaire."
     }
 ]

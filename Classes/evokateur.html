@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranger - Rupture JDR</title>
+    <title>Evokateur - Rupture JDR</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -12,8 +12,8 @@
 
     <div class="content-wrapper">
         <div class="header">
-            <h1>Ranger</h1>
-            <p>Maître du dressage et des liens avec les Pokémon</p>
+            <h1>Evokateur</h1>
+            <p>Reliés au multiples dieux de ce monde, il se sert de sa fois pour matérialiser leur pouvoirs</p>
         </div>
 
         <div class="stats-section">
@@ -31,18 +31,15 @@
 
             <h2>Maitrises</h2>
             <div class="mastery-list">
-                <span class="mastery-item">Fouet</span>
+                <span class="mastery-item">catalyseur</span>
                 <span class="mastery-item">Armure légère</span>
-                <span class="mastery-item">Armure moyenne</span>
             </div>
             <br>
             <h2>Équipement de départ</h2>
             <ul id="equipment-list">
-                <li>Un starter parmi 3 selon les maîtrises élémentaires</li>
-                <li>Un Fouet tier 0 au choix</li>
+                <li>Un catalyseur tier 0 au choix</li>
                 <li>Une Armure tier 0 au choix</li>
-                <li>Des jumelles</li>
-                <li>un Pokedex</li>
+                <li>Un grimoire contenant 3 sort tier 1 et 1 sort tier 2</li>
             </ul>
         </div>
 
@@ -50,13 +47,13 @@
         <div class="archetype-buttons" id="archetype-buttons">
             <p>Choisissez un archétype pour débloquer ses capacités :</p>
             <button class="archetype-btn archetype-unique" data-archetype="unique">
-                Lien Unique <br><span>Se concentrer sur un seul Pokémon puissant</span>
+                Conduit Divin <br><span>Laisse sa divinité prendre directement possession de son corps, acceptant un grand risque pour accéder à des pouvoirs bien plus puissants.</span>
             </button>
             <button class="archetype-btn archetype-meute" data-archetype="meute">
-                Lien de la Meute <br><span>Submerger l’ennemi avec plusieurs Pokémon</span>
+                Polyglotte <br><span>Suit plusieurs divinités à la fois, sacrifiant les hauts rangs pour une grande polyvalence et la capacité de façonner des totems à leur effigie.</span>
             </button>
             <button class="archetype-btn archetype-pacte" data-archetype="pacte">
-                Lien du Pacte <br><span>Créer des pactes temporaires avec des Pokémon sauvages</span>
+                Paladin <br><span>Bras armé de sa divinité, il cultive la perfection physique pour incarner et imposer la splendeur de son dieu qui impregne ses armes.</span>
             </button>
         </div>
 
@@ -69,31 +66,32 @@
 
     const levelAbilities = {
         1: [
-            "Étude",
-            "Ordre Simple"
+            "Choix d'une divinité",
+            "Ferveur",
+            "Intervention Divine",
+            "Magie Divine"
         ],
         2: [
-            "Don de Déplacement - Action de Déplacement et Action Bonus",
-            "Soin Pokémon - Action Bonus - Repos Court"
+            "Question Divine"
         ],
         4: [
             "Amélioration de Caractéristiques",
             "Amélioration Défensive"
         ],
         5: [
-            "Expertise Élémentaire"
+            "Expertise Martiale"
         ],
         6: [
             "Amélioration de Caractéristiques",
             "Amélioration Défensive",
-            "Expertise Martiale"
+            "Magie Divine tier 3"
         ],
         8: [
             "Amélioration de Caractéristiques",
-            "Amélioration Défensive"
+            "Amélioration Défensive",         
         ],
         9: [
-            "Connexion Totale"
+            "Magie Divine tier 4"
         ],
         10: [
             "Expertise Libre"
@@ -102,22 +100,22 @@
 
     const archetypeAbilities = {
         unique: {
-            3: ["Slot Basique", "Ordre Complexe"],
-            5: ["Diversité"],
-            7: ["Plein Potentiel - Repos Long"],
-            10: ["Slot Puissant"]
+            3: ["Quête", "Audient"],
+            5: ["Don de soi"],
+            7: ["Réceptacle idéal", "Chuchoteur"],
+            10: ["Unisson - Action Bonus - Repos Court"]
         },
         meute: {
-            3: ["Double Slot"],
-            5: ["Attaque sur Plusieurs Flancs"],
-            7: ["Slot Basique Supplémentaire", "Placement de la Meute"],
-            10: ["Attaque Unisson"]
+            3: ["Seconde Divinité", "Poids de Charge", "Sculpteur"],
+            5: ["Audient", "Écho du bois"],
+            7: ["Modification Totémique"],
+            10: ["Troisième Divinité", "Relais Totémique", "Chuchoteur"]
         },
         pacte: {
-            3: ["Pacte", "Appel", "Dresseur sans Fouet"],
-            5: ["Sifflement Sauvage"],
-            7: ["Pacte de la zone"],
-            10: ["Rugissement du roi"]
+            3: ["Maîtrise d'arme", "Maîtrise d'armure", "Arme sacrée", "Audient"],
+            5: ["Imprégnation - Action Bonus"],
+            7: ["Vengeance divine - Réaction", "Chuchoteur"],
+            10: ["Forme Divine - Action Bonus - Repos Long"]
         }
     };
 
