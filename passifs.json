@@ -68,5 +68,10 @@
     "id": 22,
     "Nom" : "Extrêmement Lourd",
     "description" : "l'arme pese 3 poids de charge au lieu d'1"
+  },
+  {
+    "id": 22,
+    "Nom" : "Allonge",
+    "description" : "Votre arme à une portée de 2 au lieu de 1"
   }
 ]

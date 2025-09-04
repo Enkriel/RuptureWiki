@@ -2,11 +2,76 @@
   {
     "id": 1,
     "Nom": "Ancré",
-    "description": "Vous ne suivez plus automatiquement votre cible et risquez fortement d’être changé de place dans le cercle d’affrontement."
+    "description": "Vous ne suivez plus automatiquement votre cible et risquez fortement d’être déplacé dans le cercle d’affrontement."
   },
   {
     "id": 2,
     "Nom": "Concentration",
-    "description": "Quand vous subbissez une blessure vous devez faire un jet de sauvegarde dont la difficulté dépend de la blessure et la stats demandé dépende de l'attaque si vous echoué votre attaque préparé est annulé."
+    "description": "Quand vous subissez une blessure, vous devez faire un jet de sauvegarde dont la difficulté dépend de la blessure et de la statistique demandée par l'attaque. Si vous échouez, votre attaque préparée est annulée."
+  },
+  {
+    "id": 3,
+    "Nom": "Paralysie",
+    "description": "Vous ne pouvez ni effectuer d'action de déplacement ni de manœuvre de désengagement, vous êtes ancré, et toutes les attaques qui vous ciblent ont l'avantage."
+  },
+  {
+    "id": 4,
+    "Nom": "Gel",
+    "description": "Tant que vous êtes gelé, vous ne pouvez rien faire. Un choc important ou une attaque de feu peuvent annuler cet état."
+  },
+  {
+    "id": 5,
+    "Nom": "Brûlure",
+    "description": "Vous perdez 1 PV par tour. Vos attaques basées sur la Force et la Dextérité perdent 1 dé de dégâts."
+  },
+  {
+    "id": 6,
+    "Nom": "Poison",
+    "description": "Vous perdez 1 PV par tour."
+  },
+  {
+    "id": 7,
+    "Nom": "Poison Grave",
+    "description": "Vous perdez 2 PV par tour."
+  },
+  {
+    "id": 8,
+    "Nom": "Sommeil",
+    "description": "Vous ne pouvez rien faire. Toute attaque vous visant gagne 1 dé de dégâts. Au moindre PV perdu, le sommeil s'arrête."
+  },
+  {
+    "id": 9,
+    "Nom": "Confusion",
+    "description": "Chaque compétence cible une cible aléatoire (vous compris)."
+  },
+  {
+    "id": 10,
+    "Nom": "Charme",
+    "description": "Chaque compétence cible une cible aléatoire (vous compris)."
+  },
+  {
+    "id": 11,
+    "Nom": "Provocation",
+    "description": "La cible est énervée et ne peut rien faire d’autre qu’utiliser son mouvement pour se rapprocher de la source de la provocation. Elle ne peut utiliser que des compétences offensives visant cette source."
+  },
+  {
+    "id": 12,
+    "Nom": "Peur",
+    "description": "La cible est terrifiée et ne peut rien faire d’autre qu’utiliser son mouvement pour s'écarter de la source de la peur. Elle ne peut utiliser que des compétences offensives qui ne ciblent pas cette source."
+  },
+  {
+    "id": 13,
+    "Nom": "Étourdi",
+    "description": "Vous perdez toutes vos actions, sauf les actions bonus."
+  },
+  {
+    "id": 14,
+    "Nom": "Vulnérable",
+    "description": "Augmente d'1 tier les dés de dégâts contre la cible."
+  },
+  {
+    "id": 15,
+    "Nom": "Aveuglé",
+    "description": "Vous avez un désavantage à vos jets d'attaque et à tout autre jet demandant de la précision."
   }
 ]

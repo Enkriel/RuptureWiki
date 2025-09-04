@@ -402,11 +402,31 @@
     {
         "id": 74,
         "Name": "Charge",
-        "description": "<b class='data-status' data-status-name='Ancré'>ancré</b>, <b class='data-status' data-status-name='Concentration'>concentration</b> au prix d’une action, au tour prochain votre prochaine attaque fait une blessure augmenté"
+        "description": "<b class='data-status' data-status-name='Ancré'>Ancré</b>, <b class='data-status' data-status-name='Concentration'>Concentration</b> au prix d’une action. Au tour prochain, votre prochaine attaque inflige une blessure augmentée."
     },
     {
         "id": 74,
         "Name": "Enchaînement Chargé",
-        "description": "En cas de touche garder votre <b>Charge</b> (chaque charge continue ajoute un dé de dégât) augmente DD de concentration"
+        "description": "En cas de touche, gardez votre <b>Charge</b> (chaque charge continue ajoute un dé de dégâts) et augmente le DD de concentration."
+    },
+    {
+        "id": 75,
+        "Name": "Frappe Étourdissante",
+        "description": "Si vous infligez une blessure majeure ou sévère dans le cadran avant d’une cible, celle-ci doit réussir un jet de sauvegarde de Constitution. En cas d'échec, elle est <b class='data-status' data-status-name='Étourdi'>étourdie</b>."
+    },
+    {
+        "id": 76,
+        "Name": "Destruction de Défense",
+        "description": "Quand vous cassez le membre du cadran avant d’une cible, appliquez-lui <b class='data-status' data-status-name='Vulnérable'>Vulnérable</b>."
+    },
+    {
+        "id": 76,
+        "Name": "Changement de Posture - Action Bonus",
+        "description": "Vous pouvez prendre l'une de ces deux postures ou reprendre votre posture normale. Tant que vous êtes en posture, vous ne pouvez pas utiliser d'action de déplacement : <ul><li><b>Posture d'Opportunité</b> : -2 en Évasion. Si un allié blesse une cible à portée dans un autre cadran, vous pouvez utiliser une réaction pour infliger une blessure mineure.</li><li><b>Posture Défensive</b> : +2 en Évasion et vos jets de sauvegarde. Vos attaques infligent 1 dé de dégâts en moins.</li></ul>"
+    },
+    {
+        "id": 77,
+        "Name": "Changement de Posture Améliorée",
+        "description": "Ajoute ces deux postures : <ul><li><b>Posture Rapprochée</b> : vous perdez le mot-clé <b class='data-passifs' data-passifs-name='Allonge'> Allonge </b> mais lancez le double de vos dés de dégâts sur votre attaque.</li><li><b>Posture Tout ou Rien</b> : toutes les blessures que vous infligez ou recevez sont doublées.</li></ul>"
     }
 ]
