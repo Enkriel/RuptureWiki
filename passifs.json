@@ -47,12 +47,12 @@
   {
     "id": 10,
     "Nom" : "Poids Leger",
-    "description" : "Les projection deplace d'une zone supplémentaire"
+    "description" : "Les projections deplacent d'une zone supplémentaire"
   },
   {
     "id": 10,
     "Nom" : "Poids Lourd",
-    "description" : "Les projection deplace d'une zone en moins"
+    "description" : "Les projections deplacent d'une zone en moins"
   },
   {
     "id": 20,
@@ -73,5 +73,25 @@
     "id": 22,
     "Nom" : "Allonge",
     "description" : "Votre arme à une portée de 2 au lieu de 1"
+  },
+  {
+    "id": 23,
+    "Nom" : "Court",
+    "description" : "Votre arme à une portée de 0 au lieu de 1"
+  },
+  {
+    "id": 24,
+    "Nom" : "Double",
+    "description" : "Quand vous utiliser une action pour Attaquer vous gagner une Action supplémentaire pour Attaquer"
+  },
+  {
+    "id": 25,
+    "Nom" : "Triple",
+    "description" : "Quand vous utiliser une action pour Attaquer vous gagner deux Action supplémentaire pour Attaquer"
+  },
+  {
+    "id": 26,
+    "Nom" : "Finesse",
+    "description" : "Utiliser la stat de Dextérité pour attaquer au lieu de la stat de Force"
   }
 ]

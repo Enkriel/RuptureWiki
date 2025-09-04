@@ -73,5 +73,15 @@
     "id": 15,
     "Nom": "Aveuglé",
     "description": "Vous avez un désavantage à vos jets d'attaque et à tout autre jet demandant de la précision."
+  },
+  {
+    "id": 16,
+    "Nom": "Reduction",
+    "description": "Perdez Double, Triple devient Double."
+  },
+  {
+    "id": 17,
+    "Nom": "Fixé",
+    "description": "La personne fixé à un cible bouge avec elle, ses attaque contre elle ne peuvent pas échoué."
   }
 ]

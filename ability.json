@@ -428,5 +428,35 @@
         "id": 77,
         "Name": "Changement de Posture Améliorée",
         "description": "Ajoute ces deux postures : <ul><li><b>Posture Rapprochée</b> : vous perdez le mot-clé <b class='data-passifs' data-passifs-name='Allonge'> Allonge </b> mais lancez le double de vos dés de dégâts sur votre attaque.</li><li><b>Posture Tout ou Rien</b> : toutes les blessures que vous infligez ou recevez sont doublées.</li></ul>"
+    },
+    {
+        "id": 78,
+        "Name": "Empalement - Action + Action de Déplacement",
+        "description": "vous pouvez traversé jusqu'a 3 zones dans la direction de votre cible pour lui infliger votre attaque, pour chaque zone traversé ajouté un dé de dégât"
+    },
+    {
+        "id": 79,
+        "Name": "Repositionnement Tactique",
+        "description": "après chaque esquive réussie vous pouvez reculer d’une zone"
+    },
+    {
+        "id": 79,
+        "Name": "Saisie - Action Bonus",
+        "description": "Vous aggripez votre cible et vous vous appliquez <b class='data-status' data-status-name='Reduction'>réduction</b> et <b class='data-status' data-status-name='Fixé'>fixé</b>"
+    },
+    {
+        "id": 80,
+        "Name": "Relâche - Action Bonus",
+        "description": "Annulé <b>Saisie</b>"
+    },
+    {
+        "id": 81,
+        "Name": "Triple Coups",
+        "description": "Vos armes avec le mot clefs <b class='data-passifs' data-passifs-name='Double'>Double</b> devienne <b class='data-passifs' data-passifs-name='Triple'>Triple</b>"
+    },
+    {
+        "id": 82,
+        "Name": "Projection",
+        "description": "Quand vous effectuer l'action <b>Relâche</b> vous pouvez projetter votre cible jusqu'a 2 cellules"
     }
 ]
