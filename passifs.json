@@ -46,17 +46,27 @@
   },
   {
     "id": 10,
-    "Nom" : "Leger",
+    "Nom" : "Poids Leger",
     "description" : "Les projection deplace d'une zone supplémentaire"
   },
   {
     "id": 10,
-    "Nom" : "Lourd",
+    "Nom" : "Poids Lourd",
     "description" : "Les projection deplace d'une zone en moins"
   },
   {
     "id": 20,
     "Nom" : "Grosse voix",
     "description" : "Les attaques sonore gagne 1 de portée"
+  },
+  {
+    "id": 21,
+    "Nom" : "Lourd",
+    "description" : "l'arme pese 2 poids de charge au lieu d'1"
+  },
+  {
+    "id": 22,
+    "Nom" : "Extrêmement Lourd",
+    "description" : "l'arme pese 3 poids de charge au lieu d'1"
   }
 ]

@@ -398,5 +398,15 @@
         "id": 74,
         "Name": "Émissaire",
         "description": "Votre <b>palier de rapprochement</b> passe à Émissaire."
+    },
+    {
+        "id": 74,
+        "Name": "Charge",
+        "description": "<b class='data-status' data-status-name='Ancré'>ancré</b>, <b class='data-status' data-status-name='Concentration'>concentration</b> au prix d’une action, au tour prochain votre prochaine attaque fait une blessure augmenté"
+    },
+    {
+        "id": 74,
+        "Name": "Enchaînement Chargé",
+        "description": "En cas de touche garder votre <b>Charge</b> (chaque charge continue ajoute un dé de dégât) augmente DD de concentration"
     }
 ]

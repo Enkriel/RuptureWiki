@@ -16,107 +16,131 @@
             <p>système de maitrise et expertise lié aux armes et armures</p>
         </div>
 
-        
         <section class="tier-section" >
-            <h2>Style d'armes et armures</h2>
-            <br>
             <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 32px;">
                 <div style="flex: 1 1 220px; min-width: 180px;">
-                    <h2>Zones autour d’un Pokémon</h2>
+                    <h2>Espadon</h2>
                     <br>
-                    <ul>
-                        <li><b>Très Loin</b> – Hors de portée directe.</li>
-                        <li><b>À Distance</b> – Portée des attaques à distance longues.</li>
-                        <li><b>Éloigné</b> – Portée moyenne, début des manœuvres d’approche.</li>
-                        <li><b>Proche</b> – Portée courte, idéal pour se préparer au contact.</li>
-                        <li><b>Au Contact</b> – En mêlée, directement sur la cible.</li>
-                    </ul>
-                </div>
-                <div style="flex: 1 1 180px; min-width: 140px;">
-                    <h2>Cadrans autour d’un Pokémon</h2>
+                    <p><b>Mot clef récurent :</b> <b class="data-passifs" data-passifs-name="Lourd"> lourd </b>, tranchant</p>
                     <br>
+                    <p><b>Maitrise : </b></p> 
                     <ul>
-                        <li><b>Pokémon normal :</b>
-                            <ul>
-                                <li>En Face</li>
-                                <li>Derrière</li>
-                            </ul>
-                        </li>
-                        <br>
-                        <li><b>Grand Pokémon uniquement :</b>
-                            <ul>
-                                <li>En Face</li>
-                                <li>Derrière</li>
-                                <li>Flanc Droit</li>
-                                <li>Flanc Gauche</li>
-                            </ul>
-                        </li>
+                        <li data-ability="Charge"></li>
                     </ul>
+                    
+                    <br>
+                    <p><b>Expertise : </b> </p>
+                    <ul>
+                        <li data-ability="Enchaînement Chargé"></li>
+                    </ul>    
+                    
                 </div>
                 <div style="flex: 1 1 180px; min-width: 140px; text-align: center;">
-                    <img src="../img/cadran.png" alt="Schéma zones et cadrans"
-                        style="max-width: 360px; width: 100%; border-radius: 15px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); margin-top: 12px;">
+                    <img src="../img/espadon.jpg" alt="Schéma zones et cadrans"
+                        style="max-height: 280px; height: 100%; border-radius: 15px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); margin-top: 12px;">
                 </div>
             </div>
         </section>
-
-        <section class="tier-section">
-            <h2>Changer de Zone <span style="font-size:1.2em;">↕️</span></h2>
-            <p>Changer de zone coûte toujours <b>1 action de déplacement</b>.</p>
-        </section>
-
-        <section class="tier-section">
-            <h2>Changer de Cadran <span style="font-size:1.2em;">🔄</span></h2>
-            <p>Changer de cadran à un coût qui varie selon la zone ou vous vous trouvez.</p>
-            <br>
-            <ul>
-                <li><b>Très Loin</b> → 2 actions de déplacement</li>
-                <li><b>À Distance</b> → 1 action + 1 action de déplacement</li>
-                <li><b>Éloigné</b> → 1 action de déplacement + 1 action bonus</li>
-                <li><b>Proche</b> → 1 action de déplacement</li>
-                <li><b>Au Contact</b> : Gratuit</li>
-            </ul>
-        </section>
-
-        <section class="tier-section">
-            <h2>Désengagement / rotation rapide <span style="font-size:1.2em;">⏬</span></h2>
-            <p>
-                Lors du combat, le monstre bouge tout le temps mais les hunters aussi. On estime donc que les hunters suivent le monstre pour rester dans le même cadran et la même zone.<br>
-                Cependant, les monstres peuvent parfois faire des manœuvres de désengagement ou de rotation rapide. Dans ces conditions, les hunters peuvent se retrouver dans une nouvelle zone ou un nouveau cadran.
-            </p>
-            <p>
-                <i>Exemple :</i> après un saut en arrière, les personnages dans la zone <b>Au Contact</b> se retrouvent alors dans la zone <b>Éloigné</b>.
-            </p>
-        </section>
-
-        <section class="tier-section">
-            <h2>Fixé / Ancré <span style="font-size:1.2em;">🔒</span></h2>
-            <p>
-                <b>Fixé</b> et <b>Ancré</b> sont deux mots-clés qui jouent avec les zones et cadrans. Un hunter <b>ancré</b> ne suit plus par défaut le monstre : il risque donc de bouger de zone ou de cadran malgré lui.<br>
-                <b>Fixé</b> signifie que vous êtes attaché au monstre et que ces manœuvres n’ont plus d’impact sur vous, un jet de sauvegarde peut néanmoins être demandé.
-            </p>
-        </section>
-
-        <section class="tier-section">
-            <h2>Projection <span style="font-size:1.2em;">🥋</span></h2>
-            <p>
-                Quand un personnage est poussé ou projeté de X, il est déplacé sur un le cercle d'affrontement. Si c'est le monstre principal alors tout le cercle est déplacé et toutes les entités sont alors suseptible d'être bougé.
-            </p>
-            <br>
-            <p>
-                <i>Exemple :</i><br>
-                Ugo, Bruno et Gaëtan affrontent un Sablaireau.<br>
-                Gaëtan est dans le cadran flanc gauche, zone Proche.<br>
-                Ugo est dans le cadran derrière, zone À distance.<br>
-                Bruno est dans le cadran en face, zone Éloignée.<br>
-                <br>
-                Bruno utilise Onde Vide, ce qui pousse d’une zone la cible.<br>
-                <b>Ce qui nous donne :</b><br>
-                Gaëtan est dans le cadran flanc gauche, zone Proche (ça ne change rien car il n’était ni dans le cadran affecté ni opposé).<br>
-                Ugo est dans le cadran derrière, zone Proche.<br>
-                Bruno est dans le cadran en face, zone À distance.
-            </p>
-        </section>
+        <div id="attack-tooltip" style="position:absolute; display:none; pointer-events:none; z-index:1000; max-width:300px; padding:8px; background:rgba(0,0,0,0.85); color:#fff; border-radius:5px; font-size:0.9em; box-shadow:0 0 5px #000;"></div>
     </div>
+    <script>
+        const tooltip = document.getElementById('attack-tooltip');
+        const PATH_TO_ROOT = '../'; // car on est dans /Mecanique/ et les JSON sont à la racine
+
+        function loadJSON(url) {
+            console.log("Chargement JSON :", url);
+            return fetch(url).then(res => {
+                if (!res.ok) {
+                    console.error(`❌ Erreur HTTP ${res.status} pour ${url}`);
+                    return null;
+                }
+                return res.json();
+            }).catch(err => {
+                console.error(`❌ Erreur chargement ${url}`, err);
+                return null;
+            });
+        }
+
+        Promise.all([
+            loadJSON(`${PATH_TO_ROOT}status.json`),
+            loadJSON(`${PATH_TO_ROOT}ability.json`),
+            loadJSON(`${PATH_TO_ROOT}passifs.json`)
+        ])
+        .then(([statusList, abilities, passifsList]) => {
+            const statusData = {};
+            const passifsData = {};
+
+            // Charger les statuts
+            if (statusList) {
+                statusList.forEach(s => {
+                    statusData[s.Nom.toLowerCase()] = s.description;
+                });
+            }
+
+            // Charger les passifs
+            if (passifsList) {
+                passifsList.forEach(p => {
+                    passifsData[p.Nom.toLowerCase()] = p.description;
+                });
+            }
+
+            // Injecter abilities
+            document.querySelectorAll('[data-ability]').forEach(el => {
+                const abilityName = el.getAttribute('data-ability');
+                const ability = abilities
+                    ? abilities.find(a => a.Name.toLowerCase() === abilityName.toLowerCase())
+                    : null;
+
+                if (ability) {
+                    el.innerHTML = `<b>${ability.Name}</b> : ${ability.description}`;
+                } else {
+                    el.textContent = abilityName;
+                }
+            });
+
+            // Tooltips pour status
+            if (statusList) {
+                activateTooltips('.data-status', statusData);
+            }
+
+            // Tooltips pour passifs
+            if (passifsList) {
+                activateTooltips('.data-passifs', passifsData);
+            }
+        });
+
+        function activateTooltips(selector, dataMap) {
+            document.querySelectorAll(selector).forEach(el => {
+                const attrName = selector === '.data-status' ? 'data-status-name' : 'data-passifs-name';
+                const name = el.getAttribute(attrName) || el.textContent.trim();
+                const desc = dataMap[name.toLowerCase()];
+
+                if (desc) {
+                    el.style.cursor = 'help';
+                    el.style.textDecoration = 'underline dotted';
+                    el.style.textDecorationThickness = '1px';
+                    el.style.textUnderlineOffset = '2px';
+
+                    el.addEventListener('mouseenter', () => {
+                        tooltip.innerHTML = `<b>${name}</b><br>${desc}`;
+                        tooltip.style.display = 'block';
+                    });
+
+                    el.addEventListener('mousemove', e => {
+                        tooltip.style.left = (e.pageX + 10) + 'px';
+                        tooltip.style.top = (e.pageY + 10) + 'px';
+                    });
+
+                    el.addEventListener('mouseleave', () => {
+                        tooltip.style.display = 'none';
+                    });
+                } else {
+                    console.warn(`⚠ Élément "${name}" non trouvé dans le JSON`);
+                }
+            });
+        }
+    </script>
+
+
 </body>
 </html>

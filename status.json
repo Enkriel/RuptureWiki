@@ -1,0 +1,12 @@
+﻿[
+  {
+    "id": 1,
+    "Nom": "Ancré",
+    "description": "Vous ne suivez plus automatiquement votre cible et risquez fortement d’être changé de place dans le cercle d’affrontement."
+  },
+  {
+    "id": 2,
+    "Nom": "Concentration",
+    "description": "Quand vous subbissez une blessure vous devez faire un jet de sauvegarde dont la difficulté dépend de la blessure et la stats demandé dépende de l'attaque si vous echoué votre attaque préparé est annulé."
+  }
+]
