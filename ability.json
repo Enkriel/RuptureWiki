@@ -442,31 +442,67 @@
     {
         "id": 79,
         "Name": "Saisie - Action Bonus",
-        "description": "Vous aggripez votre cible et vous vous appliquez <b class='data-status' data-status-name='Reduction'>réduction</b> et <b class='data-status' data-status-name='Fixé'>fixé</b>"
+        "description": "Vous agrippez votre cible et vous lui appliquez <b class='data-status' data-status-name='Reduction'>réduction</b> et <b class='data-status' data-status-name='Fixé'>fixé</b>."
     },
     {
         "id": 80,
         "Name": "Relâche - Action Bonus",
-        "description": "Annulé <b>Saisie</b>"
+        "description": "Annule <b>Saisie</b>."
     },
     {
         "id": 81,
         "Name": "Triple Coups",
-        "description": "Vos armes avec le mot clefs <b class='data-passifs' data-passifs-name='Double'>Double</b> devienne <b class='data-passifs' data-passifs-name='Triple'>Triple</b>"
+        "description": "Vos armes avec le mot-clé <b class='data-passifs' data-passifs-name='Double'>Double</b> deviennent <b class='data-passifs' data-passifs-name='Triple'>Triple</b>."
     },
     {
         "id": 82,
         "Name": "Projection",
-        "description": "Quand vous effectuer l'action <b>Relâche</b> vous pouvez projetter votre cible jusqu'a 2 cellules"
-    },
-    {
-        "id": 82,
-        "Name": "Pas de l'ombre - Action Bonus",
-        "description": "Gagner une action de Déplacement"
+        "description": "Quand vous effectuez l'action <b>Relâche</b>, vous pouvez projeter votre cible jusqu'à 2 cellules."
     },
     {
         "id": 83,
+        "Name": "Pas de l'ombre - Action Bonus",
+        "description": "Gagnez une action de Déplacement."
+    },
+    {
+        "id": 84,
         "Name": "Enchaînement sans fin",
-        "description": "A chaque fois qu'une attaque touche votre cible, ajouter 1 dé de dégat à vos attaques de se tour (cumulatif), en cas d'esquive du monstre Enchainement sans fin s'arrete"
+        "description": "À chaque fois qu'une attaque touche votre cible, ajoutez 1 dé de dégâts à vos attaques de ce tour (cumulatif). En cas d'esquive de la part du monstre, Enchaînement sans fin s'arrête."
+    },  
+    {
+        "id": 85,
+        "Name": "Parade - Réaction",
+        "description": "Quand un allié est pris pour cible à portée 0, vous pouvez prendre le coup à sa place. Dans ces conditions, vous ne pouvez pas esquiver."
+    },
+    {
+        "id": 86,
+        "Name": "Utilisation d'objet - Réaction",
+        "description": "Vous pouvez utiliser un objet à votre ceinture en réaction."
+    },
+    {
+        "id": 87,
+        "Name": "Bouclier Miroir - Réaction",
+        "description": "Sur un jet de Constitution réussi, vous pouvez dévier un projectile qui vous vise. Si la source de l'attaque vous vise avec l'intention que vous renvoyiez son projectile, divisez la difficulté par 2."
+    },
+    {
+        "id": 88,
+        "Name": "Bouclier Tremplin - Réaction",
+        "description": "Quand un allié utilise son déplacement pour arriver dans votre cellule du cercle d'affrontement, vous pouvez le projeter de 1 cellule s'il y consent."
+    },
+    {
+        "id": 89,
+        "Name": "Mur Géant - Action Déplacement",
+        "description": "Placez votre bouclier devant vous. Vous et les alliés dans le même cadran réduisez de votre niveau tous les dégâts reçus provenant de la zone derrière vous. Si aucune attaque ne vous cible alors que vous avez Mur Géant, vous pouvez à nouveau utiliser cette capacité (vous ne pouvez pas esquiver)."
+    },
+    {
+        "id": 90,
+        "Name": "Accumulation",
+        "description": "À chaque fois que vous êtes touché avec <b>Mur Géant</b>, gagnez une charge de <b>vengeance</b> (maximum 3)."
+    },
+    {
+        "id": 91,
+        "Name": "Revanche - Action + Action Déplacement",
+        "description": "Vous assénez un puissant coup avec votre bouclier, en consommant toutes vos vengeances pour augmenter votre attaque de 1 dé par vengeance consommée."
     }
+
 ]

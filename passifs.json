@@ -93,5 +93,15 @@
     "id": 26,
     "Nom" : "Finesse",
     "description" : "Utiliser la stat de Dextérité pour attaquer au lieu de la stat de Force"
+  },
+  {
+    "id": 27,
+    "Nom" : "Adaptatif",
+    "description" : "Ce type d'arme peut avoir différent type de dégat entre coupant, contondant et perçant selon ses attaques ou l'arme en elle même"
+  },
+  {
+    "id": 28,
+    "Nom" : "Protecteur",
+    "description" : "Permet l'utilisation de certaines capacités"
   }
 ]
