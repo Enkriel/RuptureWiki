@@ -458,5 +458,15 @@
         "id": 82,
         "Name": "Projection",
         "description": "Quand vous effectuer l'action <b>Relâche</b> vous pouvez projetter votre cible jusqu'a 2 cellules"
+    },
+    {
+        "id": 82,
+        "Name": "Pas de l'ombre - Action Bonus",
+        "description": "Gagner une action de Déplacement"
+    },
+    {
+        "id": 83,
+        "Name": "Enchaînement sans fin",
+        "description": "A chaque fois qu'une attaque touche votre cible, ajouter 1 dé de dégat à vos attaques de se tour (cumulatif), en cas d'esquive du monstre Enchainement sans fin s'arrete"
     }
 ]
