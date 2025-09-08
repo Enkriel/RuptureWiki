@@ -103,5 +103,15 @@
     "id": 28,
     "Nom" : "Protecteur",
     "description" : "Permet l'utilisation de certaines capacités"
+  },
+  {
+    "id": 94,
+    "Nom": "Magique",
+    "description": "Permet de lancer des sorts"
+  },
+  {
+    "id": 95,
+    "Nom": "Musical",
+    "description": "Pour une action bonus vous pouvez jouer une partition"
   }
 ]

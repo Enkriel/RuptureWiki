@@ -811,6 +811,38 @@ select:focus {
     min-width: 600px;
 }
 
+.armor-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    background: rgba(255,255,255,0.08);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.armor-table th, .armor-table td {
+    padding: 12px 10px;
+    text-align: left;
+}
+.armor-table th {
+    background: rgba(116,185,255,0.25);
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+.armor-table tr:nth-child(even) {
+    background: rgba(255,255,255,0.05);
+}
+.armor-table tr:nth-child(odd) {
+    background: rgba(255,255,255,0.12);
+}
+@media (max-width: 700px) {
+    .armor-table th, .armor-table td { 
+        padding: 7px 3px; 
+        font-size: 0.97rem; 
+    }
+}
+
 .stats-table, .skills-table {
     width: 100%;
     border-collapse: collapse;

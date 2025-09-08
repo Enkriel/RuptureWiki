@@ -10,6 +10,11 @@
         "description": "Transformez une maîtrise d'arme ou d'armure en expertise ou obtenez une nouvelle maîtrise d'arme ou d'armure."
     },
     {
+        "id": 101,
+        "Name": "Expertise d'Armure",
+        "description": "Transformez une maîtrise d'armure en expertise."
+    },
+    {
         "id": 15,
         "Name": "Expertise Libre",
         "description": "Transformez une maîtrise de votre choix en expertise ou obtenez une nouvelle maîtrise de votre choix."
@@ -267,7 +272,7 @@
     {
         "id": 51,
         "Name": "Unisson - Action Bonus - Repos Court",
-        "description": "(nécessite arme avec le mot clef conducteur) Gagnez une seconde action, mais c’est votre divinité qui vous contrôle et agit à votre place."
+        "description": " Gagnez une seconde action, mais c’est votre divinité qui vous contrôle et agit à votre place."
     },
     {
         "id": 52,
@@ -282,12 +287,12 @@
     {
         "id": 55,
         "Name": "Écho du bois",
-        "description": "(nécessite arme avec le mot clef conducteur) Lorsqu’un totem prend une attaque, vous pouvez décider de vous lier à ce totem et prendre l’attaque à sa place. Si vous le faites, votre divinité vous remercie en vous accordant 2 faveurs."
+        "description": " Lorsqu’un totem prend une attaque, vous pouvez décider de vous lier à ce totem et prendre l’attaque à sa place. Si vous le faites, votre divinité vous remercie en vous accordant 2 faveurs."
     },
     {
         "id": 56,
         "Name": "Modification Totémique",
-        "description": "(nécessite arme avec le mot clef conducteur) Vous pouvez changer l’apparence d’un totem pour une autre - 2 faveurs."
+        "description": " Vous pouvez changer l’apparence d’un totem pour une autre - 2 faveurs."
     },
     {
         "id": 57,
@@ -297,27 +302,27 @@
     {
         "id": 58,
         "Name": "Relais Totémique",
-        "description": "(nécessite arme avec le mot clef conducteur) Vous pouvez désormais lancer vos sorts directement depuis vos totems; le coût augmente de 1 ferveur. Vous pouvez aussi vous y connecter gratuitement pour voir à travers eux"
+        "description": " Vous pouvez désormais lancer vos capacités d'armes directement depuis vos totems; le coût augmente de 1 ferveur. Vous pouvez aussi vous y connecter gratuitement pour voir à travers eux"
     },
     {
         "id": 59,
         "Name": "Arme sacrée",
-        "description": "Lors d'un repos court vous pouvez prié les dieux pour qu'il impregne votre arme, elle gagne alors le mot clef <b>communicant</b>."
+        "description": "Consommé une capacité d'arme encore active d'un élément que votre divinité maitrise sur votre arme pour augmenté votre prochaine attaque de 1 dé de degat."
     },
     {
         "id": 60,
         "Name": "Imprégnation - Action Bonus",
-        "description": "(nécessite arme avec le mot clef conducteur) Si votre arme est d’un élément de votre divinité, vous pouvez dépenser 2 ferveurs pour ajouter un dé de dégâts à votre prochaine action ce tour-ci. Si elle n’a pas le même élément, vous pouvez changer son élément pour 1 tour pour le même prix."
+        "description": " Si votre arme est d’un élément de votre divinité, vous pouvez dépenser 2 ferveurs pour ajouter un dé de dégâts à votre prochaine action ce tour-ci. Si elle n’a pas le même élément, vous pouvez changer son élément pour 1 tour pour le même prix."
     },
     {
         "id": 61,
         "Name": "Vengeance divine - Réaction",
-        "description": "(nécessite arme avec le mot clef conducteur) Quand vous utilisez un point d’armure, vous pouvez créer une AoE d’un élément de votre divinité de taille 0 infligeant 1d6 + votre niveau, pour un coût de 2 ferveurs."
+        "description": " Quand vous utilisez un point d’armure, vous pouvez créer une AoE d’un élément de votre divinité de taille 0 infligeant 1d6 + votre niveau, pour un coût de 2 ferveurs."
     },
     {
         "id": 62,
         "Name": "Forme Divine - Action Bonus - Repos Long",
-        "description": "(nécessite arme avec le mot clef conducteur) Changez de forme et portez des traits visuels reconnaissables de votre divinité ; vos attaques gagnent +2 de portée et infligent toutes +1d8 de dégâts supplémentaires. Dure 2 tours - 8 ferveurs."
+        "description": " Changez de forme et portez des traits visuels reconnaissables de votre divinité ; vos attaques gagnent +2 de portée et infligent toutes +1d8 de dégâts supplémentaires. Dure 2 tours - 8 ferveurs."
     },
     {
         "id": 53,
@@ -332,17 +337,17 @@
     {
         "id": 64,
         "Name": "Question Divine",
-        "description": "(nécessite arme avec le mot clef conducteur) Lors de d’un repos court vous gagnerez l’action <b>Question</b> vous pouvez méditer en pensant particulièrement fort à une question votre divinité vous fera paraître une image plus ou moins claire pour vous aiguiller. Lors de repos long vous pouvez poser 2 questions."
+        "description": "Lors de d’un repos court vous gagnerez l’action <b>Question</b> vous pouvez méditer en pensant particulièrement fort à une question votre divinité vous fera paraître une image plus ou moins claire pour vous aiguiller. Lors de repos long vous pouvez poser 2 questions."
     },
     {
         "id": 64,
         "Name": "Intervention Divine",
-        "description": "nécessite arme avec le mot clef conducteur)  Vous pouvez désormais faire appel au pouvoir de votre divinité selon votre <b>palier de rapprochement</b>."
+        "description": "Vous pouvez désormais faire appel au pouvoir de votre divinité selon votre <b>palier de rapprochement</b>."
     },
     {
         "id": 64,
-        "Name": "Magie Divine",
-        "description": "(nécessite arme avec le mot clef conducteur) Vous pouvez utilsé les un sort d'élément associé à votre divinité et que vous maîtrisé en payant un coup en ferveur égale à sont tier, vous ne pouvez pas lancé un sort d’un tier supérieur à 2 les sorts d'Intélligence utilise la sagesse à la place."
+        "Name": "Magie Divine Old",
+        "description": " Vous pouvez utilsé les un sort d'élément associé à votre divinité et que vous maîtrisé en payant un coup en ferveur égale à sont tier, vous ne pouvez pas lancé un sort d’un tier supérieur à 2 les sorts d'Intélligence utilise la sagesse à la place."
     },
     {
         "id": 65,
@@ -503,6 +508,50 @@
         "id": 91,
         "Name": "Revanche - Action + Action Déplacement",
         "description": "Vous assénez un puissant coup avec votre bouclier, en consommant toutes vos vengeances pour augmenter votre attaque de 1 dé par vengeance consommée."
+    },
+    {
+        "id": 92,
+        "Name": "Attendrissement - Repos Court",
+        "description": "Infliger votre attaque puis la prochaine blessure infligée à votre cible  dans le même cadran ce tour-ci est augmenté."
+    },
+    {
+        "id": 93,
+        "Name": "Rattrappage - Réaction - Repos Court",
+        "description": "Attirer à vous un allié à 2 de portée de vous il peut ainsi esquiver une attaque."
+    },
+    {
+        "id": 94,
+        "Name": "Déviation - Réaction - Repos Court",
+        "description": "Lors d'une attaque ennemi vous pouvez tenter de redirigé une attaque dans un autre cadran adjacent, la cible doit faire un JS Force."
+    },
+    {
+        "id": 95,
+        "Name": "Son Dissonant",
+        "description": "Vous vous attaquer avec une portée de 3 en utilisant votre charisme à la place de la force"
+    },
+    {
+        "id": 96,
+        "Name": "Remifa",
+        "description": "Quand vous attaquer vous pouvez généré un note Verte Bleu ou Violette"
+    },
+    {
+        "id": 97,
+        "Name": "Doresol",
+        "description": "Quand vous attaquer vous pouvez généré un note Rouge Bleu ou Noire"
+    },
+    {
+        "id": 98,
+        "Name": "Jazz - Repos Court",
+        "description": "1 fois par repos court vous pouvez jouer n'importe quel partition tant que vous respecter le nombre de note"
+    },
+    {
+        "id": 99,
+        "Name": "Unisson",
+        "description": "Les partitions d'augementation qui vise une seule cible vous vise aussi"
+    },
+    {
+        "id": 100,
+        "Name": "Magie Divine",
+        "description": "<b>Magie divine</b> Permet d'utiliser une capacité d'arme équipé et d'un élément associé à votre divinité même si déja utilisé en payant en ferveur son tier dans ses condition utilisé la sagesse à la place de la stat indiqué."
     }
-
 ]

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Système de compétence d’arme - Rupture JDR</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <script src="../navbar.js"></script>
+
+    <div class="content-wrapper">
+        <div class="header">
+            <h1>Système de compétence d’arme</h1>
+        </div>
+
+        <section class="tier-section">
+            <h2>Principe</h2>
+            <p>
+                Les armes disposent de <b>compétences d’arme élémentaires</b> qui peuvent être utilisées si le manieur possède la <b>maîtrise</b> ou l’<b>expertise</b> élémentaire correspondant à la compétence.
+            </p>
+            <p>
+                Chaque compétence peut être utilisée <b>1 fois</b> et se recharge lors d’un <b>repos</b>.
+            </p>
+            <h3>Exemple</h3>
+            <div class="table-scroll">
+                <table class="armor-table">
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Dégâts</th>
+                            <th>Mots-clés</th>
+                            <th>Capacité 1</th>
+                            <th>Capacité 2</th>
+                            <th>Effet bonus / Capacité 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Espadon de l’Étourmi</td>
+                            <td>5 + 1d6 (Vol)</td>
+                            <td>Lourd, Tranchant</td>
+                            <td>(Maîtrise normale) Vive Attaque</td>
+                            <td>(Maîtrise Vol) Cru-Aile</td>
+                            <td>(Expertise normale) Bélier</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p><i>(Cet exemple n’a aucun sens en termes d’équilibrage et n’existe pas réellement. Il est uniquement fourni à titre illustratif.)</i></p>
+        </section>
+
+        <section class="tier-section">
+            <h2>Les Syntoniseurs</h2>
+            <br>
+            <p>Les syntoniseurs sont des équipements qui ressemblent à des gants, qui peuvent acceuillir des <b>badges</b> permetant de lancer plus de comptétences d'arme lorsque manié avec une arme magique </p>
+            <p>ils Pèsent <b>1 de poids de charge</b>.</p>
+        </section>
+
+        <section class="tier-section">
+            <h2>Les Badges</h2>
+            <ul>
+                <li>Les Badges sont des <b>compétences d’arme stockées</b>.</li>
+                <li>Peuvent être insérés dans un Syntoniseur et retirés facilement lors d’un <b>repos</b>.</li>
+                <li>Pour utiliser un Badge, il faut <b>maîtriser l’élément</b> du Badge.</li>
+                <li>Une fois utilisé, le Badge est <b>désactivé</b> jusqu’à sa <b>recharge</b>.</li>
+                <li>La recharge se fait lors d’un <b>repos</b>.</li>
+            </ul>
+            <br>
+            <p>
+                L’intérêt des Syntoniseurs est de <b>multiplier le nombre de capacités d’arme disponibles</b> pour offrir plus de flexibilité au combattant.
+            </p>
+            <br>
+            <p>
+                Les syntoniseurs dispose d'une puissance de stockage égale à leur tier + 2, un badge prend le tier de sa capacité en taille de stockage.      
+            </p>
+            <br>
+            <p>
+                Un syntoniseur tier 3 à donc 8 de puissance de stockage, il aura donc par exemple un slot tier 3 deux slot tier 2 et un slot tier 1.
+                Il est possible de mettre dans un slot un badge contenant une comptétence de tier égale ou inférieur.
+            </p>
+        </section>
+    </div>
+</body>
+</html>
