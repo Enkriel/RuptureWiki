@@ -36,7 +36,7 @@
     "Nom": "Présent",
     "type": "Normal",
     "tier": 2,
-    "portée": "2 - Projectile",
+    "portée": "2 - Projectile - Non Modifiable",
     "description": "Lancez 1d20 : si le résultat est pair, soignez une blessure mineure ; s’il est impair, infligez une blessure mineure ; si c’est 1, infligez une blessure majeure ; si c’est 20, soignez une blessure majeure."
   },
   {
@@ -60,7 +60,7 @@
     "Nom": "Combo Griffe",
     "type": "Normal",
     "tier": 3,
-    "portée": "0 - Dex",
+    "portée": "0 - Dex - Non Modifiable",
     "description": "Lancez 1d8. Si le résultat est inférieur à 6, lancez un nouveau dé. Continuez jusqu’à échouer, puis additionnez tous les résultats pour déterminer vos dégâts."
   },
   {
@@ -69,7 +69,7 @@
     "type": "Normal",
     "tier": 3,
     "portée": "3 - Int - Projectile",
-    "description": "Inflige 3d6 dégâts. Chaque 6 vous fait gagner 1 poignée de pièces ; chaque 1 vous en fait perdre 1."
+    "description": "Inflige 3d6 dégâts. Chaque valeur max vous fait gagner 1 poignée de pièces, chaque 1 vous en fait perdre 1."
   },
   {
     "id": 1303,

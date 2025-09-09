@@ -30,6 +30,16 @@
         "description": "Gagnez la maîtrise d'armure de votre choix."
     },
     {
+        "id": 216,
+        "Name": "Maîtrise Élémentaire",
+        "description": "Gagnez la maîtrise élémentaire de votre choix."
+    },
+    {
+        "id": 113,
+        "Name": "Matrise Armure Moyenne",
+        "description": "Vous gagner la maitrise de l'Armure Moyenne."
+    },
+    {
         "id": 48,
         "Name": "Poids de Charge",
         "description": "Augmentez votre maximum de poids de charge de 1."
@@ -52,7 +62,7 @@
     {
         "id": 5,
         "Name": "Recharge Élémentaire - Action Bonus - Repos Court",
-        "description": "Rechargez une compétence de votre arme, une fois par repos court."
+        "description": "Rechargez une compétence de votre arme ou syntoniseur, une fois par repos court."
     },
     {
         "id": 6,
@@ -553,5 +563,80 @@
         "id": 100,
         "Name": "Magie Divine",
         "description": "<b>Magie divine</b> Permet d'utiliser une capacité d'arme équipé et d'un élément associé à votre divinité même si déja utilisé en payant en ferveur son tier dans ses condition utilisé la sagesse à la place de la stat indiqué."
+    },
+    {
+        "id": 102,
+        "Name": "Puissance de l'Expert",
+        "description": "Ajouter 1 dé de dégât au capacité d’arme dont vous avez l’expertise élémentaire"
+    },
+    {
+        "id": 103,
+        "Name": "Absorption - Réaction - Repos Court",
+        "description": "Lorsqu’un pokémon vous attaque avec une compétence d’un élément dont vous avez la maitrise, vous pouvez tenter d'absorber son attaque via un jet d’intelligence. Si votre jet d’intelligence dépasse son jet d’attaque vous bloquer son attaque et la transformer en badge sinon vous prenez l’attaque de plein fouet ce qui augmente de 1 tier la blessure reçu."
+    },
+    {
+        "id": 104,
+        "Name": "Double Syntoniseurs",
+        "description": "Vous pouvez désormais lier deux syntoniseurs à une arme magique. Lors de l’action de repos <B>liaison magique</b>, vous pouvez effectuer les deux liaisons en même temps sans coût supplémentaire."
+    },
+    {
+        "id": 105,
+        "Name": "Fusion de Badges",
+        "description": "Lorsque vous lancez une compétence d’arme, désactivez un badge d’un élément dont vous avez l'expertise pour au choix : <ul><li>changer l’élément de la compétence par celle du badge</li><li> changer la portée de la compétence par celle du badge </li><li> ajouter un mot-clé de compétence du badge (comme AoE)</li></ul>"
+    },
+    {
+        "id": 106,
+        "Name": "Avalanche Élémentaire - Repos Long",
+        "description": "Vous lancez jusqu’à 3 compétences exactement au même moment, vous pouvez : viser 1 ou plusieurs cibles et infliger 3 instances de dégâts, ou viser 1 cible et effectuer une attaque combinée cumulant les effets et dégâts de toutes vos compétences."
+    },
+    {
+        "id": 107,
+        "Name": "Charge",
+        "description": "Lorsque vous lancez une compétence, vous pouvez effectuer l’action gratuite 'Charge' pour gagner 1 charge magique (max 4). Lors d'une attaque vous consommer vos charges pour ajouter des dégâts : <ul><li>1 charge = 1d4</li> <li>2 charges = 1d8</li> <li>3 charges = 1d12</li> <li>4 charges = 1d20</li></ul> Si vous subissez une attaque, faites un JS de Sagesse (DD 10) ou la charge explose, vous subissez ses dégâts en plus."
+    },
+    {
+        "id": 108,
+        "Name": "Liaison Non magique",
+        "description": "Vous pouvez lié votre syntoniseur à une arme non Magique."
+    },
+    {
+        "id": 109,
+        "Name": "Maintien",
+        "description": "Lorsque vous effectuez une attaque, vous n’êtes plus obligé d’utiliser vos charges."
+    },
+    {
+        "id": 110,
+        "Name": "Double Charge",
+        "description": "Lorsque vous utilisez Charge, vous pouvez tenter de l’augmenter de 2 crans au lieu d’un en faisant un JS de Sagesse. En cas d’échec, la charge explose et vous subissez ses dégâts."
+    },
+    {
+        "id": 111,
+        "Name": "Charge NV6",
+        "description": "5 charges = 1d20 + 1d10. 6 charges = 2d20."
+    },
+    {
+        "id": 112,
+        "Name": "Charge instantanée - Action Bonus - Repos Long",
+        "description": "Gagnez instantanément 4 niveaux de charge."
+    },
+    {
+        "id": 113,
+        "Name": "Spécialiste Magie Proche",
+        "description": "Après avoir utilisé une compétence d’arme de portée 1 ou 0, gagnez 2 points d’esquive pendant 1 tour (cumulable)."
+    },
+    {
+        "id": 213,
+        "Name": "Illusion - Repos Court",
+        "description": "Désactivez un de vos badges pour créer un double de vous-même ayant la même armure et un nombre de PV égal au tier du badge désactivé. Il peut effectuer des actions simples comme répéter une ou deux phrases ou attaquer."
+    },
+    {
+        "id": 214,
+        "Name": "Ombre Vivante - Réaction",
+        "description": "Après une esquive, vous pouvez utiliser gratuitement Illusion (désactivation d’un badge toujours requise). Illusion est désormais utilisable deux fois par repos court."
+    },
+    {
+        "id": 215,
+        "Name": "Image Rémanente - Action Bonus - Repos Long",
+        "description": "Vous pouvez absorber un ou plusieurs clones. Pour chaque clone absorbé, votre prochaine compétence d’arme de portée 1 ou 0 sera utilisée une fois supplémentaire."
     }
 ]

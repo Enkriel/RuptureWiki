@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste des Sorts</title>
+    <title>Liste des Compétence</title>
     <link rel="stylesheet" href="style.css">
     <style>
         /* Styles spécifiques aux sorts */
@@ -56,8 +56,8 @@
     <script src="navbar.js"></script>
 
     <div class="header">
-        <h1>Liste des Sorts</h1>
-        <p>Filtrer par type et parcourer par tier</p>
+        <h1>Liste des Compétences</h1>
+        <p>Filtre par type</p>
     </div>
     
     <!-- Filtres -->
@@ -137,7 +137,7 @@
             const section = document.createElement('div');
             section.className = 'tier-section';
 
-            section.innerHTML = `<div class="tier-header"><h2>Tier ${t}</h2><span>${tierAttacks.length} sorts</span></div>`;
+            section.innerHTML = `<div class="tier-header"><h2>Tier ${t}</h2><span>${tierAttacks.length} compétence</span></div>`;
 
             tierAttacks.forEach(a => {
                 section.appendChild(createAttackCard(a));

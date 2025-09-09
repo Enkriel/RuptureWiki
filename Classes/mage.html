@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guerrier - Rupture JDR</title>
+    <title>Conjureur - Rupture JDR</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -12,33 +12,34 @@
 
     <div class="content-wrapper">
         <div class="header">
-            <h1>Guerrier</h1>
-            <p>Le Guerrier est un expert dans les armes il peut se spécialiser pour augmenter ses différents potentiels</p>
+            <h1>Conjureur</h1>
+            <p>Le Conjureur est un expert dans les armes magiques équipé d'un voir deux syntoniseurs il lance une déferlantes de comptétences sur le champs de batailles</p>
         </div>
 
         <div class="stats-section">
             <h2>Statistiques de base</h2>
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-value">9</div>
+                    <div class="stat-value">10</div>
                     <div class="stat-label">Évasion</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-value">7</div>
+                    <div class="stat-value">6</div>
                     <div class="stat-label">PV</div>
                 </div>
             </div>
             <h2>Maitrises</h2>
             <div class="mastery-list">
                 <span class="mastery-item">1 Arme au choix</span>
-                <span class="mastery-item">Armure Lourde</span>
-                <span class="mastery-item">Armure Moyenne</span>
+                <span class="mastery-item">Armure Legère</span>
             </div>
             <br>
             <h2>Équipement de départ</h2>
             <ul id="equipment-list">
                 <li>Une Arme tier 0 au choix</li>
                 <li>Une Armure tier 0 au choix</li>
+                <li>un Syntoniseur tier 0 au choix</li>
+                <li>2 Badges tier 1 au choix</li>
             </ul>
         </div>
 
@@ -46,13 +47,13 @@
         <div class="archetype-buttons" id="archetype-buttons">
             <p>Choisissez un archétype pour débloquer ses capacités :</p>
             <button class="archetype-btn archetype-unique" data-archetype="unique">
-                Lame Élémentaire <br><span>Les Lames Élémentaire se concentrent sur les maitrises élémentaires pour exploiter au maximum les comptétences d'arme</span>
+                Les Manipulateurs <br><span>Les Manipulateurs utilisent 2 syntoniseurs </span><span>et consomme des badges pour améliorer et modifié leurs compétences</span>
             </button>
             <button class="archetype-btn archetype-meute" data-archetype="meute">                
-                Lame Protectrice  <br><span>Experte en bouclier les Lames Protectrices protégent leur alliés et risposte violamment</span>
+                les Surchargées  <br><span>Les surchargées acculument après chaque sort de l'energie instable qu'ils peuvent relaché lors de leur attaques </span><span>ou prendre le risque de la conservé pour en augmenté la puissance </span>
             </button>
             <button class="archetype-btn archetype-pacte" data-archetype="pacte">
-                Lame Multiple<br><span>Ils peuvent porter plusieurs armes pour s'adapter à leur ennemi</span>
+                Les Illusionistes<br><span>sont spécialisé dans les comptétence de corps à corps et crée des doubles d'eux-même ppour les aider au combats</span>
             </button>
         </div>
 
@@ -65,29 +66,29 @@
 
     const levelAbilities = {
         1: [
-            "Second Souffle - Action Bonus - Repos Court",
+            "Expertise Élémentaire", "Puissance de l'Expert",
         ],
         2: [
-            "Fougue - Repos Court",
+            "Absorption - Réaction - Repos Court",
         ],
         4: [
             "Amélioration de Caractéristiques",
             "Amélioration Défensive"
         ],
         5: [
-            "Expertise Martiale"
+            "Expertise Élémentaire"
         ],
         6: [
             "Amélioration de Caractéristiques",
             "Amélioration Défensive",
-            "Expertise Élémentaire"
+            "Expertise Martiale"
         ],
         8: [
             "Amélioration de Caractéristiques",
             "Amélioration Défensive"
         ],
         9: [
-            "Inflexible - Réaction - Repos Long"
+            "Maîtrise Élémentaire"
         ],
         10: [
             "Expertise Libre"
@@ -96,22 +97,22 @@
 
     const archetypeAbilities = {
         unique: {
-            3: ["Expertise Élémentaire", "Piratage de Pouvoir"],
-            5: ["Puissance Cachée" , "Relance Élémentaire - Réaction - Repos Court"],
+            3: ["Expertise Élémentaire", "Double Syntoniseurs"],
+            5: ["Fusion de Badges"],
             7: ["Recharge Élémentaire - Action Bonus - Repos Court"],
-            10:["Combo Élémentaire - Action Bonus"]
+            10:["Avalanche Élémentaire - Repos Long"]
         },
         meute: {
-            3: ["Gardien d'acier - Réaction - Repos Court", "Épaule d'acier"],
-            5: ["Contre-Attaque", "Poids de Charge"],
-            7: ["Absorption Élémentaire - Réaction - Repos Court", "Épaule de Titane"],
-            10: ["Défi Tyrannique - Repos Long"]
+            3: ["Charge", "Liaison Non magique", "Maîtrise d'arme"],
+            5: ["Maintien", "Double Charge"],
+            7: ["Charge NV6"],
+            10: ["Charge instantanée - Action Bonus - Repos Long"]
         },
         pacte: {
-            3: ["Poids de Charge", "Maîtrise d'arme", "Fougue Diversifiée"],
-            5: ["Changement Mobile", "Chasseur Casseur - Action Bonus - Repos Court"],
-            7: ["Analyse des Géants - Action Bonus - Repos Court", "Expertise Martiale"],
-            10: ["Maîtrise d'arme", "Frénésie de Gilgamesh - Action de Déplacement - Repos Long"]
+            3: ["Spécialiste Magie Proche", "Matrise Armure Moyenne"],
+            5: ["Illusion - Repos Court"],
+            7: ["Ombre Vivante - Réaction"],
+            10: ["Image Rémanente - Action Bonus - Repos Long"]
         }
     };
 
