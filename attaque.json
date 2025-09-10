@@ -13,7 +13,7 @@
     "type": "Normal",
     "tier": 1,
     "portée": "-",
-    "description": "Permet de réduire sa taille de moitié pendant 1 min (peut être cumulé)."
+    "description": "Permet de réduire sa taille de moitié pendant 1 min (peut être cumulé), vous gagner le mot clef <b class='data-passifs' data-passifs-name='Poids Leger'>Poids Leger</b>."
   },
   {
     "id": 1103,
@@ -165,7 +165,7 @@
     "type": "Combat",
     "tier": 2,
     "portée": "1 - Dex",
-    "description": "2d6. Si votre adversaire a le passif <b>Lourd</b>, infligez 3d6 ; s’il a le passif <b>Léger</b>, infligez 1d6."
+    "description": "2d6. Si votre adversaire a le passif <b class='data-passifs' data-passifs-name='Poids Lourd'>Poids Lourd</b>, infligez 3d6 ; s’il a le passif <b class='data-passifs' data-passifs-name='Poids Leger'>Poids Leger</b>, infligez 1d6."
   },
   {
     "id": 2301,
@@ -181,7 +181,7 @@
     "type": "Combat",
     "tier": 3,
     "portée": "0 - Dex",
-    "description": "Inflige 2d6 + 2 si <b>paralysé</b> en cas de double."
+    "description": "Inflige 2d6 + 2 <b class='data-status' data-status-name='Paralysie'>Paralyse</b> la cible en cas de double."
   },
   {
     "id": 2303,
@@ -224,10 +224,10 @@
     "description": "Attire une cible de 1 vers soi."
   },
   {
-    "id": 3103,
+    "id": 3204,
     "Nom": "Atterissage",
     "type": "Vol",
-    "tier": 1,
+    "tier": 2,
     "portée": "Reaction",
     "description": "Évite des dégâts de chute ou de projections."
   },
@@ -285,7 +285,7 @@
     "type": "Vol",
     "tier": 4,
     "portée": "3 - AoE 0 - Int",
-    "description": "2d10 + 3 JS Con les entité à 1 portée sont attiré sur la zone sans prendre de degat"
+    "description": "2d10 + 3 les entités à 1 portée sont attiré sur la zone sans prendre de degats. JS Con"
   },
   {
     "id": 3402,
@@ -293,7 +293,7 @@
     "type": "Vol",
     "tier": 4,
     "portée": "2 - AoE 0 - Action bonus",
-    "description": "toutes les entités de la zone ciblé gagne une action de déplacements."
+    "description": "Toutes les entités de la zone ciblé gagne une action de déplacements."
   },
   {
     "id": 3501,
@@ -309,7 +309,7 @@
     "type": "Poison",
     "tier": 1,
     "portée": "3",
-    "description": "Empoisonne la cible. Peut aussi être utilisé sur une arme ; son prochain coup empoisonnera si une blessure est infligée."
+    "description": "<b class='data-status' data-status-name='Poison'>Empoisonne</b> la cible. Peut aussi être utilisé sur une arme ; son prochain coup empoisonnera si une blessure est infligée."
   },
   {
     "id": 4102,
@@ -317,7 +317,7 @@
     "type": "Poison",
     "tier": 1,
     "portée": "3 - Percant - Dex - Projectile",
-    "description": "2d4. <b>Empoisonne</b> en cas de double."
+    "description": "2d4. <b class='data-status' data-status-name='Poison'>Empoisonne</b> en cas de double."
   },
   {
     "id": 4103,
@@ -333,7 +333,7 @@
     "type": "Poison",
     "tier": 2,
     "portée": "0 - Contondant - For",
-    "description": "2d6 + 2. <b>Empoisonne gravement</b> en cas de double."
+    "description": "2d6 + 2. <b class='data-status' data-status-name='Poison Grave'>Empoisonne gravement</b> en cas de double."
   },
   {
     "id": 4202,
@@ -341,7 +341,7 @@
     "type": "Poison",
     "tier": 2,
     "portée": "3 - AoE 0 - Int",
-    "description": "2d6. <b>Aveugle</b> toutes les entités. JS Sag."
+    "description": "Crée un nuage noir qui <b class='data-status' data-status-name='Aveuglé'>aveugle</b> toutes les entités à l'intérieur."
   },
   {
     "id": 4203,
@@ -357,6 +357,46 @@
     "type": "Poison",
     "tier": 3,
     "portée": "3 - Int - Projectile",
-    "description": "2d6 + 2. Augmente les dés de dégâts d’1 cran si la cible est empoisonnée, de 2 crans si elle est gravement empoisonnée."
+    "description": "2d6 + 2. Augmente les dés de dégâts d’1 cran si la cible est <b class='data-status' data-status-name='Poison'>empoisonnée</b>, de 2 crans si elle est  <b class='data-status' data-status-name='Poison Grave'>gravement empoisonnée</b>."
+  },
+  {
+    "id": 1204,
+    "Nom": "Clonage",
+    "type": "Normal",
+    "tier": 2,
+    "portée": "0 - Sag",
+    "description": "Faites un jet de sagesse pour créer un clone de vous, plus le resultat est haut plus le clone vous ressemble."
+  },
+  {
+    "id": 18205,
+    "Nom": "Lait à boire",
+    "type": "Fée",
+    "tier": 2,
+    "portée": "0 - Int",
+    "description": "Produisez 50cl de lait comestible, le boire peut calmer la faim et rendre 1d3 pv."
+  },
+  {
+    "id": 2103,
+    "Nom": "Gonflette",
+    "type": "Combat",
+    "tier": 1,
+    "portée": "-",
+    "description": "Vos muscles gonflent sans changer votre force, vous gagner 2 lors de vos jets d'intimidation, et parfois en représentation"
+  },
+  {
+    "id": 3103,
+    "Nom": "Anti-Brume",
+    "type": "Vol",
+    "tier": 1,
+    "portée": "Dex",
+    "description": "Balaie d'un grand coup de vent une zone"
+  },
+  {
+    "id": 3304,
+    "Nom": "Danse-Plume",
+    "type": "Vol",
+    "tier": 3,
+    "portée": "0 - AoE 2",
+    "description": "Vous danser et des plumes tombent du ciel dans un rayon de 5m autour de vous vous pouvez en choisir la quantité entre 1 à 100 par secondes, vous pouvez choisir certaine propriété de vos plumes comme la couleurs"
   }
 ]

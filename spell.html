@@ -3,61 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste des Compétence</title>
+    <title>Liste des Compétences</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Styles spécifiques aux sorts */
-        .filters {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 20px;
-            justify-content: center;
-        }
-        .filters label {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            background: rgba(255,255,255,0.1);
-            padding: 5px 10px;
-            border-radius: 12px;
-            cursor: pointer;
-        }
-        .tier-section {
-            margin-bottom: 30px;
-        }
-        .attack-card {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 8px 12px;
-            border-radius: 12px;
-            background: rgba(255,255,255,0.1);
-            margin-bottom: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .attack-card img.type-icon {
-            width: 32px;
-            height: 32px;
-            object-fit: contain;
-        }
-        .tier-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: white;
-            margin-bottom: 10px;
-        }
-    </style>
+    <style> /* Styles spécifiques aux sorts */ .filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; justify-content: center; } .filters label { display: flex; align-items: center; gap: 5px; background: rgba(255,255,255,0.1); padding: 5px 10px; border-radius: 12px; cursor: pointer; } .tier-section { margin-bottom: 30px; } .attack-card { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 12px; background: rgba(255,255,255,0.1); margin-bottom: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); } .attack-card img.type-icon { width: 32px; height: 32px; object-fit: contain; } .tier-header { display: flex; justify-content: space-between; align-items: center; color: white; margin-bottom: 10px; } </style>
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Navbar (si tu as un navbar.js) -->
     <div id="navbar-container"></div>
     <script src="navbar.js"></script>
 
     <div class="header">
         <h1>Liste des Compétences</h1>
-        <p>Filtre par type</p>
+        <p>Filtre par type — survolez les mots-clés pour voir les passifs / statuts.</p>
     </div>
     
     <!-- Filtres -->
@@ -66,120 +23,196 @@
     <div class="filters" style="justify-content:center;">
         <button id="uncheck-btn" class="btn-clear">❌ Décocher tout</button>
     </div>
+
     <!-- Contenu -->
     <div id="content"></div>
 
+    <!-- Tooltip -->
+     <div id="attack-tooltip" style="position:absolute; display:none; pointer-events:none; z-index:1000; max-width:300px; padding:8px; background:rgba(0,0,0,0.85); color:#fff; border-radius:5px; font-size:0.9em; box-shadow:0 0 5px #000;"></div>
+
     <script>
-    // Mapping type -> icône
-    const typeIcons = {
-        "Normal": "https://archives.bulbagarden.net/media/upload/thumb/9/95/Normal_icon_SwSh.png/48px-Normal_icon_SwSh.png",
-        "Combat": "https://archives.bulbagarden.net/media/upload/thumb/c/c2/Fighting_icon_HOME3.png/48px-Fighting_icon_HOME3.png",
-        "Vol": "https://archives.bulbagarden.net/media/upload/thumb/b/b5/Flying_icon_SwSh.png/48px-Flying_icon_SwSh.png",
-        "Poison": "https://archives.bulbagarden.net/media/upload/thumb/8/8d/Poison_icon_SwSh.png/48px-Poison_icon_SwSh.png",
-        "Sol": "https://archives.bulbagarden.net/media/upload/thumb/2/27/Ground_icon_SwSh.png/48px-Ground_icon_SwSh.png",
-        "Roche": "https://archives.bulbagarden.net/media/upload/thumb/1/11/Rock_icon_SwSh.png/48px-Rock_icon_SwSh.png",
-        "Insecte": "https://archives.bulbagarden.net/media/upload/thumb/9/9c/Bug_icon_SwSh.png/48px-Bug_icon_SwSh.png",
-        "Spectre": "https://archives.bulbagarden.net/media/upload/thumb/0/01/Ghost_icon_SwSh.png/48px-Ghost_icon_SwSh.png",
-        "Acier": "https://archives.bulbagarden.net/media/upload/thumb/0/09/Steel_icon_SwSh.png/48px-Steel_icon_SwSh.png",
-        "Feu": "https://archives.bulbagarden.net/media/upload/thumb/a/ab/Fire_icon_SwSh.png/48px-Fire_icon_SwSh.png",
-        "Eau": "https://archives.bulbagarden.net/media/upload/thumb/8/80/Water_icon_SwSh.png/48px-Water_icon_SwSh.png",
-        "Plante": "https://archives.bulbagarden.net/media/upload/thumb/a/a8/Grass_icon_SwSh.png/48px-Grass_icon_SwSh.png",
-        "Electric": "https://archives.bulbagarden.net/media/upload/thumb/c/cf/Electric_icon_HOME3.png/48px-Electric_icon_HOME3.png",
-        "Psy": "https://archives.bulbagarden.net/media/upload/thumb/2/2d/Psychic_icon_HOME3.png/48px-Psychic_icon_HOME3.png",
-        "Glace": "https://archives.bulbagarden.net/media/upload/thumb/1/15/Ice_icon_SwSh.png/48px-Ice_icon_SwSh.png",
-        "Dragon": "https://archives.bulbagarden.net/media/upload/thumb/7/70/Dragon_icon_SwSh.png/48px-Dragon_icon_SwSh.png",
-        "Ténèbres": "https://archives.bulbagarden.net/media/upload/thumb/7/71/Dark_icon_HOME3.png/48px-Dark_icon_HOME3.png",
-        "Fée": "https://archives.bulbagarden.net/media/upload/thumb/c/c6/Fairy_icon_SwSh.png/48px-Fairy_icon_SwSh.png"
-    };
+        const typeIcons = {
+            "Normal": "https://archives.bulbagarden.net/media/upload/thumb/9/95/Normal_icon_SwSh.png/48px-Normal_icon_SwSh.png",
+            "Combat": "https://archives.bulbagarden.net/media/upload/thumb/c/c2/Fighting_icon_HOME3.png/48px-Fighting_icon_HOME3.png",
+            "Vol": "https://archives.bulbagarden.net/media/upload/thumb/b/b5/Flying_icon_SwSh.png/48px-Flying_icon_SwSh.png",
+            "Poison": "https://archives.bulbagarden.net/media/upload/thumb/8/8d/Poison_icon_SwSh.png/48px-Poison_icon_SwSh.png",
+            "Sol": "https://archives.bulbagarden.net/media/upload/thumb/2/27/Ground_icon_SwSh.png/48px-Ground_icon_SwSh.png",
+            "Roche": "https://archives.bulbagarden.net/media/upload/thumb/1/11/Rock_icon_SwSh.png/48px-Rock_icon_SwSh.png",
+            "Insecte": "https://archives.bulbagarden.net/media/upload/thumb/9/9c/Bug_icon_SwSh.png/48px-Bug_icon_SwSh.png",
+            "Spectre": "https://archives.bulbagarden.net/media/upload/thumb/0/01/Ghost_icon_SwSh.png/48px-Ghost_icon_SwSh.png",
+            "Acier": "https://archives.bulbagarden.net/media/upload/thumb/0/09/Steel_icon_SwSh.png/48px-Steel_icon_SwSh.png",
+            "Feu": "https://archives.bulbagarden.net/media/upload/thumb/a/ab/Fire_icon_SwSh.png/48px-Fire_icon_SwSh.png",
+            "Eau": "https://archives.bulbagarden.net/media/upload/thumb/8/80/Water_icon_SwSh.png/48px-Water_icon_SwSh.png",
+            "Plante": "https://archives.bulbagarden.net/media/upload/thumb/a/a8/Grass_icon_SwSh.png/48px-Grass_icon_SwSh.png",
+            "Electric": "https://archives.bulbagarden.net/media/upload/thumb/c/cf/Electric_icon_HOME3.png/48px-Electric_icon_HOME3.png",
+            "Psy": "https://archives.bulbagarden.net/media/upload/thumb/2/2d/Psychic_icon_HOME3.png/48px-Psychic_icon_HOME3.png",
+            "Glace": "https://archives.bulbagarden.net/media/upload/thumb/1/15/Ice_icon_SwSh.png/48px-Ice_icon_SwSh.png",
+            "Dragon": "https://archives.bulbagarden.net/media/upload/thumb/7/70/Dragon_icon_SwSh.png/48px-Dragon_icon_SwSh.png",
+            "Ténèbres": "https://archives.bulbagarden.net/media/upload/thumb/7/71/Dark_icon_HOME3.png/48px-Dark_icon_HOME3.png",
+            "Fée": "https://archives.bulbagarden.net/media/upload/thumb/c/c6/Fairy_icon_SwSh.png/48px-Fairy_icon_SwSh.png"
+        };
 
-    let attacks = [];
+        let attacks = [];
+        let statusData = {};
+        let passifsData = {};
+        const tooltip = document.getElementById('attack-tooltip');
 
-    async function loadAttacks() {
-        try {
-            const res = await fetch('attaque.json');
-            if (!res.ok) throw new Error(`HTTP ${res.status}`);
-            attacks = await res.json();
-        } catch(err) {
-            console.error(err);
-            attacks = []; // fallback vide
-        }
-        initUI();
-    }
+        async function loadDataFiles() {
+            try {
+                const [statusRes, passifsRes] = await Promise.all([
+                    fetch('status.json').then(r => r.ok ? r.json() : []),
+                    fetch('passifs.json').then(r => r.ok ? r.json() : [])
+                ]);
 
-    function initUI() {
-        createTypeFilters();
-        renderAttacks();
-    }
+                statusRes.forEach(s => {
+                    if (s.Nom && s.description) statusData[s.Nom.toLowerCase()] = s.description;
+                });
 
-    function createTypeFilters() {
-        const container = document.getElementById('type-filters');
-        const types = Object.keys(typeIcons);
-        types.forEach(type => {
-            const label = document.createElement('label');
-            label.innerHTML = `<input type="checkbox" value="${type}" checked> <img src="${typeIcons[type]}" class="type-icon" alt="${type}"> ${type}`;
-            container.appendChild(label);
-        });
+                passifsRes.forEach(p => {
+                    if (p.Nom && p.description) passifsData[p.Nom.toLowerCase()] = p.description;
+                });
 
-        container.querySelectorAll('input[type="checkbox"]').forEach(cb => {
-            cb.addEventListener('change', renderAttacks);
-        });
-    }
-
-    function renderAttacks() {
-        const container = document.getElementById('content');
-        container.innerHTML = '';
-
-        const checkedTypes = Array.from(document.querySelectorAll('.filters input:checked')).map(cb => cb.value);
-
-        // Créer 9 sections
-        for(let t=1; t<=9; t++){
-            const tierAttacks = attacks.filter(a => a.tier === t && checkedTypes.includes(a.type));
-            const section = document.createElement('div');
-            section.className = 'tier-section';
-
-            section.innerHTML = `<div class="tier-header"><h2>Tier ${t}</h2><span>${tierAttacks.length} compétence</span></div>`;
-
-            tierAttacks.forEach(a => {
-                section.appendChild(createAttackCard(a));
-            });
-
-            if(tierAttacks.length === 0){
-                const empty = document.createElement('p');
-                empty.style.color='rgba(255,255,255,0.7)';
-                empty.textContent = 'Aucun sort dans ce tier';
-                section.appendChild(empty);
+            } catch (err) {
+                console.error("Erreur chargement JSON passifs/status", err);
             }
-
-            container.appendChild(section);
         }
-    }
 
-    function createAttackCard(a){
-        const div = document.createElement('div');
-        div.className='attack-card';
-        const iconUrl = typeIcons[a.type] || 'https://via.placeholder.com/32?text=?';
-        div.innerHTML = `
-            <img src="${iconUrl}" class="type-icon" alt="${a.type}">
-            <div>
-                <strong>${a.Nom}</strong> <em>(Tier ${a.tier})</em><br>
-                <span>${"Portée : " + a.portée || ''}</span><br>
-                <p>${a.description}</p>
-            </div>
-        `;
-        return div;
-    }
+        async function loadAttacks() {
+            try {
+                const res = await fetch('attaque.json');
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                attacks = await res.json();
+            } catch (err) {
+                console.error("Erreur chargement attaque.json", err);
+            }
+        }
 
-    document.addEventListener('DOMContentLoaded', loadAttacks);
+        function initUI() {
+            createTypeFilters();
+            renderAttacks();
+            setupUncheckBtn();
+        }
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const btn = document.getElementById('uncheck-btn');
-        if (btn) {
+        function createTypeFilters() {
+            const container = document.getElementById('type-filters');
+            container.innerHTML = '';
+            Object.keys(typeIcons).forEach(type => {
+                const label = document.createElement('label');
+                label.innerHTML = `<input type="checkbox" value="${type}" checked> <img src="${typeIcons[type]}" class="type-icon" alt="${type}"> ${type}`;
+                container.appendChild(label);
+            });
+            container.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.addEventListener('change', renderAttacks));
+        }
+
+        function setupUncheckBtn() {
+            const btn = document.getElementById('uncheck-btn');
+            if (!btn) return;
             btn.addEventListener('click', () => {
                 document.querySelectorAll('#type-filters input[type="checkbox"]').forEach(cb => cb.checked = false);
                 renderAttacks();
             });
         }
-    });
+       
+
+        function renderAttacks() {
+            const container = document.getElementById('content');
+            container.innerHTML = '';
+
+            const checkedTypes = Array.from(document.querySelectorAll('#type-filters input:checked')).map(cb => cb.value);
+
+            for (let t = 1; t <= 9; t++) {
+                const tierAttacks = attacks.filter(a => Number(a.tier) === t && (checkedTypes.length === 0 ? false : checkedTypes.includes(a.type)));
+                const section = document.createElement('div');
+                section.className = 'tier-section';
+                section.innerHTML = `<div class="tier-header"><h2>Tier ${t}</h2><span>${tierAttacks.length} compétence${tierAttacks.length > 1 ? 's' : ''}</span></div>`;
+
+                if (tierAttacks.length === 0) {
+                    const empty = document.createElement('p');
+                    empty.className = 'no-items';
+                    empty.textContent = 'Aucun sort dans ce tier';
+                    section.appendChild(empty);
+                } else {
+                    tierAttacks.forEach(a => section.appendChild(createAttackCard(a)));
+                }
+
+                container.appendChild(section);
+            }
+        }
+
+        function createAttackCard(a) {
+            const div = document.createElement('div');
+            div.className = 'attack-card';
+            const iconUrl = typeIcons[a.type] || 'https://via.placeholder.com/32?text=?';
+            const porteeText = a.portée ? `Portée : ${a.portée}` : '';
+
+            div.innerHTML = `
+                <img src="${iconUrl}" class="type-icon" alt="${a.type}">
+                <div>
+                    <strong>${a.Nom}</strong> <em>(Tier ${a.tier})</em><br>
+                    <span>${porteeText}</span>
+                    <p>${a.description}</p>
+                </div>
+            `;
+
+            activateTooltips(div);
+            return div;
+        }
+
+        function activateTooltips(scope = document) {
+            // Statuts
+            scope.querySelectorAll('.data-status').forEach(el => {
+                const name = el.getAttribute('data-status-name') || el.textContent.trim();
+                const desc = statusData[name.toLowerCase()];
+                if (!desc) return;
+
+                el.style.cursor = 'help';
+                el.style.textDecoration = 'underline dotted';
+
+                el.addEventListener('mouseenter', e => {
+                    tooltip.innerHTML = `<b>${name}</b><br>${desc}`;
+                    tooltip.style.display = 'block';
+                    tooltip.style.left = (e.pageX + 10) + 'px';
+                    tooltip.style.top = (e.pageY + 10) + 'px';
+                });
+
+                el.addEventListener('mousemove', e => {
+                    tooltip.style.left = (e.pageX + 10) + 'px';
+                    tooltip.style.top = (e.pageY + 10) + 'px';
+                });
+                el.addEventListener('mouseleave', () => {
+                    tooltip.style.display = 'none';
+                });
+                console.log("Tooltip statut :", name.toLowerCase(), desc);
+            });
+
+            // Passifs
+            scope.querySelectorAll('.data-passifs').forEach(el => {
+                const name = el.getAttribute('data-passifs-name') || el.textContent.trim();
+                const desc = passifsData[name.toLowerCase()];
+                if (!desc) return;
+
+                el.style.cursor = 'help';
+                el.style.textDecoration = 'underline dotted';
+
+                el.addEventListener('mouseenter', e => {
+                    tooltip.innerHTML = `<b>${name}</b><br>${desc}`;
+                    tooltip.style.display = 'block';
+                });
+                el.addEventListener('mousemove', e => {
+                    tooltip.style.left = (e.pageX + 10) + 'px';
+                    tooltip.style.top = (e.pageY + 10) + 'px';
+                });
+                el.addEventListener('mouseleave', () => {
+                    tooltip.style.display = 'none';
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadDataFiles();
+            await loadAttacks();
+            initUI();
+        });
     </script>
 </body>
 </html>
