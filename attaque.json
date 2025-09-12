@@ -5,7 +5,7 @@
     "type": "Normal",
     "tier": 1,
     "portée": "0 - AoE 1 circulaire - Int",
-    "description": "Inflige 1d10 + 3. Vous parlez si fort que tout le monde à 500 m peut vous entendre."
+    "description": "Inflige 1d8 + 2. Vous parlez si fort que tout le monde à 500 m peut vous entendre."
   },
   {
     "id": 1102,
@@ -54,6 +54,14 @@
     "tier": 2,
     "portée": "3 - Int - Projectile",
     "description": "(À distance) Inflige 2d6 + 1 avec un élément parmi les 18 selon la météo. (Un jet de nature peut être tenté en amont pour savoir quel élément vous aurez.)"
+  },
+  {
+    "id": 1204,
+    "Nom": "Clonage",
+    "type": "Normal",
+    "tier": 2,
+    "portée": "0 - Sag",
+    "description": "Faites un jet de sagesse pour créer un clone de vous, plus le resultat est haut plus le clone vous ressemble."
   },
   {
     "id": 1301,
@@ -144,6 +152,14 @@
     "description": "Vous donne l'état Fixé, puis projette votre adversaire de 1. Inflige 1d6 + votre niveau."
   },
   {
+    "id": 2103,
+    "Nom": "Gonflette",
+    "type": "Combat",
+    "tier": 1,
+    "portée": "-",
+    "description": "Vos muscles gonflent sans changer votre force, vous gagner 2 lors de vos jets d'intimidation, et parfois en représentation"
+  },
+  {
     "id": 2201,
     "Nom": "Mach Punch",
     "type": "Combat",
@@ -224,13 +240,13 @@
     "description": "Attire une cible de 1 vers soi."
   },
   {
-    "id": 3204,
-    "Nom": "Atterissage",
+    "id": 3103,
+    "Nom": "Anti-Brume",
     "type": "Vol",
-    "tier": 2,
-    "portée": "Reaction",
-    "description": "Évite des dégâts de chute ou de projections."
-  },
+    "tier": 1,
+    "portée": "Dex",
+    "description": "Balaie d'un grand coup de vent une zone"
+  },  
   {
     "id": 3201,
     "Nom": "Acrobatie",
@@ -256,6 +272,14 @@
     "description": "2d6 JS Dex."
   },
   {
+    "id": 3204,
+    "Nom": "Atterissage",
+    "type": "Vol",
+    "tier": 2,
+    "portée": "Reaction",
+    "description": "Évite des dégâts de chute ou de projections."
+  },
+  {
     "id": 3301,
     "Nom": "Rebond",
     "type": "Vol",
@@ -263,6 +287,7 @@
     "portée": "2 - Contondant - Dex - Action + Action de Déplacement",
     "description": "2d6. Sautez sur votre cible et placez-vous symétriquement à elle."
   },
+  
   {
     "id": 3302,
     "Nom": "Picore",
@@ -280,6 +305,14 @@
     "description": "2d8 + 4."
   },
   {
+    "id": 3304,
+    "Nom": "Danse-Plume",
+    "type": "Vol",
+    "tier": 3,
+    "portée": "0 - AoE 2",
+    "description": "Vous danser et des plumes tombent du ciel dans un rayon de 5m autour de vous vous pouvez en choisir la quantité entre 1 à 100 par secondes, vous pouvez choisir certaine propriété de vos plumes comme la couleurs"
+  },
+  {
     "id": 3401,
     "Nom": "Tornade",
     "type": "Vol",
@@ -295,6 +328,7 @@
     "portée": "2 - AoE 0 - Action bonus",
     "description": "Toutes les entités de la zone ciblé gagne une action de déplacements."
   },
+  
   {
     "id": 3501,
     "Nom": "Lame d'air",
@@ -309,7 +343,7 @@
     "type": "Poison",
     "tier": 1,
     "portée": "3",
-    "description": "<b class='data-status' data-status-name='Poison'>Empoisonne</b> la cible. Peut aussi être utilisé sur une arme ; son prochain coup empoisonnera si une blessure est infligée."
+    "description": "<b class='data-status' data-status-name='Poison'>Empoisonne</b> la cible. Peut aussi être utilisé sur une arme, son prochain coup empoisonnera si une blessure est infligée."
   },
   {
     "id": 4102,
@@ -357,46 +391,318 @@
     "type": "Poison",
     "tier": 3,
     "portée": "3 - Int - Projectile",
-    "description": "2d6 + 2. Augmente les dés de dégâts d’1 cran si la cible est <b class='data-status' data-status-name='Poison'>empoisonnée</b>, de 2 crans si elle est  <b class='data-status' data-status-name='Poison Grave'>gravement empoisonnée</b>."
+    "description": "2d6 + 2. Augmente les dés de dégâts d’1 tier si la cible est <b class='data-status' data-status-name='Poison'>empoisonnée</b>, de 2 tiers si elle est  <b class='data-status' data-status-name='Poison Grave'>gravement empoisonnée</b>."
   },
   {
-    "id": 1204,
-    "Nom": "Clonage",
-    "type": "Normal",
+    "id": 4302,
+    "Nom": "Pics Toxiques",
+    "type": "Poison",
+    "tier": 3,
+    "portée": "0",
+    "description": "Crée 1 à 10 pics toxiques de 2 cm de haut. S'ils pénètrent le corps d'une entité, celle-ci est <b class='data-status' data-status-name='Poison'>empoisonnée</b>."
+  },
+  {
+    "id": 4303,
+    "Nom": "Poison Croix",
+    "type": "Poison",
+    "tier": 3,
+    "portée": "1 - Dex - Coupant - <b class='data-passifs' data-passifs-name='Critique Facilité'>Critique Facilité</b>",
+    "description": "1d8 + 7. Votre arme prend une lueur violette et vous infligez deux entailles rapides au même endroit."
+  },
+  {
+    "id": 5101,
+    "Nom": "Jet de Sable",
+    "type": "Sol",
+    "tier": 1,
+    "portée": "3 - Dex",
+    "description": "Jette du sable. Si l'attaque touche une cible, celle-ci est <b class='data-status' data-status-name='Obscurci'>obscurcie</b>."
+  },
+  {
+    "id": 5102,
+    "Nom": "Tourbi-Sable",
+    "type": "Sol",
+    "tier": 1,
+    "portée": "3 - Dex - AoE 0",
+    "description": "Crée un sable mouvant qui <b class='data-status' data-status-name='Embourbé'>embourbe</b> les cibles."
+  },
+  {
+    "id": 5103,
+    "Nom": "Charge Os",
+    "type": "Sol",
+    "tier": 1,
+    "portée": "1 - For - Contondant - AoE 0",
+    "description": "1d8 + 1. Vous sautez dans une zone à portée."
+  },
+  {
+    "id": 5201,
+    "Nom": "Coud’Boue",
+    "type": "Sol",
     "tier": 2,
-    "portée": "0 - Sag",
-    "description": "Faites un jet de sagesse pour créer un clone de vous, plus le resultat est haut plus le clone vous ressemble."
+    "portée": "3 - Int - AoE 0",
+    "description": "Projette un tas de boue infligeant 1d10 + 3 et <b class='data-status' data-status-name='Obscurci'>obscurcissant</b> les cibles."
+  },
+  {
+    "id": 5202,
+    "Nom": "Parois",
+    "type": "Sol",
+    "tier": 2,
+    "portée": "1 - Int - AoE 0",
+    "description": "Crée un mur de terre. Vous pouvez modifier certaines de ses propriétés lors de la création (laisser une ouverture, imiter la terre environnante, etc.). Dans ces conditions, faites un jet d’Intelligence (Élément Sol, armure 4/8/12, PV 3)."
+  },
+  {
+    "id": 5203,
+    "Nom": "Fertilisation",
+    "type": "Sol",
+    "tier": 2,
+    "portée": "2 - For - AoE 2",
+    "description": "Renforce toutes les plantes dans un rayon de 15 m. Pendant 1 tour, les attaques Plante lancées depuis la zone ajoutent 1 dé de dégâts."
+  },
+  {
+    "id": 5301,
+    "Nom": "Tunnel",
+    "type": "Sol",
+    "tier": 3,
+    "portée": "3 - For - AoE 0",
+    "description": "Creuse un trou dans une surface. La difficulté du jet dépend de la matière et de la taille (terre meuble : 2 m de large, DD10)."
+  },
+  {
+    "id": 5302,
+    "Nom": "Ampleur",
+    "type": "Sol",
+    "tier": 3,
+    "portée": "0 - For - AoE 1",
+    "description": "Provoque un puissant tremblement de terre d’intensité variable (1d20)."
+  },
+  {
+    "id": 5303,
+    "Nom": "Amass'Sable",
+    "type": "Sol",
+    "tier": 3,
+    "portée": "-",
+    "description": "Du sable recouvre votre corps et panse vos blessures : soignez 1 PV (2 PV sous tempête de sable)."
+  },
+  {
+    "id": 6101,
+    "Nom": "Jet de Pierre",
+    "type": "Roche",
+    "tier": 1,
+    "portée": "3 - For - Contondant - Projectile",
+    "description": "Crée une pierre et la projette, infligeant 2d4 + 2."
+  },
+  {
+    "id": 6102,
+    "Nom": "Hache de Pierre",
+    "type": "Roche",
+    "tier": 1,
+    "portée": "1 - For - Coupant",
+    "description": "Crée une grande hache de pierre qui frappe une zone adjacente."
+  },
+  {
+    "id": 6103,
+    "Nom": "Roulade",
+    "type": "Roche",
+    "tier": 1,
+    "portée": "1 - Con - Contondant",
+    "description": "Avancez d’une case vers votre cible. Si vous la touchez, infligez 1d8. Pour chaque <b>Roulade</b> consécutive, augmentez le nombre de dés de 1."
+  },
+  {
+    "id": 6201,
+    "Nom": "Anti-Air",
+    "type": "Roche",
+    "tier": 2,
+    "portée": "3 - For - Contondant",
+    "description": "2d6. Lance une pierre magnétique : si la cible est touchée, elle subit l’effet <b class='data-status' data-status-name='Gravité'>Gravité</b>."
+  },
+  {
+    "id": 6202,
+    "Nom": "Vif Roc",
+    "type": "Roche",
+    "tier": 2,
+    "portée": "1 à 3 - Con - Perçant - AoE Linéaire",
+    "description": "2d6. Vous foncez tête baissée, entouré de pierres. Lancez 1d3 : vous traversez autant de zones que le résultat. Infligez des dégâts à toutes les entités traversées, mais ne causez vos dégâts complets qu’à une cible de la zone d’arrivée."
+  },
+  {
+    "id": 6203,
+    "Nom": "Salaison",
+    "type": "Roche",
+    "tier": 2,
+    "portée": "0",
+    "description": "Vous produisez du sel. Sur un aliment, améliore légèrement ses propriétés."
+  },
+  {
+    "id": 6301,
+    "Nom": "Tomberoche",
+    "type": "Roche",
+    "tier": 3,
+    "portée": "2 - Int - 3 AoEs 0",
+    "description": "Faites tomber 3 rochers du ciel dans chaque case autour de votre cible (sauf une). Si un rocher touche une entité, elle subit 2d6 + 2 (Élément Pierre, armure 8/12/24, PV 2)."
+  },
+  {
+    "id": 6302,
+    "Nom": "Boule Roc",
+    "type": "Roche",
+    "tier": 3,
+    "portée": "2 - For",
+    "description": "Lance 5 pierres d’affilée. Vous pouvez viser plusieurs cibles. Chaque pierre inflige 1d4 (une même cible ne subit qu’une seule instance de dégâts)."
+  },
+  {
+    "id": 6303,
+    "Nom": "Poing de Roche",
+    "type": "Roche",
+    "tier": 3,
+    "portée": "0 - For",
+    "description": "2d6 + 2. Assène un coup puissant qui repousse la cible de 2 zones."
+  },
+  {
+    "id": 7101,
+    "Nom": "Sécrétion",
+    "type": "Insecte",
+    "tier": 1,
+    "portée": "3 - Dex",
+    "description": "En cas de touche, <b class='data-status' data-status-name='Ligoté'>ligote</b> la cible."
+  },
+  {
+    "id": 7102,
+    "Nom": "Dard-Nuée",
+    "type": "Insecte",
+    "tier": 1,
+    "portée": "3 - Dex - Perçant - <b class='data-passifs' data-passifs-name='Prolifération'>Prolifération</b>",
+    "description": "Lance 4 dards d’affilée. Vous pouvez viser plusieurs cibles. Chaque dard inflige 1d2 (une même cible ne subit qu’une seule instance de dégâts)."
+  },
+  {
+    "id": 7103,
+    "Nom": "Lumi-Queue",
+    "type": "Insecte",
+    "tier": 1,
+    "portée": "-",
+    "description": "Votre arme devient lumineuse, créant une source de lumière équivalente à une torche."
+  },
+  {
+    "id": 7201,
+    "Nom": "Taillade",
+    "type": "Insecte",
+    "tier": 2,
+    "portée": "1 - Dex - Coupant - <b class='data-passifs' data-passifs-name='Critique Facilité'>Critique Facilité</b>",
+    "description": "1d6 + 5. Assène un coup rapide et tranchant."
+  },
+  {
+    "id": 7202,
+    "Nom": "Survinsecte",
+    "type": "Insecte",
+    "tier": 2,
+    "portée": "3 - Int - <b class='data-passifs' data-passifs-name='Prolifération'>Prolifération</b>",
+    "description": "1d8 + 5. Attaque rapide et tranchante."
+  },
+  {
+    "id": 7203,
+    "Nom": "Appel Défense",
+    "type": "Insecte",
+    "tier": 2,
+    "portée": "0 - <b class='data-passifs' data-passifs-name='Prolifération'>Prolifération</b>",
+    "description": "Crée des phéromones déposées sur un élément. Des Pokémon sauvages viendront peu à peu défendre cet élément."
+  },
+  {
+    "id": 7301,
+    "Nom": "Appel Attaque",
+    "type": "Insecte",
+    "tier": 3,
+    "portée": "0 - <b class='data-passifs' data-passifs-name='Prolifération'>Prolifération</b>",
+    "description": "Crée des phéromones déposées sur un élément. Des Pokémon sauvages viendront peu à peu attaquer cet élément."
+  },
+  {
+    "id": 7302,
+    "Nom": "Demi-Tour",
+    "type": "Insecte",
+    "tier": 3,
+    "portée": "2 - Dex - Contondant",
+    "description": "2d6 + 1. Recul de 1 zone."
+  },
+  {
+    "id": 7303,
+    "Nom": "Piqûre",
+    "type": "Insecte",
+    "tier": 3,
+    "portée": "2 - Dex - Perçant",
+    "description": "2d6 + 3. Si vous brisez une partie de monstre, soignez-vous de 1 PV."
+  },
+  {
+    "id": 8101,
+    "Nom": "Étonnement",
+    "type": "Spectre",
+    "tier": 1,
+    "portée": "0 - Dex",
+    "description": "2d4. Si votre cible ne vous avait pas vu, infligez-lui <b class='data-status' data-status-name='Peur'>peur</b>."
+  },
+  {
+    "id": 8102,
+    "Nom": "Ombre Nocturne",
+    "type": "Spectre",
+    "tier": 1,
+    "portée": "2 - Int - <b class='data-passifs' data-passifs-name='Attaque Surprise'>Attaque Surprise</b>",
+    "description": "2d4. Projetez votre ombre qui surgit violemment sous votre cible."
+  },
+  {
+    "id": 8103,
+    "Nom": "Disparition",
+    "type": "Spectre",
+    "tier": 1,
+    "portée": "0",
+    "description": "Vous devenez <b class='data-status' data-status-name='Flou'>flou</b>."
+  },
+  {
+    "id": 8201,
+    "Nom": "Léchouille",
+    "type": "Spectre",
+    "tier": 2,
+    "portée": "0 - Dex",
+    "description": "2d4. Si votre cible ne vous avait pas vu, infligez-lui <b class='data-status' data-status-name='Paralysie'>paralysie</b>."
+  },
+  {
+    "id": 8202,
+    "Nom": "Ombre Portée",
+    "type": "Spectre",
+    "tier": 2,
+    "portée": "1 - Action Bonus",
+    "description": "Vous vous déplacez d’1 portée sans annuler l’état <b class='data-status' data-status-name='Flou'>flou</b>."
+  },
+  {
+    "id": 8203,
+    "Nom": "Poing Ombre",
+    "type": "Spectre",
+    "tier": 2,
+    "portée": "1 - For - <b class='data-passifs' data-passifs-name='Attaque Surprise'>Attaque Surprise</b>",
+    "description": "2d6. Votre ombre recouvre votre arme et assène un coup puissant."
+  },
+  {
+    "id": 8301,
+    "Nom": "Tisse Ombre",
+    "type": "Spectre",
+    "tier": 3,
+    "portée": "2 - Dex",
+    "description": "2d4. Votre cible est <b class='data-status' data-status-name='Ligoté'>ligotée</b>."
+  },
+  {
+    "id": 8302,
+    "Nom": "Onde Folie",
+    "type": "Spectre",
+    "tier": 3,
+    "portée": "2",
+    "description": "Rend la cible <b class='data-status' data-status-name='Confusion'>confuse</b>."
+  },
+  {
+    "id": 8303,
+    "Nom": "Châtiment",
+    "type": "Spectre",
+    "tier": 3,
+    "portée": "3 - Int",
+    "description": "2d6 + 2. Si vous infligez une blessure, vous devenez <b class='data-status' data-status-name='Flou'>flou</b>."
   },
   {
     "id": 18205,
-    "Nom": "Lait à boire",
+    "Nom": "Lait à Boire",
     "type": "Fée",
     "tier": 2,
     "portée": "0 - Int",
-    "description": "Produisez 50cl de lait comestible, le boire peut calmer la faim et rendre 1d3 pv."
-  },
-  {
-    "id": 2103,
-    "Nom": "Gonflette",
-    "type": "Combat",
-    "tier": 1,
-    "portée": "-",
-    "description": "Vos muscles gonflent sans changer votre force, vous gagner 2 lors de vos jets d'intimidation, et parfois en représentation"
-  },
-  {
-    "id": 3103,
-    "Nom": "Anti-Brume",
-    "type": "Vol",
-    "tier": 1,
-    "portée": "Dex",
-    "description": "Balaie d'un grand coup de vent une zone"
-  },
-  {
-    "id": 3304,
-    "Nom": "Danse-Plume",
-    "type": "Vol",
-    "tier": 3,
-    "portée": "0 - AoE 2",
-    "description": "Vous danser et des plumes tombent du ciel dans un rayon de 5m autour de vous vous pouvez en choisir la quantité entre 1 à 100 par secondes, vous pouvez choisir certaine propriété de vos plumes comme la couleurs"
+    "description": "Produisez 50 cl de lait comestible. Le boire calme la faim et rend 1d3 PV."
   }
 ]

@@ -113,5 +113,20 @@
     "id": 95,
     "Nom": "Musical",
     "description": "Pour une action bonus vous pouvez jouer une partition"
+  },
+  {
+    "id": 96,
+    "Nom": "Critique Facilité",
+    "description": "Lors d’un jet d’attaque, obtenir un 19 est aussi considéré comme une réussite critique."
+  },
+  {
+    "id": 97,
+    "Nom": "Prolifération",
+    "description": "Si une attaque avec Prolifération a déjà été jouée durant ce tour de jeu, augmentez le palier des dés de dégâts."
+  },
+  {
+    "id": 98,
+    "Nom": "Attaque Surprise",
+    "description": "Si l’attaque est effectuée sans que votre cible vous ait remarqué, augmentez le palier des dés de dégâts."
   }
 ]

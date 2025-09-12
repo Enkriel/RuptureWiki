@@ -31,6 +31,24 @@
      <div id="attack-tooltip" style="position:absolute; display:none; pointer-events:none; z-index:1000; max-width:300px; padding:8px; background:rgba(0,0,0,0.85); color:#fff; border-radius:5px; font-size:0.9em; box-shadow:0 0 5px #000;"></div>
 
     <script>
+        /*Arme tier 1 (Niveau 1 à 2)
+            contact & proche 3-13 allonge 2-10 distance 2-8 
+        Arme tier 2 (Niveau 3 à 4)
+            contact & proche 5-16  allonge 4-14 distance 4-12
+        Arme tier 3 (Niveau 5 à 6)
+            contact & proche 7-18  allonge 6-16 distance 5-14
+        Arme tier 4 (Niveau 7 à 8)
+            contact & proche 8-21  allonge 7-19 distance 6-17
+        Arme tier 5 (Niveau 9 à 10)
+            contact & proche 10-25  allonge 9-23 distance 8-20
+        Arme tier 6 (Niveau 11 à 12)
+            contact & proche 10-28  allonge 9-26 distance 8-23
+        Arme tier 7 (Niveau 13 à 15)
+            contact & proche 11-30  allonge 10-28 distance 9-25
+        Arme tier 8 (Niveau 16 à 18)
+            contact & proche 12-34  allonge 11-32 distance 10-29
+        Arme tier 9 (Niveau 19 à 20)	
+            contact & proche 14-36  allonge 13-34 distance 12-31*/
         const typeIcons = {
             "Normal": "https://archives.bulbagarden.net/media/upload/thumb/9/95/Normal_icon_SwSh.png/48px-Normal_icon_SwSh.png",
             "Combat": "https://archives.bulbagarden.net/media/upload/thumb/c/c2/Fighting_icon_HOME3.png/48px-Fighting_icon_HOME3.png",
@@ -98,7 +116,7 @@
             container.innerHTML = '';
             Object.keys(typeIcons).forEach(type => {
                 const label = document.createElement('label');
-                label.innerHTML = `<input type="checkbox" value="${type}" checked> <img src="${typeIcons[type]}" class="type-icon" alt="${type}"> ${type}`;
+                label.innerHTML = `<input type="checkbox" value="${type}"> <img src="${typeIcons[type]}" class="type-icon" alt="${type}"> ${type}`;
                 container.appendChild(label);
             });
             container.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.addEventListener('change', renderAttacks));
@@ -166,7 +184,7 @@
                 if (!desc) return;
 
                 el.style.cursor = 'help';
-                el.style.textDecoration = 'underline dotted';
+                el.style.textDecoration = 'underline';
 
                 el.addEventListener('mouseenter', e => {
                     tooltip.innerHTML = `<b>${name}</b><br>${desc}`;
@@ -192,7 +210,7 @@
                 if (!desc) return;
 
                 el.style.cursor = 'help';
-                el.style.textDecoration = 'underline dotted';
+                el.style.textDecoration = 'underline';
 
                 el.addEventListener('mouseenter', e => {
                     tooltip.innerHTML = `<b>${name}</b><br>${desc}`;

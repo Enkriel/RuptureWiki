@@ -70,6 +70,11 @@
     "description": "Augmente d'1 tier les dés de dégâts contre la cible."
   },
   {
+    "id": 19,
+    "Nom": "Obscurci",
+    "description": "Vous avez -2 a vos jets d'attaques et de perception."
+  },
+  {
     "id": 15,
     "Nom": "Aveuglé",
     "description": "Vous avez un désavantage à vos jets d'attaque et à tout autre jet demandant de la précision."
@@ -83,5 +88,30 @@
     "id": 17,
     "Nom": "Fixé",
     "description": "La personne fixé à un cible bouge avec elle, ses attaque contre elle ne peuvent pas échoué."
+  },
+  {
+    "id": 18,
+    "Nom": "Embourbé",
+    "description": "Divise par 2 les valeur de déplacement qui affectent la cible."
+  },
+  {
+    "id": 18,
+    "Nom": "Immobilisé",
+    "description": "Tout les action de déplacement de la cible sont réduite à 0"
+  },
+  {
+    "id": 20,
+    "Nom": "Gravité",
+    "description": "Il est impossible de voler ou sauter"
+  },
+  {
+    "id": 21,
+    "Nom": "Ligoté",
+    "description": "Toutes les actions autres que les actions de déplacements sont impossible"
+  },
+  {
+    "id": 21,
+    "Nom": "Flou",
+    "description": "Vous devenez quasiment transparent, et toutes les entités on un désavantage sur les jets de perception contre vous, l'utilisation d'une attaque, d'une capacité d'arme ou subir une blessure annule <b>Flou</b>"
   }
 ]
