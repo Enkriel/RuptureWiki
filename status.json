@@ -110,8 +110,13 @@
     "description": "Toutes les actions autres que les actions de déplacements sont impossible"
   },
   {
-    "id": 21,
+    "id": 22,
     "Nom": "Flou",
     "description": "Vous devenez quasiment transparent, et toutes les entités on un désavantage sur les jets de perception contre vous, l'utilisation d'une attaque, d'une capacité d'arme ou subir une blessure annule <b>Flou</b>"
+  },
+  {
+    "id": 23,
+    "Nom": "Renforcé",
+    "description": "Ajouter votre niveau à vos palier d'armure"
   }
 ]

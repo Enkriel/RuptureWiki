@@ -4,7 +4,7 @@
     "Nom": "Echo",
     "type": "Normal",
     "tier": 1,
-    "portée": "0 - AoE 1 circulaire - Int",
+    "portée": "0 - AoE 1 circulaire - Cha",
     "description": "Inflige 1d8 + 2. Vous parlez si fort que tout le monde à 500 m peut vous entendre."
   },
   {
@@ -670,7 +670,7 @@
     "Nom": "Poing Ombre",
     "type": "Spectre",
     "tier": 2,
-    "portée": "1 - For - <b class='data-passifs' data-passifs-name='Attaque Surprise'>Attaque Surprise</b>",
+    "portée": "1 - For - Contondant - <b class='data-passifs' data-passifs-name='Attaque Surprise'>Attaque Surprise</b>",
     "description": "2d6. Votre ombre recouvre votre arme et assène un coup puissant."
   },
   {
@@ -695,7 +695,79 @@
     "type": "Spectre",
     "tier": 3,
     "portée": "3 - Int",
-    "description": "2d6 + 2. Si vous infligez une blessure, vous devenez <b class='data-status' data-status-name='Flou'>flou</b>."
+    "description": "Inflige 2d6 + 2. Si vous infligez une blessure, vous devenez <b class='data-status' data-status-name='Flou'>flou</b>."
+  },
+  {
+    "id": 9101,
+    "Nom": "Armure",
+    "type": "Acier",
+    "tier": 1,
+    "portée": "1 - Action Bonus",
+    "description": "Augmente legerement la taille de l'armure de la cible lui donnant le status <b class='data-status' data-status-name='Renforcé'>renforcé</b> pendant 1 tour de jeu à la cible et le mot clef <b class='data-passifs' data-passifs-name='Poids Lourd'>Poids Lourd</b>. "
+  },
+  {
+    "id": 9102,
+    "Nom": "Tacle Lourd",
+    "type": "Acier",
+    "tier": 1,
+    "portée": "1 - Con - Contondant - <b class='data-passifs' data-passifs-name='Tyran'>Tyran</b>",
+    "description": "Inflige 2d6, déplacez-vous dans la zone <b>au contact</b>."
+  },
+  {
+    "id": 9103,
+    "Nom": "Strido-Son",
+    "type": "Acier",
+    "tier": 1,
+    "portée": "Cha",
+    "description": "Permet d'imiter d'importe quel bruit mécanique."
+  },
+  {
+    "id": 9201,
+    "Nom": "Lame Tachyonique",
+    "type": "Acier",
+    "tier": 2,
+    "portée": "1 - Dex - Perforant - Coupant",
+    "description": "Projette 1 lame de fer qui infligent 2d6 + 2."
+  },
+  {
+    "id": 9202,
+    "Nom": "Tête de fer",
+    "type": "Acier",
+    "tier": 2,
+    "portée": "0 - For - Contondant",
+    "description": "infligent 2d6 + 2 si vous attaquer dans le cadran avant et en cas de différence de poids en votre faveur <b class='data-status' data-status-name='Étourdi'>étourdissez</b> votre cible."
+  },
+  {
+    "id": 9203,
+    "Nom": "Pisto-Poing",
+    "type": "Acier",
+    "tier": 2,
+    "portée": "2 - For - Contondant",
+    "description": "Inflige 2d6, déplacez-vous dans la zone <b>proche</b> ou <b>au contact</b>)."
+  },
+  {
+    "id": 9301,
+    "Nom": "Ailes d'acier",
+    "type": "Acier",
+    "tier": 3,
+    "portée": "2 - For - Contondant",
+    "description": "Inflige 1d10 + 5 en allourdissant votre arme et vous donne le <b class='data-passifs' data-passifs-name='Poids Lourd'>Poids Lourd</b>."
+  },
+  {
+    "id": 9302,
+    "Nom": "Gyroballe",
+    "type": "Acier",
+    "tier": 3,
+    "portée": "3 - Action + Action de déplacement - Dex - Perçant - <b class='data-passifs' data-passifs-name='Tyran'>Tyran</b>",
+    "description": "Inflige 2d6 + 2."
+  },
+  {
+    "id": 9303,
+    "Nom": "Fulmifer",
+    "type": "Acier",
+    "tier": 3,
+    "portée": "0 - Con - AoE 0",
+    "description": "Votre armure émet une lueur vive avant de projeter des projectiles metallique partout autour d'elle Infligeant 2d6 + 3 vous pouvez consommer 1 point d'armure pour ajouter 1 dé de dégats."
   },
   {
     "id": 18205,

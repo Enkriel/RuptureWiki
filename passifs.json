@@ -128,5 +128,10 @@
     "id": 98,
     "Nom": "Attaque Surprise",
     "description": "Si l’attaque est effectuée sans que votre cible vous ait remarqué, augmentez le palier des dés de dégâts."
+  },
+  {
+    "id": 99,
+    "Nom": "Tyran",
+    "description": "Augementer le tieer dé dé de la différence de poids (<b class='data-passifs' data-passifs-name='Poids Leger'>Poids Leger</b>, sans mot clef de poids, <b class='data-passifs' data-passifs-name='Poids Lourd'>Poids Lourd</b>)."
   }
 ]
