@@ -143,5 +143,10 @@
     "id": 101,
     "Nom": "Guidable",
     "description": "Permet de modifier la trajectoire de l'attaque"
+  },
+  {
+    "id": 102,
+    "Nom": "Surchargé",
+    "description": "Vous pouvez utilisé cette comptétence comme action bonus, mais elle infligera une blessure de tier inférieur"
   }
 ]

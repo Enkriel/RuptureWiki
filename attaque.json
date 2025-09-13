@@ -986,6 +986,78 @@
     "description": "Inflige 1d10 + 3. En cas de coup critique, en plus de l’effet critique, soignez-vous de 1 PV."
   },
   {
+    "id": 13101,
+    "Nom": "Éclair",
+    "type": "Electric",
+    "tier": 1,
+    "portée": "3 - Int - Projectile - <b class='data-passifs' data-passifs-name='Surchargé'>Surchargé</b>",
+    "description": "Lance un éclair rapide. Inflige 2d4."
+  },
+  {
+    "id": 13102,
+    "Nom": "Frotte-Frimousse",
+    "type": "Electric",
+    "tier": 1,
+    "portée": "0 - For - <b class='data-passifs' data-passifs-name='Surchargé'>Surchargé</b>",
+    "description": "Collez votre cible et lancez une décharge électrique puissante. Inflige 2d6 + 1."
+  },
+  {
+    "id": 13103,
+    "Nom": "Coup d’Jus",
+    "type": "Electric",
+    "tier": 1,
+    "portée": "0 - Int",
+    "description": "Vos mains produisent un fort courant électrique capable de court-circuiter la plupart des appareils électriques. Sur une entité, provoque <b class='data-status' data-status-name='Paralysie'>paralysie</b>."
+  },
+  {
+    "id": 13201,
+    "Nom": "Boule Élek",
+    "type": "Electric",
+    "tier": 2,
+    "portée": "3 - Int",
+    "description": "Inflige 2d6. Si votre cible a un statut qui limite ses actions de déplacement, ajoutez 1 dé de dégâts."
+  },
+  {
+    "id": 13202,
+    "Nom": "Étincelle",
+    "type": "Electric",
+    "tier": 2,
+    "portée": "0 - For - AoE 0 - <b class='data-passifs' data-passifs-name='Surchargé'>Surchargé</b>",
+    "description": "Relâche une charge électrique qui touche toutes les entités autour de vous. Inflige 1d10 + 4."
+  },
+  {
+    "id": 13203,
+    "Nom": "Magné-Contrôle",
+    "type": "Electric",
+    "tier": 2,
+    "portée": "3 - Int",
+    "description": "Attire un élément magnétique jusqu’à vous. Selon le poids de l'objet, un jet d’Int à DD variable peut être demandé."
+  },
+  {
+    "id": 13301,
+    "Nom": "Électrikipik",
+    "type": "Electric",
+    "tier": 3,
+    "portée": "3 - Dex - Perforant - <b class='data-passifs' data-passifs-name='Surchargé'>Surchargé</b>",
+    "description": "Tire une flèche de foudre infligeant 1d8 + 4."
+  },
+  {
+    "id": 13302,
+    "Nom": "Rayon Chargé",
+    "type": "Electric",
+    "tier": 3,
+    "portée": "3 - Int",
+    "description": "Si vous avez lancé une compétence via l’effet <b class='data-passifs' data-passifs-name='Surchargé'>Surchargé</b> ce tour-ci, retirez seulement 1 dé à la compétence au lieu de diminuer la blessure."
+  },
+  {
+    "id": 13303,
+    "Nom": "Vol Magnétik",
+    "type": "Electric",
+    "tier": 3,
+    "portée": "0 - Int",
+    "description": "Touchez un objet magnétique et retirez totalement son poids pour le faire flotter à 1 m de hauteur. L’effet s’annule quand vous le souhaitez. Selon le poids de l'objet, un jet d’Int à DD variable peut être demandé."
+  },
+  {
     "id": 18205,
     "Nom": "Lait à Boire",
     "type": "Fée",
@@ -993,5 +1065,4 @@
     "portée": "0 - Int",
     "description": "Produisez 50 cl de lait comestible. Le boire calme la faim et rend 1d3 PV."
   }
-
 ]
