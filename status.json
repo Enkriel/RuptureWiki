@@ -117,6 +117,11 @@
   {
     "id": 23,
     "Nom": "Renforcé",
-    "description": "Ajouter votre niveau à vos palier d'armure"
+    "description": "Ajouter votre niveau à vos paliers d'armure"
+  },
+  {
+    "id": 24,
+    "Nom": "Trempé",
+    "description": "Les attaques Electrique et Glace gagne 1 dé de dégats, les attaques Feu perde un dé de dégats, disparait si subbit une attaque feu, electrique ou glace"
   }
 ]

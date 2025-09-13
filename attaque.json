@@ -108,8 +108,8 @@
     "Nom": "Météores",
     "type": "Normal",
     "tier": 5,
-    "portée": "4 - Int - Projectile",
-    "description": "Inflige 2d8 + 4. Ne peut pas être esquivé."
+    "portée": "4 - Int - Projectile - <b class='data-passifs' data-passifs-name='Guidable'>Guidable</b>",
+    "description": "Projette de multiple petite étoile qui infligent 2d8 + 4."
   },
   {
     "id": 1502,
@@ -703,7 +703,7 @@
     "type": "Acier",
     "tier": 1,
     "portée": "1 - Action Bonus",
-    "description": "Augmente legerement la taille de l'armure de la cible lui donnant le status <b class='data-status' data-status-name='Renforcé'>renforcé</b> pendant 1 tour de jeu à la cible et le mot clef <b class='data-passifs' data-passifs-name='Poids Lourd'>Poids Lourd</b>. "
+    "description": "Augmente légèrement la taille de l’armure de la cible, lui donnant le statut <b class='data-status' data-status-name='Renforcé'>renforcé</b> pendant 1 tour de jeu, ainsi que le mot-clé <b class='data-passifs' data-passifs-name='Poids Lourd'>Poids Lourd</b>."
   },
   {
     "id": 9102,
@@ -711,7 +711,7 @@
     "type": "Acier",
     "tier": 1,
     "portée": "1 - Con - Contondant - <b class='data-passifs' data-passifs-name='Tyran'>Tyran</b>",
-    "description": "Inflige 2d6, déplacez-vous dans la zone <b>au contact</b>."
+    "description": "Inflige 2d6, puis déplacez-vous dans la zone <b>au contact</b>."
   },
   {
     "id": 9103,
@@ -719,7 +719,7 @@
     "type": "Acier",
     "tier": 1,
     "portée": "Cha",
-    "description": "Permet d'imiter d'importe quel bruit mécanique."
+    "description": "Permet d’imiter n’importe quel bruit mécanique."
   },
   {
     "id": 9201,
@@ -727,15 +727,15 @@
     "type": "Acier",
     "tier": 2,
     "portée": "1 - Dex - Perforant - Coupant",
-    "description": "Projette 1 lame de fer qui infligent 2d6 + 2."
+    "description": "Projette 1 lame de fer qui inflige 2d6 + 2."
   },
   {
     "id": 9202,
-    "Nom": "Tête de fer",
+    "Nom": "Tête de Fer",
     "type": "Acier",
     "tier": 2,
     "portée": "0 - For - Contondant",
-    "description": "infligent 2d6 + 2 si vous attaquer dans le cadran avant et en cas de différence de poids en votre faveur <b class='data-status' data-status-name='Étourdi'>étourdissez</b> votre cible."
+    "description": "Inflige 2d6 + 2 si vous attaquez dans le cadran avant. En cas de différence de poids en votre faveur, vous <b class='data-status' data-status-name='Étourdi'>étourdissez</b> votre cible."
   },
   {
     "id": 9203,
@@ -743,15 +743,15 @@
     "type": "Acier",
     "tier": 2,
     "portée": "2 - For - Contondant",
-    "description": "Inflige 2d6, déplacez-vous dans la zone <b>proche</b> ou <b>au contact</b>)."
+    "description": "Inflige 2d6, puis déplacez-vous dans la zone <b>proche</b> ou <b>au contact</b>."
   },
   {
     "id": 9301,
-    "Nom": "Ailes d'acier",
+    "Nom": "Ailes d’Acier",
     "type": "Acier",
     "tier": 3,
     "portée": "2 - For - Contondant",
-    "description": "Inflige 1d10 + 5 en allourdissant votre arme et vous donne le <b class='data-passifs' data-passifs-name='Poids Lourd'>Poids Lourd</b>."
+    "description": "Inflige 1d10 + 5 en alourdissant votre arme, et vous confère le passif <b class='data-passifs' data-passifs-name='Poids Lourd'>Poids Lourd</b>."
   },
   {
     "id": 9302,
@@ -767,7 +767,223 @@
     "type": "Acier",
     "tier": 3,
     "portée": "0 - Con - AoE 0",
-    "description": "Votre armure émet une lueur vive avant de projeter des projectiles metallique partout autour d'elle Infligeant 2d6 + 3 vous pouvez consommer 1 point d'armure pour ajouter 1 dé de dégats."
+    "description": "Votre armure émet une lueur vive avant de projeter des projectiles métalliques tout autour. Inflige 2d6 + 3. Vous pouvez consommer 1 point d’armure pour ajouter 1 dé de dégâts."
+  },
+  {
+    "id": 10101,
+    "Nom": "Flammèche",
+    "type": "Feu",
+    "tier": 1,
+    "portée": "3 - Int - Projectile",
+    "description": "Inflige 2d4. En cas de double, <b class='data-status' data-status-name='Brûlure'>brûlez</b> votre adversaire."
+  },
+  {
+    "id": 10102,
+    "Nom": "Nitrocharge",
+    "type": "Feu",
+    "tier": 1,
+    "portée": "Action Bonus",
+    "description": "Déplacez-vous de 1. Vous pouvez vous déplacer de 2, mais dans ce cas, lancez un dé 20 : sur un résultat impair, vous êtes <b class='data-status' data-status-name='Brûlure'>brûlé</b>."
+  },
+  {
+    "id": 10103,
+    "Nom": "Calcination",
+    "type": "Feu",
+    "tier": 1,
+    "portée": "0 - Int",
+    "description": "Vos mains produisent assez de chaleur pour embraser du bois. Appliquée sur une entité vivante, l’attaque lui inflige une <b class='data-status' data-status-name='Brûlure'>brûlure</b>."
+  },
+  {
+    "id": 10201,
+    "Nom": "Feu Envieux",
+    "type": "Feu",
+    "tier": 2,
+    "portée": "3 - Int - Projectile - <b class='data-passifs' data-passifs-name='Sacrifice Brûlant'>Sacrifice Brûlant</b>",
+    "description": "Crée un projectile de feu infligeant 2d6 + 1."
+  },
+  {
+    "id": 10202,
+    "Nom": "Poing Feu",
+    "type": "Feu",
+    "tier": 2,
+    "portée": "0 - For - Contondant - <b class='data-passifs' data-passifs-name='Sacrifice Brûlant'>Sacrifice Brûlant</b>",
+    "description": "Enflammez votre poing avant d’asséner un coup puissant : 2d8."
+  },
+  {
+    "id": 10203,
+    "Nom": "Aire de Feu",
+    "type": "Feu",
+    "tier": 2,
+    "portée": "0 - Int - AoE 1",
+    "description": "Crée une vague de chaleur qui brûle toute la végétation et les objets facilement inflammables autour de vous. Les entités vivantes (vous compris) ayant une faiblesse au feu subissent une <b class='data-status' data-status-name='Brûlure'>brûlure</b>."
+  },
+  {
+    "id": 10301,
+    "Nom": "Danse Flammes",
+    "type": "Feu",
+    "tier": 3,
+    "portée": "3",
+    "description": "Entoure la cible d’un mur de flammes. Toute entité qui traverse ce mur subit 1d10 + 3."
+  },
+  {
+    "id": 10302,
+    "Nom": "Chant Flamboyant",
+    "type": "Feu",
+    "tier": 3,
+    "portée": "4 - Cha - Projectile - <b class='data-passifs' data-passifs-name='Sacrifice Brûlant'>Sacrifice Brûlant</b> - <b class='data-passifs' data-passifs-name='Guidable'>Guidable</b>",
+    "description": "Vous chantez, ce qui crée un oiseau de feu infligeant 2d6 + 2."
+  },
+  {
+    "id": 10303,
+    "Nom": "Fouet de Feu",
+    "type": "Feu",
+    "tier": 3,
+    "portée": "2 - Dex - Contondant - <b class='data-passifs' data-passifs-name='Sacrifice Brûlant'>Sacrifice Brûlant</b>",
+    "description": "Votre arme émet de la lave qui vient fouetter votre cible, infligeant 2d6 + 4."
+  },
+  {
+    "id": 11101,
+    "Nom": "Pistolet à O",
+    "type": "Eau",
+    "tier": 1,
+    "portée": "3 - Int - Projectile",
+    "description": "Lance un jet d’eau infligeant 1d6 et applique le statut <b class='data-status' data-status-name='Trempé'>trempé</b> à la cible."
+  },
+  {
+    "id": 11102,
+    "Nom": "Eau Revoir",
+    "type": "Eau",
+    "tier": 1,
+    "portée": "2 - Dex - Contondant",
+    "description": "Donne un coup rapide avec l'arme infligeant 1d8 et recule d'une zone."
+  },
+  {
+    "id": 11103,
+    "Nom": "Bulle d’O",
+    "type": "Eau",
+    "tier": 1,
+    "portée": "",
+    "description": "Crée une bulle d'eau pendant 24h qui génère de l'eau en continu au rythme de 20 cl par minute. Le moindre contact physique avec la bulle l'explose et l'annule (l'eau déjà créée n'est pas évaporée)."
+  },
+  {
+    "id": 11201,
+    "Nom": "Douche Froide",
+    "type": "Eau",
+    "tier": 2,
+    "portée": "3 - Int",
+    "description": "Inflige 2d4 + 1. Le lanceur attaque la cible en l’arrosant d’une eau terriblement froide. Si la cible est <b class='data-status' data-status-name='Trempé'>trempée</b>, l’effet s’active sans enlever l’état."
+  },
+  {
+    "id": 11202,
+    "Nom": "Tranch’Aqua",
+    "type": "Eau",
+    "tier": 2,
+    "portée": "1 - Dex - Coupant - <b class='data-passifs' data-passifs-name='Critique Facilité'>Critique Facilité</b>",
+    "description": "Inflige 1d10 + 4. Projette de l’eau pressurisée qui entaille la cible comme une lame."
+  },
+  {
+    "id": 11203,
+    "Nom": "Ocroupi",
+    "type": "Eau",
+    "tier": 2,
+    "portée": "3 - Int - Projectile",
+    "description": "Projette de l’eau boueuse qui inflige 1d6 et applique <b class='data-status' data-status-name='Trempé'>trempé</b> et <b class='data-status' data-status-name='Obscurci'>obscurci</b> à la cible."
+  },
+  {
+    "id": 11301,
+    "Nom": "Vibraqua",
+    "type": "Eau",
+    "tier": 3,
+    "portée": "3 - Int - Projectile",
+    "description": "Projette une onde aquatique infligeant 2d6 + 1. En cas de double, inflige <b class='data-status' data-status-name='Confusion'>confusion</b>."
+  },
+  {
+    "id": 11302,
+    "Nom": "Tir de Précision",
+    "type": "Eau",
+    "tier": 3,
+    "portée": "4 - Dex - Perforant - Projectile",
+    "description": "Tir d’eau extrêmement pressurisé infligeant 1d10 + 5."
+  },
+  {
+    "id": 11303,
+    "Nom": "Transparence de l'eau",
+    "type": "Eau",
+    "tier": 3,
+    "portée": "0 - Int",
+    "description": "Change <b>visuellement</b> la matière pour en faire de l'eau, ce qui permet de voir au travers. Plus l’élément transformé en eau est épais, moins il sera possible de voir à travers et plus la DD sera élevée."
+  },
+  {
+    "id": 12101,
+    "Nom": "Racines",
+    "type": "Plante",
+    "tier": 1,
+    "portée": "0 - Action Bonus + Action de déplacement",
+    "description": "Soignez-vous de 1 PV."
+  },
+  {
+    "id": 12102,
+    "Nom": "Fouet Lianes",
+    "type": "Plante",
+    "tier": 1,
+    "portée": "2 - Dex - Contondant",
+    "description": "Fouette la cible avec de fines lianes pour infliger."
+  },
+  {
+    "id": 12103,
+    "Nom": "Champ Herbu",
+    "type": "Plante",
+    "tier": 1,
+    "portée": "0 - AoE 1",
+    "description": "Fait pousser dans un rayon de 10 m des herbes hautes de 1 m de hauteur. Une personne accroupie dedans devient <b class='data-status' data-status-name='Flou'>floue</b>."
+  },
+  {
+    "id": 12201,
+    "Nom": "Vole-Vie",
+    "type": "Plante",
+    "tier": 2,
+    "portée": "2 - Int",
+    "description": "Inflige 2d6 + 1. Si vous infligez une blessure majeure ou sévère, regagnez 1 PV."
+  },
+  {
+    "id": 12202,
+    "Nom": "Tapotige",
+    "type": "Plante",
+    "tier": 2,
+    "portée": "2 - Dex - Perforant",
+    "description": "Inflige 2d6 + 3. Le lanceur attaque sa cible en la piquant avec une branche pointue."
+  },
+  {
+    "id": 12203,
+    "Nom": "Gliss'Herbe",
+    "type": "Plante",
+    "tier": 2,
+    "portée": "Action Bonus",
+    "description": "Déplacez-vous de 1, ou de 2 si vous êtes dans des hautes herbes."
+  },
+  {
+    "id": 12301,
+    "Nom": "Bombe au Sirop",
+    "type": "Plante",
+    "tier": 3,
+    "portée": "3 - AoE 0 - Projectile",
+    "description": "Soignez les cibles de 2 PV."
+  },
+  {
+    "id": 12302,
+    "Nom": "Tranch’Herbe",
+    "type": "Plante",
+    "tier": 3,
+    "portée": "3 - Dex - Coupant - Projectile - AoE en Ligne",
+    "description": "Inflige 2d6 + 2. Lance une série de feuilles tranchantes."
+  },
+  {
+    "id": 12303,
+    "Nom": "Magie Florale",
+    "type": "Plante",
+    "tier": 3,
+    "portée": "3 - Int - Projectile - <b class='data-passifs' data-passifs-name='Critique Facilité'>Critique Facilité</b>",
+    "description": "Inflige 1d10 + 3. En cas de coup critique, en plus de l’effet critique, soignez-vous de 1 PV."
   },
   {
     "id": 18205,
@@ -777,4 +993,5 @@
     "portée": "0 - Int",
     "description": "Produisez 50 cl de lait comestible. Le boire calme la faim et rend 1d3 PV."
   }
+
 ]

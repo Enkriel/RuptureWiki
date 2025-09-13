@@ -31,8 +31,8 @@
     "resistance": ["Poison", "Insecte", "Fée"],
     "major_resistance": ["Plante", "Combat"],
     "immunity": [""],
-    "attacks": ["Dard-Venin", "Secretion"],
-    "passifs": ["Leger"], 
+    "attacks": ["Dard-Venin", "Sécrétion"],
+    "passifs": ["Poids Leger"], 
     "status" : "unlock"
   },
   {
@@ -49,7 +49,7 @@
     "resistance": ["Poison", "Insecte", "Fée"],
     "major_resistance": ["Plante", "Combat"],
     "immunity": [""],
-    "attacks": ["Dard-Venin", "Secretion", "Armure"],
+    "attacks": ["Dard-Venin", "Sécrétion", "Armure"],
     "passifs": ["Grosse voix"],
     "status" : "seen"
   },
