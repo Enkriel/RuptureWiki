@@ -4,7 +4,7 @@
     "Nom": "Echo",
     "type": "Normal",
     "tier": 1,
-    "portée": "0 - AoE 1 circulaire - Cha",
+    "portée": "0 - Cha - AoE 1 circulaire",
     "description": "Inflige 1d8 + 2. Vous parlez si fort que tout le monde à 500 m peut vous entendre."
   },
   {
@@ -20,7 +20,7 @@
     "Nom": "Griffe",
     "type": "Normal",
     "tier": 1,
-    "portée": "0 - Coupant - Dex",
+    "portée": "0 - Dex - Coupant ",
     "description": "Inflige 2d6 + 1."
   },
   {
@@ -28,7 +28,7 @@
     "Nom": "Ecras'Face",
     "type": "Normal",
     "tier": 1,
-    "portée": "1 - Contondant - For",
+    "portée": "1 - For - Contondant ",
     "description": "Inflige 2d6."
   },
   {
@@ -61,7 +61,7 @@
     "type": "Normal",
     "tier": 2,
     "portée": "0 - Sag",
-    "description": "Faites un jet de sagesse pour créer un clone de vous, plus le resultat est haut plus le clone vous ressemble."
+    "description": "Faites un jet de Intelligence pour créer un clone de vous, plus le resultat est haut plus le clone vous ressemble, le clone ne peut que faire un leger mouvement en boucle."
   },
   {
     "id": 1301,
@@ -124,7 +124,7 @@
     "Nom": "Chant Canon",
     "type": "Normal",
     "tier": 6,
-    "portée": "3 - AoE 3 Ligne - Int",
+    "portée": "3 - Int - AoE 3 Ligne ",
     "description": "Inflige 3d8 + 6 et touche toutes les zones entre vous et votre cible dans le cadran. JS Cons."
   },
   {
@@ -196,7 +196,7 @@
     "Nom": "Forte-Paume",
     "type": "Combat",
     "tier": 3,
-    "portée": "0 - Dex",
+    "portée": "0 - Dex - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
     "description": "Inflige 2d6 + 2 <b class='data-status' data-status-name='Paralysie'>Paralyse</b> la cible en cas de double."
   },
   {
@@ -204,7 +204,7 @@
     "Nom": "Eclate-Roc",
     "type": "Combat",
     "tier": 3,
-    "portée": "1 - Contondant - Dex",
+    "portée": "1 - For - Contondant",
     "description": "2d6 + 3 sur une cible faible au combat. Cette attaque augmente ses dés de dégâts d’un cran supplémentaire."
   },
   {
@@ -212,7 +212,7 @@
     "Nom": "Triple-Pied",
     "type": "Combat",
     "tier": 4,
-    "portée": "1 - Contondant - For",
+    "portée": "1 - For - Contondant ",
     "description": "Inflige 1d8 puis 1d8 dégâts, puis 1d8 dégâts."
   },
   {
@@ -220,7 +220,7 @@
     "Nom": "Lame-Ointe",
     "type": "Combat",
     "tier": 4,
-    "portée": "2 - Coupant - Int - Projectile",
+    "portée": "2 - Int - Coupant - Projectile",
     "description": "Crée une lame de lumière. Inflige 3d6 + 4."
   },
   {
@@ -228,7 +228,7 @@
     "Nom": "Picpic",
     "type": "Vol",
     "tier": 1,
-    "portée": "2 - Percant - Dex",
+    "portée": "2 - Dex - Percant",
     "description": "2d6."
   },
   {
@@ -236,7 +236,7 @@
     "Nom": "Aspiration",
     "type": "Vol",
     "tier": 1,
-    "portée": "3 - Action Bonus",
+    "portée": "3 - Int - Action Bonus",
     "description": "Attire une cible de 1 vers soi."
   },
   {
@@ -244,7 +244,7 @@
     "Nom": "Anti-Brume",
     "type": "Vol",
     "tier": 1,
-    "portée": "Dex",
+    "portée": "2 - Dex",
     "description": "Balaie d'un grand coup de vent une zone"
   },  
   {
@@ -268,7 +268,7 @@
     "Nom": "Tranch'air",
     "type": "Vol",
     "tier": 2,
-    "portée": "0 - AoE 3 Ligne - Coupant - Int",
+    "portée": "0 - Int - Coupant - AoE 3 Ligne",
     "description": "2d6 JS Dex."
   },
   {
@@ -284,7 +284,7 @@
     "Nom": "Rebond",
     "type": "Vol",
     "tier": 3,
-    "portée": "2 - Contondant - Dex - Action + Action de Déplacement",
+    "portée": "2 - Dex - Contondant - Action + Action de Déplacement",
     "description": "2d6. Sautez sur votre cible et placez-vous symétriquement à elle."
   },
   
@@ -293,7 +293,7 @@
     "Nom": "Picore",
     "type": "Vol",
     "tier": 3,
-    "portée": "3 - Percant - Dex",
+    "portée": "3 - Dex - Percant",
     "description": "1d10 + 6. Si vous infligez une blessure avec ce sort sur un Pokémon Insecte ou Plante, vous vous soignez d’1 blessure mineure."
   },
   {
@@ -301,7 +301,7 @@
     "Nom": "Cru-Ailes",
     "type": "Vol",
     "tier": 3,
-    "portée": "1 - Coupant - For",
+    "portée": "1 - For - Coupant",
     "description": "2d8 + 4."
   },
   {
@@ -317,7 +317,7 @@
     "Nom": "Tornade",
     "type": "Vol",
     "tier": 4,
-    "portée": "3 - AoE 0 - Int",
+    "portée": "3 - Int - AoE 0",
     "description": "2d10 + 3 les entités à 1 portée sont attiré sur la zone sans prendre de degats. JS Con"
   },
   {
@@ -334,7 +334,7 @@
     "Nom": "Lame d'air",
     "type": "Vol",
     "tier": 5,
-    "portée": "3 - Coupant - Int - Projectile",
+    "portée": "3 - Int - Coupant - Projectile",
     "description": "3d6 + 5."
   },
   {
@@ -350,7 +350,7 @@
     "Nom": "Dard-Venin",
     "type": "Poison",
     "tier": 1,
-    "portée": "3 - Percant - Dex - Projectile",
+    "portée": "3 - Dex - Percant - Projectile - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
     "description": "2d4. <b class='data-status' data-status-name='Poison'>Empoisonne</b> en cas de double."
   },
   {
@@ -366,7 +366,7 @@
     "Nom": "Crochet Venin",
     "type": "Poison",
     "tier": 2,
-    "portée": "0 - Contondant - For",
+    "portée": "0 - For - Contondant - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
     "description": "2d6 + 2. <b class='data-status' data-status-name='Poison Grave'>Empoisonne gravement</b> en cas de double."
   },
   {
@@ -374,7 +374,7 @@
     "Nom": "Purée de pois",
     "type": "Poison",
     "tier": 2,
-    "portée": "3 - AoE 0 - Int",
+    "portée": "3 - Int - AoE 0",
     "description": "Crée un nuage noir qui <b class='data-status' data-status-name='Aveuglé'>aveugle</b> toutes les entités à l'intérieur."
   },
   {
@@ -382,7 +382,7 @@
     "Nom": "Bain de smog",
     "type": "Poison",
     "tier": 2,
-    "portée": "3 - Int  - Projectile",
+    "portée": "3 - Int - Projectile",
     "description": "Crée une flaque de poison sur la zone. Chaque entité commençant dans cette zone subit 1 blessure mineure."
   },
   {
@@ -726,7 +726,7 @@
     "Nom": "Lame Tachyonique",
     "type": "Acier",
     "tier": 2,
-    "portée": "1 - Dex - Perforant - Coupant",
+    "portée": "1 - Dex - Coupant",
     "description": "Projette 1 lame de fer qui inflige 2d6 + 2."
   },
   {
@@ -774,7 +774,7 @@
     "Nom": "Flammèche",
     "type": "Feu",
     "tier": 1,
-    "portée": "3 - Int - Projectile",
+    "portée": "3 - Int - Projectile - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
     "description": "Inflige 2d4. En cas de double, <b class='data-status' data-status-name='Brûlure'>brûlez</b> votre adversaire."
   },
   {
@@ -894,7 +894,7 @@
     "Nom": "Vibraqua",
     "type": "Eau",
     "tier": 3,
-    "portée": "3 - Int - Projectile",
+    "portée": "3 - Int - Projectile - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
     "description": "Projette une onde aquatique infligeant 2d6 + 1. En cas de double, inflige <b class='data-status' data-status-name='Confusion'>confusion</b>."
   },
   {
@@ -1058,11 +1058,363 @@
     "description": "Touchez un objet magnétique et retirez totalement son poids pour le faire flotter à 1 m de hauteur. L’effet s’annule quand vous le souhaitez. Selon le poids de l'objet, un jet d’Int à DD variable peut être demandé."
   },
   {
-    "id": 18205,
-    "Nom": "Lait à Boire",
+    "id": 14101,
+    "Nom": "Choc Mental",
+    "type": "Psy",
+    "tier": 1,
+    "portée": "3 - Int - <b class='data-passifs' data-passifs-name='Puissance Contrôlée'>Puissance Contrôlée</b> - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
+    "description": "Inflige 2d4. Sur un double, applique <b class='data-status' data-status-name='Confusion'>confusion</b>."
+  },
+  {
+    "id": 14102,
+    "Nom": "Astuce Force",
+    "type": "Psy",
+    "tier": 1,
+    "portée": "3 - Action Bonus",
+    "description": "Votre cible peut utiliser le modificateur de son choix pour la prochaine compétence qu’elle utilise."
+  },
+  {
+    "id": 14103,
+    "Nom": "Amnésie",
+    "type": "Psy",
+    "tier": 1,
+    "portée": "3",
+    "description": "Fait oublier quelque chose à une cible. JS Sag."
+  },
+  {
+    "id": 14201,
+    "Nom": "Rafale Psy",
+    "type": "Psy",
+    "tier": 2,
+    "portée": "3 - Int - <b class='data-passifs' data-passifs-name='Puissance Contrôlée'>Puissance Contrôlée</b> - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
+    "description": "Envoie une série d’ondes psychiques. Inflige 2d6. Sur un double, applique <b class='data-status' data-status-name='Confusion'>confusion</b>."
+  },
+  {
+    "id": 14202,
+    "Nom": "Extravaillance",
+    "type": "Psy",
+    "tier": 2,
+    "portée": "3 - Action Bonus",
+    "description": "Retire une altération de statut à la cible."
+  },
+  {
+    "id": 14203,
+    "Nom": "Tour de Magie",
+    "type": "Psy",
+    "tier": 2,
+    "portée": "3 - Int",
+    "description": "Échange la position de 2 objets non tenus. Si l’un des objets est trop lourd, un jet d’Int peut être demandé."
+  },
+  {
+    "id": 14301,
+    "Nom": "Dissonance Psy",
+    "type": "Psy",
+    "tier": 3,
+    "portée": "3 - Int - <b class='data-passifs' data-passifs-name='Puissance Contrôlée'>Puissance Contrôlée</b> - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
+    "description": "Inflige 2d4 + 4. Sur un double, applique <b class='data-status' data-status-name='Antisoin'>antisoin</b>."
+  },
+  {
+    "id": 14302,
+    "Nom": "Choc Psy",
+    "type": "Psy",
+    "tier": 3,
+    "portée": "2 - ??? - <b class='data-passifs' data-passifs-name='Puissance Contrôlée'>Puissance Contrôlée</b> - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
+    "description": "Inflige une violente attaque psy avec le modificateur de statistique de votre choix. Inflige 1d10 + 5."
+  },
+  {
+    "id": 14303,
+    "Nom": "Hypnose",
+    "type": "Psy",
+    "tier": 3,
+    "portée": "3",
+    "description": "Vous tentez de plonger votre cible dans le <b class='data-status' data-status-name='Sommeil'>sommeil</b>. JS Sag."
+  },
+  {
+    "id": 15101,
+    "Nom": "Éclats Glace",
+    "type": "Glace",
+    "tier": 1,
+    "portée": "3 - Dex - Perçant - <b class='data-passifs' data-passifs-name='Destruction'>Destruction</b>",
+    "description": "Lance des éclats de glace pointus. Inflige 2d4 + 1."
+  },
+  {
+    "id": 15102,
+    "Nom": "Poudreuse",
+    "type": "Glace",
+    "tier": 1,
+    "portée": "3 - Int - Contondant - <b class='data-passifs' data-passifs-name='Destruction'>Destruction</b>",
+    "description": "Projette une serie de glaçons. Inflige 1d4 + 2."
+  },
+  {
+    "id": 15103,
+    "Nom": "Solidification",
+    "type": "Glace",
+    "tier": 1,
+    "portée": "0 - Int - <b class='data-passifs' data-passifs-name='Destruction'>Destruction</b>",
+    "description": "Transforme un liquide en glace solide. Selon la surface et l’épaisseur souhaitée, un jet d’Intelligence peut être demandé."
+  },
+  {
+    "id": 15201,
+    "Nom": "Avalanche",
+    "type": "Glace",
+    "tier": 2,
+    "portée": "1 - For - Contondant",
+    "description": "Votre arme s’entoure de neige épaisse. Inflige 1d10 + 4. Si l’attaque se fait sur une partie déjà brisée, inflige 1d10 + 8."
+  },
+  {
+    "id": 15202,
+    "Nom": "Souffle Glacé",
+    "type": "Glace",
+    "tier": 2,
+    "portée": "3 - Int - Coupant - <b class='data-passifs' data-passifs-name='Destruction'>Destruction</b>",
+    "description": "Tire plusieurs cristaux tranchants. Inflige 2d4 + 1."
+  },
+  {
+    "id": 15203,
+    "Nom": "Baisse de Température",
+    "type": "Glace",
+    "tier": 2,
+    "portée": "2 - Int - AoE Variable",
+    "description": "Abaisse la température d’une zone ou d’une cible. Selon la taille de la zone et la baisse souhaitée, un jet d’Intelligence peut être demandé."
+  },
+  {
+    "id": 15301,
+    "Nom": "Crocs Givre",
+    "type": "Glace",
+    "tier": 3,
+    "portée": "1 - For - Perçant - <b class='data-passifs' data-passifs-name='Destruction'>Destruction</b>",
+    "description": "Coup d’estoc qui inflige une morsure glaciale. Inflige 2d6 + 5."
+  },
+  {
+    "id": 15302,
+    "Nom": "Onde Boréale",
+    "type": "Glace",
+    "tier": 3,
+    "portée": "3 - Int - Contondant - <b class='data-passifs' data-passifs-name='Destruction'>Destruction</b>",
+    "description": "Crée une lentille de glace aux reflets violacés qui avance rapidement. Inflige 1d8 + 3."
+  },
+  {
+    "id": 15303,
+    "Nom": "Sculpture de Glace",
+    "type": "Glace",
+    "tier": 3,
+    "portée": "0 - Int",
+    "description": "Crée un petit objet en glace. Peut demander un jet d’Intelligence."
+  },
+  {
+    "id": 16101,
+    "Nom": "Ouragan",
+    "type": "Dragon",
+    "tier": 1,
+    "portée": "3 - Int - Action + Action Bonus",
+    "description": "Lance une bourrasque si puissante qu’elle fait reculer la cible de 1. Inflige 1d8 + 3."
+  },
+  {
+    "id": 16102,
+    "Nom": "Draco-Queue",
+    "type": "Dragon",
+    "tier": 1,
+    "portée": "1 - For - Contondant - Action + Action Déplacement - AoE 0",
+    "description": "Frappe violemment en arc de cercle devant vous. Inflige 2d6 + 1."
+  },
+  {
+    "id": 16103,
+    "Nom": "Cri du Tyran",
+    "type": "Dragon",
+    "tier": 1,
+    "portée": "3 - Con - AoE 3",
+    "description": "Poussez un cri violent. Cela peut <b class='data-status' data-status-name='Peur'>apeurer</b> toutes vos cibles. JS Sag."
+  }, 
+  {
+    "id": 16201,
+    "Nom": "Draco-Griffe",
+    "type": "Dragon",
+    "tier": 2,
+    "portée": "1 - Dex - Coupant - Action + Action Bonus",
+    "description": "Assène un coup fulgurant. Inflige 2d8 + 2."
+  },
+  {
+    "id": 16202,
+    "Nom": "Draco-Souffle",
+    "type": "Dragon",
+    "tier": 2,
+    "portée": "1 - Int - Action + Action Déplacement - AoE Ligne 2 - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
+    "description": "Relâche un puissant souffle draconique. Inflige 2d6 + 2. En cas de double, applique <b class='data-status' data-status-name='Paralysie'>paralysie</b>."
+  },
+  {
+    "id": 16203,
+    "Nom": "Mémoire Draconique",
+    "type": "Dragon",
+    "tier": 2,
+    "portée": "Sag",
+    "description": "Vous pouvez retrouver un de vos souvenirs."
+  },
+  {
+    "id": 16301,
+    "Nom": "Draco-Marteau",
+    "type": "Dragon",
+    "tier": 3,
+    "portée": "2 - Con - Contondant",
+    "description": "Foncez violemment sur votre cible. Inflige 1d10 + 5 et vous vous déplacez au contact."
+  },
+  {
+    "id": 16302,
+    "Nom": "Draco-Flèches",
+    "type": "Dragon",
+    "tier": 3,
+    "portée": "3 - Dex - Perçant - Action + Action Déplacement",
+    "description": "Projette 2 flèches infligeant chacune 1d10. Vous pouvez viser la même cible ou 2 cibles différentes. Viser la même cible crée une seule instance de dégâts."
+  },
+  {
+    "id": 16303,
+    "Nom": "Dracophonie",
+    "type": "Dragon",
+    "tier": 3,
+    "portée": "3 - Cha",
+    "description": "Perdez 2 PV. Votre cible gagne un second tour et bénéficie de l’avantage à sa prochaine action."
+  },
+  {
+    "id": 17101,
+    "Nom": "Flatterie",
+    "type": "Ténèbres",
+    "tier": 1,
+    "portée": "3 - Cha - Action Bonus - <b class='data-passifs' data-passifs-name='Cible Tiers'>Cible Tiers</b>",
+    "description": "La cible inflige les dégats max à la prochaine attaque mais elle gagne <b class='data-status' data-status-name='Confusion'>confuse</b>. Hors combat votre cible fait une action aléatoire et vous gagner sa sympatie"
+  },
+  {
+    "id": 17102,
+    "Nom": "Arrogance",
+    "type": "Ténèbres",
+    "tier": 1,
+    "portée": "1 - For - Contondant",
+    "description": "Frapper de façon irrespecteuse ou ridicule votre cible infligeant 2d4 et <b class='data-status' data-status-name='Provocation'>provoque votre cible</b>."
+  },
+  {
+    "id": 17103,
+    "Nom": "Coup Bas",
+    "type": "Ténèbres",
+    "tier": 1,
+    "portée": "1 - Dex - Contondant - <b class='data-passifs' data-passifs-name='Attaque Surprise'>Attaque Surprise</b>",
+    "description": "2d6 + 1 Frapper votre cible quand il ne s'y attend pas, si il est provoqué ou confus,  <b class='data-passifs' data-passifs-name='Attaque Surprise'>Attaque Surprise</b> s'active automatiquement."
+  },
+  {
+    "id": 17201,
+    "Nom": "Baston",
+    "type": "Ténèbres",
+    "tier": 2,
+    "portée": "1 - For - Contondant",
+    "description": "Infliger 2d6 + 2, toutes les entités confuses attaquent une entité à leur portée d'attaque."
+  },
+  {
+    "id": 17202,
+    "Nom": "Assurance",
+    "type": "Ténèbres",
+    "tier": 2,
+    "portée": "3 - Action Bonus",
+    "description": "Permet à une cible confuse de visé normallment ce tour ci."
+  },
+  {
+    "id": 17203,
+    "Nom": "Souvenir",
+    "type": "Ténèbres",
+    "tier": 2,
+    "portée": "3",
+    "description": "Soigne 2pv mais rend la cible <b class='data-status' data-status-name='Confusion'>confuse</b>."
+  },
+  {
+    "id": 17301,
+    "Nom": "Morsure",
+    "type": "Ténèbres",
+    "tier": 3,
+    "portée": "1 - Dex - Percant - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
+    "description": "Inflige 2d8 + 3 en cas de double inflige <b class='data-status' data-status-name='Peur'>peur</b>."
+  }, 
+  {
+    "id": 17302,
+    "Nom": "Aboiement",
+    "type": "Ténèbres",
+    "tier": 3,
+    "portée": "3 - Cha - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
+    "description": "Inflige 2d6 + 2 en cas de double inflige <b class='data-status' data-status-name='Confusion'>confusion</b>."
+  },
+  {
+    "id": 17303,
+    "Nom": "Croco Larme",
+    "type": "Ténèbres",
+    "tier": 3,
+    "portée": "0 - Cha - Action Bonus",
+    "description": "Vous fait pleurer à grande larme, ce qui vous rend <b class='data-status' data-status-name='Pitoyable'>pitoyable</b>."
+  },
+  {
+    "id": 18101,
+    "Nom": "Voix Enjôleuse",
+    "type": "Fée",
+    "tier": 1,
+    "portée": "3 - Cha",
+    "description": "2d4, Le lanceur laisse s’échapper une voix enchanteresse qui inflige des dégâts psychiques à la cible."
+  },
+  {
+    "id": 18102,
+    "Nom": "Doux Baiser",
+    "type": "Fée",
+    "tier": 1,
+    "portée": "3 - Action Bonus - <b class='data-passifs' data-passifs-name='Cible Tiers'>Cible Tiers</b>",
+    "description": "Rend 1pv à votre cible."
+  },
+  {
+    "id": 18103,
+    "Nom": "Charme",
+    "type": "Fée",
+    "tier": 1,
+    "portée": "3 - Cha",
+    "description": "<b class='data-status' data-status-name='Charme'>Charme</b> votre cible."
+  },
+  {
+    "id": 18201,
+    "Nom": "Vampi Baiser",
+    "type": "Fée",
+    "tier": 2,
+    "portée": "2 - Int",
+    "description": "Inflige 2d6 + 1. Si vous infligez une blessure majeure ou sévère, regagnez 1 PV."
+  },
+  {
+    "id": 18202,
+    "Nom": "Choc Emotionnel",
+    "type": "Fée",
+    "tier": 2,
+    "portée": "1 - For - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
+    "description": "Inflige 2d6 + 3. En cas de double inflige <b class='data-status' data-status-name='Charme'>Charme</b>."
+  },
+  {
+    "id": 18203,
+    "Nom": "Soin Floral",
     "type": "Fée",
     "tier": 2,
     "portée": "0 - Int",
-    "description": "Produisez 50 cl de lait comestible. Le boire calme la faim et rend 1d3 PV."
+    "description": "Fait poussé une belle fleur comestible. La manger rend 1d3 PV."
+  },
+  {
+    "id": 18301,
+    "Nom": "Vent Féérique",
+    "type": "Fée",
+    "tier": 3,
+    "portée": "3 - Int - AoE 2 Ligne ",
+    "description": "Inflige 2d6 + 1, Déchaîne un vent magique qui cingle la cible."
+  },
+  {
+    "id": 18302,
+    "Nom": "Pétales Féériques",
+    "type": "Fée",
+    "tier": 3,
+    "portée": "5 - Dex - <b class='data-passifs' data-passifs-name='Guidable'>Guidable</b>.",
+    "description": "Inflige 2d6 + 1, Projette des petales que vous pouvez controllé par la pensée."
+  },
+  {
+    "id": 18303,
+    "Nom": "Aromathérapie",
+    "type": "Fée",
+    "tier": 3,
+    "portée": "0 - Int",
+    "description": "Soigne une altération d'état."
   }
 ]

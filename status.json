@@ -42,12 +42,12 @@
   {
     "id": 9,
     "Nom": "Confusion",
-    "description": "Chaque compétence cible une cible aléatoire (vous compris)."
+    "description": "Chaque compétence que vous lancez cible une cible aléatoire (vous compris)."
   },
   {
     "id": 10,
     "Nom": "Charme",
-    "description": "Chaque compétence cible une cible aléatoire (vous compris)."
+    "description": "Le charmé ne peut pas attaquer la source du charme."
   },
   {
     "id": 11,
@@ -123,5 +123,15 @@
     "id": 24,
     "Nom": "Trempé",
     "description": "Les attaques Electrique et Glace gagne 1 dé de dégats, les attaques Feu perde un dé de dégats, disparait si subbit une attaque feu, electrique ou glace"
+  },
+  {
+    "id": 25,
+    "Nom": "Antisoin",
+    "description": "Vous ne pouvez être soigné d'aucune façon"
+  },
+  {
+    "id": 26,
+    "Nom": "Pitoyable",
+    "description": "Lorsque vous êtes dans l'état pitoyable vous avez moins de chance d'être pris pour cible et si cela devait arriver votre aggresseur doit faire un JS de Sagesse"
   }
 ]

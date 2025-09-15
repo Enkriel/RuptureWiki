@@ -57,7 +57,7 @@
   {
     "id": 20,
     "Nom" : "Grosse voix",
-    "description" : "Les attaques sonore gagne 1 de portée"
+    "description" : "Les attaques utilisant la stats de Cha gagne 1 de portée"
   },
   {
     "id": 21,
@@ -97,7 +97,7 @@
   {
     "id": 27,
     "Nom" : "Adaptatif",
-    "description" : "Ce type d'arme peut avoir différent type de dégat entre coupant, contondant et perçant selon ses attaques ou l'arme en elle même"
+    "description" : "Ce type d'arme peut avoir différent type de dégât entre coupant, contondant et perçant selon ses attaques ou l'arme en elle même"
   },
   {
     "id": 28,
@@ -132,12 +132,12 @@
   {
     "id": 99,
     "Nom": "Tyran",
-    "description": "Augementer le tier de vos dés de dégat de la différence de poids entre vous et votre cible (<b class='data-passifs' data-passifs-name='Poids Leger'>Poids Leger</b>, sans mot clef de poids, <b class='data-passifs' data-passifs-name='Poids Lourd'>Poids Lourd</b>)."
+    "description": "Si vous pesez plus lourd que votre cible augmenter vos dé de dégâts d'1 tier (<b class='data-passifs' data-passifs-name='Poids Leger'>Poids Leger</b>, sans mot clef de poids, <b class='data-passifs' data-passifs-name='Poids Lourd'>Poids Lourd</b>)."
   },
   {
     "id": 100,
     "Nom": "Sacrifice Brûlant",
-    "description": "Vous pouvez subbir 1 point de dégât pour ajouter 1 dé de dégat"
+    "description": "Vous pouvez subbir 1 point de dégât pour ajouter 1 cran d'AoE à votre attaque (utilisable jusqu'a 3 fois sur 1 seul attaque)"
   },
   {
     "id": 101,
@@ -148,5 +148,30 @@
     "id": 102,
     "Nom": "Surchargé",
     "description": "Vous pouvez utilisé cette comptétence comme action bonus, mais elle infligera une blessure de tier inférieur"
+  },
+  {
+    "id": 103,
+    "Nom": "Effet sur double",
+    "description": "Cette comptétence à un effet si les dés de dégât font un double, en cas de d'augmentation du nombre de dé, seul les 2 premiers dés sont prix en compte, en cas de dimuntion du nombre de dé, jettez des dés supplémentaires jusqu'a atteindre 2 dés, les dé ajouter de cette façon ne compterons pas dans le calcul des dégâts."
+  },
+  {
+    "id": 104,
+    "Nom": "Puissance Controllé",
+    "description": "Vous pouvez réduire de 1 la valeur un de vos dés de dégât."
+  },
+  {
+    "id": 104,
+    "Nom": "Surpuissance Controllé",
+    "description": "Vous pouvez augmenté de 1 à 3 la valeur un de vos dés de dégât."
+  },
+  {
+    "id": 105,
+    "Nom": "Destruction",
+    "description": "Si cette attaque détruit une part de la cible, inflige une blessure mineure supplémentaire."
+  },
+  {
+    "id": 106,
+    "Nom": "Cible Tiers",
+    "description": "Cette comptétence n'a aucun effet sur vous même."
   }
 ]

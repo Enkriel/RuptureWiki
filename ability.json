@@ -51,8 +51,8 @@
     },
     {
         "id": 3,
-        "Name": "Puissance Cachée",
-        "description": "Les dés de dégâts des compétences d'armes que vous utilisez augmentent d’un tiers."
+        "Name": "Puissance Cachée - Repos Court",
+        "description": "Changé l'élément d'une de vos capacité d'arme pour un autre dont vous avez la maîtrise."
     },
     {
         "id": 4,
@@ -182,7 +182,7 @@
     {
         "id": 30,
         "Name": "Pacte de la Zone",
-        "description": "Vous pouvez communiquer télépathiquement avec votre Pokémon pactisé, où que vous soyez, tant que vous êtes dans la même zone."
+        "description": "Vous pouvez communiquer télépathiquement avec un Pokémon pactisé, où que vous soyez."
     },
     {
         "id": 31,
@@ -457,7 +457,7 @@
     {
         "id": 79,
         "Name": "Saisie - Action Bonus",
-        "description": "Vous agrippez votre cible et vous lui appliquez <b class='data-status' data-status-name='Reduction'>réduction</b> et <b class='data-status' data-status-name='Fixé'>fixé</b>."
+        "description": "Vous agrippez votre cible et vous vous appliquez <b class='data-status' data-status-name='Reduction'>réduction</b> et <b class='data-status' data-status-name='Fixé'>fixé</b>."
     },
     {
         "id": 80,
@@ -496,7 +496,7 @@
     },
     {
         "id": 87,
-        "Name": "Bouclier Miroir - Réaction",
+        "Name": "Bouclier Mirroir - Réaction",
         "description": "Sur un jet de Constitution réussi, vous pouvez dévier un projectile qui vous vise. Si la source de l'attaque vous vise avec l'intention que vous renvoyiez son projectile, divisez la difficulté par 2."
     },
     {
@@ -566,8 +566,8 @@
     },
     {
         "id": 102,
-        "Name": "Puissance de l'Expert",
-        "description": "Ajouter 1 dé de dégât au capacité d’arme dont vous avez l’expertise élémentaire"
+        "Name": "Précision de l'Expert - Repos Court",
+        "description": "Une fois par repos court si vous échoué un jet d'attaque sur une comptétence d'arme d'un élément dont vous avez l'expertise, vous pouvez le relancer"
     },
     {
         "id": 103,
@@ -627,7 +627,7 @@
     {
         "id": 213,
         "Name": "Illusion - Repos Court",
-        "description": "Désactivez un de vos badges pour créer un double de vous-même ayant la même armure et un nombre de PV égal au tier du badge désactivé. Il peut effectuer des actions simples comme répéter une ou deux phrases ou attaquer."
+        "description": "Désactivez un de vos badges pour créer un double de vous-même ayant la même armure que vous et un nombre de PV égal au tier du badge désactivé. Il peut effectuer des actions simples comme répéter une ou deux phrases ou attaquer."
     },
     {
         "id": 214,
@@ -636,7 +636,12 @@
     },
     {
         "id": 215,
-        "Name": "Image Rémanente - Action Bonus - Repos Long",
-        "description": "Vous pouvez absorber un ou plusieurs clones. Pour chaque clone absorbé, votre prochaine compétence d’arme de portée 1 ou 0 sera utilisée une fois supplémentaire."
+        "Name": "Incantation - Tour complet",
+        "description": "<b class='data-status' data-status-name='Concentration'>Concentration</b>, vous pouvez passé un tour à vous concentré sur une de vos comptétence pour ajouter au choix <ul><li><b class='data-passifs' data-passifs-name='Critique Facilité'>Critique Facilité</b> et Augmenté d'1 tier les dés dégâts</li><li><b class='data-passifs' data-passifs-name='Guidable'>Guidable</b> et 3 de portée</li><li><b class='data-passifs' data-passifs-name='Surpuissance Controllé'>Surpuissance Controllé</b></li></ul> ."
+    },
+    {
+        "id": 216,
+        "Name": "Double Impact",
+        "description": "Si vous utilisez une capacité d’arme de votre bâton d’augmentation et que votre syntoniseur à cette même compétence vous pouvez la lancer en Action Bonus."
     }
 ]
