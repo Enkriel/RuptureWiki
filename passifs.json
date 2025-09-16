@@ -57,27 +57,32 @@
   {
     "id": 20,
     "Nom" : "Grosse voix",
-    "description" : "Les attaques utilisant la stats de Cha gagne 1 de portée"
+    "description" : "Les attaques utilisant la stats de Cha gagne 1 de portée."
   },
   {
     "id": 21,
     "Nom" : "Lourd",
-    "description" : "l'arme pese 2 poids de charge au lieu d'1"
+    "description" : "l'arme pese 2 poids de charge au lieu d'1."
   },
   {
     "id": 22,
     "Nom" : "Extrêmement Lourd",
-    "description" : "l'arme pese 3 poids de charge au lieu d'1"
+    "description" : "l'arme pese 3 poids de charge au lieu d'1."
   },
   {
     "id": 22,
     "Nom" : "Allonge",
-    "description" : "Votre arme à une portée de 2 au lieu de 1"
+    "description" : "Votre arme à une portée de 2 au lieu de 1."
   },
   {
     "id": 23,
     "Nom" : "Court",
-    "description" : "Votre arme à une portée de 0 au lieu de 1"
+    "description" : "Votre arme à une portée de 0 au lieu de 1."
+  },
+  {
+    "id": 106,
+    "Nom": "Distance",
+    "description": "Votre arme à une portée de 3 au lieu de 1."
   },
   {
     "id": 24,
@@ -173,5 +178,15 @@
     "id": 106,
     "Nom": "Cible Tiers",
     "description": "Cette comptétence n'a aucun effet sur vous même."
+  },
+  {
+    "id": 107,
+    "Nom": "Munitions",
+    "description": "Cette arme peut consommer des munitions adapté pour changer son attaque."
+  },
+  {
+      "id": 108,
+      "Nom": "Chargeur",
+      "description": "Vous gagner l'action recharger : Vous pouvez placer jusqu'a 3 munitions dans votre chargeur, les munitions sont utilisé automatique lors des attaque et dans l'ordre mise dans le chargeur"
   }
 ]

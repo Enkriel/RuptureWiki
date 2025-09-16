@@ -637,11 +637,71 @@
     {
         "id": 215,
         "Name": "Incantation - Tour complet",
-        "description": "<b class='data-status' data-status-name='Concentration'>Concentration</b>, vous pouvez passé un tour à vous concentré sur une de vos comptétence pour ajouter au choix <ul><li><b class='data-passifs' data-passifs-name='Critique Facilité'>Critique Facilité</b> et Augmenté d'1 tier les dés dégâts</li><li><b class='data-passifs' data-passifs-name='Guidable'>Guidable</b> et 3 de portée</li><li><b class='data-passifs' data-passifs-name='Surpuissance Controllé'>Surpuissance Controllé</b></li></ul> ."
+        "description": "<b class='data-status' data-status-name='Concentration'>Concentration</b>, vous pouvez passé un tour à vous concentré sur une de vos comptétence pour ajouter au choix <ul><li><b class='data-passifs' data-passifs-name='Critique Facilité'>Critique Facilité</b> et Augmenté d'1 tier les dés dégâts</li><li><b class='data-passifs' data-passifs-name='Guidable'>Guidable</b> et 3 de portée</li><li><b class='data-passifs' data-passifs-name='Surpuissance Controllé'>Surpuissance Controllé</b></li></ul>"
     },
     {
         "id": 216,
         "Name": "Double Impact",
         "description": "Si vous utilisez une capacité d’arme de votre bâton d’augmentation et que votre syntoniseur à cette même compétence vous pouvez la lancer en Action Bonus."
+    },
+    {
+        "id": 217,
+        "Name": "Missile Magique - Projectile",
+        "description": "Permet de faire des attaques avec une portée 3 en utilisant la statistique d’Intelligence."
+    },
+    {
+        "id": 218,
+        "Name": "Captation Magique - Réaction - Repos Court",
+        "description": "Après qu'un comptétence du même élément que votre arme est atteri à 1 portée de vous, vous pouvez récupérer l'énergie magique environnante, pour ajouter 1 dé de dégat à votre attaque."
+    },
+    {
+        "id": 219,
+        "Name": "Flèches spéciales NV1",
+        "description": "Vous pouvez utiliser des fléches spéciales de nv 1 sans malus."
+    },
+    {
+        "id": 220,
+        "Name": "Flèches spéciales NV2",
+        "description": "Vous pouvez utiliser des fléches spéciales de nv 2 sans malus."
+    },
+    {
+        "id": 221,
+        "Name": "Balles spéciales NV1",
+        "description": "Vous pouvez utiliser des balles spéciales de nv 1 sans malus."
+    },
+    {
+        "id": 222,
+        "Name": "Balles spéciales NV2",
+        "description": "Vous pouvez utiliser des balles spéciales de nv 2 sans malus."
+    },
+    {
+        "id": 223,
+        "Name": "Esquive Destructrice",
+        "description": "Vous vous mettez dans une position d’esquive, si vous êtes ciblé et que vous réussissez votre esquive vous pouvez contre attaquer et votre arme gagne le mot clef <b class='data-passifs' data-passifs-name='Double'>Double</b> (<b class='data-passifs' data-passifs-name='Triple'>Triple</b> si double est déjà appliqué)"
+    },
+    {
+        "id": 224,
+        "Name": "Chargeur Rotatif",
+        "description": "Quand vous attaquer vous pouvez sélectionner n’importe quel balle chargé"
+    },
+    {
+        "id": 225,
+        "Name": "Rechargement rapide - Action Bonus",
+        "description": "Plutot que de recharger intégralement votre chargeur pour une 1 action Bonus remettez 1 balle dans votre chargeur vide"
+    },
+    {
+        "id": 226,
+        "Name": "Lance",
+        "description": "Quand vous attaquer avec votre Great Boomerang, vous le lancer ce qui vous <b class='data-status' data-status-name='Désarme'>Désarme</b> et inflige des dégât coupant à votre cible"
+    },
+    {
+        "id": 227,
+        "Name": "Rattrape",
+        "description": "Votre Great Boomerang reviens vers vous infligeant des degat contondant à votre cible dans le cadran symmétrique à vous, annule <b class='data-status' data-status-name='Désarme'>Désarme</b>."
+    },
+    {
+        "id": 228,
+        "Name": "Rattrapage Glissé",
+        "description": "Quand vous effectué <b>Rattrapage</b>, vous pouvez effecvtué immédiatement une action de déplacement gratuite."
     }
 ]
