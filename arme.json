@@ -1,6 +1,6 @@
 ﻿[
    {
-    "id": 1001,
+    "id": 10001,
     "Nom": "Epée large de la simplicité",
     "type": "GS",
     "tier": 0,
@@ -13,7 +13,7 @@
     "Craft": "3 matériaux Normaux" 
   },
   {
-    "id": 1002,
+    "id": 10002,
     "Nom": "Torrent Inversé",
     "type": "GS",
     "tier": 0,
@@ -26,7 +26,7 @@
     "Craft": "2 matériaux Eau et 1 Vol" 
   },
   {
-    "id": 1003,
+    "id": 10003,
     "Nom": "Hache de roche",
     "type": "GS",
     "tier": 0,
@@ -39,7 +39,7 @@
     "Craft": "3 matériaux Roche" 
   },
   {
-    "id": 2001,
+    "id": 20001,
     "Nom": "Marteau d'Acier",
     "type": "Hmr",
     "tier": 0,
@@ -52,7 +52,7 @@
     "Craft": "3 matériaux Acier" 
   },
   {
-    "id": 2002,
+    "id": 20002,
     "Nom": "Marteau de Magma",
     "type": "Hmr",
     "tier": 0,
@@ -65,7 +65,7 @@
     "Craft": "2 matériaux Feu et 1 Roche" 
   },
   {
-    "id": 3001,
+    "id": 30001,
     "Nom": "Dragon Vert",
     "type": "LS",
     "tier": 0,
@@ -78,7 +78,7 @@
     "Craft": "2 matériaux Plante et 1 Dragon" 
   },
   {
-    "id": 3002,
+    "id": 30002,
     "Nom": "Lame bleue",
     "type": "LS",
     "tier": 0,
@@ -91,7 +91,7 @@
     "Craft": "3 matériaux Glace" 
   },
   {
-    "id": 4001,
+    "id": 40001,
     "Nom": "Dard",
     "type": "Spr",
     "tier": 0,
@@ -104,7 +104,7 @@
     "Craft": "3 matériaux Insecte" 
   },
   {
-    "id": 4002,
+    "id": 40002,
     "Nom": "Pointe Mentale",
     "type": "Spr",
     "tier": 0,
@@ -115,5 +115,18 @@
     "ability2": "Astuce Force",
     "ability3": "",
     "Craft": "3 matériaux Psy" 
+  },
+  {
+    "id": 130002,
+    "Nom": "Mouffle Coeur de Feu",
+    "type": "Cata",
+    "tier": 0,
+    "Element": "Fée",
+    "Dégât": "1d6",
+    "MotClef": "Magique",
+    "ability1": "Doux Baiser",
+    "ability2": "Flammèche",
+    "ability3": "Calcination",
+    "Craft": "2 matériaux Fée, 1 Feu" 
   }
 ]

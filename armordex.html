@@ -30,7 +30,18 @@
 <body>
 <div id="navbar-container"></div>
 <script src="../navbar.js"></script>
-
+<!--
+Acier = 6
+Spectre = 2
+Normal, Électrik, Poison, Fée = 1
+Feu, Eau, Vol = 0
+Sol, Ténèbres = -1
+Dragon = -2
+Combat, Insecte = -3
+Psy = -4
+Plante, Roche = -6
+Glace = -7
+-->
 <h1>Liste des Armures</h1>
 <p>Filtrez par type ou par tier.</p>
 
@@ -197,30 +208,86 @@ function setupUncheck(){
 /* ------------------ tooltips ------------------ */
 function setupTooltips(){
   const tt = document.getElementById('passif-tooltip');
+  let locked = false; // état verrouillé
+  let currentItem = null;
 
   document.addEventListener('mouseover', e=>{
     const item = e.target.closest('.passif-item');
     if(!item) return;
 
-    tt.innerHTML = `<strong>${item.textContent}</strong><div style="margin-top:4px">${item.dataset.desc}</div>`;
-    tt.style.display = 'block';
-    tt.setAttribute('aria-hidden','false');
+    // si on survole un nouvel item, on annule le lock
+    if(currentItem !== item){
+      locked = false;
+    }
+
+    if(!locked){
+      tt.innerHTML = `<strong>${item.textContent}</strong><div style="margin-top:4px">${item.dataset.desc}</div>`;
+      tt.style.display = 'block';
+      tt.setAttribute('aria-hidden','false');
+      currentItem = item;
+    }
   });
 
   document.addEventListener('mousemove', e=>{
-    if(tt.style.display==='block'){
+    if(tt.style.display==='block' && !locked){
       tt.style.left = e.pageX + 14 + 'px';
       tt.style.top  = e.pageY + 14 + 'px';
     }
   });
 
   document.addEventListener('mouseout', e=>{
+    if(locked) return; // si verrouillé, on ne ferme pas
     if(e.target.closest('.passif-item')){
       tt.style.display='none';
       tt.setAttribute('aria-hidden','true');
+      currentItem = null;
+    }
+  });
+
+  // clic sur un mot clé → lock
+  document.addEventListener('click', e=>{
+    const item = e.target.closest('.passif-item');
+    if(item){
+      tt.innerHTML = `<strong>${item.textContent}</strong><div style="margin-top:4px">${item.dataset.desc}</div>`;
+      tt.style.display = 'block';
+      tt.setAttribute('aria-hidden','false');
+      locked = true;
+      currentItem = item;
+    } else if(e.target.closest('#passif-tooltip')){
+      // clic sur la tooltip → ferme et délock
+      /*locked = false;
+      tt.style.display='none';
+      tt.setAttribute('aria-hidden','true');*/
+      currentItem = null;
+    }
+  });
+
+  // clic sur un passif => toggle verrouillage
+  document.addEventListener('click', e=>{
+    const item = e.target.closest('.passif-item');
+    if(item){
+      if(!locked){
+        // activer le lock
+        tt.innerHTML = `<strong>${item.textContent}</strong><div style="margin-top:4px">${item.dataset.desc}</div>`;
+        tt.style.display = 'block';
+        tt.setAttribute('aria-hidden','false');
+        locked = true;
+      } else {
+        // déjà lock → si on reclick sur un autre passif, mettre à jour le contenu
+        tt.innerHTML = `<strong>${item.textContent}</strong><div style="margin-top:4px">${item.dataset.desc}</div>`;
+      }
+    } else if(e.target.closest('#passif-tooltip')){
+      // clic sur la tooltip elle-même → on déverrouille et on la ferme
+      /*locked = false;
+      tt.style.display='none';
+      tt.setAttribute('aria-hidden','true');*/
+    } else {
+      // clic ailleurs (optionnel : déverrouiller aussi)
+      // locked = false;
     }
   });
 }
+
 
 /* ------------------ bootstrap ------------------ */
 async function boot(){

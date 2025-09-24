@@ -232,21 +232,20 @@ function setupUncheck(){
 function setupTooltips(){
   const tt1 = document.getElementById('attack-tooltip');
   const tt2 = document.getElementById('attack-tooltip2');
+  let locked = false;
+  let currentItem = null;
 
-  document.addEventListener('mouseover', e=>{
-    const item = e.target.closest('.attack-item');
-    if(!item) return;
-
-    const header = `<strong>${item.textContent} - ${item.dataset.type} </strong>`;
+  function showTooltips(item){
+    const header = `<strong>${item.textContent} - ${item.dataset.type}</strong>`;
     const meta = `<div style="margin:6px 0"><em>Type:</em> ${item.dataset.type} — <em>Portée:</em> ${item.dataset.range}</div>`;
     tt1.innerHTML = header + `<div>${item._descHtml || '—'}</div>`;
     tt1.style.display = 'block';
     tt1.setAttribute('aria-hidden','false');
 
+    // highlights pour tooltip2
     const tmp = document.createElement('div');
     tmp.innerHTML = item._descHtml || '';
     const highlights = tmp.querySelectorAll('[data-status-name], [data-passifs-name]');
-
     const tooltip2Content = Array.from(highlights).map(span=>{
       if(span.dataset.statusName){
         const s = statusData.find(x=>x.Nom===span.dataset.statusName);
@@ -261,14 +260,29 @@ function setupTooltips(){
     tt2.innerHTML = tooltip2Content || '—';
     tt2.style.display = tooltip2Content ? 'block' : 'none';
     tt2.setAttribute('aria-hidden', tooltip2Content ? 'false' : 'true');
+
+    currentItem = item;
+  }
+
+  document.addEventListener('mouseover', e=>{
+    const item = e.target.closest('.attack-item');
+    if(!item) return;
+
+    // si on survole un nouvel item, casser le lock
+    if(currentItem !== item){
+      locked = false;
+    }
+    if(!locked){
+      showTooltips(item);
+    }
   });
 
   document.addEventListener('mousemove', e=>{
-    if(tt1.style.display==='block'){
+    if(tt1.style.display==='block' && !locked){
       tt1.style.left = e.pageX + 14 + 'px';
       tt1.style.top  = e.pageY + 14 + 'px';
     }
-    if(tt2.style.display==='block'){
+    if(tt2.style.display==='block' && !locked){
       const t1h = tt1.offsetHeight || 40;
       tt2.style.left = e.pageX + 14 + 'px';
       tt2.style.top  = e.pageY + 14 + t1h + 8 + 'px';
@@ -276,14 +290,28 @@ function setupTooltips(){
   });
 
   document.addEventListener('mouseout', e=>{
+    if(locked) return; // si verrouillé, on ne ferme pas
     if(e.target.closest('.attack-item')){
       tt1.style.display='none';
       tt2.style.display='none';
       tt1.setAttribute('aria-hidden','true');
       tt2.setAttribute('aria-hidden','true');
+      currentItem = null;
     }
   });
+
+  // clic → lock
+  document.addEventListener('click', e=>{
+    const item = e.target.closest('.attack-item');
+    if(item){
+      showTooltips(item);
+      locked = true;
+      currentItem = item;
+    }
+    // ⚠️ on ne ferme plus si on clique sur la popup !
+  });
 }
+
 
 /* ------------------ bootstrap ------------------ */
 async function boot(){

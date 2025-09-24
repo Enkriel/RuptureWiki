@@ -11,6 +11,17 @@
     "Craft": "3 matériaux Normaux" 
   },
   {
+    "id": 10002,
+    "Nom": "Toison de feu",
+    "type": "Légère",
+    "tier": 0,
+    "Element": "Feu",
+    "Armure": "1",
+    "Paliers": "3/5",
+    "Effets": "",
+    "Craft": "3 matériaux Feu" 
+  },
+  {
     "id": 20001,
     "Nom": "Armure de lianes",
     "type": "Moyenne",
