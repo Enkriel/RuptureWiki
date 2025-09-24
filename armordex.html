@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Liste des Armures — Tooltips imbriquées (passifs)</title>
+<style>
+  body { font-family: system-ui,Segoe UI,Roboto,Arial; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); color:#fff; padding:20px; }
+  h1{ text-align:center; margin-bottom:6px }
+  p{ text-align:center; margin-bottom:18px; opacity:0.95 }
+  .filters { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:18px; justify-content:center; }
+  .filters label { display:flex; align-items:center; gap:8px; background:rgba(255,255,255,0.06); padding:6px 10px; border-radius:12px; cursor:pointer; }
+  .btn-clear{ background:rgba(255,255,255,0.12); color:#fff; border:none; padding:8px 12px; border-radius:12px; cursor:pointer }
+  .tier-section { margin-bottom:28px; background:rgba(255,255,255,0.04); padding:14px; border-radius:12px; }
+  .tier-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px }
+  .armor-table { width:100%; border-collapse:collapse; background:rgba(0,0,0,0.06); border-radius:8px; overflow:hidden }
+  .armor-table th, .armor-table td { padding:8px 10px; text-align:left; border-bottom:1px solid rgba(255,255,255,0.03) }
+  .armor-table th { background:rgba(255,255,255,0.03); font-weight:700 }
+  .passif-item { color:#8be3ff; text-decoration:underline dotted; cursor:pointer; }
+  /* tooltips */
+  .tooltip {
+    position:absolute; display:none; pointer-events:none; z-index:10000;
+    max-width:360px; padding:10px; background:rgba(0,0,0,0.88); color:#fff;
+    border-radius:8px; font-size:0.9rem; box-shadow:0 6px 22px rgba(0,0,0,0.5);
+  }
+  @media (max-width:700px){ .armor-table th,.armor-table td{font-size:0.9rem} }
+</style>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div id="navbar-container"></div>
+<script src="../navbar.js"></script>
+
+<h1>Liste des Armures</h1>
+<p>Filtrez par type ou par tier.</p>
+
+<div class="filters" id="type-filters"></div>
+<div class="filters" id="tier-filters"></div>
+<div class="filters" style="justify-content:center; margin-bottom:18px;">
+  <button id="uncheck-btn" class="btn-clear">❌ Décocher tout</button>
+</div>
+
+<div id="content"></div>
+
+<!-- tooltips -->
+<div id="passif-tooltip" class="tooltip" aria-hidden="true"></div>
+
+<script>
+/* ------------------ util load ------------------ */
+async function loadJSON(url){
+  try {
+    const r = await fetch(url);
+    if(!r.ok) throw new Error(`${url} HTTP ${r.status}`);
+    return await r.json();
+  } catch(e){
+    console.error('loadJSON',url,e);
+    return [];
+  }
+}
+
+/* ------------------ données ------------------ */
+let armors = [];
+let passifsData = [];
+
+/* ------------------ types ------------------ */
+const armorTypes = ["Légère","Moyenne","Lourde","Extrêmement Lourde"];
+
+function mapType(code){
+  return code || '—';
+}
+
+/* ------------------ rendu passif (DOM safe) ------------------ */
+function renderPassifDOM(effet){
+  const span = document.createElement('span');
+  if(!effet || effet.trim()===''){ 
+    span.textContent = '—'; 
+    return span; 
+  }
+
+  span.className = 'passif-item';
+  span.textContent = effet.trim();
+
+  // chercher description
+  const p = passifsData.find(x => x.Nom.toLowerCase() === effet.trim().toLowerCase());
+  if(p){
+    span.dataset.desc = p.description;
+  } else {
+    span.dataset.desc = '—';
+  }
+
+  return span;
+}
+
+/* ------------------ rendering table rows ------------------ */
+function renderArmors(){
+  const container = document.getElementById('content');
+  container.innerHTML = '';
+
+  const checkedTypes = Array.from(document.querySelectorAll('#type-filters input:checked')).map(i=>i.value);
+  const checkedTiers = Array.from(document.querySelectorAll('#tier-filters input:checked')).map(i=>Number(i.value));
+
+  for(let t=0; t<=9; t++){
+    const section = document.createElement('div');
+    section.className = 'tier-section';
+
+    const header = document.createElement('div');
+    header.className = 'tier-header';
+    header.innerHTML = `<h2>Tier ${t}</h2><span class="count">0</span>`;
+    section.appendChild(header);
+
+    const tierArmors = armors.filter(a => a && Number(a.tier) === t &&
+      (checkedTypes.length === 0 || checkedTypes.includes(mapType(a.type))) &&
+      (checkedTiers.length === 0 || checkedTiers.includes(t))
+    );
+
+    header.querySelector('.count').textContent = tierArmors.length;
+
+    if(tierArmors.length === 0){
+      const p = document.createElement('p');
+      p.className = 'no-items';
+      p.textContent = 'Aucune armure dans ce tier';
+      section.appendChild(p);
+    } else {
+      const table = document.createElement('table');
+      table.className = 'armor-table';
+
+      const thead = document.createElement('thead');
+      thead.innerHTML = `<tr>
+        <th>Nom</th><th>Type</th><th>Élément</th><th>Armure</th><th>Paliers</th><th>Effets</th><th>Recette</th>
+      </tr>`;
+      table.appendChild(thead);
+
+      const tbody = document.createElement('tbody');
+      tierArmors.forEach(a=>{
+        const tr = document.createElement('tr');
+        const td = txt => { const c = document.createElement('td'); c.textContent = txt || '—'; return c; };
+
+        tr.appendChild(td(a.Nom));
+        tr.appendChild(td(mapType(a.type)));
+        tr.appendChild(td(a.Element));
+        tr.appendChild(td(a["Armure"]));
+        tr.appendChild(td(a.Paliers));
+
+        const eff = document.createElement('td');
+        if(a.Effets){
+          a.Effets.split(',').forEach(e=>{
+            eff.appendChild(renderPassifDOM(e));
+            eff.appendChild(document.createTextNode(' '));
+          });
+        } else {
+          eff.textContent = '—';
+        }
+        tr.appendChild(eff);
+
+        tr.appendChild(td(a.Craft));
+        tbody.appendChild(tr);
+      });
+
+      table.appendChild(tbody);
+      section.appendChild(table);
+    }
+
+    container.appendChild(section);
+  }
+}
+
+/* ------------------ filtres UI ------------------ */
+function createTypeFilters(){
+  const container = document.getElementById('type-filters');
+  container.innerHTML = '';
+  armorTypes.forEach(t=>{
+    const label = document.createElement('label');
+    label.innerHTML = `<input type="checkbox" value="${t}"> ${t}`;
+    container.appendChild(label);
+  });
+  container.querySelectorAll('input[type="checkbox"]').forEach(cb=>cb.addEventListener('change', renderArmors));
+}
+
+function createTierFilters(){
+  const container = document.getElementById('tier-filters');
+  container.innerHTML = '';
+  for(let i=0;i<=9;i++){
+    const label = document.createElement('label');
+    label.innerHTML = `<input type="checkbox" value="${i}"> Tier ${i}`;
+    container.appendChild(label);
+  }
+  container.querySelectorAll('input[type="checkbox"]').forEach(cb=>cb.addEventListener('change', renderArmors));
+}
+
+function setupUncheck(){
+  document.getElementById('uncheck-btn').addEventListener('click', ()=>{
+    document.querySelectorAll('input[type="checkbox"]').forEach(cb=>cb.checked=false);
+    renderArmors();
+  });
+}
+
+/* ------------------ tooltips ------------------ */
+function setupTooltips(){
+  const tt = document.getElementById('passif-tooltip');
+
+  document.addEventListener('mouseover', e=>{
+    const item = e.target.closest('.passif-item');
+    if(!item) return;
+
+    tt.innerHTML = `<strong>${item.textContent}</strong><div style="margin-top:4px">${item.dataset.desc}</div>`;
+    tt.style.display = 'block';
+    tt.setAttribute('aria-hidden','false');
+  });
+
+  document.addEventListener('mousemove', e=>{
+    if(tt.style.display==='block'){
+      tt.style.left = e.pageX + 14 + 'px';
+      tt.style.top  = e.pageY + 14 + 'px';
+    }
+  });
+
+  document.addEventListener('mouseout', e=>{
+    if(e.target.closest('.passif-item')){
+      tt.style.display='none';
+      tt.setAttribute('aria-hidden','true');
+    }
+  });
+}
+
+/* ------------------ bootstrap ------------------ */
+async function boot(){
+  [passifsData, armors] = await Promise.all([
+    loadJSON('passifs.json'),
+    loadJSON('armure.json')
+  ]);
+
+  renderArmors();
+  createTypeFilters();
+  createTierFilters();
+  setupUncheck();
+  setupTooltips();
+}
+
+document.addEventListener('DOMContentLoaded', boot);
+</script>
+
+</body>
+</html>

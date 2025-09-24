@@ -142,7 +142,7 @@
   {
     "id": 100,
     "Nom": "Sacrifice Brûlant",
-    "description": "Vous pouvez subbir 1 point de dégât pour ajouter 1 cran d'AoE à votre attaque (utilisable jusqu'a 3 fois sur 1 seul attaque)"
+    "description": "Vous pouvez sacrifier un point d'armure pour augmenter d'1 tier vos dé de dégats (utilisable jusqu'a 3 fois sur 1 seul attaque)"
   },
   {
     "id": 101,
@@ -161,12 +161,12 @@
   },
   {
     "id": 104,
-    "Nom": "Puissance Controllé",
+    "Nom": "Puissance Contrôlée",
     "description": "Vous pouvez réduire de 1 la valeur un de vos dés de dégât."
   },
   {
     "id": 104,
-    "Nom": "Surpuissance Controllé",
+    "Nom": "Surpuissance Contrôlée",
     "description": "Vous pouvez augmenté de 1 à 3 la valeur un de vos dés de dégât."
   },
   {
@@ -185,8 +185,18 @@
     "description": "Cette arme peut consommer des munitions adapté pour changer son attaque."
   },
   {
-      "id": 108,
-      "Nom": "Chargeur",
-      "description": "Vous gagner l'action recharger : Vous pouvez placer jusqu'a 3 munitions dans votre chargeur, les munitions sont utilisé automatique lors des attaque et dans l'ordre mise dans le chargeur"
+    "id": 108,
+    "Nom": "Chargeur",
+    "description": "Vous gagner l'action recharger : Vous pouvez placer jusqu'a 3 munitions dans votre chargeur, les munitions sont utilisé automatique lors des attaque et dans l'ordre mise dans le chargeur"
+  },
+  {
+    "id": 109,
+    "Nom": "Epines",
+    "description": "Quand vous subissez une attaque ou un capacité dont la portée est de 1 ou moins ou infligé 1 dégats"
+  },
+  {
+    "id": 109,
+    "Nom": "Armure Inflammable",
+    "description": "Quand vous subbissez une attaque feu, si vous n'utiliser pas de point d'armure vous êtes automatiqument brûler"
   }
 ]

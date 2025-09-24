@@ -11,6 +11,7 @@ body {
     min-height: 100vh;
     padding: 20px;
     color: white;
+    padding-top: 70px;
 }
 
 /* ---------- Header ---------- */
@@ -559,11 +560,16 @@ select:focus {
     padding: 10px 20px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
-    position: sticky;
+
+    position: fixed;  /* ← changement */
     top: 0;
+    left: 0;
+    right: 0;
+
     z-index: 1000;
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* tu peux enlever ça avec fixed */
 }
+
 
 .navbar .brand {
     color: white;

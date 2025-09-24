@@ -1,0 +1,46 @@
+﻿[
+   {
+    "id": 10001,
+    "Nom": "Laine legere",
+    "type": "Légère",
+    "tier": 0,
+    "Element": "Normal",
+    "Armure": "1",
+    "Paliers": "3/6",
+    "Effets": "Fragilité Coupante",
+    "Craft": "3 matériaux Normaux" 
+  },
+  {
+    "id": 20001,
+    "Nom": "Armure de lianes",
+    "type": "Moyenne",
+    "tier": 0,
+    "Element": "Plante",
+    "Armure": "2",
+    "Paliers": "4/6",
+    "Effets": "Epines",
+    "Craft": "3 matériaux Plante" 
+  },
+  {
+    "id": 30001,
+    "Nom": "Cuirasse de feu",
+    "type": "Lourde",
+    "tier": 0,
+    "Element": "Feu",
+    "Armure": "3",
+    "Paliers": "4/8",
+    "Effets": "",
+    "Craft": "3 matériaux Feu" 
+  },
+  {
+    "id": 40001,
+    "Nom": "Rempart d'acier",
+    "type": "Extrêmement Lourde",
+    "tier": 0,
+    "Element": "Acier",
+    "Armure": "3",
+    "Paliers": "5/9",
+    "Effets": "Poids Lourd, Armure Inflammable",
+    "Craft": "3 matériaux Acier" 
+  }
+]

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Liste des Armes — Tooltips imbriquées (statut)</title>
+<style>
+  body { font-family: system-ui,Segoe UI,Roboto,Arial; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); color:#fff; padding:20px; }
+  h1{ text-align:center; margin-bottom:6px }
+  p{ text-align:center; margin-bottom:18px; opacity:0.95 }
+  .filters { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:18px; justify-content:center; }
+  .filters label { display:flex; align-items:center; gap:8px; background:rgba(255,255,255,0.06); padding:6px 10px; border-radius:12px; cursor:pointer; }
+  .btn-clear{ background:rgba(255,255,255,0.12); color:#fff; border:none; padding:8px 12px; border-radius:12px; cursor:pointer }
+  .tier-section { margin-bottom:28px; background:rgba(255,255,255,0.04); padding:14px; border-radius:12px; }
+  .tier-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px }
+  .armor-table { width:100%; border-collapse:collapse; background:rgba(0,0,0,0.06); border-radius:8px; overflow:hidden }
+  .armor-table th, .armor-table td { padding:8px 10px; text-align:left; border-bottom:1px solid rgba(255,255,255,0.03) }
+  .armor-table th { background:rgba(255,255,255,0.03); font-weight:700 }
+  .attack-item { color:#8be3ff; text-decoration:underline dotted; cursor:pointer; }
+  /* tooltips */
+  .tooltip {
+    position:absolute; display:none; pointer-events:none; z-index:10000;
+    max-width:360px; padding:10px; background:rgba(0,0,0,0.88); color:#fff;
+    border-radius:8px; font-size:0.9rem; box-shadow:0 6px 22px rgba(0,0,0,0.5);
+  }
+  .status-highlight { font-weight:700; text-decoration:underline dotted; }
+  @media (max-width:700px){ .armor-table th,.armor-table td{font-size:0.9rem} }
+</style>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div id="navbar-container"></div>
+<script src="../navbar.js"></script>
+
+<h1>Liste des Armes</h1>
+<p>Filtrez par type ou par tier.</p>
+
+<div class="filters" id="type-filters"></div>
+<div class="filters" id="tier-filters"></div>
+<div class="filters" style="justify-content:center; margin-bottom:18px;">
+  <button id="uncheck-btn" class="btn-clear">❌ Décocher tout</button>
+</div>
+
+<div id="content"></div>
+
+<!-- tooltips -->
+<div id="attack-tooltip" class="tooltip" aria-hidden="true"></div>
+<div id="attack-tooltip2" class="tooltip" aria-hidden="true"></div>
+
+<script>
+/* ------------------ util load ------------------ */
+async function loadJSON(url){
+  try {
+    const r = await fetch(url);
+    if(!r.ok) throw new Error(`${url} HTTP ${r.status}`);
+    return await r.json();
+  } catch(e){
+    console.error('loadJSON',url,e);
+    return [];
+  }
+}
+
+/* ------------------ données ------------------ */
+let weapons = [];
+let attaqueData = [];
+let statusData = [];
+let passifsData = [];
+
+/* ------------------ mappings & types ------------------ */
+const weaponTypes = [
+  "Espadon","Marteau","Katana","Hallebarde","Poings","Double lames",
+  "Arme légère et bouclier","Lance et bouclier géant","Fouet","Harmonium",
+  "Cor de Chasse","Bâton d'amplification","Catalyseur","Arc","Fusarbalete","Great boomerang"
+];
+
+function mapType(code){
+  const m = {
+    "GS":"Espadon","Hmr":"Marteau","LS":"Katana","Spr":"Hallebarde","Fist":"Poings",
+    "Dual":"Double lames","SnS":"Arme légère et bouclier","LnS":"Lance et bouclier géant",
+    "Whip":"Fouet","Harm":"Harmonium","Harmonium":"Harmonium","HH":"Cor de Chasse",
+    "Staff":"Bâton d'amplification","Cata":"Catalyseur","Bow":"Arc","Bowgun":"Fusarbalete","GB":"Great boomerang"
+  };
+  return m[code] || code || '—';
+}
+
+/* ------------------ rendu capacité (DOM safe) ------------------ */
+function renderAbilityDOM(name){
+  const span = document.createElement('span');
+  if(!name || name === '-') { 
+    span.textContent = '—'; 
+    return span; 
+  }
+
+  const atk = attaqueData.find(a => a.Nom === name);
+  if(!atk){ 
+    span.textContent = name; 
+    return span; 
+  }
+
+  span.className = 'attack-item';
+  span.textContent = atk.Nom;
+  span.dataset.type = atk.type || '—';
+  span.dataset.range = atk.portée || '—';
+
+  // Conteneur temporaire
+  const tmp = document.createElement('div');
+
+  // On inclut la portée + description
+  tmp.innerHTML = `<div data-range>${atk.portée || '—'}</div>` + (atk.description || '');
+
+  // Transformer les <b> en <span> pour tooltip2
+  tmp.querySelectorAll('b.data-status').forEach(b=>{
+    const sName = b.dataset.statusName;
+    b.outerHTML = `<span class="status-highlight" data-status-name="${sName}">${b.innerHTML}</span>`;
+  });
+  tmp.querySelectorAll('b.data-passifs').forEach(b=>{
+    const pName = b.dataset.passifsName;
+    b.outerHTML = `<span class="status-highlight" data-passifs-name="${pName}">${b.innerHTML}</span>`;
+  });
+
+  // Stocker pour tooltip1
+  span._descHtml = tmp.innerHTML;
+
+  // Stocker les highlights pour tooltip2
+  span._allHighlights = Array.from(tmp.querySelectorAll('[data-status-name], [data-passifs-name]')).map(h => ({
+    statusName: h.dataset.statusName,
+    passifsName: h.dataset.passifsName
+  }));
+
+  return span;
+}
+
+
+/* ------------------ rendering table rows ------------------ */
+function renderWeapons(){
+  const container = document.getElementById('content');
+  container.innerHTML = '';
+
+  const checkedTypes = Array.from(document.querySelectorAll('#type-filters input:checked')).map(i=>i.value);
+  const checkedTiers = Array.from(document.querySelectorAll('#tier-filters input:checked')).map(i=>Number(i.value));
+
+  for(let t=0; t<=9; t++){
+    const section = document.createElement('div');
+    section.className = 'tier-section';
+
+    const header = document.createElement('div');
+    header.className = 'tier-header';
+    header.innerHTML = `<h2>Tier ${t}</h2><span class="count">0</span>`;
+    section.appendChild(header);
+
+    const tierWeapons = weapons.filter(w => w && Number(w.tier) === t &&
+      (checkedTypes.length === 0 || checkedTypes.includes(mapType(w.type))) &&
+      (checkedTiers.length === 0 || checkedTiers.includes(t))
+    );
+
+    header.querySelector('.count').textContent = tierWeapons.length;
+
+    if(tierWeapons.length === 0){
+      const p = document.createElement('p');
+      p.className = 'no-items';
+      p.textContent = 'Aucune arme dans ce tier';
+      section.appendChild(p);
+    } else {
+      const table = document.createElement('table');
+      table.className = 'armor-table';
+
+      const thead = document.createElement('thead');
+      thead.innerHTML = `<tr>
+        <th>Nom</th><th>Type</th><th>Élément</th><th>Dégâts</th><th>Mots-clés</th>
+        <th>Capacité 1</th><th>Capacité 2</th><th>Capacité 3</th><th>Recette</th>
+      </tr>`;
+      table.appendChild(thead);
+
+      const tbody = document.createElement('tbody');
+      tierWeapons.forEach(w=>{
+        const tr = document.createElement('tr');
+        const td = txt => { const c = document.createElement('td'); c.textContent = txt || '—'; return c; };
+
+        tr.appendChild(td(w.Nom));
+        tr.appendChild(td(mapType(w.type)));
+        tr.appendChild(td(w.Element));
+        tr.appendChild(td(w["Dégât"]));
+        tr.appendChild(td(w.MotClef));
+
+        const a1 = document.createElement('td'); a1.appendChild(renderAbilityDOM(w.ability1)); tr.appendChild(a1);
+        const a2 = document.createElement('td'); a2.appendChild(renderAbilityDOM(w.ability2)); tr.appendChild(a2);
+        const a3 = document.createElement('td'); a3.appendChild(renderAbilityDOM(w.ability3)); tr.appendChild(a3);
+
+        tr.appendChild(td(w.Craft));
+        tbody.appendChild(tr);
+      });
+
+      table.appendChild(tbody);
+      section.appendChild(table);
+    }
+
+    container.appendChild(section);
+  }
+}
+
+/* ------------------ filtres UI ------------------ */
+function createTypeFilters(){
+  const container = document.getElementById('type-filters');
+  container.innerHTML = '';
+  weaponTypes.forEach(t=>{
+    const label = document.createElement('label');
+    label.innerHTML = `<input type="checkbox" value="${t}"> ${t}`;
+    container.appendChild(label);
+  });
+  container.querySelectorAll('input[type="checkbox"]').forEach(cb=>cb.addEventListener('change', renderWeapons));
+}
+
+function createTierFilters(){
+  const container = document.getElementById('tier-filters');
+  container.innerHTML = '';
+  for(let i=0;i<=9;i++){
+    const label = document.createElement('label');
+    label.innerHTML = `<input type="checkbox" value="${i}"> Tier ${i}`;
+    container.appendChild(label);
+  }
+  container.querySelectorAll('input[type="checkbox"]').forEach(cb=>cb.addEventListener('change', renderWeapons));
+}
+
+function setupUncheck(){
+  document.getElementById('uncheck-btn').addEventListener('click', ()=>{
+    document.querySelectorAll('input[type="checkbox"]').forEach(cb=>cb.checked=false);
+    renderWeapons();
+  });
+}
+
+/* ------------------ tooltips ------------------ */
+function setupTooltips(){
+  const tt1 = document.getElementById('attack-tooltip');
+  const tt2 = document.getElementById('attack-tooltip2');
+
+  document.addEventListener('mouseover', e=>{
+    const item = e.target.closest('.attack-item');
+    if(!item) return;
+
+    const header = `<strong>${item.textContent} - ${item.dataset.type} </strong>`;
+    const meta = `<div style="margin:6px 0"><em>Type:</em> ${item.dataset.type} — <em>Portée:</em> ${item.dataset.range}</div>`;
+    tt1.innerHTML = header + `<div>${item._descHtml || '—'}</div>`;
+    tt1.style.display = 'block';
+    tt1.setAttribute('aria-hidden','false');
+
+    const tmp = document.createElement('div');
+    tmp.innerHTML = item._descHtml || '';
+    const highlights = tmp.querySelectorAll('[data-status-name], [data-passifs-name]');
+
+    const tooltip2Content = Array.from(highlights).map(span=>{
+      if(span.dataset.statusName){
+        const s = statusData.find(x=>x.Nom===span.dataset.statusName);
+        if(s) return `<strong>${s.Nom}</strong><div style="margin-top:4px">${s.description}</div>`;
+      } else if(span.dataset.passifsName){
+        const p = passifsData.find(x=>x.Nom===span.dataset.passifsName);
+        if(p) return `<strong>${p.Nom}</strong><div style="margin-top:4px">${p.description}</div>`;
+      }
+      return null;
+    }).filter(x=>x).join('<hr>');
+
+    tt2.innerHTML = tooltip2Content || '—';
+    tt2.style.display = tooltip2Content ? 'block' : 'none';
+    tt2.setAttribute('aria-hidden', tooltip2Content ? 'false' : 'true');
+  });
+
+  document.addEventListener('mousemove', e=>{
+    if(tt1.style.display==='block'){
+      tt1.style.left = e.pageX + 14 + 'px';
+      tt1.style.top  = e.pageY + 14 + 'px';
+    }
+    if(tt2.style.display==='block'){
+      const t1h = tt1.offsetHeight || 40;
+      tt2.style.left = e.pageX + 14 + 'px';
+      tt2.style.top  = e.pageY + 14 + t1h + 8 + 'px';
+    }
+  });
+
+  document.addEventListener('mouseout', e=>{
+    if(e.target.closest('.attack-item')){
+      tt1.style.display='none';
+      tt2.style.display='none';
+      tt1.setAttribute('aria-hidden','true');
+      tt2.setAttribute('aria-hidden','true');
+    }
+  });
+}
+
+/* ------------------ bootstrap ------------------ */
+async function boot(){
+  [attaqueData, statusData, passifsData, weapons] = await Promise.all([
+    loadJSON('attaque.json'),
+    loadJSON('status.json'),
+    loadJSON('passifs.json'),
+    loadJSON('arme.json')
+  ]);
+
+  renderWeapons();
+  createTypeFilters();
+  createTierFilters();
+  setupUncheck();
+  setupTooltips();
+}
+
+document.addEventListener('DOMContentLoaded', boot);
+</script>
+
+</body>
+</html>

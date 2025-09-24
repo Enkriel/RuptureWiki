@@ -229,7 +229,7 @@
     "type": "Vol",
     "tier": 1,
     "portée": "2 - Dex - Percant",
-    "description": "2d6."
+    "description": "1d8 + 2."
   },
   {
     "id": 3102,
@@ -503,7 +503,7 @@
     "type": "Roche",
     "tier": 1,
     "portée": "1 - Con - Contondant",
-    "description": "Avancez d’une case vers votre cible. Si vous la touchez, infligez 1d8. Pour chaque <b>Roulade</b> consécutive, augmentez le nombre de dés de 1."
+    "description": "Infligez 1d8. Avancez d’une case vers votre cible. Pour chaque <b>Roulade</b> consécutive qui touche, augmentez le nombre de dés de 1."
   },
   {
     "id": 6201,
@@ -927,7 +927,7 @@
     "type": "Plante",
     "tier": 1,
     "portée": "2 - Dex - Contondant",
-    "description": "Fouette la cible avec de fines lianes pour infliger."
+    "description": "Inflige : 1d8 + 2 Fouette la cible avec de fines lianes."
   },
   {
     "id": 12103,
@@ -1150,7 +1150,7 @@
     "Nom": "Solidification",
     "type": "Glace",
     "tier": 1,
-    "portée": "0 - Int - <b class='data-passifs' data-passifs-name='Destruction'>Destruction</b>",
+    "portée": "0 - Int",
     "description": "Transforme un liquide en glace solide. Selon la surface et l’épaisseur souhaitée, un jet d’Intelligence peut être demandé."
   },
   {
