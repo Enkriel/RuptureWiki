@@ -86,14 +86,28 @@
         ];
 
         // VERSION CORRIGÉE DE TON CODE
+        // VERSION CORRIGÉE DE TON CODE
         async function loadMonsters() {
             try {
                 const res = await fetch('pokemon.json'); // <-- ici
                 if (!res.ok) {
                     throw new Error(`Erreur HTTP: ${res.status}`);
                 }
-        
-                const monsters = await res.json();
+
+                let monsters = await res.json();
+
+                // 🔑 Si on est en local (localhost, 127.0.0.1 ou file://), forcer tout en "unlock"
+                if (
+                    location.hostname === "localhost" || 
+                    location.hostname === "127.0.0.1" || 
+                    location.protocol === "file:"
+                ) {
+                    monsters = monsters.map(p => {
+                        return { ...p, status: "unlock" };
+                    });
+                    console.log("Mode local détecté → tous les Pokémon sont débloqués !");
+                }
+
                 initUI(monsters);
             } catch (err) {
                 console.error('Erreur de chargement:', err);
@@ -101,6 +115,8 @@
                 initUI(sampleData); // fallback
             }
         }
+
+
 
         let attaqueData = [];
         let passifData = [];
