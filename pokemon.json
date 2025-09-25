@@ -7,15 +7,11 @@
     "hp": 6,
     "difficulty": "10",
     "armor": "4/8/15",
-    "type": ["Grass/Poison"],
-    "major_weakness": [""],
-    "weakness": ["Feu","Glace","Vol","Psy"],
-    "resistance": ["Eau", "Electric", "Combat", "Fée"],
-    "major_resistance": ["Plante"],
-    "immunity": [""],
+    "type": ["Plante/Poison"],
     "attacks": ["Fouet Liane", "Poudre Toxic", "Balle Graine"],
     "passifs": [""], 
-    "status" : "seen"
+    "status" : "seen",
+    "alpha" : "no"
   },
   {
     "id": 13,
@@ -26,32 +22,24 @@
     "difficulty": "10",
     "armor": "2/8",
     "type": ["Insecte/Poison"],
-    "major_weakness": [""],
-    "weakness": ["Roche","Feu","Vol","Psy"],
-    "resistance": ["Poison", "Insecte", "Fée"],
-    "major_resistance": ["Plante", "Combat"],
-    "immunity": [""],
     "attacks": ["Dard-Venin", "Sécrétion"],
     "passifs": ["Poids Leger"], 
-    "status" : "unlock"
+    "status" : "unlock",
+    "alpha" : "no"
   },
   {
     "id": 14,
     "name": "Coconfort",
     "image" : "https://img.pokemondb.net/sprites/home/normal/2x/avif/kakuna.avif",
-    "tier": 1,
+    "tier": 2,
     "hp": 3,
     "difficulty": "9",
-    "armor": "3/10",
+    "armor": "4/11",
     "type": ["Insecte/Poison"],
-    "major_weakness": [""],
-    "weakness": ["Roche","Feu","Vol","Psy"],
-    "resistance": ["Poison", "Insecte", "Fée"],
-    "major_resistance": ["Plante", "Combat"],
-    "immunity": [""],
     "attacks": ["Dard-Venin", "Sécrétion", "Armure"],
     "passifs": ["Grosse voix"],
-    "status" : "seen"
+    "status" : "seen",
+    "alpha" : "no"
   },
   {
     "id": 15,
@@ -62,14 +50,27 @@
     "difficulty": "13",
     "armor": "5/10/17",
     "type": ["Insecte/Poison"],
-    "major_weakness": [""],
-    "weakness": ["Roche","Feu","Vol","Psy"],
-    "resistance": ["Poison", "Insecte", "Fée"],
-    "major_resistance": ["Plante", "Combat"],
-    "immunity": [""],
     "attacks": ["Dard-Venin", "Secretion", "Armure", "Double-Dard"],
     "passifs": [""],
-    "status" : "hide"
+    "status" : "hide",
+    "alpha" : "no"
+  },
+  {
+    "id": 129,
+    "name": "Magicarpe Alpha",
+    "image" : "https://i.pinimg.com/1200x/d8/c2/9c/d8c29c53bffd7b891272f78c2876e6ea.jpg",
+    "tier": 1,
+    "hp": 10,
+    "difficulty": "13",
+    "armor": "5/10/17",
+    "type": ["Eau/Spectre"],
+    "attacks": ["Disparition", "Ombre Nocturne", "Trempette", "Eau Revoir"],
+    "passifs": ["Trempette des revenants"],
+    "status" : "hide",
+    "alpha" : "yes",
+    "headMat" : "Barbillon Osseux",
+    "sideMat" : "Nageoire Blanche",
+    "backMat" : "Os Codale"
   },
   {
     "id": 293,
@@ -80,13 +81,9 @@
     "difficulty": "10",
     "armor": "2/8",
     "type": ["Normal"],
-    "major_weakness": [""],
-    "weakness": ["Combat"],
-    "resistance": [""],
-    "major_resistance": [""],
-    "immunity": [""],
     "attacks": ["Charge", "Echo", "Ecras'Face"],
     "passifs": ["Grosse voix", "Fragilité Percante", "Resistance Contondante"],    
-    "status" : "unlock"
+    "status" : "unlock",
+    "alpha" : "no"
   }
 ]

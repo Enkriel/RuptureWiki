@@ -195,8 +195,13 @@
     "description": "Quand vous subissez une attaque ou un capacité dont la portée est de 1 ou moins ou infligé 1 dégats"
   },
   {
-    "id": 109,
+    "id": 110,
     "Nom": "Armure Inflammable",
     "description": "Quand vous subbissez une attaque feu, si vous n'utiliser pas de point d'armure vous êtes automatiqument brûler"
+  },
+  {
+    "id": 111,
+    "Nom": "Trempette des revenants",
+    "description": "Quand vous lancer l'attaque Trempette que vous lancer à 1 chance sur 4 de reveillé les esprits. Créer 4 projectiles de portée 4 qui infligent chacun 1d4 (les attaque sur une même cible crée une seule instance de dégât)"
   }
 ]

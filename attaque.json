@@ -866,6 +866,14 @@
     "description": "Crée une bulle d'eau pendant 24h qui génère de l'eau en continu au rythme de 20 cl par minute. Le moindre contact physique avec la bulle l'explose et l'annule (l'eau déjà créée n'est pas évaporée)."
   },
   {
+    "id": 11104,
+    "Nom": "Trempette",
+    "type": "Eau",
+    "tier": 1,
+    "portée": "",
+    "description": "Vous sautiller sur place. Se recharge après utilisation"
+  },
+  {
     "id": 11201,
     "Nom": "Douche Froide",
     "type": "Eau",
