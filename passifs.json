@@ -228,5 +228,20 @@
     "id": 116,
     "Nom": "Trempette Surprise",
     "description": "Quand vous lancer l'attaque <b>Trempette</b> cous avez 1 chance sur 4 de sauter extremement haut (saut de 5m)"
+  },
+  {
+    "id": 117,
+    "Nom": "Syncronise",
+    "description": "Quand quelqu'un vous inflige une altération état vous lui infliger aussi"
+  },
+  {
+    "id": 118,
+    "Nom": "Comestible",
+    "description": "Vise Librement"
+  },
+  {
+    "id": 119,
+    "Nom": "Prouveur",
+    "description": "A chaque fois que vous infliger une blessure vous êtes obligé d'utiliser gonflette pour votre prochaine action bonus"
   }
 ]

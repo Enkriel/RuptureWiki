@@ -28,8 +28,8 @@
     "Nom": "Ecras'Face",
     "type": "Normal",
     "tier": 1,
-    "portée": "1 - For - Contondant ",
-    "description": "Inflige 2d6."
+    "portée": "1 - For - Contondant",
+    "description": "Inflige 2d6 si casse la part avant rend <b class='data-status' data-status-name='Confusion'>confus</b>."
   },
   {
     "id": 1201,
@@ -60,7 +60,7 @@
     "Nom": "Clonage",
     "type": "Normal",
     "tier": 2,
-    "portée": "0 - Sag",
+    "portée": "0 - Int",
     "description": "Faites un jet de Intelligence pour créer un clone de vous, plus le resultat est haut plus le clone vous ressemble, le clone ne peut que faire un leger mouvement en boucle."
   },
   {
@@ -137,11 +137,11 @@
   },
   {
     "id": 2101,
-    "Nom": "Double pied",
+    "Nom": "Balayage",
     "type": "Combat",
     "tier": 1,
-    "portée": "1 - Contondant - For",
-    "description": "Inflige 1d6 puis 1d6 dégâts."
+    "portée": "1 - Dex",
+    "description": "2d6. Si votre adversaire a le passif <b class='data-passifs' data-passifs-name='Poids Lourd'>Poids Lourd</b>, infligez 3d6 ; s’il a le passif <b class='data-passifs' data-passifs-name='Poids Leger'>Poids Leger</b>, infligez 1d6."
   },
   {
     "id": 2102,
@@ -149,14 +149,14 @@
     "type": "Combat",
     "tier": 1,
     "portée": "0 - For - Action + Action Deplacement",
-    "description": "Vous donne l'état Fixé, puis projette votre adversaire de 1. Inflige 1d6 + votre niveau."
+    "description": "Vous donne l'état Fixé, puis projette votre adversaire de 1. Inflige 2d6 + niveau de la cible (ou le tier de difficulté * 2 si non applicable)."
   },
   {
     "id": 2103,
     "Nom": "Gonflette",
     "type": "Combat",
     "tier": 1,
-    "portée": "-",
+    "portée": "Action Bonus - Cha",
     "description": "Vos muscles gonflent sans changer votre force, vous gagner 2 lors de vos jets d'intimidation, et parfois en représentation"
   },
   {
@@ -174,14 +174,14 @@
     "tier": 2,
     "portée": "2 - Int - Projectile",
     "description": "2d4 + 2 dégâts, vous poussez votre cible d’1 zone par rapport à vous."
-  },
+  },  
   {
     "id": 2203,
-    "Nom": "Balayage",
+    "Nom": "Double pied",
     "type": "Combat",
     "tier": 2,
-    "portée": "1 - Dex",
-    "description": "2d6. Si votre adversaire a le passif <b class='data-passifs' data-passifs-name='Poids Lourd'>Poids Lourd</b>, infligez 3d6 ; s’il a le passif <b class='data-passifs' data-passifs-name='Poids Leger'>Poids Leger</b>, infligez 1d6."
+    "portée": "1 - Contondant - For",
+    "description": "Inflige 1d8 puis 1d8 dégâts."
   },
   {
     "id": 2301,
@@ -1090,6 +1090,14 @@
     "description": "Fait oublier quelque chose à une cible. JS Sag."
   },
   {
+    "id": 14104,
+    "Nom": "Téléport",
+    "type": "Psy",
+    "tier": 1,
+    "portée": "3",
+    "description": "Vous déplace de 2 cases (10m) aléatoirement"
+  },
+  {
     "id": 14201,
     "Nom": "Rafale Psy",
     "type": "Psy",
@@ -1306,6 +1314,14 @@
     "description": "2d6 + 1 Frapper votre cible quand il ne s'y attend pas, si il est provoqué ou confus,  <b class='data-passifs' data-passifs-name='Attaque Surprise'>Attaque Surprise</b> s'active automatiquement."
   },
   {
+    "id": 17301,
+    "Nom": "Morsure",
+    "type": "Ténèbres",
+    "tier": 3,
+    "portée": "1 - Dex - Percant - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
+    "description": "Inflige 2d6 en cas de double inflige <b class='data-status' data-status-name='Peur'>peur</b>."
+  },
+  {
     "id": 17201,
     "Nom": "Baston",
     "type": "Ténèbres",
@@ -1331,7 +1347,7 @@
   },
   {
     "id": 17301,
-    "Nom": "Morsure",
+    "Nom": "Machouille",
     "type": "Ténèbres",
     "tier": 3,
     "portée": "1 - Dex - Percant - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
