@@ -243,5 +243,20 @@
     "id": 119,
     "Nom": "Prouveur",
     "description": "A chaque fois que vous infliger une blessure vous êtes obligé d'utiliser gonflette pour votre prochaine action bonus"
+  },
+  {
+    "id": 120,
+    "Nom": "Tempo Perso",
+    "description": "Vous ne pouvez pas être <b class='data-status' data-status-name='Confusion'>confus</b>"
+  },
+  {
+    "id": 121,
+    "Nom": "Benêt",
+    "description": "Vous ne pouvez pas être <b class='data-status' data-status-name='Charme'>Charmé</b>"
+  },
+  {
+    "id": 122,
+    "Nom": "Fonceur",
+    "description": "Les attaques utilisant la stats de Con augmente de 1 leur tier de dégats"
   }
 ]

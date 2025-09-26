@@ -650,6 +650,14 @@
     "description": "Vous devenez <b class='data-status' data-status-name='Flou'>flou</b>."
   },
   {
+    "id": 8104,
+    "Nom": "Brouillard",
+    "type": "Spectre",
+    "tier": 1,
+    "portée": "0 - AoE 1",
+    "description": "Créer une zone autour de vous dans laquel tout le monde est <b class='data-status' data-status-name='Flou'>flou</b> et <b class='data-status' data-status-name='Aveuglé'>Aveugle</b>."
+  },
+  {
     "id": 8201,
     "Nom": "Léchouille",
     "type": "Spectre",

@@ -108,6 +108,21 @@
     "alpha" : "no"
   },
   {
+    "id": 220,
+    "name": "Marcacrin",
+    "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/swinub.avif",
+    "tier": 1,
+    "hp": 7,
+    "esquive": "7",
+    "armor": "2/8",
+    "type": ["Glace","Sol"],
+    "attacks": ["Éclats Glace", "Jet de Sable", "Griffe"],
+    "passifs": ["Benêt"],    
+    "status" : "unlock",
+    "comportement" : "A tendence à toujours reculer",
+    "alpha" : "no"
+  },
+  {
     "id": 236,
     "name": "Débugant",
     "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/tyrogue.avif",
@@ -168,6 +183,36 @@
     "alpha" : "no"
   },
   {
+    "id": 714,
+    "name": "Sonistrelle",
+    "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/noibat.avif",
+    "tier": 1,
+    "hp": 3,
+    "esquive": "12",
+    "armor": "3/7",
+    "type": ["Vol","Dragon"],
+    "attacks": ["Tranch'air", "Ouragan", "Echo"],
+    "passifs": ["Grosse voix"],    
+    "status" : "unlock",
+    "comportement" : "Vise Librement",
+    "alpha" : "no"
+  },
+  {
+    "id": 837,
+    "name": "Charbi",
+    "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/rolycoly.avif",
+    "tier": 1,
+    "hp": 6,
+    "esquive": "9",
+    "armor": "4/8",
+    "type": ["Roche"],
+    "attacks": ["Roulade", "Nitrocharge", "Brouillard"],
+    "passifs": ["Fonceur"],    
+    "status" : "unlock",
+    "comportement" : "Fonce toujours sur l'ennemi le plus loin à portée d'attaque",
+    "alpha" : "no"
+  },
+  {
     "id": 840,
     "name": "Verpom",
     "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/applin.avif",
@@ -195,6 +240,21 @@
     "passifs": ["Poids Leger"],    
     "status" : "unlock",
     "comportement" : "Vise la derniere cible qui l'a attaqué",
+    "alpha" : "no"
+  },
+  {
+    "id": 957,
+    "name": "Forgerette",
+    "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/tinkatink.avif",
+    "tier": 1,
+    "hp": 5,
+    "esquive": "8",
+    "armor": "3/8",
+    "type": ["Acier", "Fée"],
+    "attacks": ["Étonnement", "Tacle Lourd", "Voix Enjôleuse"],
+    "passifs": ["Tempo Perso"],    
+    "status" : "unlock",
+    "comportement" : "Vise librement",
     "alpha" : "no"
   }
 ]
