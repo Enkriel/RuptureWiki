@@ -183,6 +183,21 @@
     "alpha" : "no"
   },
   {
+    "id": 607,
+    "name": "Funécire",
+    "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/litwick.avif",
+    "tier": 1,
+    "hp": 3,
+    "esquive": "9",
+    "armor": "2/7",
+    "type": ["Feu","Spectre"],
+    "attacks": ["Flammèche", "Ombre Nocturne", "Brouillard"],
+    "passifs": ["Brillant", "Corps Ardent"],    
+    "status" : "unlock",
+    "comportement" : "Vise Librement",
+    "alpha" : "no"
+  },
+  {
     "id": 714,
     "name": "Sonistrelle",
     "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/noibat.avif",

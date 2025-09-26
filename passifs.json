@@ -222,7 +222,7 @@
   {
     "id": 115,
     "Nom": "Statik",
-    "description": "Quand vous subissez une blessure du à une attaque ou un capacité dont la portée est de 1 ou moins <b class='data-status' data-status-name='Paralysie'>Paralyse</b>"
+    "description": "Quand vous subissez une blessure du à une attaque ou un capacité dont la portée est de 1 ou moins <b class='data-status' data-status-name='Paralysie'>paralysé</b> votre attaquant"
   },
   {
     "id": 116,
@@ -258,5 +258,15 @@
     "id": 122,
     "Nom": "Fonceur",
     "description": "Les attaques utilisant la stats de Con augmente de 1 leur tier de dégats"
+  },
+  {
+    "id": 123,
+    "Nom": "Brillant",
+    "description": "Vous ne pouvez pas être flou"
+  },
+  {
+    "id": 124,
+    "Nom": "Corps Ardent",
+    "description": "Quand vous subissez une blessure du à une attaque ou un capacité dont la portée est de 1 ou moins <b class='data-status' data-status-name='Brulure'>brûlé</b> votre attaquant"
   }
 ]
