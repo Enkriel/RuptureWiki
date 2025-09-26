@@ -10,7 +10,8 @@
     "ability1": "Griffe",
     "ability2": "Echo",
     "ability3": "",
-    "Craft": "3 matériaux Normaux" 
+    "Craft": "3 matériaux Normaux",
+    "Secret": "no"   
   },
   {
     "id": 10002,
@@ -23,7 +24,8 @@
     "ability1": "Aspiration",
     "ability2": "",
     "ability3": "Eau Revoir",
-    "Craft": "2 matériaux Eau et 1 Vol" 
+    "Craft": "2 matériaux Eau et 1 Vol",
+    "Secret": "no"   
   },
   {
     "id": 10003,
@@ -36,7 +38,8 @@
     "ability1": "Roulade",
     "ability2": "Roulade",
     "ability3": "-",
-    "Craft": "3 matériaux Roche" 
+    "Craft": "3 matériaux Roche",
+    "Secret": "no"   
   },
   {
     "id": 20001,
@@ -45,11 +48,12 @@
     "tier": 0,
     "Element": "Acier",
     "Dégât": "1d8+2",
-    "MotClef": "Extrement Lourd, Contondant",
+    "MotClef": "Extrêmement Lourd, Contondant",
     "ability1": "Tacle Lourd",
     "ability2": "-",
     "ability3": "Armure",
-    "Craft": "3 matériaux Acier" 
+    "Craft": "3 matériaux Acier",
+    "Secret": "no"   
   },
   {
     "id": 20002,
@@ -58,11 +62,12 @@
     "tier": 0,
     "Element": "Feu",
     "Dégât": "1d6+3",
-    "MotClef": "Extrement Lourd, Contondant",
+    "MotClef": "Extrêmement Lourd, Contondant",
     "ability1": "Nitrocharge",
     "ability2": "Jet de Pierre",
     "ability3": "-",
-    "Craft": "2 matériaux Feu et 1 Roche" 
+    "Craft": "2 matériaux Feu et 1 Roche",
+    "Secret": "no"   
   },
   {
     "id": 30001,
@@ -75,7 +80,8 @@
     "ability1": "Fouet Lianes",
     "ability2": "",
     "ability3": "Draco-Griffe",
-    "Craft": "2 matériaux Plante et 1 Dragon" 
+    "Craft": "2 matériaux Plante et 1 Dragon",
+    "Secret": "no"   
   },
   {
     "id": 30002,
@@ -88,7 +94,8 @@
     "ability1": "Éclats Glace",
     "ability2": "Solidification",
     "ability3": "Poudreuse",
-    "Craft": "3 matériaux Glace" 
+    "Craft": "3 matériaux Glace",
+    "Secret": "no"   
   },
   {
     "id": 40001,
@@ -101,7 +108,8 @@
     "ability1": "Taillade",
     "ability2": "",
     "ability3": "",
-    "Craft": "3 matériaux Insecte" 
+    "Craft": "3 matériaux Insecte",
+    "Secret": "no"   
   },
   {
     "id": 40002,
@@ -114,7 +122,8 @@
     "ability1": "Choc Mental",
     "ability2": "Astuce Force",
     "ability3": "",
-    "Craft": "3 matériaux Psy" 
+    "Craft": "3 matériaux Psy",
+    "Secret": "no"   
   },
   {
     "id": 130002,
@@ -127,6 +136,49 @@
     "ability1": "Doux Baiser",
     "ability2": "Flammèche",
     "ability3": "Calcination",
-    "Craft": "2 matériaux Fée, 1 Feu" 
+    "Craft": "2 matériaux Fée, 1 Feu",
+    "Secret": "no"   
+  },
+  {
+    "id": 11001,
+    "Nom": "Hache de la cascade silencieuse",
+    "type": "GS",
+    "tier": 1,
+    "Element": "Eau",
+    "Dégât": "2d6",
+    "MotClef": "Lourd, Attaque Surprise, Coupant",
+    "ability1": "Eau Revoir",
+    "ability2": "Charge",
+    "ability3": "Disparition",
+    "Craft": "Membrane Perpétuelle, 3 matériaux Eau",
+    "Secret": "no"   
+  },
+  {
+    "id": 121001,
+    "Nom": "Queue de l'espoir",
+    "type": "Staff",
+    "tier": 1,
+    "Element": "Spectre",
+    "Dégât": "1d8+2",
+    "MotClef": "Magique, Contondant",
+    "ability1": "Pistolet à O",
+    "ability2": "Ombre Nocturne",
+    "ability3": "Ombre Nocturne",
+    "Craft": "Os Codale, 3 matériaux Eau",
+    "Secret": "no"   
+  },
+  {
+    "id": 141001,
+    "Nom": "Arc en os vivant",
+    "type": "Bow",
+    "tier": 1,
+    "Element": "Spectre",
+    "Dégât": "1d6 + 1",
+    "MotClef": "Distance, Munitions, Finesse, Attaque Surprise, Perçant",
+    "ability1": "Disparition",
+    "ability2": "Ombre Nocturne",
+    "ability3": "Disparition",
+    "Craft": "Barbillon Osseux, 3 matériaux Spectre",
+    "Secret": "no"   
   }
 ]

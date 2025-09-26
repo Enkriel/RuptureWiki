@@ -331,6 +331,19 @@
             card.setAttribute('aria-pressed', 'false');
 
             const isSeen = pokemon.status === "seen";
+            var cardStyle = "card-normie"
+            if (pokemon.status === "seen") {
+                card.style.filter = "grayscale(50%) brightness(0.7)";
+                card.style.opacity = "0.85";
+            }
+
+            if (pokemon.alpha === "yes") {
+                card.style.border = "2px solid #e74c3c"; // rouge
+                card.style.boxShadow = "0 0 14px rgba(231, 76, 60, 0.8)";
+                cardStyle = "card-alpha"
+            } else {
+                card.style.border = "2px solid #3498db"; // bleu par défaut
+            }
 
             // Fallback image
             const imageUrl = pokemon.image || 'https://via.placeholder.com/120x120?text=?';
@@ -346,26 +359,42 @@
             // --- Carte HTML ---
             card.innerHTML = `
                 <div class="card-inner">
-                    <div class="card-front">
+                    <div class="card-front ${cardStyle}">
                         <img src="${imageUrl}" alt="${pokemon.name}" onerror="this.src='https://via.placeholder.com/120x120?text=?'">
-                        <h3>${showValue(pokemon.name)}</h3>
+                        <h3>${pokemon.name}</h3>
                         <p>Tier ${pokemon.tier}</p>
                     </div>
 
-                    <div class="card-back">
+
+                    <div class="card-back ${cardStyle}">
                         <h3>${showValue(pokemon.name)}</h3>
                         <ul class="stats">
                             <li><strong>PV:</strong> ${showValue(pokemon.hp)}</li>
-                            <li><strong>Difficulté:</strong> ${showValue(pokemon.difficulty)}</li>
+                            <li><strong>Esquive:</strong> ${showValue(pokemon.esquive)}</li>
                             <li><strong>Armure:</strong> ${showValue(pokemon.armor)}</li>
-                            <li><strong>Type:</strong> ${joinOrDash(pokemon.type)}</li>
+                            <li><strong>Type:</strong> ${renderTypeIcons(
+                                                            Array.isArray(pokemon.type) 
+                                                                ? pokemon.type.flatMap(t => t.split('/').map(x => x.trim())) 
+                                                                : (pokemon.type ? pokemon.type.split('/').map(x => x.trim()) : [])
+                                                        )}</li>
                         </ul>
+
+                        ${pokemon.alpha === "yes" ? `
+                        <h4>Points de rupture</h4>
+                        <ul class="stats">
+                            <li><strong>Face:</strong> ${pokemon.front ?? '—'}</li>
+                            <li><strong>Côtés:</strong> ${pokemon.sides ?? '—'}</li>
+                            <li><strong>Dos:</strong> ${pokemon.back ?? '—'}</li>
+                        </ul>` : ''}
 
                         <h4>Attaques</h4>
                         <ul class="attacks"></ul>
 
                         <h4>Passifs</h4>
-                        <ul class="passifs"></ul>
+                        <ul class="passifs stats"></ul>
+                        
+                        <h4>Comportement</h4>
+                        <p>${pokemon.comportement}</p>
 
                         <h4>Faiblesses / Résistances</h4>
                         <ul class="attacks">
@@ -381,7 +410,7 @@
 
             // --- Remplissage Attaques ---
             const attackList = card.querySelector('.attacks');
-            if (pokemon.attacks && pokemon.attacks.length) {
+            if (pokemon.attacks && pokemon.attacks.length && !isSeen) {
                 pokemon.attacks.forEach(a => {
                     const atk = attaqueData.find(atk => atk.Nom === a);
                     const li = document.createElement('li');
@@ -418,7 +447,7 @@
 
             // --- Remplissage Passifs ---
             const passifList = card.querySelector('.passifs');
-            if (pokemon.passifs && pokemon.passifs.length) {
+            if (pokemon.passifs && pokemon.passifs.length && !isSeen) {
                 pokemon.passifs.forEach(pName => {
                     const pas = passifData.find(p => p.Nom === pName);
                     const li = document.createElement('li');
@@ -518,40 +547,46 @@
 
         // Fonction qui calcule les faiblesses/résistances/immunités
         function computeTypeChart(pokemon) {
-        let types = [];
-        if (Array.isArray(pokemon.type)) {
-            // cas "Plante/Poison" => on split
-            types = pokemon.type.flatMap(t => t.split('/'));
-        } else if (typeof pokemon.type === "string") {
-            types = pokemon.type.split('/');
-        }
+            let types = [];
+            if (Array.isArray(pokemon.type)) {
+                // cas "Plante/Poison" => on split
+                types = pokemon.type.flatMap(t => t.split('/'));
+            } else if (typeof pokemon.type === "string") {
+                types = pokemon.type.split('/');
+            }
 
-        const multipliers = {};
+            const multipliers = {};
 
-        // Appliquer les interactions pour chaque type du Pokémon
-        types.forEach(t => {
-            const interactions = typeChart[t] || {};
-            Object.entries(interactions).forEach(([target, mult]) => {
-            multipliers[target] = (multipliers[target] ?? 1) * mult;
+            // Appliquer les interactions pour chaque type du Pokémon
+            types.forEach(t => {
+                const interactions = typeChart[t] || {};
+                Object.entries(interactions).forEach(([target, mult]) => {
+                multipliers[target] = (multipliers[target] ?? 1) * mult;
+                });
             });
-        });
 
-        // Classer les résultats
-        const weaknesses = [];
-        const resistances = [];
-        const immunities = [];
+            // Classer les résultats
+            const weaknesses = [];
+            const majorWeaknesses = [];
+            const resistances = [];
+            const majorResistances = [];
+            const immunities = [];
 
-        Object.entries(multipliers).forEach(([type, mult]) => {
-            if (mult === 0) immunities.push(type);
-            else if (mult > 1) weaknesses.push(type + (mult === 4 ? " (x4)" : ""));
-            else if (mult < 1) resistances.push(type + (mult === 0.25 ? " (x¼)" : ""));
-        });
+            Object.entries(multipliers).forEach(([type, mult]) => {
+                if (mult === 0) immunities.push(type);
+                else if (mult == 2) weaknesses.push(type);
+                else if (mult == 4) majorWeaknesses.push(type);
+                else if (mult == 0.5) resistances.push(type);
+                else if (mult == 0.25) majorResistances.push(type);
+            });
 
-        return {
-            weakness: weaknesses,
-            resistance: resistances,
-            immunity: immunities
-        };
+            return {
+                weakness: weaknesses,
+                major_weakness : majorWeaknesses,
+                resistance: resistances,
+                major_resistance: majorResistances,
+                immunity: immunities
+            };
         }
 
 

@@ -180,7 +180,9 @@ function renderWeapons(){
         tr.appendChild(td(mapType(w.type)));
         tr.appendChild(td(w.Element));
         tr.appendChild(td(w["Dégât"]));
-        tr.appendChild(td(w.MotClef));
+        const tdMot = document.createElement('td');
+        tdMot.appendChild(renderMotClefDOM(w.MotClef));
+        tr.appendChild(tdMot);
 
         const a1 = document.createElement('td'); a1.appendChild(renderAbilityDOM(w.ability1)); tr.appendChild(a1);
         const a2 = document.createElement('td'); a2.appendChild(renderAbilityDOM(w.ability2)); tr.appendChild(a2);
@@ -226,6 +228,62 @@ function setupUncheck(){
     document.querySelectorAll('input[type="checkbox"]').forEach(cb=>cb.checked=false);
     renderWeapons();
   });
+}
+
+// helper : normaliser texte (minuscules + retirer accents)
+function normalizeName(s){
+  if(!s) return '';
+  return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+}
+
+/**
+ * Render des mots-clés (MotClef).
+ * Si le mot correspond à un status ou un passif, on le transforme en .attack-item
+ * pour réutiliser la mécanique des tooltips.
+ */
+function renderMotClefDOM(text){
+  const wrapper = document.createElement('div');
+  if(!text || text === '-') {
+    wrapper.textContent = '—';
+    return wrapper;
+  }
+
+  // split basique sur , ; / | (ajoute d'autres séparateurs si nécessaire)
+  const parts = String(text).split(/\s*[;,\/|]\s*/);
+
+  parts.forEach((raw, idx) => {
+    const name = raw.trim();
+    if(!name){
+      if(idx < parts.length - 1) wrapper.appendChild(document.createTextNode(', '));
+      return;
+    }
+
+    // recherche tolérante (insensible à la casse et aux accents)
+    const statusMatch = statusData.find(x => normalizeName(x.Nom) === normalizeName(name));
+    const passifMatch = passifsData.find(x => normalizeName(x.Nom) === normalizeName(name));
+
+    if(statusMatch || passifMatch){
+      const span = document.createElement('span');
+      span.className = 'attack-item';
+      span.textContent = name;
+      span.dataset.type = statusMatch ? 'Statut' : 'Passif';
+      span.dataset.range = '—';
+      span._descHtml = (statusMatch ? statusMatch.description : passifMatch.description) || '';
+      span._allHighlights = []; // pas de highlights ici
+      wrapper.appendChild(span);
+    } else {
+      // texte simple
+      const txt = document.createElement('span');
+      txt.textContent = name;
+      wrapper.appendChild(txt);
+    }
+
+    if(idx < parts.length - 1){
+      wrapper.appendChild(document.createTextNode(', '));
+    }
+  });
+
+  return wrapper;
 }
 
 /* ------------------ tooltips ------------------ */
@@ -299,6 +357,7 @@ function setupTooltips(){
       currentItem = null;
     }
   });
+
 
   // clic → lock
   document.addEventListener('click', e=>{

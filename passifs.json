@@ -202,6 +202,31 @@
   {
     "id": 111,
     "Nom": "Trempette des revenants",
-    "description": "Quand vous lancer l'attaque Trempette que vous lancer à 1 chance sur 4 de reveillé les esprits. Créer 4 projectiles de portée 4 qui infligent chacun 1d4 (les attaque sur une même cible crée une seule instance de dégât)"
+    "description": "Quand vous lancer l'attaque <b>Trempette</b> cous avez 1 chance sur 4 de reveillé les esprits. Créer 4 projectiles de portée 4 qui infligent chacun 1d4 (les attaque sur une même cible crée une seule instance de dégât)"
+  },
+  {
+    "id": 112,
+    "Nom": "Double Action",
+    "description": "Vous avez 2 actions par tour"
+  },
+  {
+    "id": 113,
+    "Nom": "Gain Trempette",
+    "description": "Vous pouvez utiliser <b>Trempette</b> (Vous sautiller sur place. Se recharge après utilisation)"
+  },
+  {
+    "id": 114,
+    "Nom": "Trempette du Peureux",
+    "description": "Si vous subbissez une blessure majeur ou sévère votre prochaine action <b>doit</b> être <b>Trempette</b>"
+  },
+  {
+    "id": 115,
+    "Nom": "Statik",
+    "description": "Quand vous subissez une blessure du à une attaque ou un capacité dont la portée est de 1 ou moins <b class='data-status' data-status-name='Paralysie'>Paralyse</b>"
+  },
+  {
+    "id": 116,
+    "Nom": "Trempette Surprise",
+    "description": "Quand vous lancer l'attaque <b>Trempette</b> cous avez 1 chance sur 4 de sauter extremement haut (saut de 5m)"
   }
 ]

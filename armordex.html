@@ -154,11 +154,18 @@ function renderArmors(){
 
         const eff = document.createElement('td');
         if(a.Effets){
-          a.Effets.split(',').forEach(e=>{
-            eff.appendChild(renderPassifDOM(e));
-            eff.appendChild(document.createTextNode(' '));
-          });
-        } else {
+          if(a.Secret == "no"){
+             a.Effets.split(',').forEach(e=>{
+              eff.appendChild(renderPassifDOM(e));
+              eff.appendChild(document.createTextNode(' '));
+            });           
+          }
+          else{
+            eff.style.color = "purple";
+            eff.textContent = '???';
+          }
+        } 
+        else {
           eff.textContent = '—';
         }
         tr.appendChild(eff);

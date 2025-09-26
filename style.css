@@ -72,7 +72,7 @@ select:focus {
 
 /* ---------- Content Wrapper ---------- */
 #content, .content-wrapper {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -169,8 +169,7 @@ select:focus {
     box-shadow: 0 8px 32px rgba(0,0,0,0.2);
 }
 
-.card-front {
-    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+.card-front {  
     color: white;
     display: flex;
     flex-direction: column;
@@ -178,8 +177,15 @@ select:focus {
     align-items: center;
 }
 
-.card-back {
+.card-normie{
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+}
+
+.card-alpha{
     background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
+}
+
+.card-back {    
     color: white;
     transform: rotateY(180deg);
     overflow-y: auto;
