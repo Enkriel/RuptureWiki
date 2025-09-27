@@ -55,6 +55,7 @@ Glace = -7
 
 <!-- tooltips -->
 <div id="passif-tooltip" class="tooltip" aria-hidden="true"></div>
+<div id="passif-tooltip2" class="tooltip" aria-hidden="true"></div>
 
 <script>
 /* ------------------ util load ------------------ */
@@ -88,15 +89,36 @@ function renderPassifDOM(effet){
     return span; 
   }
 
+  const passif = passifsData.find(x => x.Nom.toLowerCase() === effet.trim().toLowerCase());
   span.className = 'passif-item';
   span.textContent = effet.trim();
 
-  // chercher description
-  const p = passifsData.find(x => x.Nom.toLowerCase() === effet.trim().toLowerCase());
-  if(p){
-    span.dataset.desc = p.description;
+  if(passif){
+    // Conteneur temporaire pour description
+    const tmp = document.createElement('div');
+    tmp.innerHTML = passif.description || '—';
+
+    // Transformer les <b> spéciaux en span.highlight (comme dans weapondew)
+    tmp.querySelectorAll('b.data-passifs').forEach(b=>{
+      const pName = b.dataset.passifsName;
+      b.outerHTML = `<span class="status-highlight" data-passifs-name="${pName}">${b.innerHTML}</span>`;
+    });
+    tmp.querySelectorAll('b.data-status').forEach(b=>{
+      const sName = b.dataset.statusName;
+      b.outerHTML = `<span class="status-highlight" data-status-name="${sName}">${b.innerHTML}</span>`;
+    });
+
+    // description enrichie pour tooltip1
+    span._descHtml = tmp.innerHTML;
+
+    // highlights (pour tooltip2)
+    span._allHighlights = Array.from(tmp.querySelectorAll('[data-status-name], [data-passifs-name]')).map(h => ({
+      statusName: h.dataset.statusName,
+      passifsName: h.dataset.passifsName
+    }));
   } else {
-    span.dataset.desc = '—';
+    span._descHtml = '—';
+    span._allHighlights = [];
   }
 
   return span;
@@ -214,83 +236,77 @@ function setupUncheck(){
 
 /* ------------------ tooltips ------------------ */
 function setupTooltips(){
-  const tt = document.getElementById('passif-tooltip');
-  let locked = false; // état verrouillé
+  const tt1 = document.getElementById('passif-tooltip');
+  const tt2 = document.getElementById('passif-tooltip2');
+  let locked = false;
   let currentItem = null;
+
+  function showTooltips(item){
+    tt1.innerHTML = `<strong>${item.textContent}</strong><div style="margin-top:4px">${item._descHtml || '—'}</div>`;
+    tt1.style.display = 'block';
+    tt1.setAttribute('aria-hidden','false');
+
+    // highlights → tooltip2
+    const tmp = document.createElement('div');
+    tmp.innerHTML = item._descHtml || '';
+    const highlights = tmp.querySelectorAll('[data-status-name], [data-passifs-name]');
+    console.log("highlights trouvés:", highlights);
+    const tooltip2Content = Array.from(highlights).map(span=>{
+      if(span.dataset.statusName){
+        const s = passifsData.find(x=>x.Nom.toLowerCase() === span.dataset.statusName.toLowerCase());
+        if(s) return `<strong>${s.Nom}</strong><div style="margin-top:4px">${s.description}</div>`;
+      } else if(span.dataset.passifsName){
+        const p = passifsData.find(x=>x.Nom.toLowerCase() === span.dataset.passifsName.toLowerCase());
+        if(p) return `<strong>${p.Nom}</strong><div style="margin-top:4px">${p.description}</div>`;
+      }
+      return null;
+    }).filter(x=>x).join('<hr>');
+
+    tt2.innerHTML = tooltip2Content || '—';
+    tt2.style.display = tooltip2Content ? 'block' : 'none';
+    tt2.setAttribute('aria-hidden', tooltip2Content ? 'false' : 'true');
+
+    currentItem = item;
+  }
 
   document.addEventListener('mouseover', e=>{
     const item = e.target.closest('.passif-item');
     if(!item) return;
 
-    // si on survole un nouvel item, on annule le lock
-    if(currentItem !== item){
-      locked = false;
-    }
-
-    if(!locked){
-      tt.innerHTML = `<strong>${item.textContent}</strong><div style="margin-top:4px">${item.dataset.desc}</div>`;
-      tt.style.display = 'block';
-      tt.setAttribute('aria-hidden','false');
-      currentItem = item;
-    }
+    if(currentItem !== item) locked = false;
+    if(!locked) showTooltips(item);
   });
 
   document.addEventListener('mousemove', e=>{
-    if(tt.style.display==='block' && !locked){
-      tt.style.left = e.pageX + 14 + 'px';
-      tt.style.top  = e.pageY + 14 + 'px';
+    if(tt1.style.display==='block' && !locked){
+      tt1.style.left = e.pageX + 14 + 'px';
+      tt1.style.top  = e.pageY + 14 + 'px';
+    }
+    if(tt2.style.display==='block' && !locked){
+      const t1h = tt1.offsetHeight || 40;
+      tt2.style.left = e.pageX + 14 + 'px';
+      tt2.style.top  = e.pageY + 14 + t1h + 8 + 'px';
     }
   });
 
   document.addEventListener('mouseout', e=>{
-    if(locked) return; // si verrouillé, on ne ferme pas
+    if(locked) return;
     if(e.target.closest('.passif-item')){
-      tt.style.display='none';
-      tt.setAttribute('aria-hidden','true');
+      tt1.style.display='none';
+      tt2.style.display='none';
+      tt1.setAttribute('aria-hidden','true');
+      tt2.setAttribute('aria-hidden','true');
       currentItem = null;
     }
   });
 
-  // clic sur un mot clé → lock
+  // clic → lock
   document.addEventListener('click', e=>{
     const item = e.target.closest('.passif-item');
     if(item){
-      tt.innerHTML = `<strong>${item.textContent}</strong><div style="margin-top:4px">${item.dataset.desc}</div>`;
-      tt.style.display = 'block';
-      tt.setAttribute('aria-hidden','false');
+      showTooltips(item);
       locked = true;
       currentItem = item;
-    } else if(e.target.closest('#passif-tooltip')){
-      // clic sur la tooltip → ferme et délock
-      /*locked = false;
-      tt.style.display='none';
-      tt.setAttribute('aria-hidden','true');*/
-      currentItem = null;
-    }
-  });
-
-  // clic sur un passif => toggle verrouillage
-  document.addEventListener('click', e=>{
-    const item = e.target.closest('.passif-item');
-    if(item){
-      if(!locked){
-        // activer le lock
-        tt.innerHTML = `<strong>${item.textContent}</strong><div style="margin-top:4px">${item.dataset.desc}</div>`;
-        tt.style.display = 'block';
-        tt.setAttribute('aria-hidden','false');
-        locked = true;
-      } else {
-        // déjà lock → si on reclick sur un autre passif, mettre à jour le contenu
-        tt.innerHTML = `<strong>${item.textContent}</strong><div style="margin-top:4px">${item.dataset.desc}</div>`;
-      }
-    } else if(e.target.closest('#passif-tooltip')){
-      // clic sur la tooltip elle-même → on déverrouille et on la ferme
-      /*locked = false;
-      tt.style.display='none';
-      tt.setAttribute('aria-hidden','true');*/
-    } else {
-      // clic ailleurs (optionnel : déverrouiller aussi)
-      // locked = false;
     }
   });
 }

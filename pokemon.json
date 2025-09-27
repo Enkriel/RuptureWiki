@@ -60,6 +60,24 @@
     "alpha" : "no"
   },
   {
+    "id": 63,
+    "name": "Abra Alpha",
+    "image" : "https://i.pinimg.com/1200x/01/71/bf/0171bfd801a48520459e56e3a265b100.jpg",
+    "tier": 1,
+    "hp": 14,
+    "esquive": "12",
+    "armor": "3/8",
+    "type": ["Ténèbres"],
+    "attacks": ["Griffe", "Flatterie", "Coup Bas", "Choc Mental", "Téléport"],
+    "passifs": ["Griffes des Ténèbres", "Téléport Flou", "Téléport Controllé", "Téléport Autrui"],
+    "status" : "hide",
+    "comportement" : "Utilise automatiquement Téléport après avoir subbit une blessure majeur ou sévère, vise la personne qui a le moins de PV",
+    "alpha" : "yes",
+    "front" : "3 - Perçant - Oreilles du Traqueur - Choc Mental",
+    "sides" : "3 - Contondant - Griffes Psionique - Griffe",
+    "back" : "4 - Coupant - Queue du Guide - Téléport Controllé"
+  },
+  {
     "id": 129,
     "name": "Magicarpe",
     "image" : "https://img.pokemondb.net/sprites/home/normal/2x/avif/magikarp.avif",
@@ -138,6 +156,21 @@
     "alpha" : "no"
   },
   {
+    "id": 261,
+    "name": "Medhyèna",
+    "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/poochyena.avif",
+    "tier": 1,
+    "hp": 4,
+    "esquive": "12",
+    "armor": "2/6",
+    "type": ["Ténèbres"],
+    "attacks": ["Griffe", "Morsure", "Coup Bas"],
+    "passifs": ["Odorat Développé"],    
+    "status" : "unlock",
+    "comportement" : "Vise la derniere cible qui l'a attaqué",
+    "alpha" : "no"
+  },
+  {
     "id": 293,
     "name": "Chuchmur",
     "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/whismur.avif",
@@ -150,21 +183,6 @@
     "passifs": ["Grosse voix", "Fragilité Percante", "Resistance Contondante"],    
     "status" : "unlock",
     "comportement" : "Vise de façon aléatoire un adversaire",
-    "alpha" : "no"
-  },
-  {
-    "id": 261,
-    "name": "Medhyèna",
-    "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/poochyena.avif",
-    "tier": 1,
-    "hp": 4,
-    "esquive": "12",
-    "armor": "2/6",
-    "type": ["Ténèbres"],
-    "attacks": ["Griffe", "Morsure", "Coup Bas"],
-    "passifs": [""],    
-    "status" : "unlock",
-    "comportement" : "Vise la derniere cible qui l'a attaqué",
     "alpha" : "no"
   },
   {

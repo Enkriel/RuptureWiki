@@ -78,7 +78,7 @@ const weaponTypes = [
 function mapType(code){
   const m = {
     "GS":"Espadon","Hmr":"Marteau","LS":"Katana","Spr":"Hallebarde","Fist":"Poings",
-    "Dual":"Double lames","SnS":"Arme légère et bouclier","LnS":"Lance et bouclier géant",
+    "DS":"Double lames","SnS":"Arme légère et bouclier","LnS":"Lance et bouclier géant",
     "Whip":"Fouet","Harm":"Harmonium","Harmonium":"Harmonium","HH":"Cor de Chasse",
     "Staff":"Bâton d'amplification","Cata":"Catalyseur","Bow":"Arc","Bowgun":"Fusarbalete","GB":"Great boomerang"
   };
@@ -183,7 +183,12 @@ function renderWeapons(){
         tr.appendChild(td(w.Element));
         tr.appendChild(td(w["Dégât"]));
         const tdMot = document.createElement('td');
-        tdMot.appendChild(renderMotClefDOM(w.MotClef));
+        if(w.Secret == "no")
+          tdMot.appendChild(renderMotClefDOM(w.MotClef));
+        else{
+          tdMot.appendChild(renderMotClefDOM("???"));
+          tdMot.style.color = "purple";
+        }
         tr.appendChild(tdMot);
 
         const a1 = document.createElement('td'); a1.appendChild(renderAbilityDOM(w.ability1)); tr.appendChild(a1);

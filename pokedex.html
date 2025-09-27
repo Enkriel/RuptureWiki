@@ -58,11 +58,12 @@
             "Fée": "img/Icon/fee_icon.png"
         };
 
-        function renderTypeIcons(arr) {
+        function renderTypeIcons(arr, size = 24) {
+            console.log(size);
             if (!Array.isArray(arr) || arr.length === 0) return '—';
             return arr
                 .filter(type => type && typeIcons[type])
-                .map(type => `<img src="${typeIcons[type]}" alt="${type}" title="${type}" style="width:24px; height:24px; vertical-align:middle;">`)
+                .map(type => `<img src="${typeIcons[type]}" alt="${type}" title="${type}" style="width:${size}px; height:${size}px; vertical-align:middle;">`)
                 .join(' ');
         }
         // Données d'exemple intégrées (remplace le fetch)
@@ -360,9 +361,13 @@
             card.innerHTML = `
                 <div class="card-inner">
                     <div class="card-front ${cardStyle}">
-                        <img src="${imageUrl}" alt="${pokemon.name}" onerror="this.src='https://via.placeholder.com/120x120?text=?'">
+                        <img src="${imageUrl}" alt="${pokemon.name}" class="frontIcon" onerror="this.src='https://via.placeholder.com/120x120?text=?'">
                         <h3>${pokemon.name}</h3>
-                        <p>Tier ${pokemon.tier}</p>
+                        <p>${renderTypeIcons(
+                            Array.isArray(pokemon.type) 
+                                ? pokemon.type.flatMap(t => t.split('/').map(x => x.trim())) 
+                                : (pokemon.type ? pokemon.type.split('/').map(x => x.trim()) : []), 50
+                        )}</p>
                     </div>
 
 
@@ -375,7 +380,7 @@
                             <li><strong>Type:</strong> ${renderTypeIcons(
                                                             Array.isArray(pokemon.type) 
                                                                 ? pokemon.type.flatMap(t => t.split('/').map(x => x.trim())) 
-                                                                : (pokemon.type ? pokemon.type.split('/').map(x => x.trim()) : [])
+                                                                : (pokemon.type ? pokemon.type.split('/').map(x => x.trim()) : []), 24
                                                         )}</li>
                         </ul>
 
@@ -398,11 +403,11 @@
 
                         <h4>Faiblesses / Résistances</h4>
                         <ul class="attacks">
-                            <li><strong>Faiblesse majeure:</strong> ${renderTypeIcons(pokemon.major_weakness)}</li>
-                            <li><strong>Faiblesses:</strong> ${renderTypeIcons(pokemon.weakness)}</li>
-                            <li><strong>Résistances:</strong> ${renderTypeIcons(pokemon.resistance)}</li>
-                            <li><strong>Résistances majeures:</strong> ${renderTypeIcons(pokemon.major_resistance)}</li>
-                            <li><strong>Immunités:</strong> ${renderTypeIcons(pokemon.immunity)}</li>
+                            <li><strong>Faiblesse majeure:</strong> ${renderTypeIcons(pokemon.major_weakness, 24)}</li>
+                            <li><strong>Faiblesses:</strong> ${renderTypeIcons(pokemon.weakness, 24)}</li>
+                            <li><strong>Résistances:</strong> ${renderTypeIcons(pokemon.resistance, 24)}</li>
+                            <li><strong>Résistances majeures:</strong> ${renderTypeIcons(pokemon.major_resistance, 24)}</li>
+                            <li><strong>Immunités:</strong> ${renderTypeIcons(pokemon.immunity, 24)}</li>
                         </ul>
                     </div>
                 </div>

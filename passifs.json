@@ -262,11 +262,46 @@
   {
     "id": 123,
     "Nom": "Brillant",
-    "description": "Vous ne pouvez pas être flou"
+    "description": "Vous ne pouvez pas être <b class='data-status' data-status-name='Flou'>flou</b>"
   },
   {
     "id": 124,
     "Nom": "Corps Ardent",
     "description": "Quand vous subissez une blessure du à une attaque ou un capacité dont la portée est de 1 ou moins <b class='data-status' data-status-name='Brulure'>brûlé</b> votre attaquant"
+  },
+  {
+    "id": 125,
+    "Nom": "Odorat Développé",
+    "description": "Vous pouvez faire des jet d'investigation sur des odeurs"
+  },
+  {
+    "id": 126,
+    "Nom": "Téléport Flou",
+    "description": "Quand vous utiliser <b>Téléport</b> vous réapparaissez en étant <b class='data-status' data-status-name='Flou'>flou</b>"
+  },
+  {
+    "id": 127,
+    "Nom": "Griffes des Ténèbres",
+    "description": "<b>Griffe</b> deviens une attaque Ténèbres avec 2 de Portée"
+  },
+  {
+    "id": 128,
+    "Nom": "Téléport Controllé",
+    "description": "Quand vous utiliser <b>Téléport</b> le lieu de réapparition n'est pas aléatoire"
+  },
+  {
+    "id": 128,
+    "Nom": "Téléport Autrui",
+    "description": "Vous pouvez utiliser <b>Téléport</b> sur une autre cible que vous"
+  },
+  {
+    "id": 129,
+    "Nom": "Attaque Surprise Précise",
+    "description": "Vous avez l'avantage lors de vos attaque surprise"
+  },
+  {
+    "id": 130,
+    "Nom": "Ajout Puissance Contrôlée",
+    "description": "Vous avez le passif <b class='data-passifs' data-passifs-name='Puissance Contrôlée'>Puissance Controllé</b> sur toutes vos comptétence"
   }
 ]

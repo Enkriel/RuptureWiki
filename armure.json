@@ -60,15 +60,39 @@
     "Secret": "no" 
   },
   {
-    "id": 21001,
+    "id": 11001,
     "Nom": "Toge d'espoir",
     "type": "Légère",
     "tier": 1,
     "Element": "Eau",
-    "Armure": "3",
+    "Armure": "1",
     "Paliers": "3/8",
     "Effets": "Gain Trempette, Trempette Surprise",
     "Craft": "Membrane perpétuelle + 2 matériaux Eau",
+    "Secret": "yes"
+  },
+  {
+    "id": 11002,
+    "Nom": "Lambeau de tristesse",
+    "type": "Légère",
+    "tier": 1,
+    "Element": "Ténèbres",
+    "Armure": "1",
+    "Paliers": "4/8",
+    "Effets": "Ajout Puissance Contrôlée",
+    "Craft": "Oreille du Traqueur + 2 matériaux Ténèbres",
+    "Secret": "yes"
+  },
+  {
+    "id": 21001,
+    "Nom": "Tenue de l'assassin Dimentionnel",
+    "type": "Légère",
+    "tier": 1,
+    "Element": "Ténèbres",
+    "Armure": "2",
+    "Paliers": "4/9",
+    "Effets": "Attaque Surprise Précise",
+    "Craft": "Griffes Psionique + 2 matériaux Ténèbres",
     "Secret": "yes"
   },
   {

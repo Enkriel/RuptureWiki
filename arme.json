@@ -151,7 +151,35 @@
     "ability2": "Charge",
     "ability3": "Disparition",
     "Craft": "Membrane Perpétuelle, 3 matériaux Eau",
-    "Secret": "no"   
+    "Secret": "yes"   
+  },
+  {
+    "id": 61001,
+    "Nom": "Griffes du vengueur psionique",
+    "type": "DS",
+    "tier": 1,
+    "Element": "Ténèbres",
+    "Dégât": "1d6",
+    "MotClef": "Court, Double, Finesse, Griffes des Ténèbres, Coupant",
+    "ability1": "Griffe",
+    "ability2": "Arrogance",
+    "ability3": "Griffe",
+    "Craft": "Griffes Psionique, 3 matériaux Ténèbres",
+    "Secret": "yes"   
+  },
+  {
+    "id": 91001,
+    "Nom": "Fouet du guides des plans",
+    "type": "Whip",
+    "tier": 1,
+    "Element": "Ténèbres",
+    "Dégât": "1d8 + 2",
+    "MotClef": " Allonge, Finesse, Téléport Autrui, Téléport Controllé, Contondant",
+    "ability1": "Téléport",
+    "ability2": "Flatterie",
+    "ability3": "Téléport",
+    "Craft": "Queue du Guide, 3 matériaux Ténèbres",
+    "Secret": "yes"   
   },
   {
     "id": 121001,
@@ -164,8 +192,22 @@
     "ability1": "Pistolet à O",
     "ability2": "Ombre Nocturne",
     "ability3": "Ombre Nocturne",
-    "Craft": "Os Codale, 3 matériaux Eau",
-    "Secret": "no"   
+    "Craft": "Os Codale, 2 matériaux Spectre, 1 Eau",
+    "Secret": "yes"   
+  },
+  {
+    "id": 131001,
+    "Nom": "Masque blanc de la tristesse",
+    "type": "Cata",
+    "tier": 1,
+    "Element": "Ténèbres",
+    "Dégât": "1d8+1",
+    "MotClef": "Magique, Téléport Controllé",
+    "ability1": "Choc Mental",
+    "ability2": "Téléport",
+    "ability3": "Choc Mental",
+    "Craft": "Oreilles du Traqueur, 3 matériaux Psy",
+    "Secret": "yes"   
   },
   {
     "id": 141001,
@@ -179,6 +221,6 @@
     "ability2": "Ombre Nocturne",
     "ability3": "Disparition",
     "Craft": "Barbillon Osseux, 3 matériaux Spectre",
-    "Secret": "no"   
+    "Secret": "yes"   
   }
 ]
