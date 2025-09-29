@@ -126,6 +126,34 @@
     "Secret": "no"   
   },
   {
+    "id": 80001,
+    "Nom": "Pic et Roc",
+    "type": "LnS",
+    "tier": 0,
+    "Element": "Acier",
+    "Dégât": "1d6 + 3",
+    "MotClef": "Extrêmement Lourd, Protecteur, Perçant",
+    "ability1": "Hache de Pierre",
+    "ability2": "Armure",
+    "ability3": "",
+    "Craft": "2 matériaux Acier et 1 Roche",
+    "Secret": "no"   
+  },
+  {
+    "id": 90001,
+    "Nom": "Racine d'argile",
+    "type": "Whip",
+    "tier": 0,
+    "Element": "Sol",
+    "Dégât": "1d8",
+    "MotClef": "Finesse, Allonge, Contondant, Dressant",
+    "ability1": "Jet de Sable",
+    "ability2": "Tourbi-Sable",
+    "ability3": "",
+    "Craft": "3 matériaux Sol",
+    "Secret": "no"
+  },
+  {
     "id": 130002,
     "Nom": "Mouffle Coeur de Feu",
     "type": "Cata",

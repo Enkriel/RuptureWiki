@@ -212,7 +212,7 @@
     {
         "id": 36,
         "Name": "Épaule d'acier",
-        "description": "Vous gagnez une maîtrise au choix parmi « armure extrêmement lourde », « arme légère et bouclier », « lance et bouclier » ou « bouclier géant »."
+        "description": "Vous gagnez une maîtrise au choix parmi « armure extrêmement lourde », « arme légère et bouclier » ou « lance et bouclier géant »."
     },
     {
         "id": 37,
@@ -703,5 +703,10 @@
         "id": 228,
         "Name": "Rattrapage Glissé",
         "description": "Quand vous effectué <b>Rattrapage</b>, vous pouvez effecvtué immédiatement une action de déplacement gratuite."
+    },
+    {
+        "id": 229,
+        "Name": "Capacité de l'Expert",
+        "description": "Vos capacité stocker sur votre arme (pas syntoniseur) dont vous avez l'expertise élémentaire on une deuxième utilisation"
     }
 ]

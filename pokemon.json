@@ -29,6 +29,24 @@
     "comportement" : "Attaque la derniere cible qui l'a attaqué",
     "alpha" : "no"
   },
+   {
+    "id": 13,
+    "name": "Aspicot Alpha",
+    "image" : "https://img.pokemondb.net/sprites/home/normal/2x/avif/weedle.avif",
+    "tier": 1,
+    "hp": 16,
+    "esquive": "10",
+    "armor": "3/8",
+    "type": ["Insecte/Poison"],
+    "attacks": ["Dard-Venin", "Sécrétion", "Dard-Nuée", "Poudre Toxic"],
+    "passifs": ["Alpha", "Secretion Toxique"],
+    "status" : "unlock",
+    "comportement" : "Utilise automatiquement Téléport après avoir subbit une blessure majeur ou sévère, vise la personne qui a le moins de PV",
+    "alpha" : "yes",
+    "front" : "3 - Percant - Glande filandreuse - Sécrétion",
+    "sides" : "3 - Coupant - Pattes  - Manoeuvre de Désangagement",
+    "back" : "4 - Contondant - Pic Codale - Dard-Nuée"
+  },
   {
     "id": 14,
     "name": "Coconfort",

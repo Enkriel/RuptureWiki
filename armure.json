@@ -36,6 +36,18 @@
     "Secret": "no"  
   },
   {
+    "id": 20002,
+    "Nom": "Armure Sedimentaire",
+    "type": "Moyenne",
+    "tier": 0,
+    "Element": "Sol",
+    "Armure": "2",
+    "Paliers": "4/6",
+    "Effets": "Paratonnerre",
+    "Craft": "3 matériaux Sol",
+    "Secret": "no"  
+  },
+  {
     "id": 30001,
     "Nom": "Cuirasse de feu",
     "type": "Lourde",
@@ -45,6 +57,18 @@
     "Paliers": "4/8",
     "Effets": "",
     "Craft": "3 matériaux Feu",
+    "Secret": "no"  
+  },
+  {
+    "id": 30002,
+    "Nom": "Armure de Roche Vivante",
+    "type": "Lourde",
+    "tier": 0,
+    "Element": "Roche",
+    "Armure": "3",
+    "Paliers": "4/8",
+    "Effets": "Recomposition",
+    "Craft": "3 matériaux Roche",
     "Secret": "no"  
   },
   {

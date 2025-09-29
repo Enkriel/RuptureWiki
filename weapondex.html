@@ -71,16 +71,28 @@ let passifsData = [];
 /* ------------------ mappings & types ------------------ */
 const weaponTypes = [
   "Espadon","Marteau","Katana","Hallebarde","Poings","Double lames",
-  "Arme légère et bouclier","Lance et bouclier géant","Fouet","Harmonium",
+  "Arme légère et bouclier","Lance et Bouclier géant","Fouet","Harmonium",
   "Cor de Chasse","Bâton d'amplification","Catalyseur","Arc","Fusarbalete","Great boomerang"
 ];
 
 function mapType(code){
   const m = {
-    "GS":"Espadon","Hmr":"Marteau","LS":"Katana","Spr":"Hallebarde","Fist":"Poings",
-    "DS":"Double lames","SnS":"Arme légère et bouclier","LnS":"Lance et bouclier géant",
-    "Whip":"Fouet","Harm":"Harmonium","Harmonium":"Harmonium","HH":"Cor de Chasse",
-    "Staff":"Bâton d'amplification","Cata":"Catalyseur","Bow":"Arc","Bowgun":"Fusarbalete","GB":"Great boomerang"
+    "GS":"Espadon",
+    "Hmr":"Marteau",
+    "LS":"Katana",
+    "Spr":"Hallebarde",
+    "Fist":"Poings",
+    "DS":"Double lames",
+    "SnS":"Arme légère et bouclier",
+    "LnS":"Lance et Bouclier géant",
+    "Whip":"Fouet","Harm":"Harmonium",
+    "Harmonium":"Harmonium",
+    "HH":"Cor de Chasse",
+    "Staff":"Bâton d'amplification",
+    "Cata":"Catalyseur",
+    "Bow":"Arc",
+    "Bowgun":"Fusarbalete",
+    "GB":"Great boomerang"
   };
   return m[code] || code || '—';
 }

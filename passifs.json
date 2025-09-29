@@ -303,5 +303,20 @@
     "id": 130,
     "Nom": "Ajout Puissance Contrôlée",
     "description": "Vous avez le passif <b class='data-passifs' data-passifs-name='Puissance Contrôlée'>Puissance Controllé</b> sur toutes vos comptétence"
+  },
+  {
+    "id": 131,
+    "Nom": "Paratonnere",
+    "description": "Vous pouvez rediriger une attaque électrique visant une cible à 0 de vous vers vous même"
+  },
+  {
+    "id": 132,
+    "Nom": "Recomposition",
+    "description": "Quand vous utiliser 1 point d'armure pour réduire une blessure vous avez 1 chance sur 4 de ne pas consommé ce point d'armure"
+  },
+  {
+    "id": 133,
+    "Nom": "Secretion Toxique",
+    "description": "Quand vous utiliser <b>Secretion<b> vous appliquez aussi <b class='data-status' data-status-name='Empoisonné'>empoisonné</b> à votre cible"
   }
 ]
