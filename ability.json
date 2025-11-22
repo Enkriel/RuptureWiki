@@ -67,7 +67,7 @@
     {
         "id": 6,
         "Name": "Second Souffle - Action Bonus - Repos Court",
-        "description": "Regagnez un nombre de PV égal à 1d4. Une fois cette capacité utilisée, vous devez terminer un repos court ou long pour pouvoir l'utiliser de nouveau."
+        "description": "Regagnez 1D2 pv."
     },
     {
         "id": 7,
@@ -76,7 +76,7 @@
     },
     {
         "id": 8,
-        "Name": "Ordre Simple",
+        "Name": "Ordre Simple - Action Bonus",
         "description": "(Nécessite une arme avec le mot-clé dressant) : vous pouvez donner un ordre simple en combat à un Pokémon allié. ('Attaque', 'Fuis', 'Cherche'...)"
     },
     {
@@ -87,7 +87,7 @@
     {
         "id": 10,
         "Name": "Soin Pokémon - Action Bonus - Repos Court",
-        "description": "(Nécessite une arme avec le mot-clé dressant) : à votre tour, vous pouvez utiliser une action bonus pour soigner un Pokémon dans votre zone, lui rendant 1d4 PV. Nécessite un repos court ou long pour être réutilisée."
+        "description": "(Nécessite une arme avec le mot-clé dressant) : à votre tour, vous pouvez utiliser une action bonus pour soigner un Pokémon dans votre zone, lui rendant 2PV. Nécessite un repos court ou long pour être réutilisée."
     },
     {
         "id": 11,
@@ -122,7 +122,7 @@
     {
         "id": 19,
         "Name": "Diversité",
-        "description": "(Nécessite une arme avec le mot-clé dressant) Votre Pokémon peut utiliser vos compétences d'armes. Vos Pokémon ont l'expertise de leur élément."
+        "description": "(Nécessite une arme avec le mot-clé dressant) Vous pouvez donner des badge à vos pokémon pour qu'ils remplace ses comptétence par de nouvelle comptétence."
     },
     {
         "id": 20,
@@ -216,8 +216,8 @@
     },
     {
         "id": 37,
-        "Name": "Contre-Attaque",
-        "description": "Après avoir utilisé <b>Gardien d’acier</b>, vous pouvez immédiatement effectuer une action d’attaque gratuitement."
+        "Name": "Abri Continu",
+        "description": "Vos compétence Abri gagne une utilisation supplémentaire"
     },
     {
         "id": 38,
@@ -250,9 +250,9 @@
         "description": "Quand vous effectuez une action <b>Changer d’arme</b>, vous pouvez effectuer une action de déplacement gratuite."
     },
     {
-    "id": 45,
-    "Name": "Chasseur Casseur - Action Bonus - Repos Court",
-    "description": "Quand vous cassez une partie de monstre, regagnez <b>Fougue</b>."
+        "id": 45,
+        "Name": "Chasseur Casseur - Action Bonus - Repos Court",
+        "description": "Quand vous cassez une partie de monstre, regagnez <b>Fougue</b>."
     },
     {
         "id": 46,
@@ -347,7 +347,7 @@
     {
         "id": 64,
         "Name": "Question Divine",
-        "description": "Lors de d’un repos court vous gagnerez l’action <b>Question</b> vous pouvez méditer en pensant particulièrement fort à une question votre divinité vous fera paraître une image plus ou moins claire pour vous aiguiller. Lors de repos long vous pouvez poser 2 questions."
+        "description": "Lors de d’un repos court vous gagnerez l’action <b>Question</b> : Sacrifiez un objet lié à une divinité, puis méditer en pensant particulièrement fort à une question la divinité vous répondra comme elle l'entend et à la hauteur de votre offrande."
     },
     {
         "id": 64,
@@ -425,24 +425,29 @@
         "description": "En cas de touche, gardez votre <b>Charge</b> (chaque charge continue ajoute un dé de dégâts) et augmente le DD de concentration."
     },
     {
+        "id": 238,
+        "Name": "Coup d'épaule - Action + Action Bonus + Action de Déplacement",
+        "description": "Au début de votre tour si vous êtes en charge vous pouvez bouger de 1 en gardant votre Charge si vous arriver dans la zone au contact, c'est action inflige aussi des dégats d'attaque avec des dé de dégat de tier inférieur ."
+    },
+    {
         "id": 75,
-        "Name": "Frappe Étourdissante",
-        "description": "Si vous infligez une blessure majeure ou sévère dans le cadran avant d’une cible, celle-ci doit réussir un jet de sauvegarde de Constitution. En cas d'échec, elle est <b class='data-status' data-status-name='Étourdi'>étourdie</b>."
+        "Name": "Fracassage",
+        "description": "Baissez vos dés de dégâts de 2 tiers mais augementé la blessure aux part de 1."
     },
     {
         "id": 76,
-        "Name": "Destruction de Défense",
-        "description": "Quand vous cassez le membre du cadran avant d’une cible, appliquez-lui <b class='data-status' data-status-name='Vulnérable'>Vulnérable</b>."
+        "Name": "Frappe Étourdissante - Repos Court",
+        "description": "Si vous frappez le cadran avant d’une cible et que celui ci est cassé ou se casse grace à ce coup, appliquez-lui <b class='data-status' data-status-name='Étourdi'>étourdi</b>."
     },
     {
         "id": 76,
         "Name": "Changement de Posture - Action Bonus",
-        "description": "Vous pouvez prendre l'une de ces deux postures ou reprendre votre posture normale. Tant que vous êtes en posture, vous ne pouvez pas utiliser d'action de déplacement : <ul><li><b>Posture d'Opportunité</b> : -2 en Évasion. Si un allié blesse une cible à portée dans un autre cadran, vous pouvez utiliser une réaction pour infliger une blessure mineure.</li><li><b>Posture Défensive</b> : +2 en Évasion et vos jets de sauvegarde. Vos attaques infligent 1 dé de dégâts en moins.</li></ul>"
+        "description": "Vous pouvez prendre l'une de ces deux postures ou reprendre votre posture normale. Tant que vous êtes en posture, vous ne pouvez pas utiliser d'action de déplacement : <ul><li><b>Posture d'Opportunité</b> : -5 en Évasion. Si un allié blesse une cible à portée dans un cadran opposé, vous pouvez utiliser une réaction pour attaquer.</li><li><b>Posture Défensive</b> : +2 en Évasion et vos jets de sauvegarde.</li></ul>"
     },
     {
         "id": 77,
         "Name": "Changement de Posture Améliorée",
-        "description": "Ajoute ces deux postures : <ul><li><b>Posture Rapprochée</b> : vous perdez le mot-clé <b class='data-passifs' data-passifs-name='Allonge'> Allonge </b> mais lancez le double de vos dés de dégâts sur votre attaque.</li><li><b>Posture Tout ou Rien</b> : toutes les blessures que vous infligez ou recevez sont doublées.</li></ul>"
+        "description": "Ajoute ces deux postures : <ul><li><b>Posture Rapprochée</b> : vous perdez le mot-clé <b class='data-passifs' data-passifs-name='Allonge'> Allonge </b> mais lancez le double de vos dés de dégâts sur votre attaque.</li><li><b>Posture Tout ou Rien</b> : Toutes les blessures que vous infligez Sont augmenté de 1.</li></ul>"
     },
     {
         "id": 78,
@@ -486,7 +491,7 @@
     },  
     {
         "id": 85,
-        "Name": "Parade - Réaction",
+        "Name": "Gardien - Réaction",
         "description": "Quand un allié est pris pour cible à portée 0, vous pouvez prendre le coup à sa place. Dans ces conditions, vous ne pouvez pas esquiver."
     },
     {
@@ -507,7 +512,7 @@
     {
         "id": 89,
         "Name": "Mur Géant - Action Déplacement",
-        "description": "Placez votre bouclier devant vous. Vous et les alliés dans le même cadran réduisez de votre niveau tous les dégâts reçus provenant de la zone derrière vous. Si aucune attaque ne vous cible alors que vous avez Mur Géant, vous pouvez à nouveau utiliser cette capacité (vous ne pouvez pas esquiver)."
+        "description": "Placez votre bouclier devant vous. Vous et les alliés dans le même cadran derière vous réduisez de votre niveau tous les dégâts reçus.  Tout type action effectué de votre part annule <b>Mur Géant</b> les action contre vous peuvent annulé <b>Mur Géant</b> ou vous demander un JS pour le garder."
     },
     {
         "id": 90,
@@ -562,7 +567,7 @@
     {
         "id": 100,
         "Name": "Magie Divine",
-        "description": "<b>Magie divine</b> Permet d'utiliser une capacité d'arme équipé et d'un élément associé à votre divinité même si déja utilisé en payant en ferveur son tier dans ses condition utilisé la sagesse à la place de la stat indiqué."
+        "description": "<b>Magie divine</b> Permet d'utiliser une capacité d'arme même si elle est épuisé en payant en pv son tier dans ses condition utilisé la sagesse à la place de la stat indiqué et ne l'épuisez pas."
     },
     {
         "id": 102,
@@ -572,7 +577,7 @@
     {
         "id": 103,
         "Name": "Absorption - Réaction - Repos Court",
-        "description": "Lorsqu’un pokémon vous attaque avec une compétence d’un élément dont vous avez la maitrise, vous pouvez tenter d'absorber son attaque via un jet d’intelligence. Si votre jet d’intelligence dépasse son jet d’attaque vous bloquer son attaque et la transformer en badge sinon vous prenez l’attaque de plein fouet ce qui augmente de 1 tier la blessure reçu."
+        "description": "Lorsqu’un pokémon vous attaque avec une compétence d’un élément dont vous avez la maitrise, vous pouvez tenter d'absorber son attaque via un jet d’intelligence. Si votre jet d’intelligence dépasse son jet d’attaque vous bloquez son attaque et la transformer en badge sinon vous prenez l’attaque de plein fouet ce qui augmente de 1 tier la blessure reçu."
     },
     {
         "id": 104,
@@ -651,8 +656,8 @@
     },
     {
         "id": 218,
-        "Name": "Captation Magique - Réaction - Repos Court",
-        "description": "Après qu'un comptétence du même élément que votre arme est atteri à 1 portée de vous, vous pouvez récupérer l'énergie magique environnante, pour ajouter 1 dé de dégat à votre attaque."
+        "Name": "Captation Magique - Réaction",
+        "description": "Après qu'un comptétence du même élément que votre arme est atteri à 1 portée de vous, vous pouvez récupérer l'énergie magique environnante, pour ajouter 1 dé de dégat à votre prochaine attaque (cumulable)."
     },
     {
         "id": 219,
@@ -708,5 +713,278 @@
         "id": 229,
         "Name": "Capacité de l'Expert",
         "description": "Vos capacité stocker sur votre arme (pas syntoniseur) dont vous avez l'expertise élémentaire on une deuxième utilisation"
+    },
+    {
+        "id": 230,
+        "Name": "Dressage tier 2",
+        "description": "Vous pouvez capturer des pokémon de tier 2"
+    },
+    {
+        "id": 231,
+        "Name": "Dressage tier 3",
+        "description": "Vous pouvez capturer des pokémon de tier 3"
+    },
+    {
+        "id": 232,
+        "Name": "Dressage tier 4",
+        "description": "Vous pouvez capturer des pokémon de tier 4"
+    },
+    {
+        "id": 233,
+        "Name": "Dressage tier 5",
+        "description": "Vous pouvez capturer des pokémon de tier 5"
+    },
+    {
+        "id": 234,
+        "Name": "Dressage tier 6",
+        "description": "Vous pouvez capturer des pokémon de tier 6"
+    },
+    {
+        "id": 235,
+        "Name": "Dressage tier 7",
+        "description": "Vous pouvez capturer des pokémon de tier 7"
+    },
+    {
+        "id": 236,
+        "Name": "Dressage tier 8",
+        "description": "Vous pouvez capturer des pokémon de tier 8"
+    },
+    {
+        "id": 237,
+        "Name": "Dressage tier 9",
+        "description": "Vous pouvez capturer des pokémon de tier 9"
+    },
+    {
+        "id": 238,
+        "Name": "Posture de contre",
+        "description": "Vous pouvez prendre une posture dangereuse jusqu'a votre prochain tour qui vous retire toute votre esquive mais si vous reussissez un jet de sauvegarde dans cette posture vous contrez attaquer gratuitement en infligeant 2 Attaques, utiliser une action de déplacement vous fait sortir de cette posture"
+    },
+    {
+        "id": 239,
+        "Name" : "Contre précis",
+        "description": "Quand vous activer votre contre vous ne pouvez pas raté votre première attaque."
+    },
+    {
+        "id": 240,
+        "Name": "Manimement Rapproché",
+        "description": "Vous changer la saisie de votre lance pour passer une sur une saisie proche de vous <ul><li>vous perdez le mot clef allonge</li><li> Vos attaques font des dégâts Coupants</li><li> Vos attaques sont en AoE 0 sur votre zone et celle de votre cible (JDS Dex 10 + mod Dex)</li></ul>"
+    },
+    {
+        "id": 241,
+        "Name": "Empâlement - Action + Action de Déplacement - Repos Court - AoE Ligne 2",
+        "description" : "Vous avancer brutalment vers votre cible l'empaler avec votre lance, infligeant votre attaque si votre attaque traverse votre cible l'attaque inflige 2 blessures sur les cadrans opposés."
+    },
+    {
+        "id": 242,
+        "Name" : "Contre Instantané - Réaction - Repos Court",
+        "description": "Vous pouvez votre posture de contre."
+    },
+    {
+        "id": 243,
+        "Name" : "Impact Absorbatant",
+        "description": "Si vous infliger une blessure majeur ou severe via votre attaque vous pouvez recharger une capacité de votre Bâton d’Amplification."
+    },
+    {
+        "id": 244,
+        "Name": "Frappe Chargée - Action Bonus",
+        "description": "Vous pouvez consommer 1 comptétence de votre Bâton d’Amplification faire une Attaque lors de votre Action Bonus."
+    },
+    {
+    "id": 245,
+    "Name": "Arme Précise",
+    "description": "Quand vous effectuez une attaque avec une arme dont vous avez la maîtrise, ajoutez +1 à votre jet de touche (+2 si vous avez l'expertise)."
+    },
+    {
+        "id": 246,
+        "Name": "Défi - Action Bonus - Repos Court",
+        "description": "(Nécessite une arme avec le mot-clé protecteur) : <b class='data-status' data-status-name='Provocation'>Provoquez</b> votre cible."
+    },
+    {
+        "id": 247,
+        "Name": "Parade",
+        "description": "Après avoir utilisé <b>Abri</b> et réussi à bloquer l'attaque, vous pouvez effectuer une attaque simple sur la cible qui vous a attaqué si elle est à portée."
+    },
+    {
+        "id": 248,
+        "Name": "Frappe Absorbante",
+        "description": "Faite une attaque simple en retirant 1 dé de dégat, Si vous infligez une blessure majeure ou sévère via votre attaque, vous pouvez recharger une capacité de votre Arme."
+    },
+    {
+        "id": 249,
+        "Name": "Cercle d'Amplification",
+        "description": "Vous consommez un badge de votre syntoniseur pour créer un cercle magique d’amplification sur la cellule où vous vous trouvez. Ce cercle augmente la puissance des capacités de son créateur : tant que celui-ci se tient à l’intérieur, toutes les capacités sont considérées comme canalisées. L’élément du cercle dépend du badge consommé."
+    },
+    {
+        "id": 250,
+        "Name": "Rapatriement - Réaction",
+        "description": "Vous pouvez vous téléporter à votre cercle d’amplification. Si vous tentez d'esquiver une attaque en procédant ainsi, vous devez alors faire un jet d'opposition d'Intelligence ; si vous échouez, votre cercle se brise et vous subissez l'attaque."
+    },
+    {
+        "id": 251,
+        "Name": "Canalisation Concentrée",
+        "description": "Quand vous lancez une capacité, vous pouvez la canaliser : vous passez alors en état de <b class='data-status' data-status-name='Concentration'>Concentration</b> jusqu'à votre prochain tour. Toutes les capacités canalisées infligent un dé de dégâts supplémentaire."
+    },
+    {
+        "id": 252,
+        "Name": "Dépeceur Élémentaire",
+        "description": "Quand vous brisez une partie d'un monstre avec une capacité d'arme, celle-ci n'est pas consommée."
+    },
+    {
+        "id": 253,
+        "Name": "Impact Vitalisant - Action Bonus - Repos Court",
+        "description": "Sacrifiez 1pv, soignez une cible que vous touchez de 1d4pv"
+    },
+    {
+        "id": 253,
+        "Name": "Tempete - 2pv - Ecaille de Rayquaza",
+        "description": "Vous invoquez une tempete (voir météo)"
+    },
+    {
+        "id": 254,
+        "Name": "Tempete - 2pv - Ecaille de Rayquaza",
+        "description": "Vous invoquez une tempete claire (voir météo)"
+    },
+    {
+        "id": 255,
+        "Name": "Air Lock - 1pv - Ecaille de Rayquaza",
+        "description": "Vous immunisé une cible de votre choix à portée 2 contre les effets de la météo pendant 3 tours"
+    },
+    {
+        "id": 256,
+        "Name": "Hurletempete - 1pv - Croc de Rayquaza",
+        "description": "Vous pouvez utiliser Hurletempete (portée 1, AoE ligne 3, inflige 2d6 + 2 dégâts, l'élément de l'attaque dépend de la météo en cours)"
+    },
+    {
+        "id": 256,
+        "Name": "Prière",
+        "description": "Lors d'un repos court vous gagnerez l’action prière : Prier pour obtenir une ou plusieurs reliques de votre divinité, le nombre et la qualité des reliques reçues dépendent de votre jet de Religion (Cha)"
+    },
+    {
+        "id": 254,
+        "Name": "Pluie et Secheresse - 2pv - Ecaille de Rayquaza",
+        "description": "Vous invoquez au choix une pluie ou une secheresse (voir météo)"
+    },
+    {
+        "id": 255,
+        "Name": "Draco Ascention - 2pv - Croc de Rayquaza",
+        "description": "Vous pouvez utiliser Draco ascention (portée 3, AoE 0, inflige 2d8 + 5 votre niveau dégâts, l'élément de l'attaque dépend de la météo en cours)"
+    },
+    {
+        "id": 256,
+        "Name": "Géo-Contrôle - 2pv - Corne Rouge de Xerneas",
+        "description": "Vous pouvez utiliser Géo-Contrôle (portée 1, AoE 1, Pose une graine qui au début de votre prochain tour éclot et crée une zone durant 2 tour ou chaque jet de touche et de sauvegarde effectué par vous et vos alliés dans la zone ont l'avantage)" 
+    },
+    {
+        "id": 257,
+        "Name": "Frappe de soin - 1pv - Corne Orange de Xerneas",
+        "description": "Faite une attaque avec votre arme, puis soignez d'autant de pv que de dégâts infligés un cible à portée 3 de vous" 
+    },
+    {
+        "id": 258,
+        "Name": "Déchainement Climatique - 1pv - Ecaille Rayquaza",
+        "description": "Passer le climat actuelle au niveau supérieur (voir météo)" 
+    },
+    {
+        "id": 259,
+        "Name": "Emissaire - 1 à 6 pv - Tour Complet",
+        "description": "Demander de l'aide à votre divinité en dépensant un nombre de pv entre 1 et 6, selon votre offrande un allié plus ou moins puissant viendra vous aider" 
+    },
+    {
+        "id": 260,
+        "Name": "Hurletempete Affligeante",
+        "description": "Hurletempete gagne désormais le mot clef effet sur double et +2 de dégât sous la tempete claire la pluie et la secheresse  " 
+    },
+    {
+        "id": 261,
+        "Name": "Croix Purificatrice - 1 pv - Corne Orange de Xerneas - Action Bonus",
+        "description": "Vous pouvez utiliser Croix Purificatrice (portée 3, Vous pouvez effectué un jet de sauvegarde contre un effet négatif d'une autre cible)" 
+    },
+    {
+        "id": 262,
+        "Name": "Marche de la Vie - 2 pv - Corne Rouge de Xerneas",
+        "description": "Permet à un allié à terre de se relever durant 2 tours, à la fin du deuxième tour il meurt à nouveau"
+    },
+    {
+        "id": 263,
+        "Name": "Aura Fééerique - 1 pv à chaque tour - Corne Violette de Xerneas",
+        "description": "Crée autour de vous une aura fééerique de portée 2, toutes les alliés à l'intérieur de l'aura regagne 1 pv supplémentaire lors d'un soin, les ennemis sont <b class='data-status' data-status-name='Appaisé'>appaisé</b> tant qu'elles restent dans l'aura"
+    },
+    {
+        "id": 263,
+        "Name": "Expert du Synthoniseur",
+        "description": "Les comptétences de votre syntoniseur dont vous avez l'expertise élémentaire on une seconde utilisation"
+    },
+    {
+        "id": 263,
+        "Name": "Expert du Synthoniseur",
+        "description": "Les comptétences de votre syntoniseur dont vous avez l'expertise élémentaire on une seconde utilisation"
+    },
+    {
+        "id": 264,
+        "Name": "Dressage tier 1",
+        "description": "Les Pokémons dressés de tier 2 qui partagent un élément que vous maîtrisez ne vous demandent pas de jet supplémentaire pour être contrôlés."
+    },
+    {
+        "id": 265,
+        "Name": "Dressage tier 2",
+        "description": "Les Pokémons dressés de tier 2 qui partagent un élément que vous maîtrisez ne vous demandent pas de jet supplémentaire pour être contrôlés."
+    },
+    {
+        "id": 266,
+        "Name": "Dressage tier 3",
+        "description": "Les Pokémons dressés de tier 3 qui partagent un élément que vous maîtrisez ne vous demandent pas de jet supplémentaire pour être contrôlés."
+    },
+    {
+        "id": 267,
+        "Name": "Dressage tier 4",
+        "description": "Les Pokémons dressés de tier 4 qui partagent un élément que vous maîtrisez ne vous demandent pas de jet supplémentaire pour être contrôlés."
+    },
+    {
+        "id": 268,
+        "Name": "Dressage tier 5",
+        "description": "Les Pokémons dressés de tier 5 qui partagent un élément que vous maîtrisez ne vous demandent pas de jet supplémentaire pour être contrôlés."
+    },
+    {
+        "id": 269,
+        "Name": "Dressage tier 6",
+        "description": "Les Pokémons dressés de tier 6 qui partagent un élément que vous maîtrisez ne vous demandent pas de jet supplémentaire pour être contrôlés."
+    },
+    {
+        "id": 270,
+        "Name": "Dressage tier 7",
+        "description": "Les Pokémons dressés de tier 7 qui partagent un élément que vous maîtrisez ne vous demandent pas de jet supplémentaire pour être contrôlés."
+    },
+    {
+        "id": 271,
+        "Name": "Dressage tier 8",
+        "description": "Les Pokémons dressés de tier 8 qui partagent un élément que vous maîtrisez ne vous demandent pas de jet supplémentaire pour être contrôlés."
+    },
+    {
+        "id": 272,
+        "Name": "Dressage tier 9",
+        "description": "Les Pokémons dressés de tier 9 qui partagent un élément que vous maîtrisez ne vous demandent pas de jet supplémentaire pour être contrôlés."
+    },
+    {
+        "id": 273,
+        "Name": "Connexion Mentale",
+        "description": "Vous pouvez lié une connexion à votre pokémon pour pouvoir lui donner des ordres complexes tout les tours de façon gratuite. Un cup fort sur vous ou votre pokemon peut briser le lien il faudra alors relancer la comptétence"
+    },
+    {
+        "id": 274,
+        "Name": "Souffle du Dresseur - Action Bonus - Repos Court",
+        "description": "(Nécessite une arme avec le mot-clé dressant) : Votre Pokemon peut faire immédiatement une action."
+    },
+    {
+        "id": 275,
+        "Name": "Entrainement Particulier",
+        "description": "Votre pokémon peut gagner au choix le passif <b class='data-passifs' data-passifs-name='Pokemon Paladin'>Pokemon Paladin</b>, <b class='data-passifs' data-passifs-name='Pokemon Fourbe'>Pokemon Fourbe</b> ou <b class='data-passifs' data-passifs-name='Pokemon Berserker'>Pokemon Berserker</b>."
+    },
+    {
+        "id": 275,
+        "Name": "transfert dimentionnel - Anneau de Hoopa - 2PV",
+        "description": "Vous pouvez marquer vos pokemon pour qu'il puisse échanger de place entre eux sans aucune limite de portée"
     }
 ]
+
+    
+ 

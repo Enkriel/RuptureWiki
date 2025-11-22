@@ -5,7 +5,7 @@
     "type": "Normal",
     "tier": 1,
     "portée": "0 - Cha - AoE 1 circulaire",
-    "description": "Inflige 1d8 + 2. Vous parlez si fort que tout le monde à 500 m peut vous entendre."
+    "description": "Inflige 1d10 + 4. Vous parlez si fort que tout le monde à 500 m peut vous entendre."
   },
   {
     "id": 1102,
@@ -20,8 +20,8 @@
     "Nom": "Griffe",
     "type": "Normal",
     "tier": 1,
-    "portée": "0 - Dex - Coupant ",
-    "description": "Inflige 2d6 + 1."
+    "portée": "0 - Dex - Coupant - Critique Facilité",
+    "description": "Inflige 2d6 + 2."
   },
   {
     "id": 1104,
@@ -29,14 +29,14 @@
     "type": "Normal",
     "tier": 1,
     "portée": "1 - For - Contondant",
-    "description": "Inflige 2d6 si casse la part avant rend <b class='data-status' data-status-name='Confusion'>confus</b>."
+    "description": "Inflige 2d6 + 2 si casse la part avant rend <b class='data-status' data-status-name='Confusion'>confus</b>."
   },
   {
     "id": 1201,
     "Nom": "Présent",
     "type": "Normal",
     "tier": 2,
-    "portée": "2 - Projectile - Non Modifiable",
+    "portée": "3 - Projectile - Non Modifiable",
     "description": "Lancez 1d20 : si le résultat est pair, soignez une blessure mineure ; s’il est impair, infligez une blessure mineure ; si c’est 1, infligez une blessure majeure ; si c’est 20, soignez une blessure majeure."
   },
   {
@@ -45,7 +45,7 @@
     "type": "Normal",
     "tier": 2,
     "portée": "1 - Con",
-    "description": "2d6 + 1 dégâts, déplacez-vous dans la zone (au contact)."
+    "description": "2d8 + 1 dégâts, déplacez-vous dans la zone (au contact)."
   },
   {
     "id": 1203,
@@ -53,7 +53,7 @@
     "type": "Normal",
     "tier": 2,
     "portée": "3 - Int - Projectile",
-    "description": "(À distance) Inflige 2d6 + 1 avec un élément parmi les 18 selon la météo. (Un jet de nature peut être tenté en amont pour savoir quel élément vous aurez.)"
+    "description": "(À distance) Inflige 2d6 + 3 avec un élément parmi les 18 selon la météo. (Un jet de nature peut être tenté en amont pour savoir quel élément vous aurez.)"
   },
   {
     "id": 1204,
@@ -99,9 +99,9 @@
     "id": 1402,
     "Nom": "Abri",
     "type": "Normal",
-    "tier": 4,
-    "portée": "",
-    "description": "(Action bonus avec une arme avec le mot-clef protecteur) Réduisez toute blessure subie d’un cran gratuitement jusqu'à votre prochain tour (vous pouvez utiliser un point d’armure pour diminuer une seconde fois)."
+    "tier": 1,
+    "portée": "0 - Con - Réaction",
+    "description": "Quand une attaque vous cible vous pouvez faire un jet de constitution en opposition au jet de touche. En cas de réussite (resultat plus grand) l'attaque est annulée."
   },
   {
     "id": 1501,
@@ -141,7 +141,7 @@
     "type": "Combat",
     "tier": 1,
     "portée": "1 - Dex",
-    "description": "2d6. Si votre adversaire a le passif <b class='data-passifs' data-passifs-name='Poids Lourd'>Poids Lourd</b>, infligez 3d6 ; s’il a le passif <b class='data-passifs' data-passifs-name='Poids Leger'>Poids Leger</b>, infligez 1d6."
+    "description": "2d6 + 2. Si votre adversaire a le passif <b class='data-passifs' data-passifs-name='Poids Lourd'>Poids Lourd</b>, infligez 3d6 ; s’il a le passif <b class='data-passifs' data-passifs-name='Poids Leger'>Poids Leger</b>, infligez 1d6."
   },
   {
     "id": 2102,
@@ -149,7 +149,7 @@
     "type": "Combat",
     "tier": 1,
     "portée": "0 - For - Action + Action Deplacement",
-    "description": "Vous donne l'état Fixé, puis projette votre adversaire de 1. Inflige 2d6 + niveau de la cible (ou le tier de difficulté * 2 si non applicable)."
+    "description": "Inflige 2d6 + niveau de la cible (ou le tier de difficulté * 2 si non applicable). Vous donne l'état Fixé, puis projette votre adversaire de 1."
   },
   {
     "id": 2103,
@@ -160,12 +160,20 @@
     "description": "Vos muscles gonflent sans changer votre force, vous gagner 2 lors de vos jets d'intimidation, et parfois en représentation"
   },
   {
+    "id": 2104,
+    "Nom": "Ruse",
+    "type": "Combat",
+    "tier": 1,
+    "portée": "1 - Dex + Int",
+    "description": "Inflige 2d6 + 2 utilisez à la fois votre intelligence et votre dextérité pour tromper la garde ennemie."
+  },
+  {
     "id": 2201,
     "Nom": "Mach Punch",
     "type": "Combat",
     "tier": 2,
-    "portée": "1 - Contondant - For",
-    "description": "2d6 + 1 dégâts, déplacez-vous dans la zone <b>au contact</b>."
+    "portée": "1 - Contondant - For - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
+    "description": "2d6 + 1 dégâts, déplacez-vous dans la zone <b>au contact</b> si vous frappez le cadran avant l'ennemi et que vous faîtes un double la cible est <b class='data-status' data-status-name='Étourdi'> étourdi</b>."
   },
   {
     "id": 2202,
@@ -181,7 +189,7 @@
     "type": "Combat",
     "tier": 2,
     "portée": "1 - Contondant - For",
-    "description": "Inflige 1d8 puis 1d8 dégâts."
+    "description": "Inflige 1d6 + 5 puis 1d6 + 5 dégâts."
   },
   {
     "id": 2301,
@@ -189,7 +197,7 @@
     "type": "Combat",
     "tier": 3,
     "portée": "0 - Reaction",
-    "description": "Après avoir subi une blessure, frappez votre adversaire avec votre poing, infligeant 5 + 1d10 dégâts."
+    "description": "Après avoir subi une blessure, frappez votre adversaire avec votre poing, infligeant 2d6 + 8 dégâts."
   },
   {
     "id": 2302,
@@ -197,7 +205,7 @@
     "type": "Combat",
     "tier": 3,
     "portée": "0 - Dex - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
-    "description": "Inflige 2d6 + 2 <b class='data-status' data-status-name='Paralysie'>Paralyse</b> la cible en cas de double."
+    "description": "Inflige 2d8 + 8 <b class='data-status' data-status-name='Paralysie'>Paralyse</b> la cible en cas de double."
   },
   {
     "id": 2303,
@@ -205,7 +213,7 @@
     "type": "Combat",
     "tier": 3,
     "portée": "1 - For - Contondant",
-    "description": "2d6 + 3 sur une cible faible au combat. Cette attaque augmente ses dés de dégâts d’un cran supplémentaire."
+    "description": "2d8 + 4 sur une cible faible au combat. Cette attaque augmente ses dés de dégâts d’un cran supplémentaire."
   },
   {
     "id": 2401,
@@ -229,15 +237,15 @@
     "type": "Vol",
     "tier": 1,
     "portée": "2 - Dex - Percant",
-    "description": "1d8 + 2."
+    "description": "2d6 + 3."
   },
   {
     "id": 3102,
-    "Nom": "Aspiration",
+    "Nom": "Acrobatie",
     "type": "Vol",
     "tier": 1,
-    "portée": "3 - Int - Action Bonus",
-    "description": "Attire une cible de 1 vers soi."
+    "portée": "0 - Dex",
+    "description": "2d6 + 3. Vous pouvez vous replacer dans le cadran <b>proche</b> de votre choix."
   },
   {
     "id": 3103,
@@ -246,22 +254,30 @@
     "tier": 1,
     "portée": "2 - Dex",
     "description": "Balaie d'un grand coup de vent une zone"
-  },  
+  },
+  {
+    "id": 3104,
+    "Nom": "Frappe du Vent",
+    "type": "Vol",
+    "tier": 1,
+    "portée": "3 - Int - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
+    "description": "2d6 + 1 concentre le vent avant de frappé votre cible sur un double la cible <b class='data-status' data-status-name='Chute'>chute</b>"
+  },
   {
     "id": 3201,
-    "Nom": "Acrobatie",
+    "Nom": "Aspiration",
     "type": "Vol",
     "tier": 2,
-    "portée": "0 - Dex",
-    "description": "2d6 + 2. Vous pouvez vous replacer dans le cadran <b>proche</b> de votre choix."
-  },
+    "portée": "3 - Int - Action Bonus",
+    "description": "Attire une cible de 1 vers soi."
+  },   
   {
     "id": 3202,
     "Nom": "Double volée",
     "type": "Vol",
     "tier": 2,
     "portée": "3 - Percant - Dex - Projectile",
-    "description": "2d6 + 2."
+    "description": "Inflige 2d6 + 2."
   },
   {
     "id": 3203,
@@ -269,7 +285,7 @@
     "type": "Vol",
     "tier": 2,
     "portée": "0 - Int - Coupant - AoE 3 Ligne",
-    "description": "2d6 JS Dex."
+    "description": "2d8 + 2 JS Dex."
   },
   {
     "id": 3204,
@@ -285,7 +301,7 @@
     "type": "Vol",
     "tier": 3,
     "portée": "2 - Dex - Contondant - Action + Action de Déplacement",
-    "description": "2d6. Sautez sur votre cible et placez-vous symétriquement à elle."
+    "description": "2d8 + 2. Sautez sur votre cible et placez-vous symétriquement à elle."
   },
   
   {
@@ -294,7 +310,7 @@
     "type": "Vol",
     "tier": 3,
     "portée": "3 - Dex - Percant",
-    "description": "1d10 + 6. Si vous infligez une blessure avec ce sort sur un Pokémon Insecte ou Plante, vous vous soignez d’1 blessure mineure."
+    "description": "2d6 + 3. Si vous infligez une blessure avec ce sort sur un Pokémon Insecte ou Plante, vous vous soignez d’1 blessure mineure."
   },
   {
     "id": 3303,
@@ -302,7 +318,7 @@
     "type": "Vol",
     "tier": 3,
     "portée": "1 - For - Coupant",
-    "description": "2d8 + 4."
+    "description": "2d8 + 6."
   },
   {
     "id": 3304,
@@ -327,8 +343,7 @@
     "tier": 4,
     "portée": "2 - AoE 0 - Action bonus",
     "description": "Toutes les entités de la zone ciblé gagne une action de déplacements."
-  },
-  
+  }, 
   {
     "id": 3501,
     "Nom": "Lame d'air",
@@ -351,22 +366,22 @@
     "type": "Poison",
     "tier": 1,
     "portée": "3 - Dex - Percant - Projectile - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
-    "description": "2d4. <b class='data-status' data-status-name='Poison'>Empoisonne</b> en cas de double."
+    "description": "2d4 + 2. <b class='data-status' data-status-name='Poison'>Empoisonne</b> en cas de double."
   },
   {
     "id": 4103,
     "Nom": "Acide",
     "type": "Poison",
     "tier": 1,
-    "portée": "3 - Int - Projectile",
-    "description": "2d4 + 2."
+    "portée": "3 - Int - Projectile - <b class='data-passifs' data-passifs-name='Destrucarmure'>Destrucarmure</b>",
+    "description": "Inflige 1d6."
   },
   {
     "id": 4201,
     "Nom": "Crochet Venin",
     "type": "Poison",
     "tier": 2,
-    "portée": "0 - For - Contondant - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
+    "portée": "0 - For - Perçant - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
     "description": "2d6 + 2. <b class='data-status' data-status-name='Poison Grave'>Empoisonne gravement</b> en cas de double."
   },
   {
@@ -382,7 +397,7 @@
     "Nom": "Bain de smog",
     "type": "Poison",
     "tier": 2,
-    "portée": "3 - Int - Projectile",
+    "portée": "3 - Int - Projectile - AoE 0",
     "description": "Crée une flaque de poison sur la zone. Chaque entité commençant dans cette zone subit 1 blessure mineure."
   },
   {
@@ -391,7 +406,7 @@
     "type": "Poison",
     "tier": 3,
     "portée": "3 - Int - Projectile",
-    "description": "2d6 + 2. Augmente les dés de dégâts d’1 tier si la cible est <b class='data-status' data-status-name='Poison'>empoisonnée</b>, de 2 tiers si elle est  <b class='data-status' data-status-name='Poison Grave'>gravement empoisonnée</b>."
+    "description": "2d6 + 3. Augmente les dés de dégâts d’1 tier si la cible est <b class='data-status' data-status-name='Poison'>empoisonnée</b>, de 2 tiers si elle est  <b class='data-status' data-status-name='Poison Grave'>gravement empoisonnée</b>."
   },
   {
     "id": 4302,
@@ -407,7 +422,7 @@
     "type": "Poison",
     "tier": 3,
     "portée": "1 - Dex - Coupant - <b class='data-passifs' data-passifs-name='Critique Facilité'>Critique Facilité</b>",
-    "description": "1d8 + 7. Votre arme prend une lueur violette et vous infligez deux entailles rapides au même endroit."
+    "description": "2d8 + 5. Votre arme prend une lueur violette et vous infligez deux entailles rapides au même endroit."
   },
   {
     "id": 5101,
@@ -415,7 +430,7 @@
     "type": "Sol",
     "tier": 1,
     "portée": "3 - Dex",
-    "description": "Jette du sable. Si l'attaque touche une cible, celle-ci est <b class='data-status' data-status-name='Obscurci'>obscurcie</b>."
+    "description": "Jette du sable. Si l'attaque touche le cadran avant d'une cible, celle-ci est <b class='data-status' data-status-name='Obscurci'>obscurcie</b>."
   },
   {
     "id": 5102,
@@ -431,7 +446,7 @@
     "type": "Sol",
     "tier": 1,
     "portée": "1 - For - Contondant - AoE 0",
-    "description": "1d8 + 1. Vous sautez dans une zone à portée."
+    "description": "1d8 + 2. Vous sautez dans une zone à portée faisant sortir des os qui frappent les entités tout autrour de vous."
   },
   {
     "id": 5201,
@@ -439,7 +454,7 @@
     "type": "Sol",
     "tier": 2,
     "portée": "3 - Int - AoE 0",
-    "description": "Projette un tas de boue infligeant 1d10 + 3 et <b class='data-status' data-status-name='Obscurci'>obscurcissant</b> les cibles."
+    "description": "Projette un tas de boue infligeant 2d6 et <b class='data-status' data-status-name='Obscurci'>obscurcissant</b> les cibles."
   },
   {
     "id": 5202,
@@ -471,14 +486,14 @@
     "type": "Sol",
     "tier": 3,
     "portée": "0 - For - AoE 1",
-    "description": "Provoque un puissant tremblement de terre d’intensité variable (1d20)."
+    "description": "Provoque un puissant tremblement de terre d’intensité variable, jetez 1d4 <ul><li>1 : 2d6 + 2</li><li>2 : 2d6 + 6</li><li>3 : 2d6 + 10</li><li>4 : 2d8 + 11</li></ul>"
   },
   {
     "id": 5303,
     "Nom": "Amass'Sable",
     "type": "Sol",
     "tier": 3,
-    "portée": "-",
+    "portée": "0 - Action Bonus",
     "description": "Du sable recouvre votre corps et panse vos blessures : soignez 1 PV (2 PV sous tempête de sable)."
   },
   {
@@ -487,7 +502,7 @@
     "type": "Roche",
     "tier": 1,
     "portée": "3 - For - Contondant - Projectile",
-    "description": "Crée une pierre et la projette, infligeant 2d4 + 2."
+    "description": "Crée une pierre et la projette, infligeant 1d8 + 3."
   },
   {
     "id": 6102,
@@ -495,7 +510,7 @@
     "type": "Roche",
     "tier": 1,
     "portée": "1 - For - Coupant",
-    "description": "Crée une grande hache de pierre qui frappe une zone adjacente."
+    "description": "Crée une grande hache de pierre qui frappe horinzontalement touchant ainsi un cadran adjacent à l'endroit que vous visiez."
   },
   {
     "id": 6103,
@@ -503,7 +518,7 @@
     "type": "Roche",
     "tier": 1,
     "portée": "1 - Con - Contondant",
-    "description": "Infligez 1d8. Avancez d’une case vers votre cible. Pour chaque <b>Roulade</b> consécutive qui touche, augmentez le nombre de dés de 1."
+    "description": "Infligez 1d10 + 3. Avancez d’une case vers votre cible. Pour chaque <b>Roulade</b> consécutive qui touche, augmentez le nombre de dés de 1."
   },
   {
     "id": 6201,
@@ -511,7 +526,7 @@
     "type": "Roche",
     "tier": 2,
     "portée": "3 - For - Contondant",
-    "description": "2d6. Lance une pierre magnétique : si la cible est touchée, elle subit l’effet <b class='data-status' data-status-name='Gravité'>Gravité</b>."
+    "description": "2d6 + 2. Lance une pierre magnétique : si la cible est touchée, elle subit l’effet <b class='data-status' data-status-name='Gravité'>Gravité</b>."
   },
   {
     "id": 6202,
@@ -519,15 +534,15 @@
     "type": "Roche",
     "tier": 2,
     "portée": "1 à 3 - Con - Perçant - AoE Linéaire",
-    "description": "2d6. Vous foncez tête baissée, entouré de pierres. Lancez 1d3 : vous traversez autant de zones que le résultat. Infligez des dégâts à toutes les entités traversées, mais ne causez vos dégâts complets qu’à une cible de la zone d’arrivée."
+    "description": "2d8 + 4. Vous foncez tête baissée, entouré de pierres. Lancez 1d3 : vous traversez autant de zones que le résultat. Infligez des dégâts à toutes les entités traversées et à une cible de la zone d’arrivée."
   },
   {
     "id": 6203,
     "Nom": "Salaison",
     "type": "Roche",
     "tier": 2,
-    "portée": "0",
-    "description": "Vous produisez du sel. Sur un aliment, améliore légèrement ses propriétés."
+    "portée": "0 - Int",
+    "description": "Vous produisez du sel. Sur un aliment, améliore légèrement ses propriétés et son goût sa calité dépend de votre jet d'Intélligence."
   },
   {
     "id": 6301,
@@ -535,7 +550,7 @@
     "type": "Roche",
     "tier": 3,
     "portée": "2 - Int - 3 AoEs 0",
-    "description": "Faites tomber 3 rochers du ciel dans chaque case autour de votre cible (sauf une). Si un rocher touche une entité, elle subit 2d6 + 2 (Élément Pierre, armure 8/12/24, PV 2)."
+    "description": "Faites tomber 3 rochers du ciel dans des chaque cellule différentes autour de votre cible. Si un rocher touche une entité, elle subit 2d6 + 2 (Élément Pierre, armure 8/12/24, PV 2)."
   },
   {
     "id": 6302,
@@ -543,7 +558,7 @@
     "type": "Roche",
     "tier": 3,
     "portée": "2 - For",
-    "description": "Lance 5 pierres d’affilée. Vous pouvez viser plusieurs cibles. Chaque pierre inflige 1d4 (une même cible ne subit qu’une seule instance de dégâts)."
+    "description": "Lance 4 pierres d’affilée. Vous pouvez viser plusieurs cibles. Chaque pierre inflige 1d4 (une même cible ne subit qu’une seule instance de dégâts)."
   },
   {
     "id": 6303,
@@ -551,7 +566,7 @@
     "type": "Roche",
     "tier": 3,
     "portée": "0 - For",
-    "description": "2d6 + 2. Assène un coup puissant qui repousse la cible de 2 zones."
+    "description": "2d8 + 8. Assène un coup puissant qui repousse la cible de 2 zones."
   },
   {
     "id": 7101,
@@ -567,7 +582,7 @@
     "type": "Insecte",
     "tier": 1,
     "portée": "3 - Dex - Perçant - <b class='data-passifs' data-passifs-name='Prolifération'>Prolifération</b>",
-    "description": "Lance 4 dards d’affilée. Vous pouvez viser plusieurs cibles. Chaque dard inflige 1d2 (une même cible ne subit qu’une seule instance de dégâts)."
+    "description": "Lance 5 dards d’affilée. Vous pouvez viser plusieurs cibles. Chaque dard inflige 1d2 (une même cible ne subit qu’une seule instance de dégâts)."
   },
   {
     "id": 7103,
@@ -583,7 +598,7 @@
     "type": "Insecte",
     "tier": 2,
     "portée": "1 - Dex - Coupant - <b class='data-passifs' data-passifs-name='Critique Facilité'>Critique Facilité</b>",
-    "description": "1d6 + 5. Assène un coup rapide et tranchant."
+    "description": "2d6 + 4. Assène un coup rapide et tranchant."
   },
   {
     "id": 7202,
@@ -591,7 +606,7 @@
     "type": "Insecte",
     "tier": 2,
     "portée": "3 - Int - <b class='data-passifs' data-passifs-name='Prolifération'>Prolifération</b>",
-    "description": "1d8 + 5. Attaque rapide et tranchante."
+    "description": "1d10 + 3. Crée un faisseau de minuscules insectes fonçant sur leur cible."
   },
   {
     "id": 7203,
@@ -615,15 +630,15 @@
     "type": "Insecte",
     "tier": 3,
     "portée": "2 - Dex - Contondant",
-    "description": "2d6 + 1. Recul de 1 zone."
+    "description": "2d6 + 3. Recule de 2 zone."
   },
   {
     "id": 7303,
     "Nom": "Piqûre",
     "type": "Insecte",
     "tier": 3,
-    "portée": "2 - Dex - Perçant",
-    "description": "2d6 + 3. Si vous brisez une partie de monstre, soignez-vous de 1 PV."
+    "portée": "2 - Dex - Perçant - <b class='data-passifs' data-passifs-name='Prolifération'>Prolifération</b>",
+    "description": "2d8 + 4. Si vous brisez une partie de monstre, soignez-vous de 1 PV."
   },
   {
     "id": 8101,
@@ -631,15 +646,15 @@
     "type": "Spectre",
     "tier": 1,
     "portée": "0 - Dex",
-    "description": "2d4. Si votre cible ne vous avait pas vu, infligez-lui <b class='data-status' data-status-name='Peur'>peur</b>."
+    "description": "2d4 + 3. Si votre cible ne vous avait pas vu, infligez-lui <b class='data-status' data-status-name='Peur'>peur</b>."
   },
   {
     "id": 8102,
     "Nom": "Ombre Nocturne",
     "type": "Spectre",
     "tier": 1,
-    "portée": "2 - Int - <b class='data-passifs' data-passifs-name='Attaque Surprise'>Attaque Surprise</b>",
-    "description": "2d4. Projetez votre ombre qui surgit violemment sous votre cible."
+    "portée": "3 - Int - <b class='data-passifs' data-passifs-name='Attaque Surprise'>Attaque Surprise</b>",
+    "description": "2d4 + 4. Projetez votre ombre qui surgit violemment sous votre cible."
   },
   {
     "id": 8103,
@@ -663,7 +678,7 @@
     "type": "Spectre",
     "tier": 2,
     "portée": "0 - Dex",
-    "description": "2d4. Si votre cible ne vous avait pas vu, infligez-lui <b class='data-status' data-status-name='Paralysie'>paralysie</b>."
+    "description": "2d4 + 2. Si votre cible ne vous avait pas vu, infligez-lui <b class='data-status' data-status-name='Paralysie'>paralysie</b>."
   },
   {
     "id": 8202,
@@ -679,7 +694,7 @@
     "type": "Spectre",
     "tier": 2,
     "portée": "1 - For - Contondant - <b class='data-passifs' data-passifs-name='Attaque Surprise'>Attaque Surprise</b>",
-    "description": "2d6. Votre ombre recouvre votre arme et assène un coup puissant."
+    "description": "2d6 + 4. Votre ombre recouvre votre arme et assène un coup puissant."
   },
   {
     "id": 8301,
@@ -687,7 +702,7 @@
     "type": "Spectre",
     "tier": 3,
     "portée": "2 - Dex",
-    "description": "2d4. Votre cible est <b class='data-status' data-status-name='Ligoté'>ligotée</b>."
+    "description": "2d6 + 1. Votre cible est <b class='data-status' data-status-name='Ligoté'>ligotée</b>."
   },
   {
     "id": 8302,
@@ -719,7 +734,7 @@
     "type": "Acier",
     "tier": 1,
     "portée": "1 - Con - Contondant - <b class='data-passifs' data-passifs-name='Tyran'>Tyran</b>",
-    "description": "Inflige 2d6, puis déplacez-vous dans la zone <b>au contact</b>."
+    "description": "Inflige 2d6+1, puis déplacez-vous dans la zone <b>au contact</b>."
   },
   {
     "id": 9103,
@@ -734,8 +749,8 @@
     "Nom": "Lame Tachyonique",
     "type": "Acier",
     "tier": 2,
-    "portée": "1 - Dex - Coupant",
-    "description": "Projette 1 lame de fer qui inflige 2d6 + 2."
+    "portée": "3 - Dex - Coupant",
+    "description": "inflige 2d6 + 2, Projette 1 lame de fer."
   },
   {
     "id": 9202,
@@ -743,7 +758,7 @@
     "type": "Acier",
     "tier": 2,
     "portée": "0 - For - Contondant",
-    "description": "Inflige 2d6 + 2 si vous attaquez dans le cadran avant. En cas de différence de poids en votre faveur, vous <b class='data-status' data-status-name='Étourdi'>étourdissez</b> votre cible."
+    "description": "Inflige 3d6 + 3 si vous attaquez dans le cadran avant. En cas de différence de poids en votre faveur, vous <b class='data-status' data-status-name='Étourdi'>étourdissez</b> votre cible."
   },
   {
     "id": 9203,
@@ -751,7 +766,7 @@
     "type": "Acier",
     "tier": 2,
     "portée": "2 - For - Contondant",
-    "description": "Inflige 2d6, puis déplacez-vous dans la zone <b>proche</b> ou <b>au contact</b>."
+    "description": "Inflige 2d6 + 2, puis déplacez-vous dans la zone <b>proche</b> ou <b>au contact</b>."
   },
   {
     "id": 9301,
@@ -759,7 +774,7 @@
     "type": "Acier",
     "tier": 3,
     "portée": "2 - For - Contondant",
-    "description": "Inflige 1d10 + 5 en alourdissant votre arme, et vous confère le passif <b class='data-passifs' data-passifs-name='Poids Lourd'>Poids Lourd</b>."
+    "description": "Inflige 1d10 + 5 en alourdissant votre arme, et vous confère le passif <b class='data-passifs' data-passifs-name='Poids Lourd'>Poids Lourd</b> pour 2 tours."
   },
   {
     "id": 9302,
@@ -767,7 +782,7 @@
     "type": "Acier",
     "tier": 3,
     "portée": "3 - Action + Action de déplacement - Dex - Perçant - <b class='data-passifs' data-passifs-name='Tyran'>Tyran</b>",
-    "description": "Inflige 2d6 + 2."
+    "description": "Inflige 2d8."
   },
   {
     "id": 9303,
@@ -775,7 +790,7 @@
     "type": "Acier",
     "tier": 3,
     "portée": "0 - Con - AoE 0",
-    "description": "Votre armure émet une lueur vive avant de projeter des projectiles métalliques tout autour. Inflige 2d6 + 3. Vous pouvez consommer 1 point d’armure pour ajouter 1 dé de dégâts."
+    "description": "Inflige 2d6 + 8, Votre armure émet une lueur vive avant de projeter des projectiles métalliques tout autour. Vous pouvez consommer 1 point d’armure pour ajouter 1 dé de dégâts."
   },
   {
     "id": 10101,
@@ -783,7 +798,7 @@
     "type": "Feu",
     "tier": 1,
     "portée": "3 - Int - Projectile - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
-    "description": "Inflige 2d4. En cas de double, <b class='data-status' data-status-name='Brûlure'>brûlez</b> votre adversaire."
+    "description": "Inflige 2d4 + 2. En cas de double, <b class='data-status' data-status-name='Brûlure'>brûlez</b> votre adversaire."
   },
   {
     "id": 10102,
@@ -815,7 +830,7 @@
     "type": "Feu",
     "tier": 2,
     "portée": "0 - For - Contondant - <b class='data-passifs' data-passifs-name='Sacrifice Brûlant'>Sacrifice Brûlant</b>",
-    "description": "Enflammez votre poing avant d’asséner un coup puissant : 2d8."
+    "description": "Enflammez votre poing avant d’asséner un coup puissant : 2d8 + 4."
   },
   {
     "id": 10203,
@@ -839,7 +854,7 @@
     "type": "Feu",
     "tier": 3,
     "portée": "4 - Cha - Projectile - <b class='data-passifs' data-passifs-name='Sacrifice Brûlant'>Sacrifice Brûlant</b> - <b class='data-passifs' data-passifs-name='Guidable'>Guidable</b>",
-    "description": "Vous chantez, ce qui crée un oiseau de feu infligeant 2d6 + 2."
+    "description": "inflige 2d6 + 3 . Votre chant se métamorphose en un oiseau de feu "
   },
   {
     "id": 10303,
@@ -847,7 +862,7 @@
     "type": "Feu",
     "tier": 3,
     "portée": "2 - Dex - Contondant - <b class='data-passifs' data-passifs-name='Sacrifice Brûlant'>Sacrifice Brûlant</b>",
-    "description": "Votre arme émet de la lave qui vient fouetter votre cible, infligeant 2d6 + 4."
+    "description": "Inflige 2d6 + 4 Votre arme émet de la lave qui vient fouetter votre cible"
   },
   {
     "id": 11101,
@@ -887,7 +902,7 @@
     "type": "Eau",
     "tier": 2,
     "portée": "3 - Int",
-    "description": "Inflige 2d4 + 1. Le lanceur attaque la cible en l’arrosant d’une eau terriblement froide. Si la cible est <b class='data-status' data-status-name='Trempé'>trempée</b>, l’effet s’active sans enlever l’état."
+    "description": "Inflige 2d6. Le lanceur attaque la cible en l’arrosant d’une eau terriblement froide. Si la cible est <b class='data-status' data-status-name='Trempé'>trempée</b>, l’effet s’active sans enlever l’état."
   },
   {
     "id": 11202,
@@ -903,7 +918,7 @@
     "type": "Eau",
     "tier": 2,
     "portée": "3 - Int - Projectile",
-    "description": "Projette de l’eau boueuse qui inflige 1d6 et applique <b class='data-status' data-status-name='Trempé'>trempé</b> et <b class='data-status' data-status-name='Obscurci'>obscurci</b> à la cible."
+    "description": "Inflige 1d10. Projette de l’eau boueuse qui applique <b class='data-status' data-status-name='Trempé'>trempé</b> et <b class='data-status' data-status-name='Obscurci'>obscurci</b> à la cible."
   },
   {
     "id": 11301,
@@ -911,15 +926,15 @@
     "type": "Eau",
     "tier": 3,
     "portée": "3 - Int - Projectile - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
-    "description": "Projette une onde aquatique infligeant 2d6 + 1. En cas de double, inflige <b class='data-status' data-status-name='Confusion'>confusion</b>."
+    "description": " inflige 2d6 + 2, Projette une onde aquatique. En cas de double, inflige <b class='data-status' data-status-name='Confusion'>confusion</b>."
   },
   {
     "id": 11302,
     "Nom": "Tir de Précision",
     "type": "Eau",
     "tier": 3,
-    "portée": "4 - Dex - Perforant - Projectile",
-    "description": "Tir d’eau extrêmement pressurisé infligeant 1d10 + 5."
+    "portée": "4 - Dex - Perforant - Projectile - <b class='data-passifs' data-passifs-name='Critique Facilité'>Critique Facilité</b>",
+    "description": "Inflige 1d10 + 5, Tir d’eau extrêmement pressurisé."
   },
   {
     "id": 11303,
@@ -935,7 +950,7 @@
     "type": "Plante",
     "tier": 1,
     "portée": "0 - Action Bonus + Action de déplacement",
-    "description": "Soignez-vous de 1 PV."
+    "description": "Soignez-vous de 1 PV. Puis de 1 pv au début du tour suivant si n'avez pas été déplacé."
   },
   {
     "id": 12102,
@@ -967,7 +982,7 @@
     "type": "Plante",
     "tier": 2,
     "portée": "2 - Dex - Perforant",
-    "description": "Inflige 2d6 + 3. Le lanceur attaque sa cible en la piquant avec une branche pointue."
+    "description": "Inflige 2d6 + 4. Le lanceur attaque sa cible en la piquant avec une branche pointue."
   },
   {
     "id": 12203,
@@ -991,7 +1006,7 @@
     "type": "Plante",
     "tier": 3,
     "portée": "3 - Dex - Coupant - Projectile - AoE en Ligne",
-    "description": "Inflige 2d6 + 2. Lance une série de feuilles tranchantes."
+    "description": "Inflige 2d6 + 3. Lance une série de feuilles tranchantes."
   },
   {
     "id": 12303,
@@ -999,7 +1014,7 @@
     "type": "Plante",
     "tier": 3,
     "portée": "3 - Int - Projectile - <b class='data-passifs' data-passifs-name='Critique Facilité'>Critique Facilité</b>",
-    "description": "Inflige 1d10 + 3. En cas de coup critique, en plus de l’effet critique, soignez-vous de 1 PV."
+    "description": "Inflige 1d10 + 4. En cas de coup critique, en plus de l’effet critique, soignez-vous de 1 PV."
   },
   {
     "id": 13101,
@@ -1007,7 +1022,7 @@
     "type": "Electric",
     "tier": 1,
     "portée": "3 - Int - Projectile - <b class='data-passifs' data-passifs-name='Surchargé'>Surchargé</b>",
-    "description": "Lance un éclair rapide. Inflige 2d4."
+    "description": "Inflige 3d4, Lance un éclair rapide."
   },
   {
     "id": 13102,
@@ -1015,7 +1030,7 @@
     "type": "Electric",
     "tier": 1,
     "portée": "0 - For - <b class='data-passifs' data-passifs-name='Surchargé'>Surchargé</b>",
-    "description": "Collez votre cible et lancez une décharge électrique puissante. Inflige 2d6 + 1."
+    "description": "Inflige 2d6 + 3. Collez votre cible et lancez une décharge électrique puissante."
   },
   {
     "id": 13103,
@@ -1031,7 +1046,7 @@
     "type": "Electric",
     "tier": 2,
     "portée": "3 - Int",
-    "description": "Inflige 2d6. Si votre cible a un statut qui limite ses actions de déplacement, ajoutez 1 dé de dégâts."
+    "description": "Inflige 2d6 + 1. Si votre cible a un statut qui limite ses actions de déplacement, ajoutez 1 dé de dégâts."
   },
   {
     "id": 13202,
@@ -1039,7 +1054,7 @@
     "type": "Electric",
     "tier": 2,
     "portée": "0 - For - AoE 0 - <b class='data-passifs' data-passifs-name='Surchargé'>Surchargé</b>",
-    "description": "Relâche une charge électrique qui touche toutes les entités autour de vous. Inflige 1d10 + 4."
+    "description": "Relâche une charge électrique qui touche toutes les entités autour de vous. Inflige 1d10 + 7."
   },
   {
     "id": 13203,
@@ -1055,7 +1070,7 @@
     "type": "Electric",
     "tier": 3,
     "portée": "3 - Dex - Perforant - <b class='data-passifs' data-passifs-name='Surchargé'>Surchargé</b>",
-    "description": "Tire une flèche de foudre infligeant 1d8 + 4."
+    "description": "infligeant 2d8 + 1, Tire une flèche de foudre."
   },
   {
     "id": 13302,
@@ -1063,7 +1078,7 @@
     "type": "Electric",
     "tier": 3,
     "portée": "3 - Int",
-    "description": "Si vous avez lancé une compétence via l’effet <b class='data-passifs' data-passifs-name='Surchargé'>Surchargé</b> ce tour-ci, retirez seulement 1 dé à la compétence au lieu de diminuer la blessure."
+    "description": "Inflige 2d6 + 2, Si vous lancé une autre compétence via l’effet <b class='data-passifs' data-passifs-name='Surchargé'>Surchargé</b> ce tour-ci, retirez seulement 1 dé à la compétence au lieu de diminuer la blessure."
   },
   {
     "id": 13303,
@@ -1142,8 +1157,8 @@
     "Nom": "Choc Psy",
     "type": "Psy",
     "tier": 3,
-    "portée": "2 - ??? - <b class='data-passifs' data-passifs-name='Puissance Contrôlée'>Puissance Contrôlée</b> - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
-    "description": "Inflige une violente attaque psy avec le modificateur de statistique de votre choix. Inflige 1d10 + 5."
+    "portée": "2 - ???",
+    "description": "Inflige 2d8. Inflige une violente attaque psy avec le modificateur de statistique de votre choix."
   },
   {
     "id": 14303,
@@ -1159,7 +1174,7 @@
     "type": "Glace",
     "tier": 1,
     "portée": "3 - Dex - Perçant - <b class='data-passifs' data-passifs-name='Destruction'>Destruction</b>",
-    "description": "Lance des éclats de glace pointus. Inflige 2d4 + 1."
+    "description": "Lance des éclats de glace pointus. Inflige 2d4 + 3."
   },
   {
     "id": 15102,
@@ -1167,7 +1182,7 @@
     "type": "Glace",
     "tier": 1,
     "portée": "3 - Int - Contondant - <b class='data-passifs' data-passifs-name='Destruction'>Destruction</b>",
-    "description": "Projette une serie de glaçons. Inflige 1d4 + 2."
+    "description": "Inflige 2d4 + 2. Projette une serie de glaçons."
   },
   {
     "id": 15103,
@@ -1183,7 +1198,7 @@
     "type": "Glace",
     "tier": 2,
     "portée": "1 - For - Contondant",
-    "description": "Votre arme s’entoure de neige épaisse. Inflige 1d10 + 4. Si l’attaque se fait sur une partie déjà brisée, inflige 1d10 + 8."
+    "description": "Inflige 1d10 + 4. Votre arme s’entoure de neige épaisse. Si l’attaque se fait sur une partie déjà brisée, inflige 1d10 + 9."
   },
   {
     "id": 15202,
@@ -1191,7 +1206,7 @@
     "type": "Glace",
     "tier": 2,
     "portée": "3 - Int - Coupant - <b class='data-passifs' data-passifs-name='Destruction'>Destruction</b>",
-    "description": "Tire plusieurs cristaux tranchants. Inflige 2d4 + 1."
+    "description": "Inflige 2d6 + 2. Tire plusieurs cristaux tranchants. "
   },
   {
     "id": 15203,
@@ -1207,7 +1222,7 @@
     "type": "Glace",
     "tier": 3,
     "portée": "1 - For - Perçant - <b class='data-passifs' data-passifs-name='Destruction'>Destruction</b>",
-    "description": "Coup d’estoc qui inflige une morsure glaciale. Inflige 2d6 + 5."
+    "description": " Inflige 2d8 + 3. Coup d’estoc qui inflige une morsure glaciale."
   },
   {
     "id": 15302,
@@ -1215,7 +1230,7 @@
     "type": "Glace",
     "tier": 3,
     "portée": "3 - Int - Contondant - <b class='data-passifs' data-passifs-name='Destruction'>Destruction</b>",
-    "description": "Crée une lentille de glace aux reflets violacés qui avance rapidement. Inflige 1d8 + 3."
+    "description": "Inflige 2d6 + 4. Crée une lentille de glace aux reflets violacés qui avance rapidement."
   },
   {
     "id": 15303,
@@ -1231,15 +1246,15 @@
     "type": "Dragon",
     "tier": 1,
     "portée": "3 - Int - Action + Action Bonus",
-    "description": "Lance une bourrasque si puissante qu’elle fait reculer la cible de 1. Inflige 1d8 + 3."
+    "description": "Inflige 1d10 + 3. Lance une bourrasque si puissante qu’elle fait reculer la cible de 1."
   },
   {
     "id": 16102,
     "Nom": "Draco-Queue",
     "type": "Dragon",
     "tier": 1,
-    "portée": "1 - For - Contondant - Action + Action Déplacement - AoE 0",
-    "description": "Frappe violemment en arc de cercle devant vous. Inflige 2d6 + 1."
+    "portée": "1 - For - Contondant - Action + Action Déplacement - AoE Ligne 1",
+    "description": "Inflige 3d6 - 1. Frappe violemment en arc de cercle devant vous."
   },
   {
     "id": 16103,
@@ -1247,7 +1262,7 @@
     "type": "Dragon",
     "tier": 1,
     "portée": "3 - Con - AoE 3",
-    "description": "Poussez un cri violent. Cela peut <b class='data-status' data-status-name='Peur'>apeurer</b> toutes vos cibles. JS Sag."
+    "description": "Poussez un cri violent. Cela peut <b class='data-status' data-status-name='Peur'>apeurer</b> toutes vos cibles. JS Sag Avantage aux alliés."
   }, 
   {
     "id": 16201,
@@ -1255,7 +1270,7 @@
     "type": "Dragon",
     "tier": 2,
     "portée": "1 - Dex - Coupant - Action + Action Bonus",
-    "description": "Assène un coup fulgurant. Inflige 2d8 + 2."
+    "description": "Inflige 3d8 - 3. Assène un coup fulgurant."
   },
   {
     "id": 16202,
@@ -1263,7 +1278,7 @@
     "type": "Dragon",
     "tier": 2,
     "portée": "1 - Int - Action + Action Déplacement - AoE Ligne 2 - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
-    "description": "Relâche un puissant souffle draconique. Inflige 2d6 + 2. En cas de double, applique <b class='data-status' data-status-name='Paralysie'>paralysie</b>."
+    "description": "Inflige 3d6 - 2. En cas de double, applique <b class='data-status' data-status-name='Paralysie'>paralysie</b>. Relâche un puissant souffle draconique."
   },
   {
     "id": 16203,
@@ -1278,8 +1293,8 @@
     "Nom": "Draco-Marteau",
     "type": "Dragon",
     "tier": 3,
-    "portée": "2 - Con - Contondant",
-    "description": "Foncez violemment sur votre cible. Inflige 1d10 + 5 et vous vous déplacez au contact."
+    "portée": "2 - Con - Contondant -  Action + Action Déplacement",
+    "description": "Inflige 3d8 - 2 et vous vous déplacez dans la zone <b>au contact</b>. Foncez violemment sur votre cible."
   },
   {
     "id": 16302,
@@ -1287,7 +1302,7 @@
     "type": "Dragon",
     "tier": 3,
     "portée": "3 - Dex - Perçant - Action + Action Déplacement",
-    "description": "Projette 2 flèches infligeant chacune 1d10. Vous pouvez viser la même cible ou 2 cibles différentes. Viser la même cible crée une seule instance de dégâts."
+    "description": "Projette 2 flèches infligeant chacune 2d6 - 1. Vous pouvez viser la même cible ou 2 cibles différentes. Viser la même cible crée une seule instance de dégâts."
   },
   {
     "id": 16303,
@@ -1295,7 +1310,7 @@
     "type": "Dragon",
     "tier": 3,
     "portée": "3 - Cha",
-    "description": "Perdez 2 PV. Votre cible gagne un second tour et bénéficie de l’avantage à sa prochaine action."
+    "description": "Perdez 2 PV. Votre cible joue immédiatement un tour bonus."
   },
   {
     "id": 17101,
@@ -1311,7 +1326,7 @@
     "type": "Ténèbres",
     "tier": 1,
     "portée": "1 - For - Contondant",
-    "description": "Frapper de façon irrespecteuse ou ridicule votre cible infligeant 2d4 et <b class='data-status' data-status-name='Provocation'>provoque votre cible</b>."
+    "description": "inflige 2d4. Frapper de façon irrespecteuse ou ridicule votre cible  et <b class='data-status' data-status-name='Provocation'>provoque</b> votre cible."
   },
   {
     "id": 17103,
@@ -1319,13 +1334,21 @@
     "type": "Ténèbres",
     "tier": 1,
     "portée": "1 - Dex - Contondant - <b class='data-passifs' data-passifs-name='Attaque Surprise'>Attaque Surprise</b>",
-    "description": "2d6 + 1 Frapper votre cible quand il ne s'y attend pas, si il est provoqué ou confus,  <b class='data-passifs' data-passifs-name='Attaque Surprise'>Attaque Surprise</b> s'active automatiquement."
+    "description": "2d6 + 1 Frapper votre cible quand il ne s'y attend pas, si il est provoqué ou confus, <b class='data-passifs' data-passifs-name='Attaque Surprise'>Attaque Surprise</b> s'active automatiquement."
   },
   {
-    "id": 17301,
+    "id": 17104,
+    "Nom": "Posture Intimidante",
+    "type": "Ténèbres",
+    "tier": 1,
+    "portée": "3 - Cha",
+    "description": "Infligez <b class='data-status' data-status-name='Peur'>peur</b> votre cible."
+  },
+  {
+    "id": 17105,
     "Nom": "Morsure",
     "type": "Ténèbres",
-    "tier": 3,
+    "tier": 1,
     "portée": "1 - Dex - Percant - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
     "description": "Inflige 2d6 en cas de double inflige <b class='data-status' data-status-name='Peur'>peur</b>."
   },
@@ -1335,7 +1358,7 @@
     "type": "Ténèbres",
     "tier": 2,
     "portée": "1 - For - Contondant",
-    "description": "Infliger 2d6 + 2, toutes les entités confuses attaquent une entité à leur portée d'attaque."
+    "description": "Infliger 2d6 + 1, toutes les entités confuses attaquent une entité à leur portée d'attaque."
   },
   {
     "id": 17202,
@@ -1359,7 +1382,7 @@
     "type": "Ténèbres",
     "tier": 3,
     "portée": "1 - Dex - Percant - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
-    "description": "Inflige 2d8 + 3 en cas de double inflige <b class='data-status' data-status-name='Peur'>peur</b>."
+    "description": "Inflige 3d6 + 1 en cas de double inflige <b class='data-status' data-status-name='Peur'>peur</b>."
   }, 
   {
     "id": 17302,
@@ -1383,7 +1406,7 @@
     "type": "Fée",
     "tier": 1,
     "portée": "3 - Cha",
-    "description": "2d4, Le lanceur laisse s’échapper une voix enchanteresse qui inflige des dégâts psychiques à la cible."
+    "description": "Inflige 2d6 + 1, Le lanceur laisse s’échapper une voix enchanteresse qui inflige des dégâts à la cible."
   },
   {
     "id": 18102,
@@ -1407,7 +1430,7 @@
     "type": "Fée",
     "tier": 2,
     "portée": "2 - Int",
-    "description": "Inflige 2d6 + 1. Si vous infligez une blessure majeure ou sévère, regagnez 1 PV."
+    "description": "Inflige 2d6 + 2. Si vous infligez une blessure majeure ou sévère, regagnez 1 PV."
   },
   {
     "id": 18202,
@@ -1430,8 +1453,8 @@
     "Nom": "Vent Féérique",
     "type": "Fée",
     "tier": 3,
-    "portée": "3 - Int - AoE 2 Ligne ",
-    "description": "Inflige 2d6 + 1, Déchaîne un vent magique qui cingle la cible."
+    "portée": "3 - Int",
+    "description": "Inflige 2d6 + 3, Déchaîne un vent magique qui cingle la cible."
   },
   {
     "id": 18302,

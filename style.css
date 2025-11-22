@@ -540,10 +540,13 @@ select:focus {
 .archetype-pacte {
     background: linear-gradient(135deg, #fab1a0, #e17055);
 }
-
+.archetype-meteo {
+    background: linear-gradient(135deg, #9d3ddd, #55e1ce);
+}
 .ability-name-unique { color: #ff74f3; }
 .ability-name-meute  { color: #faf8a0; }
 .ability-name-pacte  { color: #fab1a0; }
+.ability-name-meteo  { color: #0ce6ee; }
 
 #arch-levels {
     transition: all 0.4s ease;

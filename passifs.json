@@ -157,7 +157,7 @@
   {
     "id": 103,
     "Nom": "Effet sur double",
-    "description": "Cette comptétence à un effet si les dés de dégât font un double, en cas de d'augmentation du nombre de dé, seul les 2 premiers dés sont prix en compte, en cas de dimuntion du nombre de dé, jettez des dés supplémentaires jusqu'a atteindre 2 dés, les dé ajouter de cette façon ne compterons pas dans le calcul des dégâts."
+    "description": "S'active si les 2 premiers dés de dégât font un double, si vous avez moins de dé jettez en jusqu'a atteindre 2 dés, les dés ajouté de cette façon ne compterons pas dans le calcul des dégâts."
   },
   {
     "id": 104,
@@ -318,5 +318,60 @@
     "id": 133,
     "Nom": "Secretion Toxique",
     "description": "Quand vous utiliser <b>Secretion<b> vous appliquez aussi <b class='data-status' data-status-name='Empoisonné'>empoisonné</b> à votre cible"
+  },
+  {
+    "id": 134,
+    "Nom": "Alpha",
+    "description": "Les pokémon Alpha agissent automatiquement dès que 2 joueurs ont fini leur tour, certaines capacités gagnent des effets supplémentaires"
+  },
+  {
+    "id": 135,
+    "Nom": "Destrucarmure",
+    "description": "En cas de touche détruit 1 point d'armure avant le calcul des dégâts si la cible n'en possède pas l'attaque double sa valeur de dégâts"
+  },
+  {
+    "id": 136,
+    "Nom": "Coup Adaptible",
+    "description": "Au prix de votre Action Bonus vous pouvez changer l'élément de votre arme par un autre que vous maitrisé jusqu'a votre prochain tour"
+  },
+  {
+    "id": 137,
+    "Nom": "Poids de l'Acier",
+    "description": "Vous avez -2 à vos jets de dexterité"
+  },
+  {
+    "id": 138,
+    "Nom": "Spectre Tangible",
+    "description": "Les attaque Combat et Normal sont réduit de 2 tier de dé plutôt que d'^étre totallement annulé"
+  },
+  {
+    "id": 139,
+    "Nom": "Fuyard",
+    "description": "Le pokemon a <b class='data-status' data-status-name='Peur'>peur</b> lorsqu'il a moins de 50% de ses PV"
+  },
+  {
+    "id": 139,
+    "Nom": "Colère du Peureux",
+    "description": "Lorsque le pokémon est sous l'effet de <b class='data-status' data-status-name='Peur'>peur</b> il devient <b class='data-status' data-status-name='Confusion'>confus</b> à la place et augmente ses tier de dés de dégat de 1 cran"
+  },
+  {
+    "id": 140,
+    "Nom": "Posture Rapide",
+    "description": "Lorsque le pokémon utilise <b>Posture Intimidante</b> il consomme une Action Bonus au lieu d'une Action"
+  },
+  {
+    "id": 141,
+    "Nom": "Pokemon Paladin",
+    "description": "Si le Pokemon est entre son maitre et une attaque ciblant ce dernier, il peut utiliser son action pour intercepter l'attaque à la place de son maitre"
+  },
+  {
+    "id": 142,
+    "Nom": "Pokemon Fourbe",
+    "description": "Si le Pokemon attaque dans le cadran opposé à son maitre, il gagne +2 à ses jets de touche"
+  },
+  {
+    "id": 143,
+    "Nom": "Pokemon Berserker",
+    "description": "Si le maitre du Pokemon a moins de 50% de ses PV, il gagne +1 tier de dégat sur toutes ses attaques"
   }
 ]

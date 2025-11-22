@@ -47,17 +47,13 @@
         <div class="archetype-buttons" id="archetype-buttons">
             <p>Choisissez un archétype pour débloquer ses capacités :</p>
             <button class="archetype-btn archetype-unique" data-archetype="unique">
-                Les Médecins de Xerneas <br><span>Ils insulfent la vie, quittent a donner leur propre energie vitale</span>
+                Conduit Divin <br><span>Laisse sa divinité prendre directement possession de son corps, acceptant un grand risque pour accéder à des pouvoirs bien plus puissants.</span>
             </button>
             <button class="archetype-btn archetype-meute" data-archetype="meute">
-                Les Parieurs de Jirachi <br><span>Coming soon.
-                </span>
+                Polyglotte <br><span>Suit plusieurs divinités à la fois, sacrifiant les hauts rangs pour une grande polyvalence et la capacité de façonner des totems à leur effigie.</span>
             </button>
             <button class="archetype-btn archetype-pacte" data-archetype="pacte">
-                Les Chevaliers de Zacian et Zamazenta <br><span>Coming soon.</span>
-            </button>
-            <button class="archetype-btn archetype-meteo" data-archetype="meteo">
-                Les météorologues de Rayquaza <br><span>Ils manipulent la météo pour offrir un avantage tactique à eux et leur alliés.</span>
+                Paladin <br><span>Bras armé de sa divinité, il cultive la perfection physique pour incarner et imposer la splendeur de son dieu qui impregne ses armes.</span>
             </button>
         </div>
 
@@ -65,33 +61,18 @@
             <!-- Les niveaux et abilities seront générés ici -->
         </div>
     </div>
-    <!-- Tooltip -->
-    <div id="attack-tooltip" style="position:absolute; display:none; pointer-events:none; z-index:1000; max-width:300px; padding:8px; background:rgba(0,0,0,0.85); color:#fff; border-radius:5px; font-size:0.9em; box-shadow:0 0 5px #000;"></div>
-    <style>
-        .data-status {
-            cursor: help;
-            text-decoration: underline;
-            text-decoration-color: rgba(255,255,255,0.75);
-            text-decoration-thickness: 1px;
-            transition: text-decoration-color 120ms ease;
-        }
-        .data-status:hover,
-        .data-status:focus {
-            text-decoration-color: #ffd27a;
-            outline: none;
-        }
-    </style>
     <script>
     // filepath: c:\Users\arthu\Documents\GitHub\RuptureWiki\Classes\ranger.html
 
     const levelAbilities = {
         1: [
-            "Magie Divine",
-            "Impact Vitalisant - Action Bonus - Repos Court"
+            "Choix d'une divinité",
+            "Ferveur",
+            "Intervention Divine",
+            "Magie Divine"
         ],
         2: [
-            "Question Divine",
-            "Prière"
+            "Question Divine"
         ],
         4: [
             "Amélioration de Caractéristiques",
@@ -110,8 +91,7 @@
             "Amélioration Défensive",         
         ],
         9: [
-            "Amélioration de Caractéristiques",
-            "Emissaire - 1 à 6 pv - Tour Complet"
+            
         ],
         10: [
             "Expertise Libre"
@@ -120,28 +100,22 @@
 
     const archetypeAbilities = {
         unique: {
-            3: ["Géo-Contrôle - 2pv - Corne Rouge de Xerneas", "Frappe de soin - 1pv - Corne Orange de Xerneas"],
-            5: ["Croix Purificatrice - 1 pv - Corne Orange de Xerneas - Action Bonus", "Marche de la Vie - 2 pv - Corne Rouge de Xerneas"],
-            7: ["Aura Fééerique - 1 pv à chaque tour - Corne Violette de Xerneas"],
-            10: [""]
+            3: ["Quête", "Audient"],
+            5: ["Don de soi"],
+            7: ["Réceptacle idéal", "Chuchoteur"],
+            10: ["Unisson - Action Bonus - Repos Court"]
         },
         meute: {
-            3: [""],
-            5: [""],
-            7: [""],
-            10: [""]
+            3: ["Seconde Divinité", "Poids de Charge", "Sculpteur"],
+            5: ["Audient", "Écho du bois"],
+            7: ["Modification Totémique"],
+            10: ["Troisième Divinité", "Relais Totémique", "Chuchoteur"]
         },
         pacte: {
-            3: [""],
-            5: [""],
-            7: [""],
-            10: [""]
-        },
-        meteo: {
-            3: ["Tempete - 2pv - Ecaille de Rayquaza", "Air Lock - 1pv - Ecaille de Rayquaza", "Hurletempete - 1pv - Croc de Rayquaza"],
-            5: ["Hurletempete Affligeante", "Pluie et Secheresse - 2pv - Ecaille de Rayquaza"],
-            7: ["Déchainement Climatique - 1pv - Ecaille Rayquaza", "Draco Ascention - 2pv - Croc de Rayquaza"],
-            10: [""]
+            3: ["Expertise d'Armure", "Arme sacrée", "Audient"],
+            5: ["Imprégnation - Action Bonus"],
+            7: ["Vengeance divine - Réaction", "Chuchoteur"],
+            10: ["Forme Divine - Action Bonus - Repos Long"]
         }
     };
 
@@ -218,80 +192,6 @@
             });
         });
     });
-
-    let statusData = {};
-    const tooltip = document.getElementById('attack-tooltip');
-
-    async function loadDataFiles() {
-        try {
-            const statusRes = await fetch('../status.json');
-            const statuses = statusRes.ok ? await statusRes.json() : [];
-            statuses.forEach(s => {
-                if (s.Nom && s.description) statusData[s.Nom.toLowerCase()] = s.description;
-            });
-        } catch (err) {
-            console.error("Erreur chargement JSON passifs/status", err);
-        }
-    }
-
-    // affichage de la tooltip
-    function showTooltip(event, content) {
-        tooltip.innerHTML = content;
-        tooltip.style.display = 'block';
-        positionTooltip(event);
-    }
-    function hideTooltip() { tooltip.style.display = 'none'; }
-    function positionTooltip(event) {
-        const pageX = event.pageX ?? (event.touches && event.touches[0] && event.touches[0].pageX) ?? 0;
-        const pageY = event.pageY ?? (event.touches && event.touches[0] && event.touches[0].pageY) ?? 0;
-        const offset = 12;
-        tooltip.style.left = (pageX + offset) + 'px';
-        tooltip.style.top = (pageY + offset) + 'px';
-        const rect = tooltip.getBoundingClientRect();
-        const maxRight = window.innerWidth - 8;
-        const maxBottom = window.innerHeight - 8;
-        let left = pageX + offset, top = pageY + offset;
-        if (rect.width && left + rect.width > maxRight) left = pageX - rect.width - offset;
-        if (rect.height && top + rect.height > maxBottom) top = pageY - rect.height - offset;
-        if (left < 8) left = 8;
-        if (top < 8) top = 8;
-        tooltip.style.left = left + 'px';
-        tooltip.style.top = top + 'px';
-    }
-
-    // déléguation : un seul handler pour tous les .data-status présents ou futurs
-    function setupDelegatedStatusTooltips() {
-        // mouseenter/mousemove/leave via pointer events
-        document.addEventListener('pointermove', (e) => {
-            const el = e.target.closest && e.target.closest('.data-status');
-            if (el) {
-                const nameAttr = el.dataset.statusName || el.getAttribute('data-status-name') || '';
-                const key = nameAttr.toLowerCase();
-                const desc = statusData[key] || '<em>Description non disponible.</em>';
-                const title = nameAttr || 'Statut';
-                showTooltip(e, `<strong style="display:block;margin-bottom:6px;">${title}</strong><div style="line-height:1.25">${desc}</div>`);
-            } else {
-                // si on n'est plus sur un .data-status, masquer
-                hideTooltip();
-            }
-        }, {passive: true});
-
-        // tactile : afficher au tap sur .data-status
-        document.addEventListener('touchstart', (ev) => {
-            const el = ev.target.closest && ev.target.closest('.data-status');
-            if (!el) return;
-            const nameAttr = el.dataset.statusName || el.getAttribute('data-status-name') || '';
-            const key = nameAttr.toLowerCase();
-            const desc = statusData[key] || '<em>Description non disponible.</em>';
-            const title = nameAttr || 'Statut';
-            showTooltip(ev, `<strong style="display:block;margin-bottom:6px;">${title}</strong><div style="line-height:1.25">${desc}</div>`);
-            setTimeout(hideTooltip, 3000);
-        }, {passive: true});
-    }
-
-    // initialisation
-    loadDataFiles();
-    setupDelegatedStatusTooltips();
     </script>
 </body>
 </html>

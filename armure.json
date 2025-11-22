@@ -6,7 +6,7 @@
     "tier": 0,
     "Element": "Normal",
     "Armure": "1",
-    "Paliers": "3/6",
+    "Paliers": "4/6",
     "Effets": "Fragilité Coupante",
     "Craft": "3 matériaux Normaux",
     "Secret": "no"  
@@ -18,7 +18,7 @@
     "tier": 0,
     "Element": "Feu",
     "Armure": "1",
-    "Paliers": "3/5",
+    "Paliers": "4/6",
     "Effets": "",
     "Craft": "3 matériaux Feu",
     "Secret": "no"  
@@ -30,7 +30,7 @@
     "tier": 0,
     "Element": "Plante",
     "Armure": "2",
-    "Paliers": "4/6",
+    "Paliers": "4/7",
     "Effets": "Epines",
     "Craft": "3 matériaux Plante",
     "Secret": "no"  
@@ -42,9 +42,21 @@
     "tier": 0,
     "Element": "Sol",
     "Armure": "2",
-    "Paliers": "4/6",
+    "Paliers": "4/7",
     "Effets": "Paratonnerre",
     "Craft": "3 matériaux Sol",
+    "Secret": "no"  
+  },
+  {
+    "id": 20002,
+    "Nom": "Cuir du Ciel",
+    "type": "Moyenne",
+    "tier": 0,
+    "Element": "Vol",
+    "Armure": "2",
+    "Paliers": "4/7",
+    "Effets": "",
+    "Craft": "3 matériaux Vol",
     "Secret": "no"  
   },
   {
@@ -54,7 +66,7 @@
     "tier": 0,
     "Element": "Feu",
     "Armure": "3",
-    "Paliers": "4/8",
+    "Paliers": "5/8",
     "Effets": "",
     "Craft": "3 matériaux Feu",
     "Secret": "no"  
@@ -66,7 +78,7 @@
     "tier": 0,
     "Element": "Roche",
     "Armure": "3",
-    "Paliers": "4/8",
+    "Paliers": "5/8",
     "Effets": "Recomposition",
     "Craft": "3 matériaux Roche",
     "Secret": "no"  
@@ -79,8 +91,20 @@
     "Element": "Acier",
     "Armure": "3",
     "Paliers": "5/9",
-    "Effets": "Poids Lourd, Armure Inflammable",
+    "Effets": "Poids Lourd, Armure Inflammable, Poids de l'Acier",
     "Craft": "3 matériaux Acier",
+    "Secret": "no" 
+  },
+  {
+    "id": 40002,
+    "Nom": "Armure des tombes",
+    "type": "Extrêmement Lourde",
+    "tier": 0,
+    "Element": "Spectre",
+    "Armure": "3",
+    "Paliers": "5/9",
+    "Effets": "Spectre Tangible",
+    "Craft": "3 matériaux Spectre",
     "Secret": "no" 
   },
   {
@@ -90,7 +114,7 @@
     "tier": 1,
     "Element": "Eau",
     "Armure": "1",
-    "Paliers": "3/8",
+    "Paliers": "5/8",
     "Effets": "Gain Trempette, Trempette Surprise",
     "Craft": "Membrane perpétuelle + 2 matériaux Eau",
     "Secret": "yes"
@@ -102,7 +126,7 @@
     "tier": 1,
     "Element": "Ténèbres",
     "Armure": "1",
-    "Paliers": "4/8",
+    "Paliers": "5/8",
     "Effets": "Ajout Puissance Contrôlée",
     "Craft": "Oreille du Traqueur + 2 matériaux Ténèbres",
     "Secret": "yes"
@@ -110,11 +134,11 @@
   {
     "id": 21001,
     "Nom": "Tenue de l'assassin Dimentionnel",
-    "type": "Légère",
+    "type": "Moyenne",
     "tier": 1,
     "Element": "Ténèbres",
     "Armure": "2",
-    "Paliers": "4/9",
+    "Paliers": "5/9",
     "Effets": "Attaque Surprise Précise",
     "Craft": "Griffes Psionique + 2 matériaux Ténèbres",
     "Secret": "yes"
@@ -126,7 +150,7 @@
     "tier": 1,
     "Element": "Spectre",
     "Armure": "3",
-    "Paliers": "4/9",
+    "Paliers": "6/10",
     "Effets": "Gain Trempette, Trempette des revenants, Trempette du Peureux",
     "Craft": "Os Codale + 2 matériaux Eau",
     "Secret": "yes"

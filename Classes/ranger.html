@@ -64,23 +64,56 @@
             <!-- Les niveaux et abilities seront générés ici -->
         </div>
     </div>
+    <!-- Tooltip -->
+    <div id="attack-tooltip" style="position:absolute; display:none; pointer-events:none; z-index:1000; max-width:300px; padding:8px; background:rgba(0,0,0,0.85); color:#fff; border-radius:5px; font-size:0.9em; box-shadow:0 0 5px #000;"></div>
+    <style>
+        .data-status {
+            cursor: help;
+            text-decoration: underline;
+            text-decoration-color: rgba(255,255,255,0.75);
+            text-decoration-thickness: 1px;
+            transition: text-decoration-color 120ms ease;
+        }
+        .data-status:hover,
+        .data-status:focus {
+            text-decoration-color: #ffd27a;
+            outline: none;
+        }
+        .data-passifs {
+            cursor: help;
+            text-decoration: underline;
+            text-decoration-color: rgba(255,255,255,0.75);
+            text-decoration-thickness: 1px;
+            transition: text-decoration-color 120ms ease;
+        }
+        .data-passifs:hover,
+        .data-passifs:focus {
+            text-decoration-color: #ffd27a;
+            outline: none;
+        }
+    </style>
     <script>
     // filepath: c:\Users\arthu\Documents\GitHub\RuptureWiki\Classes\ranger.html
 
     const levelAbilities = {
         1: [
+            "Dressage tier 1",
             "Étude",
-            "Ordre Simple"
+            "Ordre Simple - Action Bonus"
         ],
         2: [
             "Don de Déplacement - Action de Déplacement et Action Bonus",
-            "Soin Pokémon - Action Bonus - Repos Court"
+            "Diversité"
+        ],
+        3: [
+            "Dressage tier 2"
         ],
         4: [
             "Amélioration de Caractéristiques",
             "Amélioration Défensive"
         ],
         5: [
+            "Dressage tier 3",
             "Expertise Élémentaire"
         ],
         6: [
@@ -102,10 +135,10 @@
 
     const archetypeAbilities = {
         unique: {
-            3: ["Slot Basique", "Ordre Complexe"],
-            5: ["Diversité"],
+            3: ["Entrainement Particulier", "Connexion Mentale"],
+            5: ["Soin Pokémon - Action Bonus - Repos Court", "Souffle du Dresseur - Action Bonus - Repos Court"],
             7: ["Plein Potentiel - Repos Long"],
-            10: ["Slot Puissant"]
+            10: [""]
         },
         meute: {
             3: ["Double Slot"],
@@ -194,6 +227,89 @@
             });
         });
     });
+    let statusData = {};
+    let passifData = {};
+    const tooltip = document.getElementById('attack-tooltip');
+
+    async function loadDataFiles() {
+        try {
+            const [statusRes, passifsRes] = await Promise.all([
+                fetch('../status.json'),
+                fetch('../passifs.json')
+            ]);
+            const statuses = statusRes.ok ? await statusRes.json() : [];
+            const passifs = passifsRes.ok ? await passifsRes.json() : [];
+
+            statuses.forEach(s => {
+                if (s.Nom && s.description) statusData[s.Nom.toLowerCase()] = s.description;
+            });
+            passifs.forEach(p => {
+                if (p.Nom && p.description) passifData[p.Nom.toLowerCase()] = p.description;
+            });
+        } catch (err) {
+            console.error("Erreur chargement JSON passifs/status", err);
+        }
+    }
+
+    // affichage de la tooltip
+    function showTooltip(event, content) {
+        tooltip.innerHTML = content;
+        tooltip.style.display = 'block';
+        positionTooltip(event);
+    }
+    function hideTooltip() { tooltip.style.display = 'none'; }
+    function positionTooltip(event) {
+        const pageX = event.pageX ?? (event.touches && event.touches[0] && event.touches[0].pageX) ?? 0;
+        const pageY = event.pageY ?? (event.touches && event.touches[0] && event.touches[0].pageY) ?? 0;
+        const offset = 12;
+        tooltip.style.left = (pageX + offset) + 'px';
+        tooltip.style.top = (pageY + offset) + 'px';
+        const rect = tooltip.getBoundingClientRect();
+        const maxRight = window.innerWidth - 8;
+        const maxBottom = window.innerHeight - 8;
+        let left = pageX + offset, top = pageY + offset;
+        if (rect.width && left + rect.width > maxRight) left = pageX - rect.width - offset;
+        if (rect.height && top + rect.height > maxBottom) top = pageY - rect.height - offset;
+        if (left < 8) left = 8;
+        if (top < 8) top = 8;
+        tooltip.style.left = left + 'px';
+        tooltip.style.top = top + 'px';
+    }
+
+    // déléguation : un seul handler pour tous les .data-status et .data-passifs présents ou futurs
+    function setupDelegatedStatusTooltips() {
+        document.addEventListener('pointermove', (e) => {
+            const el = e.target.closest && e.target.closest('.data-status, .data-passifs');
+            if (el) {
+                const nameAttr = el.dataset.statusName || el.dataset.passifsName || el.getAttribute('data-status-name') || el.getAttribute('data-passifs-name') || '';
+                const key = nameAttr.toLowerCase();
+                const isPassif = el.classList.contains('data-passifs');
+                const source = isPassif ? passifData : statusData;
+                const desc = source[key] || '<em>Description non disponible.</em>';
+                const title = nameAttr || (isPassif ? 'Passif' : 'Statut');
+                showTooltip(e, `<strong style="display:block;margin-bottom:6px;">${title}</strong><div style="line-height:1.25">${desc}</div>`);
+            } else {
+                hideTooltip();
+            }
+        }, {passive: true});
+
+        document.addEventListener('touchstart', (ev) => {
+            const el = ev.target.closest && ev.target.closest('.data-status, .data-passifs');
+            if (!el) return;
+            const nameAttr = el.dataset.statusName || el.dataset.passifsName || el.getAttribute('data-status-name') || el.getAttribute('data-passifs-name') || '';
+            const key = nameAttr.toLowerCase();
+            const isPassif = el.classList.contains('data-passifs');
+            const source = isPassif ? passifData : statusData;
+            const desc = source[key] || '<em>Description non disponible.</em>';
+            const title = nameAttr || (isPassif ? 'Passif' : 'Statut');
+            showTooltip(ev, `<strong style="display:block;margin-bottom:6px;">${title}</strong><div style="line-height:1.25">${desc}</div>`);
+            setTimeout(hideTooltip, 3000);
+        }, {passive: true});
+    }
+
+    // initialisation
+    loadDataFiles();
+    setupDelegatedStatusTooltips();
     </script>
 </body>
 </html>

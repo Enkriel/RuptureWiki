@@ -34,7 +34,7 @@
     "name": "Aspicot Alpha",
     "image" : "https://img.pokemondb.net/sprites/home/normal/2x/avif/weedle.avif",
     "tier": 1,
-    "hp": 16,
+    "hp": 31,
     "esquive": "10",
     "armor": "3/8",
     "type": ["Insecte/Poison"],
@@ -43,9 +43,9 @@
     "status" : "unlock",
     "comportement" : "Utilise automatiquement Téléport après avoir subbit une blessure majeur ou sévère, vise la personne qui a le moins de PV",
     "alpha" : "yes",
-    "front" : "3 - Percant - Glande filandreuse - Sécrétion",
-    "sides" : "3 - Coupant - Pattes  - Manoeuvre de Désangagement",
-    "back" : "4 - Contondant - Pic Codale - Dard-Nuée"
+    "front" : "5 - Percant - Glande filandreuse - Sécrétion",
+    "sides" : "4 - Coupant - Pattes  - Manoeuvre de Désangagement",
+    "back" : "5 - Contondant - Pic Codale - Dard-Nuée"
   },
   {
     "id": 14,
@@ -82,7 +82,7 @@
     "name": "Abra Alpha",
     "image" : "https://i.pinimg.com/1200x/01/71/bf/0171bfd801a48520459e56e3a265b100.jpg",
     "tier": 1,
-    "hp": 14,
+    "hp": 28,
     "esquive": "12",
     "armor": "3/8",
     "type": ["Ténèbres"],
@@ -91,9 +91,9 @@
     "status" : "hide",
     "comportement" : "Utilise automatiquement Téléport après avoir subbit une blessure majeur ou sévère, vise la personne qui a le moins de PV",
     "alpha" : "yes",
-    "front" : "3 - Perçant - Oreilles du Traqueur - Choc Mental",
-    "sides" : "3 - Contondant - Griffes Psionique - Griffe",
-    "back" : "4 - Coupant - Queue du Guide - Téléport Controllé"
+    "front" : "4 - Perçant - Oreilles du Traqueur - Choc Mental",
+    "sides" : "4 - Contondant - Griffes Psionique - Griffe",
+    "back" : "5 - Coupant - Queue du Guide - Téléport Controllé"
   },
   {
     "id": 129,
@@ -115,7 +115,7 @@
     "name": "Magicarpe Alpha",
     "image" : "https://i.pinimg.com/1200x/d8/c2/9c/d8c29c53bffd7b891272f78c2876e6ea.jpg",
     "tier": 1,
-    "hp": 15,
+    "hp": 30,
     "esquive": "11",
     "armor": "2/4/8",
     "type": ["Eau/Spectre"],
@@ -124,9 +124,9 @@
     "status" : "hide",
     "comportement" : "1 action sur 2 magicarpe est obligé de faire <b>Trempette</b>, attaque l'ennemi le plus proche et fait Eau Revoir dès qu'un ennemi se trouve dans sa zone Au Contact ou Proche",
     "alpha" : "yes",
-    "front" : "4 - Contondant - Barbillon Osseux - Charge",
-    "sides" : "3 - Coupant - Membrane Perpétuelle - Eau Revoir",
-    "back" : "4 - Contondant - Os Codale - Ombre Nocturne"
+    "front" : "5 - Contondant - Barbillon Osseux - Charge",
+    "sides" : "4 - Coupant - Membrane Perpétuelle - Eau Revoir",
+    "back" : "5 - Contondant - Os Codale - Ombre Nocturne"
   },
   {
     "id": 172,
@@ -180,13 +180,31 @@
     "tier": 1,
     "hp": 4,
     "esquive": "12",
-    "armor": "2/6",
+    "armor": "4/7",
     "type": ["Ténèbres"],
     "attacks": ["Griffe", "Morsure", "Coup Bas"],
-    "passifs": ["Odorat Développé"],    
+    "passifs": ["Odorat Développé", "Fuyard"],    
     "status" : "unlock",
     "comportement" : "Vise la derniere cible qui l'a attaqué",
     "alpha" : "no"
+  },
+  {
+    "id": 261,
+    "name": "Medhyèna Alpha",
+    "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/poochyena.avif",
+    "tier": 1,
+    "hp": 35,
+    "esquive": "12",
+    "armor": "5/9",
+    "type": ["Ténèbres"],
+    "attacks": ["Griffe", "Morsure", "Coup Bas", "Posture Intimidante"],
+    "passifs": ["Odorat Développé", "Fuyard", "Colère du Peureux", "Posture Rapide"],    
+    "status" : "unlock",
+    "comportement" : "Ne sort que la nuit et vise la derniere cible qui l'a attaqué, patern : <ul> <li>Quand Medhyéna dresse sa queue il va utiliser Posture Intimidante dans le cadran devant lui </li> <li>Quand il baisse les oreilles il va utiliser, Saut du Medhéyèna AoE 1 devant lui infligeant 1d8 + 2 et mord celui qui a fait le plus mauvais jet il ne pourra pas jouer ce tour ci si Medhyéna reçois asssez de degat ou si le joueur reussi un JdS de Force DC 12 il se libère sinon il subbit une blessure severe</li><li> Quand il gratte le sol il va utiliser coup bas sur un joueur dans son cadran arrière</li> </ul>",
+    "alpha" : "yes",
+    "front" : "7 - Contondant - Machoire Juvénile - Saut du Medhéyèna",
+    "sides" : "5 - Coupant - Griffe du Chiot - Coup Bas",
+    "back" : "6 - Contondant - Queue du froussard - Posture Rapide - Inflige Peur"
   },
   {
     "id": 293,

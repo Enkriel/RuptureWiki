@@ -17,276 +17,43 @@
         </div>
 
         <section class="tier-section">
-            <h2>Ferveur</h2>
-            <ul>
-                <li>La ferveur est une ressource à dépenser pour invoquer son dieu. Si vous n'avez pas de ferveur, vous pouvez la remplacer par des blessures mineures.</li>
-                <li>Un personnage a <b>2 + son niveau</b> en ferveur.</li>
-                <li>On peut recharger la ferveur via des prières lors des repos, ou en accomplissant des faits qui plaisent à sa divinité.</li>
-            </ul>
+            <h2>Sort Divin</h2>
+             <br>
+            <p>    
+                Les sorts divins provienne directement des différentes divinité de ce monde qu'ils l'accordent a leurs fidèle en échange de sacrifices.
+                Il existe 2 type de sacrifices pour utiliser un sort divin : 
+                <ul>
+                    <li>
+                        les offrandes de sang les plus courantes ou l'utilisateur lié à la divinité peut sacrifier une partie de son energie vitale.
+                    </li>
+                    <li>
+                        Les offrandes matérielles plus rares ou n'importe quel utilisateur peut sacrifier <b>une relique</b> qui contient directement le sort.
+                    </li>
+                </ul>            
+            </p>
         </section>
 
         <section class="tier-section">
-            <h2>Système de divinité</h2>
-            <p>Chaque divinité propose des <b>paliers de rapprochement</b> :</p>
-            <ul>
-                <li>Croyant</li>
-                <li>Audient</li>
-                <li>Chuchoteur</li>
-                <li>Portevoix</li>
-                <li>Émissaire</li>
-            </ul>
-        </section>
-
-        <!-- Arceus -->
-        <section class="divinity-section">
-            <div class="divinity-title">Arceus le créateur</div>
-            <div class="divinity-lore">
-                Être primordial, il façonna le monde et engendra les premières divinités Pokémon. Trop puissant pour être compris par les mortels, il fixe ses prix après coup, et les tributs qu’il exige peuvent briser les plus téméraires. Certains ont péri en sous-estimant ses attentes. Arceus ne tolère ni injustice ni déséquilibre dans son œuvre.
-            </div>
-            <div class="divinity-lore">
-                <b>Element associé </b>: Normal (Peut changer a l'aide des 17 tablettes)
-            </div>
-            <b>Regagner de la ferveur :</b> Arceus aime la justice et l’équilibre. Vaincre un criminel reconnu coupable ou abattre un Pokémon Alpha vous rapporte ses faveurs.
-            <table class="palier-table">
-                <thead>
-                    <tr>
-                        <th>Palier</th>
-                        <th>Pouvoir</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Croyant</td>
-                        <td>
-                            <b>Ordre</b> : Prononcez une phrase de 4 mots maximum. Toutes les créatures qui vous entendent doivent réussir un JS Sagesse ou se voir forcées d’obéir à la phrase pendant 1 minute. Les cibles savent qu’elles sont visées, que le jet soit réussi ou non. (1 ferveur)
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Audient</td>
-                        <td>
-                            <b>Copie</b> : Dupliquez un objet. Le prix en ferveur dépend de l’objet.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Chuchoteur</td>
-                        <td>
-                            <b>Voie d’Arceus</b> : Imposez votre volonté à une créature qui vous comprend. À chaque fin de tour, elle doit réussir un JS Sagesse ou rester sous votre contrôle. (4 ferveurs)
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Portevoix</td>
-                        <td>
-                            <b>Création</b> : Permet de créer ce que vous voulez.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Émissaire</td>
-                        <td>
-                            <b>Jugement</b> : Accès au pouvoir suprême de Jugement.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="totem">
-               <b>Totem</b> : Attaque une cible ennemi aléatoire infligeant 1d10 degat avec un portée 4 
-            </div>
-        </section>
-
-        <!-- Regigigas et les Regi -->
-        <section class="divinity-section">
-            <div class="divinity-title">Regigigas et les Regi</div>
-            <div class="divinity-lore">
-                Ancien architecte du monde, il aurait déplacé les continents à mains nues. Son corps abrite une force incommensurable, mais il est lent à se mettre en marche. Ceux qui le servent doivent se montrer patients et solides comme la pierre. Il confie ses pouvoirs à travers ses créations — les trois Golems originels (Regirock, Regice, Registeel) — et considère l’endurance comme une vertu sacrée.
-            </div>
-            <div class="divinity-lore">
-                <b>Element associé </b>: Glace, Roche et Acier
-            </div>
-            <b>Regagner de la ferveur :</b> Regigigas valorise la persévérance et l’effort prolongé. Déplacer un objet massif, survivre à une épreuve physique extrême ou défendre un lieu sacré contre de nombreux assauts vous fera gagner ses ferveurs.
-            <table class="palier-table">
-                <thead>
-                    <tr>
-                        <th>Palier</th>
-                        <th>Pouvoir</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Croyant</td>
-                        <td>
-                            <b>Force sans limite</b> : Quand vous tentez de pousser un objet, votre force augmente de 3 par minute (chaque augmentation coûte 1 ferveur).<br>
-                            <i>(Pour rappel, le calcul de force de poussée = For * 10)</i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Audient</td>
-                        <td>
-                            <b>Mur</b> : Faites surgir un bloc massif de pierre, glace ou acier (aléatoire) pour vous abriter ou bloquer un passage. Il prend toute une zone de cadran (2 ferveurs).<br>
-                            (3 PV palier = niveau Évocateur / niveau Évocateur * 2)
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Chuchoteur</td>
-                        <td>
-                            <b>Poids du monde</b> : Doublez le poids d’un objet (2 ferveurs).
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Portevoix</td>
-                        <td>
-                            <b>Refaçonnage</b> : Quand vous touchez une structure de pierre, de glace ou d’acier, vous pouvez lentement mais sûrement changer sa forme (ex : créer une porte dans un mur de pierre en 1h, permettant à vos alliés de faire un repos court).
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Émissaire</td>
-                        <td>
-                            <b>Roi des Golems</b> : Invoquez un Régi aléatoire qui vous aide pendant 3 tours (8 ferveurs).
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="totem">
-               <b>Totem</b> : reduit les déâts recu des alliés en reduisant de 2 tiers les dés de dégâts reçu 
-            </div>
-        </section>
-
-        <!-- Jirachi -->
-        <section class="divinity-section">
-            <div class="divinity-title">Jirachi l’Étoile des Vœux</div>
-            <div class="divinity-lore">
-                Messager des cieux, il ne s’éveille que rarement, et n’exauce qu’un nombre limité de souhaits avant de se rendormir pour des siècles. Ceux qui le suivent doivent accepter que ses bénédictions sont capricieuses : un vœu peut se réaliser immédiatement… ou se retourner contre celui qui l’a formulé.
-            </div>
-            <div class="divinity-lore">
-                <b>Element associé </b>: Psy et Acier
-            </div>
-            <b>Regagner de la ferveur :</b> Jirachi aime les gestes altruistes et les désirs sincères. Exaucer un vœu important pour autrui, ou accomplir un acte désintéressé en grande difficulté, vous rapporte ses ferveurs.
-            <table class="palier-table">
-                <thead>
-                    <tr>
-                        <th>Palier</th>
-                        <th>Pouvoir</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Croyant</td>
-                        <td>
-                            <b>Étoile filante</b> : Lors de vos repos, vous gagnez l’action « regarder les étoiles ».<br>
-                            Jetez 1d4 :<br>
-                            1 : il ne se passe rien<br>
-                            2 : un allié aléatoire (vous compris) regagne toute sa vie<br>
-                            3 : gagnez une poignée de pièces<br>
-                            4 : il va se passer quelque chose de sympa à un allié aléatoire (vous compris)
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Audient</td>
-                        <td>
-                            <b>Métronome</b> : Vous pouvez lancer le sort <b>Métronome</b>.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Chuchoteur</td>
-                        <td>
-                            <b>Caprice céleste</b> : Annoncez un souhait à voix haute. Le MJ lance 1d8 : sur 3-8, il s’exauce comme Jirachi le souhaite ; sur 1-2, Jirachi vous joue un tour. (4 ferveurs)<br>
-                            Le souhait met souvent du temps à être exaucé.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Portevoix</td>
-                        <td>
-                            <b>Carnareket</b> : Donne accès au sort Carnareket (sort puissant qui vise des cellules aléatoires).
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Émissaire</td>
-                        <td>
-                            <b>Vœu absolu</b> : Formulez un vœu majeur. Le MJ définit un effet puissant mais lance secrètement 1d10 :<br>
-                            1-2 : L’effet se produit, mais avec une lourde contrepartie<br>
-                            3-10 : L’effet se produit comme demandé<br>
-                            (10 ferveurs)
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="totem">
-                <b>Totem</b> : produit un effet alétoire sur 1d6, 
+            <h2>Les reliques</h2>
+            <br>
+            <p>    
+                Les reliques sont des objets imprégné de la puissance d'une divinité, elles permettent à n'importe quel utilisateur de lancer un sort divin en sacrifiant la relique.
+            </p>
+            <p>    
+                Les reliques peuvent être obtenu de deux façon :
                 <ul>
                     <li>
-                       1. inflige 1d8 à un allié                        
-                    </li> 
-                    <li>
-                        2. échange la position de 2 entité alétoires, 
+                        Sois par des récompenses donner par les divinités elles même lors de quêtes ou d'actes glorieux en leur nom.
                     </li>
                     <li>
-                        3. Donne confusion à toutes les entité dans 1 cadran aléatoire
+                        Sois réalisé par des forgerons spécialisé.
                     </li>
-                    <li>
-                       4. soigne 2 pv à un allié aléatoire 
-                    </li>
-                    <li>
-                        5. inflige 1d10 à un ennemi alétoire 
-                    </li>
-                    <li>
-                       6. donne une action supplémentaire à un allié alétoire 
-                    </li>
-               </ul>
-            </div>
+                </ul>            
+            </p>
+
+            <p>    
+                Si vendre une relique fabriqué par un marchand est possible, il peut être très mal vu de revendre une relique offerte par une divinité, cela peut entraîner la colère de cette dernière.
+            </p>
         </section>
-        <!-- Culte des Bêtes Légendaires -->
-        <section class="divinity-section">
-            <div class="divinity-title">Entei, Raikou & Suicune — Les Bêtes du Voyage</div>
-            <div class="divinity-lore">
-                Incarnations du feu, de la foudre et de l’eau, ces trois bêtes légendaires sillonnent le monde sans jamais s’arrêter. Elles symbolisent la liberté, la vitesse et l’adaptabilité. Leurs fidèles apprennent à se déplacer avec grâce, à franchir tous les obstacles et à ne jamais rester prisonniers d’un lieu ou d’une situation.
-            </div>
-            <div class="divinity-lore">
-                <b>Éléments associés</b> : Feu, Électrique, Eau
-            </div>
-            <b>Regagner de la ferveur :</b> Accomplir un long voyage, franchir un obstacle naturel important (fleuve, montagne, tempête), ou aider quelqu’un à atteindre une destination essentielle.
-            <table class="palier-table">
-                <thead>
-                    <tr>
-                        <th>Palier</th>
-                        <th>Pouvoir</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Croyant</td>
-                        <td>
-                            <b>Foulée céleste</b> : Doublez votre vitesse de déplacement pendant 1 minute. En combat, vous pouvez transformer votre action bonus en action de déplacement (2 ferveurs).
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Audient</td>
-                        <td>
-                            <b>Éclair qui embrase</b> : Vous vous déplacez instantanément dans une zone visible à 30 mètres. Les créatures traversées ressentent une énergie électrique et doivent réussir un jet de Constitution ou être temporairement ralenties (2 ferveurs).
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Chuchoteur</td>
-                        <td>
-                            <b>Flamme qui consume</b> : Créez une flamme sacrée : si vous lui confiez un objet, elle suivra la trace du propriétaire de cet objet jusqu’à l’avoir retrouvé ou jusqu’à ce que l’objet soit entièrement consumé (4 ferveurs).
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Portevoix</td>
-                        <td>
-                            <b>Chevauchée légendaire</b> : Invoquez temporairement l’esprit d’Entei, Raikou ou Suicune pour transporter votre groupe à grande vitesse sur une longue distance (6 ferveurs).
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Émissaire</td>
-                        <td>
-                            <b>La pluie qui éteint le désastre</b> : Faites apparaître une pluie magique dont les gouttes se solidifient sous vos pieds, vous permettant de marcher dans les airs pendant 3 minutes (10 ferveurs).
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="totem">
-                <b>Totem</b> : pour 1 action bonus un allié peut échanger sa place avec le totem, le créateur est celui qui decide qui est considéré comme allié. 
-            </div>
-        </section>     
-    </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
   {
     "id": 1,
     "Nom": "Ancré",
-    "description": "Vous ne suivez plus automatiquement votre cible et risquez fortement d’être déplacé dans le cercle d’affrontement."
+    "description": "Vous ne suivez plus automatiquement votre cible et risquez fortement d’être déplacé dans le cercle d’affrontement de plus vous ne pouvez plus esquiver."
   },
   {
     "id": 2,
@@ -12,7 +12,7 @@
   {
     "id": 3,
     "Nom": "Paralysie",
-    "description": "Vous ne pouvez ni effectuer d'action de déplacement ni de manœuvre de désengagement, vous êtes ancré, et toutes les attaques qui vous ciblent ont l'avantage."
+    "description": "Vous ne pouvez ni effectuer d'action de déplacement ni de manœuvre de désengagement, et toutes les attaques qui vous ciblent ont l'avantage."
   },
   {
     "id": 4,
@@ -72,7 +72,7 @@
   {
     "id": 19,
     "Nom": "Obscurci",
-    "description": "Vous avez -2 a vos jets d'attaques et de perception."
+    "description": "Vous avez -2 a vos jets de touche et de perception."
   },
   {
     "id": 15,
@@ -92,7 +92,7 @@
   {
     "id": 18,
     "Nom": "Embourbé",
-    "description": "Divise par 2 les valeur de déplacement qui affectent la cible."
+    "description": "Au début du tour, retire l'action de déplacement."
   },
   {
     "id": 18,
@@ -122,7 +122,7 @@
   {
     "id": 24,
     "Nom": "Trempé",
-    "description": "Les attaques Electrique et Glace gagne 1 dé de dégats, les attaques Feu perde un dé de dégats, disparait si subbit une attaque feu, electrique ou glace"
+    "description": "Les attaques Electrique et Glace gagnent 1 dé de dégats, les attaques Feu perde un dé de dégats, disparait si subbit une attaque feu, electrique ou glace"
   },
   {
     "id": 25,
@@ -138,5 +138,25 @@
     "id": 27,
     "Nom": "Désarme",
     "description": "Vous ne pouvez plus faire d'action offensive qui necessite votre arme"
+  },
+  {
+    "id": 28,
+    "Nom": "Chute",
+    "description": "Tant que vous êtes à terre il faut utiliser une Action Bonus pour se relever, vous avez un désavantage sur les jets d'attaque et de défense"
+  },
+  {
+    "id": 29,
+    "Nom": "Sec",
+    "description": "Les attaques les attaques Feu gagne un dé de dégats, Electrique et Glace perdent 1 dé de dégats, disparait si subbit une attaque eau"
+  },
+  {
+    "id": 30,
+    "Nom": "Rage du combattant",
+    "description": "Vous perdez votre réaction mais gagnez 2 actions. Cependant, vous êtes obligé d'effectuer la deuxième action et devez réussir un jet de Sagesse avant de la réaliser. En cas d'échec, vous devenez fou et le MJ choisira votre action."
+  },
+  {
+    "id": 31,
+    "Nom": "Appaisé",
+    "description": "Vous perdez tout envie de combattre, vous avez désavantage à tout vos effets offensif et vous avez -2 à vos js de Charisme."
   }
 ]

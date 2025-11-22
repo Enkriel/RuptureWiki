@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Météo - Rupture JDR</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <script src="../navbar.js"></script>
+
+    <div class="content-wrapper">
+        <div class="header">
+            <h1>Météo</h1>
+            <p>Effets des différentes conditions météorologiques</p>
+        </div>
+
+        <section class="tier-section">
+            <h2>Disclaimer</h2>
+            <p>
+                La liste des effets présentés ici est une base de suggestions. Le MJ reste libre d'adapter ou de modifier ces effets en fonction de la situation et du contexte de la partie.
+            </p>
+            <p>
+                De nombreux effets annexes liés au lore ne sont pas listés ici, comme par exemple l'apparition de certains Pokémon selon le climat.
+            </p>
+            <p>
+                Chaque météo possède une version dite « extrême » qui peut être déclenchée par des capacités spéciales, des attaques ou par la présence de certains Pokémon. Ces météos extrêmes sont très rares mais particulièrement redoutées des Hunters, parfois plus dangereuses que les Pokémon Alpha eux‑mêmes.
+            </p>
+        </section>
+
+        <section class="tier-section">
+            <h2>Temps clair</h2>
+            <h5>Élément associé : Normal</h5>
+            <p>Temps dégagé : pas d'effet particulier.</p>
+        </section>
+
+        <section class="tier-section">
+            <h2>Pluie</h2>
+            <h5>Élément associé : Eau</h5>
+            <ul>
+                <li>Les entités sont régulièrement <b class="data-status" data-status-name="Trempé">trempées</b>.</li>
+                <li>Les jets de Discrétion ont +2 ; les jets de Perception et d'Investigation ont -1.</li>
+            </ul>
+        </section>
+
+        <section class="tier-section">
+            <h2>Sécheresse</h2>
+            <h5>Élément associé : Feu</h5>
+            <ul>
+                <li>Les entités gagnent régulièrement l'effet <b class="data-status" data-status-name="Sec">sec</b>.</li>
+                <li>Les jets d'Athlétisme ont -2.</li>
+            </ul>
+        </section>
+
+        <section class="tier-section">
+            <h2>Tempête claire</h2>
+            <h5>Élément associé : Vol</h5>
+            <ul>
+                <li>-2 au jet de touche des attaques à distance.</li>
+                <li>Les jets d'Acrobaties ont -3.</li>
+                <li>Au début de chaque round, toute entité possédant le passif <b>Poids léger</b> doit réussir un jet de sauvegarde de Constitution ; en cas d'échec, elle est déplacée aléatoirement et peut subir des dégâts.</li>
+            </ul>
+        </section>
+
+        <section class="tier-section">
+            <h2>Orage</h2>
+            <h5>Élément associé : Électrik</h5>
+            <ul>
+                <li>Les entités sont régulièrement <b class="data-status" data-status-name="Trempé">trempées</b>.</li>
+                <li>Les jets de Discrétion ont +3 ; les jets de Perception et d'Investigation ont -3.</li>
+                <li>Au début de chaque round, chaque entité non à l'abri lance 1d6 : sur un résultat de 1, elle est frappée par la foudre et subit 1 PV (2 PV si elle est <b class="data-status" data-status-name="Trempé">trempée</b>).</li>
+            </ul>
+        </section>
+
+        <section class="tier-section">
+            <h2>Brouillard</h2>
+            <h5>Élément associé : Électrik</h5>
+            <ul>
+                <li>Vous êtes en permance <b class="data-status" data-status-name="Obscurci">obscurci</b>.</li>
+            </ul>
+        </section>
+
+        <section class="tier-section">
+            <h2>Neige</h2>
+            <h5>Élément associé : Glace</h5>
+            <ul>
+                <li>La valeur d'esquive est réduite de 2, sauf pour les Pokémon de type Glace ou les Hunters portant une armure de type Glace.</li>
+            </ul>
+        </section>
+
+        <section class="tier-section">
+            <h2>Tempête de sable</h2>
+            <h5>Élément associé : Sol</h5>
+            <ul>
+                <li>Vous êtes <b class="data-status" data-status-name="Obscurci">obscurci</b> par le sable (visibilité réduite).</li>
+                <li>Au début de chaque round, chaque entité non à l'abri lance 1d6 : sur un résultat de 1, elle subit 1 PV de dégâts dus au sable.</li>
+            </ul>
+        </section>
+
+        <section class="tier-section">
+            <h2>Pluie acide</h2>
+            <h5>Élément associé : Poison</h5>
+            <ul>
+                <li>Chaque entité qui n'est pas immunisée au poison perd 1 PV au début de son tour.</li>
+            </ul>
+        </section>
+
+        <section class="tier-section">
+            <h2>Cristaux flottants</h2>
+            <h5>Élément associé : Roche</h5>
+            <ul>
+                <li>Des pierres tournoient dans l'air : tout déplacement rapide (course, esquive, attaque de déplacement, etc.) exige un jet d'Acrobaties ; en cas d'échec, la créature subit 1 dégât.</li>
+            </ul>
+        </section>
+
+        <section class="tier-section" >
+            <h2>Magnétisme Alternatif</h2>
+            <h5>élément associé : Acier</h5>
+            <br>
+            <p>
+                <ul>
+                    <li>Les éléments magnétiques flottent par instants, repoussés du sol puis violemment attirés vers lui, dans un cycle imprévisible.</li>
+                </ul>
+            </p>
+        </section>
+        
+        <section class="tier-section" >
+            <h2>Aura de champs de bataille</h2>
+            <h5>élément associé : Combat</h5>
+            <br>
+            <p>
+                <ul>
+                    <li>L’air semble vibrer d’énergie brute, vous pouvez obtenir <b class="data-status" data-status-name="Rage du combattant">Rage du Combattant</b> quand vous le souhaité, en cas de blessure vous devez faire un JS de Sagesse pour ne pas tomber de force dans cet état</li>
+                </ul>
+            </p>
+        </section>
+
+        <section class="tier-section" >
+            <h2>Brume de Spores</h2>
+            <h5>élément associé : Plantes</h5>
+            <br>
+            <p>Une brume multicolore flotte au ras du sol, chargée de spores irritantes.</p>
+            <p>
+                <ul>
+                    <li> Un jet de Constitution est régulièrement demandé l'échoué vous donnera un status aléatoire</li>
+                </ul>
+            </p>
+        </section>
+
+        <section class="tier-section" >
+            <h2>Toiles flottantes</h2>
+            <p>Des filaments collants flottent dans l’air, accrochés partout.</p>
+            <br>
+            <p>
+                <ul>
+                    <li> Se déplacer de façon sécuriser demande d'utiliser son action en plus de son action de déplacement </li>
+                    <li> Il est possible de se déplacer sans utiliser son action,  mais un js de Dex est demandé en cas d'echec vous êtes <b class="data-status" data-status-name="Ligoté">ligoté</b></li>
+                </ul>
+            </p>
+        </section>
+
+        <section class="tier-section" >
+            <h2>Eclat Enchanté</h2>
+            <p>Une lumière rose frappe depuis le ciel, rendant tout le monde plus amical</p>
+            <br>
+            <p>
+                <ul>
+                    <li> Régulièreùent un js de Sagesse est demandé en cas d'echec vous êtes <b class="data-status" data-status-name="Apaisé">Apaisé</b> </li>
+                </ul>
+            </p>
+        </section>
+
+        <section class="tier-section" >
+            <h2>Pluie d'étoile</h2>
+            <p>Des boule d'énergie tombe du ciel régulièrement</p>
+            <br>
+            <p>
+                Au début de chaque tour de jeu une météorite d'énergie tombe du ciel sur une zone aléatoire infligeant 2D20 de dégats.
+            </p>
+        </section>
+    </div>
+
+    <!-- Tooltip -->
+    <div id="attack-tooltip" style="position:absolute; display:none; pointer-events:none; z-index:1000; max-width:300px; padding:8px; background:rgba(0,0,0,0.85); color:#fff; border-radius:5px; font-size:0.9em; box-shadow:0 0 5px #000;"></div>
+
+    <style>
+        .data-status {
+            cursor: help;
+            text-decoration: underline;
+            text-decoration-color: rgba(255,255,255,0.75);
+            text-decoration-thickness: 1px;
+            transition: text-decoration-color 120ms ease;
+        }
+        .data-status:hover,
+        .data-status:focus {
+            text-decoration-color: #ffd27a;
+            outline: none;
+        }
+    </style>
+
+    <script>
+        let statusData = {};
+        const tooltip = document.getElementById('attack-tooltip');
+
+        async function loadDataFiles() {
+            try {
+                const statusRes = await fetch('../status.json');
+                const statuses = statusRes.ok ? await statusRes.json() : [];
+
+                statuses.forEach(s => {
+                    if (s.Nom && s.description) statusData[s.Nom.toLowerCase()] = s.description;
+                });
+
+                // Après le chargement des données, attacher les listeners aux éléments .data-status
+                attachStatusTooltips();
+            } catch (err) {
+                console.error("Erreur chargement JSON passifs/status", err);
+            }
+        }
+
+        function showTooltip(event, content) {
+            tooltip.innerHTML = content;
+            tooltip.style.display = 'block';
+            positionTooltip(event);
+        }
+
+        function hideTooltip() {
+            tooltip.style.display = 'none';
+        }
+
+        function positionTooltip(event) {
+            const pageX = event.pageX ?? (event.touches && event.touches[0] && event.touches[0].pageX) ?? 0;
+            const pageY = event.pageY ?? (event.touches && event.touches[0] && event.touches[0].pageY) ?? 0;
+            const offset = 12;
+            tooltip.style.left = (pageX + offset) + 'px';
+            tooltip.style.top = (pageY + offset) + 'px';
+
+            const rect = tooltip.getBoundingClientRect();
+            const maxRight = window.innerWidth - 8;
+            const maxBottom = window.innerHeight - 8;
+
+            let left = pageX + offset;
+            let top = pageY + offset;
+
+            if (rect.width && left + rect.width > maxRight) {
+                left = pageX - rect.width - offset;
+                if (left < 8) left = 8;
+            }
+            if (rect.height && top + rect.height > maxBottom) {
+                top = pageY - rect.height - offset;
+                if (top < 8) top = 8;
+            }
+
+            tooltip.style.left = left + 'px';
+            tooltip.style.top = top + 'px';
+        }
+
+        function attachStatusTooltips() {
+            const nodes = document.querySelectorAll('.data-status');
+            if (!nodes.length) return;
+
+            nodes.forEach(el => {
+                const nameAttr = el.dataset.statusName || el.getAttribute('data-status-name') || '';
+                const key = nameAttr.toLowerCase();
+
+                function onEnter(e) {
+                    const desc = statusData[key] || '<em>Description non disponible.</em>';
+                    const title = nameAttr || 'Statut';
+                    showTooltip(e, `<strong style="display:block;margin-bottom:6px;">${title}</strong><div style="line-height:1.25">${desc}</div>`);
+                }
+
+                function onMove(e) {
+                    positionTooltip(e);
+                }
+
+                el.addEventListener('mouseenter', onEnter);
+                el.addEventListener('mousemove', onMove);
+                el.addEventListener('mouseleave', hideTooltip);
+
+                el.addEventListener('touchstart', function (ev) {
+                    onEnter(ev);
+                    setTimeout(hideTooltip, 3500);
+                }, {passive: true});
+            });
+        }
+
+        // lancer le chargement
+        loadDataFiles();
+    </script>
+</body>
+</html>
