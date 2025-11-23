@@ -1121,3 +1121,89 @@ select:focus {
   pointer-events:auto; 
   user-select:text;    /* permet de sélectionner/copier */
 }
+
+/* ---------------- Frise chronologique ---------------- */
+.timeline-toc {
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-bottom:20px;
+    color: rgba(255,255,255,0.95);
+    font-size:0.95rem;
+}
+.timeline-toc a {
+    color: inherit;
+    text-decoration:none;
+    background: rgba(255,255,255,0.04);
+    padding:8px 12px;
+    border-radius:12px;
+    transition:background .18s;
+}
+.timeline-toc a:hover { background: rgba(255,255,255,0.08); }
+
+.timeline {
+    position:relative;
+    max-width:980px;
+    margin: 10px auto 60px;
+    padding: 20px 10px;
+}
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 44px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: rgba(255,255,255,0.08);
+    border-radius:2px;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 18px 20px 18px 86px;
+    margin: 18px 0;
+    display:block;
+}
+.timeline-dot {
+    position:absolute;
+    left: 32px;
+    top: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius:50%;
+    background: linear-gradient(135deg,#ffdd88,#ff9f6b);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    border: 3px solid rgba(255,255,255,0.08);
+}
+.timeline-date {
+    display:block;
+    font-weight:700;
+    color: #ffd27a;
+    margin-bottom:6px;
+}
+.timeline-title {
+    font-size:1.15rem;
+    margin-bottom:8px;
+    color: #fff;
+}
+.timeline-body {
+    background: rgba(255,255,255,0.04);
+    padding:12px 14px;
+    border-radius:10px;
+    color: rgba(255,255,255,0.95);
+    line-height:1.45;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+/* compact look for short items */
+.timeline-item small { display:block; opacity:.8; margin-top:6px; }
+
+/* Responsive adjustments */
+@media (max-width: 760px) {
+    .timeline::before { left: 20px; }
+    .timeline-item { padding-left: 58px; }
+    .timeline-dot { left: 10px; top: 20px; width:18px; height:18px; }
+    .timeline-body { padding:10px; }
+    .timeline-toc { gap:8px; font-size:0.9rem; }
+}
