@@ -362,7 +362,7 @@
   {
     "id": 141,
     "Nom": "Pokemon Paladin",
-    "description": "Si le Pokemon est entre son maitre et une attaque ciblant ce dernier, il peut utiliser son action pour intercepter l'attaque à la place de son maitre"
+    "description": "Si le Pokemon est entre son maitre et une attaque ciblant ce dernier, il peut utiliser sa réaction pour intercepter l'attaque à la place de son maitre (pas d'esquive possible)"
   },
   {
     "id": 142,

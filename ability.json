@@ -72,22 +72,22 @@
     {
         "id": 7,
         "Name": "Étude",
-        "description": "Une fois par repos long, faites un jet de Connaissance Pokémon sur votre Sagesse ou Intelligence. Selon le résultat, vous obtenez plus ou moins d'indices sur la condition secrète de dressage d'un Pokémon sauvage."
+        "description": "Une fois par repos long, faites un jet de Connaissance Pokémons sur votre Sagesse ou Intelligence. Selon le résultat, vous obtenez plus ou moins d'indices sur la condition secrète de dressage d'un Pokémons sauvage."
     },
     {
         "id": 8,
         "Name": "Ordre Simple - Action Bonus",
-        "description": "(Nécessite une arme avec le mot-clé dressant) : vous pouvez donner un ordre simple en combat à un Pokémon allié. ('Attaque', 'Fuis', 'Cherche'...)"
+        "description": "(Nécessite une arme avec le mot-clé dressant) : vous pouvez donner un ordre simple en combat à un Pokémons allié. ('Attaque', 'Fuis', 'Cherche'...)"
     },
     {
         "id": 9,
         "Name": "Don de Déplacement - Action de Déplacement et Action Bonus",
-        "description": "(Nécessite une arme avec le mot-clé dressant) : insufflez votre motivation à un allié pour lui offrir une action de déplacement bonus. Si c'est un Pokémon allié que vous contrôlez, cela ne coûte pas d'action bonus."
+        "description": "(Nécessite une arme avec le mot-clé dressant) : insufflez votre motivation à un allié pour lui offrir une action de déplacement bonus. Si c'est un Pokémons allié que vous contrôlez, cela ne coûte pas d'action bonus."
     },
     {
         "id": 10,
-        "Name": "Soin Pokémon - Action Bonus - Repos Court",
-        "description": "(Nécessite une arme avec le mot-clé dressant) : à votre tour, vous pouvez utiliser une action bonus pour soigner un Pokémon dans votre zone, lui rendant 2PV. Nécessite un repos court ou long pour être réutilisée."
+        "Name": "Soin Pokémons - Action Bonus - Repos Court",
+        "description": "(Nécessite une arme avec le mot-clé dressant) : à votre tour, vous pouvez utiliser une action bonus pour soigner un Pokémons dans votre zone, lui rendant 2PV. Nécessite un repos court ou long pour être réutilisée."
     },
     {
         "id": 11,
@@ -107,7 +107,7 @@
     {
         "id": 16,
         "Name": "Connexion Totale",
-        "description": "(Nécessite une arme avec le mot-clé dressant) : vous pouvez prendre le contrôle d'un Pokémon allié avec qui vous avez un lien ou un pacte. Votre corps reste alors immobile et vulnérable."
+        "description": "(Nécessite une arme avec le mot-clé dressant) : vous pouvez prendre le contrôle d'un Pokémons allié avec qui vous avez un lien ou un pacte. Votre corps reste alors immobile et vulnérable."
     },
     {
         "id": 17,
@@ -117,17 +117,17 @@
     {
         "id": 18,
         "Name": "Ordre Complexe",
-        "description": "<b>Ordre simple</b> devient Ordre complexe : (Nécessite une arme avec le mot-clé dressant) vous pouvez donner des ordres précis à votre Pokémon, comme choisir quelle attaque il doit utiliser."
+        "description": "<b>Ordre simple</b> devient Ordre complexe : (Nécessite une arme avec le mot-clé dressant) vous pouvez donner des ordres précis à votre Pokémons, comme choisir quelle attaque il doit utiliser."
     },
     {
         "id": 19,
         "Name": "Diversité",
-        "description": "(Nécessite une arme avec le mot-clé dressant) Vous pouvez donner des badge à vos pokémon pour qu'ils remplace ses comptétence par de nouvelle comptétence."
+        "description": "(Nécessite une arme avec le mot-clé dressant) Vous pouvez donner des badge à vos Pokémons pour qu'ils remplace ses comptétence par de nouvelle comptétence."
     },
     {
         "id": 20,
         "Name": "Plein Potentiel - Repos Long",
-        "description": "(Nécessite une arme avec le mot-clé dressant) Votre Pokémon apprend une nouvelle attaque inédite utilisable une fois par repos long. Donner l’ordre de l’utiliser consomme votre action et celle de votre Pokémon."
+        "description": "(Nécessite une arme avec le mot-clé dressant) Votre Pokémons apprend une nouvelle attaque inédite utilisable une fois par repos long. Donner l’ordre de l’utiliser consomme votre action et celle de votre Pokémons."
     },
     {
         "id": 21,
@@ -142,7 +142,7 @@
     {
         "id": 23,
         "Name": "Attaque sur Plusieurs Flancs",
-        "description": "(Nécessite une arme avec le mot-clé dressant) Si un <b>membre de la meute</b> (vous ou vos Pokémon) est attaqué, tous les Pokémon de la meute situés dans des cadrans différents augmentent leur dé de dégâts d’un tiers pour ce tour."
+        "description": "(Nécessite une arme avec le mot-clé dressant) Si un <b>membre de la meute</b> (vous ou vos Pokémons) est attaqué, tous les Pokémons de la meute situés dans des cadrans différents augmentent leur dé de dégâts d’un tiers pour ce tour."
     },
     {
         "id": 23,
@@ -152,7 +152,7 @@
     {
         "id": 24,
         "Name": "Placement de la Meute",
-        "description": "<b>Don de déplacement</b> devient Don de déplacement amélioré : (Nécessite une arme avec le mot-clé dressant) vous pouvez donner une action de déplacement bonus à un allié dans votre zone, et si c'est un Pokémon allié que vous contrôlez, cela ne coûte pas d'action bonus."
+        "description": "<b>Don de déplacement</b> devient Don de déplacement amélioré : (Nécessite une arme avec le mot-clé dressant) vous pouvez donner une action de déplacement bonus à un allié dans votre zone, et si c'est un Pokémons allié que vous contrôlez, cela ne coûte pas d'action bonus."
     },
     {
         "id": 25,
@@ -162,12 +162,12 @@
     {
         "id": 26,
         "Name": "Pacte",
-        "description": "Vous pouvez former un pacte avec un Pokémon sauvage. Vous ne pouvez avoir qu'un seul pacte à la fois. Un pacte vous permet de communiquer télépathiquement avec le Pokémon, et de le contrôler en combat comme s'il était dressé."
+        "description": "Vous pouvez former un pacte avec un Pokémons sauvage. Vous ne pouvez avoir qu'un seul pacte à la fois. Un pacte vous permet de communiquer télépathiquement avec le Pokémons, et de le contrôler en combat comme s'il était dressé."
     },
     {
         "id": 27,
         "Name": "Appel",
-        "description": "Vous pouvez appeler votre Pokémon pactisé à tout moment, où que vous soyez, et il viendra à vous. Si le Pokémon est loin, cela peut prendre plusieurs minutes."
+        "description": "Vous pouvez appeler votre Pokémons pactisé à tout moment, où que vous soyez, et il viendra à vous. Si le Pokémons est loin, cela peut prendre plusieurs minutes."
     },
     {
         "id": 28,
@@ -177,17 +177,17 @@
     {
         "id": 29,
         "Name": "Sifflement Sauvage",
-        "description": "Vous sifflez aussi fort que possible, ce qui transmet 3 mots aux alentours. Si un groupe de Pokémon sauvages l’entend, il répondra à l’appel en tentant au maximum de respecter ces 3 mots selon leur interprétation."
+        "description": "Vous sifflez aussi fort que possible, ce qui transmet 3 mots aux alentours. Si un groupe de Pokémons sauvages l’entend, il répondra à l’appel en tentant au maximum de respecter ces 3 mots selon leur interprétation."
     },
     {
         "id": 30,
         "Name": "Pacte de la Zone",
-        "description": "Vous pouvez communiquer télépathiquement avec un Pokémon pactisé, où que vous soyez."
+        "description": "Vous pouvez communiquer télépathiquement avec un Pokémons pactisé, où que vous soyez."
     },
     {
         "id": 31,
         "Name": "Rugissement du Roi",
-        "description": "Poussez un cri tonitruant qui va attirer un Pokémon sauvage très puissant en lui transmettant 2 mots. Il tentera au maximum de respecter ces mots selon son interprétation."
+        "description": "Poussez un cri tonitruant qui va attirer un Pokémons sauvage très puissant en lui transmettant 2 mots. Il tentera au maximum de respecter ces mots selon son interprétation."
     },
     {
         "id": 32,
@@ -257,7 +257,7 @@
     {
         "id": 46,
         "Name": "Analyse des Géants - Action Bonus - Repos Court",
-        "description": "Vous pouvez obtenir l'information sur le type d’arme nécessaire pour casser une partie d’un Pokémon et connaître le nombre de blessures restantes avant la section de celle-ci."
+        "description": "Vous pouvez obtenir l'information sur le type d’arme nécessaire pour casser une partie d’un Pokémons et connaître le nombre de blessures restantes avant la section de celle-ci."
     },
     {
         "id": 47,
@@ -577,7 +577,7 @@
     {
         "id": 103,
         "Name": "Absorption - Réaction - Repos Court",
-        "description": "Lorsqu’un pokémon vous attaque avec une compétence d’un élément dont vous avez la maitrise, vous pouvez tenter d'absorber son attaque via un jet d’intelligence. Si votre jet d’intelligence dépasse son jet d’attaque vous bloquez son attaque et la transformer en badge sinon vous prenez l’attaque de plein fouet ce qui augmente de 1 tier la blessure reçu."
+        "description": "Lorsqu’un Pokémons vous attaque avec une compétence d’un élément dont vous avez la maitrise, vous pouvez tenter d'absorber son attaque via un jet d’intelligence. Si votre jet d’intelligence dépasse son jet d’attaque vous bloquez son attaque et la transformer en badge sinon vous prenez l’attaque de plein fouet ce qui augmente de 1 tier la blessure reçu."
     },
     {
         "id": 104,
@@ -717,42 +717,42 @@
     {
         "id": 230,
         "Name": "Dressage tier 2",
-        "description": "Vous pouvez capturer des pokémon de tier 2"
+        "description": "Vous pouvez capturer des Pokémons de tier 2"
     },
     {
         "id": 231,
         "Name": "Dressage tier 3",
-        "description": "Vous pouvez capturer des pokémon de tier 3"
+        "description": "Vous pouvez capturer des Pokémons de tier 3"
     },
     {
         "id": 232,
         "Name": "Dressage tier 4",
-        "description": "Vous pouvez capturer des pokémon de tier 4"
+        "description": "Vous pouvez capturer des Pokémons de tier 4"
     },
     {
         "id": 233,
         "Name": "Dressage tier 5",
-        "description": "Vous pouvez capturer des pokémon de tier 5"
+        "description": "Vous pouvez capturer des Pokémons de tier 5"
     },
     {
         "id": 234,
         "Name": "Dressage tier 6",
-        "description": "Vous pouvez capturer des pokémon de tier 6"
+        "description": "Vous pouvez capturer des Pokémons de tier 6"
     },
     {
         "id": 235,
         "Name": "Dressage tier 7",
-        "description": "Vous pouvez capturer des pokémon de tier 7"
+        "description": "Vous pouvez capturer des Pokémons de tier 7"
     },
     {
         "id": 236,
         "Name": "Dressage tier 8",
-        "description": "Vous pouvez capturer des pokémon de tier 8"
+        "description": "Vous pouvez capturer des Pokémons de tier 8"
     },
     {
         "id": 237,
         "Name": "Dressage tier 9",
-        "description": "Vous pouvez capturer des pokémon de tier 9"
+        "description": "Vous pouvez capturer des Pokémons de tier 9"
     },
     {
         "id": 238,
@@ -777,7 +777,7 @@
     {
         "id": 242,
         "Name" : "Contre Instantané - Réaction - Repos Court",
-        "description": "Vous pouvez votre posture de contre."
+        "description": "Vous pouvez passez dans votre posture de contre."
     },
     {
         "id": 243,
@@ -967,22 +967,47 @@
     {
         "id": 273,
         "Name": "Connexion Mentale",
-        "description": "Vous pouvez lié une connexion à votre pokémon pour pouvoir lui donner des ordres complexes tout les tours de façon gratuite. Un cup fort sur vous ou votre pokemon peut briser le lien il faudra alors relancer la comptétence"
+        "description": "Vous pouvez lié une connexion à votre Pokémons pour pouvoir lui donner des ordres complexes tout les tours de façon gratuite. Un cup fort sur vous ou votre Pokémons peut briser le lien il faudra alors relancer la comptétence"
     },
     {
         "id": 274,
         "Name": "Souffle du Dresseur - Action Bonus - Repos Court",
-        "description": "(Nécessite une arme avec le mot-clé dressant) : Votre Pokemon peut faire immédiatement une action."
+        "description": "(Nécessite une arme avec le mot-clé dressant) : Votre Pokémons peut faire immédiatement une action."
     },
     {
         "id": 275,
         "Name": "Entrainement Particulier",
-        "description": "Votre pokémon peut gagner au choix le passif <b class='data-passifs' data-passifs-name='Pokemon Paladin'>Pokemon Paladin</b>, <b class='data-passifs' data-passifs-name='Pokemon Fourbe'>Pokemon Fourbe</b> ou <b class='data-passifs' data-passifs-name='Pokemon Berserker'>Pokemon Berserker</b>."
+        "description": "Votre Pokémons peut gagner au choix le passif <b class='data-passifs' data-passifs-name='Pokémons Paladin'>Pokémons Paladin</b>, <b class='data-passifs' data-passifs-name='Pokémons Fourbe'>Pokémons Fourbe</b> ou <b class='data-passifs' data-passifs-name='Pokémons Berserker'>Pokémons Berserker</b>."
     },
     {
-        "id": 275,
-        "Name": "transfert dimentionnel - Anneau de Hoopa - 2PV",
-        "description": "Vous pouvez marquer vos pokemon pour qu'il puisse échanger de place entre eux sans aucune limite de portée"
+        "id": 276,
+        "Name": "Transfert dimentionnel - Anneau de Hoopa - 2PV",
+        "description": "Vous pouvez échanger de place de deux Pokémons que vous avez marqué entre eux sans aucune limite de portée (y compris les Pokémons en garderie)"
+    },
+    {
+        "id": 277,
+        "Name": "Echange Rapide - Anneau de Hoopa - 1PV - Sag - Réaction",
+        "description": "Vous pouvez échanger de place avec un Pokémons allié à portée 5 lorsque vous êtes ciblé par une attaque si vous faite cette action pour esquiver une attaque vous devez faire un jet d'opposition de sagesse"
+    },
+    {
+        "id": 278,
+        "Name": "Portail Dimensionnel - Anneau de Hoopa - 2PV",
+        "description": "Vous créez un portail dimensionnel qui dure 24heures il est possible de sortir par n'importe quel autre portail que vous avez créer, si plusde 2 portail existe traversé un portail demande un jet de sagesse pour sortir par le portail souhaité et un JS de d'endurance peut etre demandé à chaque traversée"
+    },
+    {
+        "id": 279,
+        "Name": "Portal express - corne de Hoopa - 1PV - Sag - Réaction",
+        "description": "Quand une attaque passe par votre cellule téléporter l'attaque 3 cellules plus loin et changer son orientation, si cette attaque viens d'une source adversaire vous devez faire un jet d'opposition de sagesse"
+    },
+    {
+        "id": 280,
+        "Name": "Marque de Hoopa - Anneau de Hoopa",
+        "description": "Vous pouvez marquer vos Pokémons, cette marque est permanente et impossible à enlever sauf par un disciple de Hoopa"
+    },
+    {
+        "id": 281,
+        "Name": "Energie de la Marque",
+        "description": "Après avoir été téléporter vos Pokémons marqué gagne +3 à leur jet de touche"
     }
 ]
 
