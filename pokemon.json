@@ -259,7 +259,7 @@
     "name": "Skitty",
     "image": "../img/pkmn/iron_pawn.jpg",
     "tier": 1,
-    "hp": 20,
+    "hp": 21,
     "esquive": "11",
     "armor": "3/7",
     "type": ["Normal","Acier"],
