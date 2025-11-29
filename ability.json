@@ -162,7 +162,7 @@
     {
         "id": 26,
         "Name": "Pacte",
-        "description": "Vous pouvez former un pacte avec un Pokémons sauvage. Vous ne pouvez avoir qu'un seul pacte à la fois. Un pacte vous permet de communiquer télépathiquement avec le Pokémons, et de le contrôler en combat comme s'il était dressé."
+        "description": "Vous pouvez former un pacte avec un Pokémons sauvage. Un pacte vous permet de communiquer télépathiquement avec le Pokémons (sens unique seul vous pouvez parler vous ne pouvez pas l'entendre)."
     },
     {
         "id": 27,
@@ -836,22 +836,22 @@
     },
     {
         "id": 253,
-        "Name": "Tempete - 2pv - Ecaille de Rayquaza",
+        "Name": "Tempete - 2pv",
         "description": "Vous invoquez une tempete (voir météo)"
     },
     {
         "id": 254,
-        "Name": "Tempete - 2pv - Ecaille de Rayquaza",
+        "Name": "Tempete - 2pv",
         "description": "Vous invoquez une tempete claire (voir météo)"
     },
     {
         "id": 255,
-        "Name": "Air Lock - 1pv - Ecaille de Rayquaza",
+        "Name": "Air Lock - 1pv",
         "description": "Vous immunisé une cible de votre choix à portée 2 contre les effets de la météo pendant 3 tours"
     },
     {
         "id": 256,
-        "Name": "Hurletempete - 1pv - Croc de Rayquaza",
+        "Name": "Hurletempete - 1pv",
         "description": "Vous pouvez utiliser Hurletempete (portée 1, AoE ligne 3, inflige 2d6 + 2 dégâts, l'élément de l'attaque dépend de la météo en cours)"
     },
     {
@@ -861,27 +861,27 @@
     },
     {
         "id": 254,
-        "Name": "Pluie et Secheresse - 2pv - Ecaille de Rayquaza",
+        "Name": "Pluie et Secheresse - 2pv",
         "description": "Vous invoquez au choix une pluie ou une secheresse (voir météo)"
     },
     {
         "id": 255,
-        "Name": "Draco Ascention - 2pv - Croc de Rayquaza",
+        "Name": "Draco Ascention - 2pv",
         "description": "Vous pouvez utiliser Draco ascention (portée 3, AoE 0, inflige 2d8 + 5 votre niveau dégâts, l'élément de l'attaque dépend de la météo en cours)"
     },
     {
         "id": 256,
-        "Name": "Géo-Contrôle - 2pv - Corne Rouge de Xerneas",
+        "Name": "Géo-Contrôle - 2pv",
         "description": "Vous pouvez utiliser Géo-Contrôle (portée 1, AoE 1, Pose une graine qui au début de votre prochain tour éclot et crée une zone durant 2 tour ou chaque jet de touche et de sauvegarde effectué par vous et vos alliés dans la zone ont l'avantage)" 
     },
     {
         "id": 257,
-        "Name": "Frappe de soin - 1pv - Corne Orange de Xerneas",
+        "Name": "Frappe de soin - 1pv",
         "description": "Faite une attaque avec votre arme, puis soignez d'autant de pv que de dégâts infligés un cible à portée 3 de vous" 
     },
     {
         "id": 258,
-        "Name": "Déchainement Climatique - 1pv - Ecaille Rayquaza",
+        "Name": "Déchainement Climatique - 1pv",
         "description": "Passer le climat actuelle au niveau supérieur (voir météo)" 
     },
     {
@@ -896,17 +896,17 @@
     },
     {
         "id": 261,
-        "Name": "Croix Purificatrice - 1 pv - Corne Orange de Xerneas - Action Bonus",
+        "Name": "Croix Purificatrice - 1 pv - Action Bonus",
         "description": "Vous pouvez utiliser Croix Purificatrice (portée 3, Vous pouvez effectué un jet de sauvegarde contre un effet négatif d'une autre cible)" 
     },
     {
         "id": 262,
-        "Name": "Marche de la Vie - 2 pv - Corne Rouge de Xerneas",
+        "Name": "Marche de la Vie - 2 pv",
         "description": "Permet à un allié à terre de se relever durant 2 tours, à la fin du deuxième tour il meurt à nouveau"
     },
     {
         "id": 263,
-        "Name": "Aura Fééerique - 1 pv à chaque tour - Corne Violette de Xerneas",
+        "Name": "Aura Fééerique - 1 pv à chaque tour",
         "description": "Crée autour de vous une aura fééerique de portée 2, toutes les alliés à l'intérieur de l'aura regagne 1 pv supplémentaire lors d'un soin, les ennemis sont <b class='data-status' data-status-name='Appaisé'>appaisé</b> tant qu'elles restent dans l'aura"
     },
     {
@@ -1008,7 +1008,88 @@
         "id": 281,
         "Name": "Energie de la Marque",
         "description": "Après avoir été téléporter vos Pokémons marqué gagne +3 à leur jet de touche"
+    },
+    {
+        "id": 282,
+        "Name": "Maîtrise armure legère",
+        "description": "Gagnez 2 point d'esquive supplémentaire lorsque vous portez une armure légère"
+    },
+    {
+        "id": 283,
+        "Name": "Expertise armure legère",
+        "description": "Vous pouvez consommer 1 point d'armure pour recharger une capacité d'arme"
+    },
+    {
+        "id": 284,
+        "Name": "Maîtrise armure moyenne",
+        "description": "Gagnez 1 point d'esquive supplémentaire lorsque vous portez une armure moyenne"
+    },
+    {
+        "id": 285,
+        "Name": "Expertise armure moyenne",
+        "description": "Vous pouvez consommer 1 point d'armure pour relancer un jet de touche ou de sauvegarde"
+    },
+    {
+        "id": 286,
+        "Name": "Equipé armure lourde",
+        "description": "Perdez 2 point d'esquive supplémentaire lorsque vous portez une armure lourde"
+    },
+    {
+        "id": 286,
+        "Name": "Maîtrise armure lourde",
+        "description": "Portez une armure lourde ne vous fait plus perdre d'esquive."
+    },
+    {
+        "id": 287,
+        "Name": "Expertise armure lourde",
+        "description": "Vous pouvez consommer 1 point d'armure pour relancer un dé de dégât"
+    },
+    {
+        "id": 288,
+        "Name": "Equipé armure extrement lourde",
+        "description": "Perdez toute vos point d'esquive lorsque vous portez une armure extrêmement lourde"
+    },
+    {
+        "id": 289,
+        "Name": "Maîtrise armure extrement lourde",
+        "description": "Portez une armure extrêmement lourde ne perdre sue 2 points d'esquive."
+    },
+    {
+        "id": 290,
+        "Name": "Expertise armure extrement lourde",
+        "description": "Vous gagner un troisième palier d'armure qui est égale à votre palier de blessure majeur/2 (arrondi à l'inférieur) un dégât inférieur à ce palier est annulé"
+    },
+    {
+        "id": 291,
+        "Name": "Saut de Loup - Action de Déplacement - 1pv",
+        "description": "Sauter sur votre frere de bataille à porter 4 max."
+    },
+    {
+        "id": 292,
+        "Name": "Frere de bataille - Repos Court",
+        "description": "Vous pouvez choisir une cible celle ci devient votre frere de bataille."
+    },
+    {
+        "id": 293,
+        "Name": "Bouclier Lycan - Réaction - 2pv",
+        "description": "Quand une attaque passe par votre cellule vous pouvez l'intercepter et faire un jet d'opposition de Constitution, en cas de reussite soignez vous de 3pv au lieu de subir les dégâts de l'attaque."
+    },
+    {
+        "id": 294,
+        "Name": "Epée ou Bouclier",
+        "description": "Quand vous utiliser <b>Frere de bataille</b> choississez entre la bénédiction de Zacian qui augemente d'un tier vos dé de dégat quand vous etes à 1 de porté ou moins de votre <b>Frere de bataille</b> ou celle de Zamazentta qui augemente vos seuil d'armure de 1 donner l'autre bonus à votre <b>Frere de Bataille<b>."
+    },
+    {
+        "id": 295,
+        "Name": "Gladius Maximus - 2 pv",
+        "description": "Si vous avez la bénédiction de Zacian faite une attaque et reproduisez cette attaque en la lancant depuis votre frere de bataille."
+    },
+    {
+        "id": 296,
+        "Name": "Aegis Maxima - 2 pv - Réaction",
+        "description": "Si vous avez la bénédiction de Zamazentta et que vous êtes sur la meme cellule que votre frere de bataille crée un bouclier géant puis faites tous les 2 un jet d'opposition en constitution, si l'un de vous reussi proteger votre cellule et celle derière elle, si vous reussissez tout les deux renvoyer l'attaque à la cible."
     }
+
 ]
 
     
