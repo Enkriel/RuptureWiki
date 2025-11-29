@@ -468,7 +468,7 @@
         "id": 297,
         "Name": "Rapprochement",
         "description": "Si vous êtes fixé via saisie vous pouvez faire revenir votre poing, si la cible est plus legere que vous vous, vous la ramener dans votre cellule, si elle est plus lourde c'est vous qui vous projeter vers elle si vous faite globalement le même poids vous devez faire un jet d'opposition de votre force contre sa constitution."
-    }
+    },
     {
         "id": 80,
         "Name": "Relâche - Action Bonus",
@@ -1066,35 +1066,39 @@
     },
     {
         "id": 291,
-        "Name": "Saut de Loup - Action de Déplacement - 1pv",
-        "description": "Sauter sur votre frere de bataille à porter 4 max."
+        "Name": "Saut de Loup - Action de Déplacement - 1 PV",
+        "description": "Sautez sur votre frère de bataille à portée 4 maximum."
     },
     {
         "id": 292,
-        "Name": "Frere de bataille - Repos Court",
-        "description": "Vous pouvez choisir une cible celle ci devient votre frere de bataille."
+        "Name": "Frère de Bataille - Repos Court",
+        "description": "Vous pouvez choisir une cible : celle-ci devient votre frère de bataille."
     },
     {
         "id": 293,
-        "Name": "Bouclier Lycan - Réaction - 2pv",
-        "description": "Quand une attaque passe par votre cellule vous pouvez l'intercepter et faire un jet d'opposition de Constitution, en cas de reussite soignez vous de 3pv au lieu de subir les dégâts de l'attaque."
+        "Name": "Bouclier Lycan - Réaction - 2 PV",
+        "description": "Quand une attaque traverse votre cellule, vous pouvez l'intercepter et faire un jet d'opposition de Constitution. En cas de réussite, soignez-vous de 3 PV au lieu de subir les dégâts de l'attaque."
     },
     {
         "id": 294,
-        "Name": "Epée ou Bouclier",
-        "description": "Quand vous utiliser <b>Frere de bataille</b> choississez entre la bénédiction de Zacian qui augemente d'un tier vos dé de dégat quand vous etes à 1 de porté ou moins de votre <b>Frere de bataille</b> ou celle de Zamazentta qui augemente vos seuil d'armure de 1 donner l'autre bonus à votre <b>Frere de Bataille<b>."
+        "Name": "Épée ou Bouclier",
+        "description": "Quand vous utilisez <b>Frère de Bataille</b>, choisissez entre la bénédiction de Zacian, qui augmente d’un tiers vos dés de dégâts lorsque vous êtes à 1 de portée ou moins de votre <b>Frère de Bataille</b>, ou celle de Zamazentta, qui augmente votre seuil d’armure de 1 vous êtes à 1 de portée ou moins de votre <b>Frère de Bataille</b>."
     },
     {
         "id": 295,
-        "Name": "Gladius Maximus - 2 pv",
-        "description": "Si vous avez la bénédiction de Zacian faite une attaque et reproduisez cette attaque en la lancant depuis votre frere de bataille."
+        "Name": "Gladius Maximus - 2 PV",
+        "description": "Si vous avez la bénédiction de Zacian, faites une attaque puis reproduisez cette attaque en la lançant depuis votre frère de bataille."
     },
     {
         "id": 296,
-        "Name": "Aegis Maxima - 2 pv - Réaction",
-        "description": "Si vous avez la bénédiction de Zamazentta et que vous êtes sur la meme cellule que votre frere de bataille crée un bouclier géant puis faites tous les 2 un jet d'opposition en constitution, si l'un de vous reussi proteger votre cellule et celle derière elle, si vous reussissez tout les deux renvoyer l'attaque à la cible."
+        "Name": "Aegis Maxima - 2 PV - Réaction",
+        "description": "(Nécessite une arme avec le mot-clé Protecteur) : Si vous avez la bénédiction de Zamazentta et que vous êtes sur la même cellule que votre frère de bataille, créez un bouclier géant puis faites tous les deux un jet d’opposition en Constitution. Si l’un de vous réussit, protégez votre cellule et celle derrière elle. Si vous réussissez tous les deux, renvoyez l’attaque à la cible."
+    },
+    {
+        "id": 298,
+        "Name": "Fraternité",
+        "description": "Quand vous utilisez <b>Épée ou Bouclier</b>, donnez la bénédiction que vous n’avez pas choisie à votre <b>frère</b>."
     }
-
 ]
 
     
