@@ -257,7 +257,7 @@
   {
     "id": 300,
     "name": "Skitty",
-    "image": "../img/pkmn/iron_pawn.jpg",
+    "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/litwick.avif",
     "tier": 1,
     "hp": 21,
     "esquive": "11",
