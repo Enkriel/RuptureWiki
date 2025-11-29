@@ -373,5 +373,15 @@
     "id": 143,
     "Nom": "Pokemon Berserker",
     "description": "Si le maitre du Pokemon a moins de 50% de ses PV, il gagne +1 tier de dégat sur toutes ses attaques"
+  },
+  {
+    "id": 144,
+    "Nom": "Magné-Contrôle de Zone",
+    "description": "<b>Magné-Contrôle</b> affecte tout les les cible possible dans un rayon de 3 autour de vous"
+  },
+  {
+    "id": 145,
+    "Nom": "Étincelle Inversé",
+    "description": "Quand vous utilisez <b>Étincelle</b> vous pouvez touché les zones <b>Eloignée</b> et <b>À Distance</b> à la place de <b>Au Contact</b>"
   }
 ]

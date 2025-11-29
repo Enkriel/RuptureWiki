@@ -279,5 +279,19 @@
     "ability3": "Disparition",
     "Craft": "Barbillon Osseux, 3 matériaux Spectre",
     "Secret": "yes"   
+  },
+  {
+    "id": 72001,
+    "Nom": "Marteau et bouclier Magneti",
+    "type": "SnS",
+    "tier": 2,
+    "Element": "Acier",
+    "Dégât": "2d6 + 5",
+    "MotClef": "Court, Protecteur, Étincelle Inversé, Contondant",
+    "ability1": "Tête de Fer",
+    "ability2": "Étincelle",
+    "ability3": "Abri",
+    "Craft": "Vis Parabolisantee, 3 matériaux Acier",
+    "Secret": "yes"   
   }
 ]
