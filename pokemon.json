@@ -257,7 +257,7 @@
   {
     "id": 300,
     "name": "Skitty",
-    "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/litwick.avif",
+    "image": "../img/pkmn/iron_pawn.jpg",
     "tier": 1,
     "hp": 21,
     "esquive": "11",
@@ -265,7 +265,7 @@
     "type": ["Normal","Acier"],
     "attacks": ["Ecras'Face", "Tacle Lourd", "Echo", "Frotte-Frimousse", "Charme"],
     "passifs": ["Alpha, Poids Lourd, Tempo Perso"],    
-    "status" : "seen",
+    "status" : "unlock",
     "comportement" : "Est attiré par les elements rose qu'il accumule : <ul> <li> Quand ses yeux deviennent rouge il va lancé Tacle lourd dans le cadran ou il ya le plus d'ennemi </li> <li> si un enneml n'a pas tenter de le frapper se tour si il lui lance charme en action bonus<li><li> Des que sa queue est frappé il peut lancer Frotte-Frimousse en reaction</li> </ul>",
     "alpha" : "yes",
     "front" : "7 - Contondant - Casque à oreille Rose - Tacle Lourd",
