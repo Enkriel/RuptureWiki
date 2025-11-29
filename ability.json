@@ -462,8 +462,13 @@
     {
         "id": 79,
         "Name": "Saisie - Action Bonus",
-        "description": "Vous agrippez votre cible et vous vous appliquez <b class='data-status' data-status-name='Reduction'>réduction</b> et <b class='data-status' data-status-name='Fixé'>fixé</b>."
+        "description": "Vous lancer votre poings qui vous est relié par un cable, pour agrippez votre cible à porté 2, et vous vous appliquez <b class='data-status' data-status-name='Reduction'>réduction</b> et <b class='data-status' data-status-name='Fixé'>fixé</b>."
     },
+    {
+        "id": 297,
+        "Name": "Rapprochement",
+        "description": "Si vous êtes fixé via saisie vous pouvez faire revenir votre poing, si la cible est plus legere que vous vous, vous la ramener dans votre cellule, si elle est plus lourde c'est vous qui vous projeter vers elle si vous faite globalement le même poids vous devez faire un jet d'opposition de votre force contre sa constitution."
+    }
     {
         "id": 80,
         "Name": "Relâche - Action Bonus",
@@ -476,8 +481,8 @@
     },
     {
         "id": 82,
-        "Name": "Projection",
-        "description": "Quand vous effectuez l'action <b>Relâche</b>, vous pouvez projeter votre cible jusqu'à 2 cellules."
+        "Name": "Poings Fulgurants",
+        "description": "Quand vous effectué rapprochement vous pouvez frapper votre cible avec une attaque."
     },
     {
         "id": 83,
