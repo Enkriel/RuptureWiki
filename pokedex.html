@@ -486,7 +486,7 @@
             }
 
             // --- Flip ---
-            if (pokemon.status === "unlock" || pokemon.status === "seen") {
+            if (pokemon.status === "unlock") {
                 const toggleFlip = () => {
                     card.classList.toggle('is-flipped');
                     const pressed = card.classList.contains('is-flipped');

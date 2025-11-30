@@ -269,7 +269,7 @@
     "type": "Vol",
     "tier": 2,
     "portée": "3 - Int - Action Bonus",
-    "description": "Attire une cible de 1 vers soi."
+    "description": "Attire une cible de vers soi la distance dépant du jet d'Intélligence et du poids de la cible."
   },   
   {
     "id": 3202,

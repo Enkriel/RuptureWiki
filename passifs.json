@@ -383,5 +383,25 @@
     "id": 145,
     "Nom": "Étincelle Inversé",
     "description": "Quand vous utilisez <b>Étincelle</b> vous pouvez touché les zones <b>Eloignée</b> et <b>À Distance</b> à la place de <b>Au Contact</b>"
+  },
+  {
+    "id": 146,
+    "Nom": "Armure Robotique",
+    "description": "Les attaques Eau inflige immédiatement une blessure mineure si vous n'utilisez pas de point d'armure les attaques Electriques peuvent aléatoirement vous donner un malus ou un bonus"
+  },
+  {
+    "id": 147,
+    "Nom": "Généreux",
+    "description": "<b>Présent</b> est utilisé en AoE circulaire 2 autour de vous"
+  },
+  {
+    "id": 147,
+    "Nom": "Surprise du Chef",
+    "description": "<b>Présent</b> peut avoir de nouveaux effets très aléatoire et souvent dangereux"
+  },
+  {
+    "id": 147,
+    "Nom": "Magie de Noël",
+    "description": "<b>Présent</b> se recharge après utilisation"
   }
 ]

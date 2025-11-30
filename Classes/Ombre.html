@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guerrier - Rupture JDR</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <script src="../navbar.js"></script>
+
+    <div class="content-wrapper">
+        <div class="header">
+            <h1>Guerrier</h1>
+            <p>Le Guerrier est un expert dans les armes il peut se spécialiser pour augmenter ses différents potentiels</p>
+        </div>
+
+        <div class="stats-section">
+            <h2>Statistiques de base</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value">9</div>
+                    <div class="stat-label">Évasion</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">7</div>
+                    <div class="stat-label">PV</div>
+                </div>
+            </div>
+            <h2>Maitrises</h2>
+            <div class="mastery-list">
+                <span class="mastery-item">1 Arme au choix</span>
+                <span class="mastery-item">1 Armure au choix</span>
+            </div>
+            <br>
+            <h2>Équipement de départ</h2>
+            <ul id="equipment-list">
+                <li>Une Arme tier 0 au choix</li>
+                <li>Une Armure tier 0 au choix</li>
+            </ul>
+        </div>
+
+        <!-- BOUTONS ARCHETYPE TOUJOURS VISIBLES -->
+        <div class="archetype-buttons" id="archetype-buttons">
+            <p>Choisissez un archétype pour débloquer ses capacités :</p>
+            <button class="archetype-btn archetype-unique" data-archetype="unique">
+                Lame Élémentaire <br><span>Les Lames Élémentaire se concentrent sur les maitrises élémentaires pour exploiter au maximum les comptétences d'arme</span>
+            </button>
+            <button class="archetype-btn archetype-meute" data-archetype="meute">                
+                Lame Protectrice  <br><span>Experte en bouclier les Lames Protectrices protégent leur alliés et risposte violamment</span>
+            </button>
+            <button class="archetype-btn archetype-pacte" data-archetype="pacte">
+                Lame Multiple<br><span>Ils peuvent porter plusieurs armes pour s'adapter à leur ennemi</span>
+            </button>
+        </div>
+
+        <div class="level-progression" id="level-progression">
+            <!-- Les niveaux et abilities seront générés ici -->
+        </div>
+    </div>
+    <script>
+    // filepath: c:\Users\arthu\Documents\GitHub\RuptureWiki\Classes\ranger.html
+
+    const levelAbilities = {
+        1: [
+            "Arme Précise",
+            "Poids de Charge"
+        ],
+        2: [
+            "Fougue - Repos Court"
+        ],
+        4: [
+            "Amélioration de Caractéristiques",
+            "Amélioration Défensive"
+        ],
+        5: [
+            "Expertise Martiale"
+        ],
+        6: [
+            "Amélioration de Caractéristiques",
+            "Amélioration Défensive",
+            "Expertise Élémentaire"
+        ],
+        8: [
+            "Amélioration de Caractéristiques",
+            "Amélioration Défensive"
+        ],
+        9: [
+            "Inflexible - Réaction - Repos Long"
+        ],
+        10: [
+            "Expertise Libre"
+        ]
+    };
+
+    const archetypeAbilities = {
+        unique: {
+            3: ["Expertise Élémentaire", "Frappe Absorbante"],
+            5: ["Dépeceur Élémentaire" , "Relance Élémentaire - Réaction - Repos Court"],
+            7: ["Recharge Élémentaire - Action Bonus - Repos Court"],
+            10:["Combo Élémentaire - Action Bonus"]
+        },
+        meute: {
+            3: ["Parade", "Défi - Action Bonus - Repos Court"],
+            5: ["Second Souffle - Action Bonus - Repos Court", "Abri Continu"],
+            7: ["Absorption Élémentaire - Réaction - Repos Court", "Épaule de Titane"],
+            10:["Défi Tyrannique - Repos Long"]
+        },
+        pacte: {
+            3: ["Maîtrise d'arme", "Fougue Diversifiée"],
+            5: ["Changement Mobile", "Chasseur Casseur - Action Bonus - Repos Court"],
+            7: ["Analyse des Géants - Action Bonus - Repos Court", "Expertise Martiale"],
+            10:["Maîtrise d'arme", "Frénésie de Gilgamesh - Action de Déplacement - Repos Long"]
+        }
+    };
+
+    function renderBaseLevels(abilityDescriptions) {
+        const progression = document.getElementById("level-progression");
+        progression.innerHTML = "";
+
+        [1,2,3,4,5,6,7,8,9,10].forEach(level => {
+            const card = document.createElement("div");
+            card.className = "level-card";
+            card.dataset.level = level;
+            card.innerHTML = `
+                <div class="level-header">
+                    <div class="level-number">Level ${level}</div>
+                </div>
+                <ul class="ability-list"></ul>
+            `;
+            const ul = card.querySelector(".ability-list");
+            (levelAbilities[level] || []).forEach(name => {
+                const desc = abilityDescriptions[name] || "";
+                ul.innerHTML += `
+                    <li class="ability-item">
+                        <div class="ability-name">${name}</div>
+                        <div class="ability-description">${desc}</div>
+                    </li>
+                `;
+            });
+            progression.appendChild(card);
+        });
+    }
+
+    function applyArchetype(archetype, abilityDescriptions) {
+        // Pour chaque niveau d'archétype
+        Object.keys(archetypeAbilities[archetype]).forEach(levelStr => {
+            const level = parseInt(levelStr);
+            // Trouve la carte de niveau correspondante
+            const card = document.querySelector(`.level-card[data-level="${level}"]`);
+            if (!card) return;
+            const ul = card.querySelector(".ability-list");
+            // Supprime les anciennes abilities d'archétype (pour changer d'archétype)
+            ul.querySelectorAll(".arch").forEach(el => el.remove());
+            // Ajoute les abilities d'archétype
+            archetypeAbilities[archetype][level].forEach(name => {
+                const desc = abilityDescriptions[name] || "";
+                const li = document.createElement("li");
+                li.className = `ability-item arch ${archetype}`;
+                li.innerHTML = `
+                    <div class="ability-name ability-name-${archetype}">${name}</div>
+                    <div class="ability-description">${desc}</div>
+                `;
+                ul.appendChild(li);
+            });
+        });
+    }
+
+    fetch('../ability.json')
+    .then(res => res.json())
+    .then(data => {
+        const abilityDescriptions = {};
+        data.forEach(ability => {
+            if (ability.Name) abilityDescriptions[ability.Name.trim()] = ability.description;
+        });
+
+        renderBaseLevels(abilityDescriptions);
+
+        document.querySelectorAll(".archetype-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                document.querySelectorAll(".archetype-btn").forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                // NE PAS rappeler renderArchLevels ici !
+                const archetype = btn.dataset.archetype;
+                applyArchetype(archetype, abilityDescriptions);
+            });
+        });
+    });
+    </script>
+</body>
+</html>

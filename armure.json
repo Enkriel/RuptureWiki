@@ -154,5 +154,17 @@
     "Effets": "Gain Trempette, Trempette des revenants, Trempette du Peureux",
     "Craft": "Os Codale + 2 matériaux Eau",
     "Secret": "yes"
+  },
+  {
+    "id": 31001,
+    "Nom": "Armure rose metallique à belles oreilles",
+    "type": "Lourde",
+    "tier": 1,
+    "Element": "Normal",
+    "Armure": "3",
+    "Paliers": "7/11",
+    "Effets": "Armure Robotique",
+    "Craft": "Casque à oreille Rose + 2 matériaux Normaux",
+    "Secret": "yes"
   }
 ]

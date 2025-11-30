@@ -273,7 +273,7 @@
     "tier": 1,
     "Element": "Spectre",
     "Dégât": "1d6 + 3",
-    "MotClef": "Distance, Munitions, Finesse, Attaque Surprise, Perçant",
+    "MotClef": "Distance, Finesse, Attaque Surprise, Perçant",
     "ability1": "Disparition",
     "ability2": "Ombre Nocturne",
     "ability3": "Disparition",
@@ -292,6 +292,20 @@
     "ability2": "Étincelle",
     "ability3": "Abri",
     "Craft": "Vis Parabolisantee, 3 matériaux Acier",
+    "Secret": "yes"   
+  },
+  {
+    "id": 142001,
+    "Nom": "Arc Cadoizo",
+    "type": "Bow",
+    "tier": 2,
+    "Element": "Vol",
+    "Dégât": "1d8 + 6",
+    "MotClef": "Distance, Finesse, Surprise du chef, Magie de Noël, Perçant",
+    "ability1": "Présent",
+    "ability2": "Double volée",
+    "ability3": "Souffle Glacé",
+    "Craft": "Queue du Partage, 2 matériaux Glace et 1 Vol",
     "Secret": "yes"   
   }
 ]

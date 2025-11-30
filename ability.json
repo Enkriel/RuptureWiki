@@ -1098,6 +1098,16 @@
         "id": 298,
         "Name": "Fraternité",
         "description": "Quand vous utilisez <b>Épée ou Bouclier</b>, donnez la bénédiction que vous n’avez pas choisie à votre <b>frère</b>."
+    },
+    {
+        "id": 299,
+        "Name": "Enduit",
+        "description" : "Vous utiliser des matières naturelles pour enduire jusqu'a 3 fleches et leur ajouter des effets suppléméntaires"
+    },
+    {
+        "id": 300,
+        "Name": "Perce-Dragon - Reaction - AoE ligne 6",
+        "description" : "Après une esquive reussie vous pouvez entrer en état de <b class='data-status' data-status-name='Concentration'>Concentration</b> au debut de votre prochain tour tirer une fleche en face de vous si la fleche inflioge des degat au 2 part des monstres quelle traverse."
     }
 ]
 
