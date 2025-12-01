@@ -1,11 +1,11 @@
 ﻿[
   {
-    "id": 1,
+    "id": 31,
     "Nom": "Ancré",
-    "description": "Vous ne suivez plus automatiquement votre cible et risquez fortement d’être déplacé dans le cercle d’affrontement de plus vous ne pouvez plus esquiver."
+    "description": "Vous ne pouvez plus esquiver."
   },
   {
-    "id": 2,
+    "id": 32,
     "Nom": "Concentration",
     "description": "Quand vous subissez une blessure, vous devez faire un jet de sauvegarde dont la difficulté dépend de la blessure et de la statistique demandée par l'attaque. Si vous échouez, votre attaque préparée est annulée."
   },
@@ -155,7 +155,7 @@
     "description": "Vous perdez votre réaction mais gagnez 2 actions. Cependant, vous êtes obligé d'effectuer la deuxième action et devez réussir un jet de Sagesse avant de la réaliser. En cas d'échec, vous devenez fou et le MJ choisira votre action."
   },
   {
-    "id": 31,
+    "id": 33,
     "Nom": "Appaisé",
     "description": "Vous perdez tout envie de combattre, vous avez désavantage à tout vos effets offensif et vous avez -2 à vos js de Charisme."
   }

@@ -403,5 +403,10 @@
     "id": 147,
     "Nom": "Magie de Noël",
     "description": "<b>Présent</b> se recharge après utilisation"
+  },
+  {
+    "id": 147,
+    "Nom": "Courageux",
+    "description": "Vous ne pouvez pas subbir l'état <b class='data-status' data-status-name='Peur'>peur</b>"
   }
 ]

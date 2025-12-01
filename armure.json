@@ -156,7 +156,7 @@
     "Secret": "yes"
   },
   {
-    "id": 31001,
+    "id": 31002,
     "Nom": "Armure rose metallique à belles oreilles",
     "type": "Lourde",
     "tier": 1,
@@ -166,5 +166,17 @@
     "Effets": "Armure Robotique",
     "Craft": "Casque à oreille Rose + 2 matériaux Normaux",
     "Secret": "yes"
+  },
+  {
+    "id": 41001,
+    "Nom": "Armure du chef de meute",
+    "type": "Extrêmement Lourde",
+    "tier": 1,
+    "Element": "Ténèbres",
+    "Armure": "4",
+    "Paliers": "7/12",
+    "Effets": "Courageux",
+    "Craft": "Queue du peureux + 2 matériaux Ténèbres",
+    "Secret": "no"
   }
 ]

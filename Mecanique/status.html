@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status — Rupture JDR</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <script src="../navbar.js"></script>
+
+    <div class="content-wrapper">
+        <div class="header">
+            <h1>Status</h1>
+            <p>Tous les effets de statut du jeu</p>
+        </div>
+
+        <section class="tier-section">
+            <div class="search-bar-wrapper">
+                <input 
+                    type="text" 
+                    id="searchStatus" 
+                    class="search-bar" 
+                    placeholder="Rechercher un statut..."
+                    aria-label="Rechercher un statut"
+                >
+            </div>
+        </section>
+
+        <section class="tier-section">
+            <table class="status-table" id="statusTable">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody id="statusTableBody">
+                    <!-- Rempli dynamiquement par JS -->
+                </tbody>
+            </table>
+            <p id="noResults" style="display:none; text-align:center; opacity:0.7; margin-top:20px;">
+                Aucun statut ne correspond à votre recherche.
+            </p>
+        </section>
+    </div>
+
+    <script>
+        let allStatuses = [];
+
+        async function loadStatuses() {
+            try {
+                const res = await fetch('../status.json');
+                allStatuses = res.ok ? await res.json() : [];
+                allStatuses.sort((a, b) => (a.id || 0) - (b.id || 0));
+                renderTable(allStatuses);
+            } catch (err) {
+                console.error("Erreur chargement status.json", err);
+            }
+        }
+
+        function renderTable(statuses) {
+            const tbody = document.getElementById('statusTableBody');
+            const noResults = document.getElementById('noResults');
+            
+            tbody.innerHTML = '';
+            
+            if (statuses.length === 0) {
+                noResults.style.display = 'block';
+                return;
+            }
+            noResults.style.display = 'none';
+
+            statuses.forEach(status => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td class="status-name">${status.Nom || '—'}</td>
+                    <td class="status-description">${status.description || '—'}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function filterStatuses(query) {
+            const filtered = allStatuses.filter(status => {
+                const searchText = `${status.id || ''} ${status.Nom || ''} ${status.description || ''}`.toLowerCase();
+                return searchText.includes(query.toLowerCase());
+            });
+            renderTable(filtered);
+        }
+
+        // Event listener pour la recherche
+        document.getElementById('searchStatus').addEventListener('input', (e) => {
+            filterStatuses(e.target.value);
+        });
+
+        // Chargement initial
+        loadStatuses();
+    </script>
+</body>
+</html>
