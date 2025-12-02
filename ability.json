@@ -1121,8 +1121,28 @@
     },
     {
         "id": 303,
-        "Name": "Precision de l'assassin",
+        "Name": "Precision de l'Assassin",
         "description" : "Vos jet de touche gagne +2 si vous attaquer un ennemi dans le son cadran arrière"
+    },
+    {
+        "id": 304,
+        "Name": "Acharné - Réaction - Repos Court",
+        "description" : "Si votre cible tourne ou se déplacer vous pouvez déplacer avec lui"
+    },
+    {
+        "id": 305,
+        "Name": "Instint meurtier",
+        "description" : "Quand la part arrrière de votre cible est brisé, tout vos bonus qui affecte le cadran arrière affecte aussi les cadran gauche et droite"
+    },
+    {
+        "id": 306,
+        "Name": "Brise-Dos",
+        "description" : "Brise un cadran arrière qui à 0 pv"
+    },
+    {
+        "id": 307,
+        "Name": "Meurtrier",
+        "description" : "Vos blessure sevère dans le dos inflige 4 pv"
     }
 ]
 
