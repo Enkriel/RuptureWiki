@@ -1143,6 +1143,11 @@
         "id": 307,
         "Name": "Meurtrier",
         "description" : "Vos blessure sevère dans le dos inflige 4 pv"
+    },
+    {
+        "id": 307,
+        "Name": "Descendant du ranger - Repos Long",
+        "description" : "Vous pouvez placer une marque qui dure 2 tours sur un Pokémon Alpha si ses pv tombe à 0 alors qu'il porte la marque il générera un oeuf de son espèce"
     }
 ]
 
