@@ -178,5 +178,17 @@
     "Effets": "Courageux",
     "Craft": "Queue du peureux + 2 matériaux Ténèbres",
     "Secret": "no"
+  },
+  {
+    "id": 22001,
+    "Nom": "Toge aérienne rouge",
+    "type": "Légère",
+    "tier": 2,
+    "Element": "Vol",
+    "Armure": "2",
+    "Paliers": "7/11",
+    "Effets": "",
+    "Craft": "1 Ailes Rouges + 2 matériaux Vol + 1 matériaux Glace",
+    "Secret": "no"
   }
 ]

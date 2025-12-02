@@ -601,7 +601,7 @@
     },
     {
         "id": 107,
-        "Name": "Charge",
+        "Name": "Charge Magique",
         "description": "Lorsque vous lancez une compétence, vous pouvez effectuer l’action gratuite 'Charge' pour gagner 1 charge magique (max 4). Lors d'une attaque vous consommer vos charges pour ajouter des dégâts : <ul><li>1 charge = 1d4</li> <li>2 charges = 1d8</li> <li>3 charges = 1d12</li> <li>4 charges = 1d20</li></ul> Si vous subissez une attaque, faites un JS de Sagesse (DD 10) ou la charge explose, vous subissez ses dégâts en plus."
     },
     {
@@ -1108,6 +1108,21 @@
         "id": 300,
         "Name": "Perce-Dragon - Reaction - AoE ligne 6",
         "description" : "Après une esquive reussie vous pouvez entrer en état de <b class='data-status' data-status-name='Concentration'>Concentration</b> au debut de votre prochain tour tirer une fleche en face de vous si la fleche inflioge des degat au 2 part des monstres quelle traverse."
+    },
+    {
+        "id": 301,
+        "Name": "Initiative",
+        "description" : "A l'engagement d'un combat, vous pouvez effectué une action de déplacement gratuitement"
+    },
+    {
+        "id": 302,
+        "Name": "Réflexe Agile - Réaction - Repos Court",
+        "description" : "Si une esquive echoue vous pouvez faire un jet d'accrobatie en opposition pour tenter de l'esquiver à nouveau"
+    },
+    {
+        "id": 303,
+        "Name": "Precision de l'assassin",
+        "description" : "Vos jet de touche gagne +2 si vous attaquer un ennemi dans le son cadran arrière"
     }
 ]
 

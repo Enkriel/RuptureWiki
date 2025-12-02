@@ -32,6 +32,14 @@
     "description": "Inflige 2d6 + 2 si casse la part avant rend <b class='data-status' data-status-name='Confusion'>confus</b>."
   },
   {
+    "id": 1104,
+    "Nom": "Rugissement",
+    "type": "Normal",
+    "tier": 1,
+    "portée": "0 - Cha - AoE 2 circulaire",
+    "description": "JS Sag réduit de 3 tous les dégats infligé du prochain tour."
+  },
+  {
     "id": 1201,
     "Nom": "Présent",
     "type": "Normal",

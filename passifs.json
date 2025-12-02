@@ -408,5 +408,10 @@
     "id": 147,
     "Nom": "Courageux",
     "description": "Vous ne pouvez pas subbir l'état <b class='data-status' data-status-name='Peur'>peur</b>"
+  },
+  {
+    "id": 148,
+    "Nom": "Fouille",
+    "description": "Lors d'un repos court ou long le pokemon trouve un objet aléatoire"
   }
 ]
