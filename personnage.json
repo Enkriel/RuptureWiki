@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "Nom": "Lyandra Atlas",
+    "age": 52,
+    "image": "LyandraAtlas.png",
+    "motClef": [
+      "Silent Howl",
+      "Guilde",
+      "Guerrier",
+      "femme"
+    ],
+    "infoPublique": "Lyandra a aujourd’hui 52 ans, mais son passé est marqué par une douleur profonde. Lors de la Rupture, elle n’avait que neuf ans. Sa famille fut décimée lors de l’assaut des Pokémon Alpha, un événement qui a laissé en elle une haine brûlante et une volonté ardente, celle d'abattre Mewtwo. Cette tragédie forma sa jeunesse, la poussant à devenir, dès l’adolescence, une chasseuse redoutable, disciplinée et déterminée. À vingt-neuf ans, alors qu’elle participait à une chasse dans le Desert Azarim contre un Grolem Alpha particulièrement agressif, elle subit une blessure grave. L’attaque du Pokémon la projeta contre une paroi rocheuse, fracturant gravement son épaule droite et provoquant une lourde contusion au thorax. L’opération fut longue et douloureuse, et la rééducation intense. Cette blessure mit fin à sa carrière. Mais sa rage ne pouvait pas s'estomper, si elle ne pouvait plus chasser, alors elle ferait chasser les autres. C'est ainsi qu'elle fonda Silent Howl avec Coan Voss, un ami de longue date et combattant aguerri. De par son palmarès et l'attrait de trouver facilement du travail, Silent Howl attira rapidement de nombreux chasseurs talentueux. Lyandra devint rapidement une figure emblématique et respectée.",
+    "infoMJ": "Son pere l'appellais mon petit feunard, un pokémon connu pour sa ruse son intelligence mais aussi sa rancune, le jour ou son père est mort devant elle elle n'as pu faire aucun son d'ou le nom de la guilde",
+    "seen": true
+  },
+  {
+    "id": 2,
+    "Nom": "Coan Voss",
+    "age": 43,
+    "image": "none",
+    "motClef": [
+      "Silent Howl",
+      "Guilde",
+      "Assassin",
+      "homme"
+    ],
+    "infoPublique": "Coan est née l'année de la Rupture, il souhaite que les grande villes etaient moins d'influence sur le continent",
+    "infoMJ": "Il est né à Rivargent et sa mère est morte avant l'arriver des armures dans la villes, il en veux particulièrement à Solhéon et au pontif.\nC'est un assassin expert en poison extrement fort mais se fait passer pour pas très fort\n",
+    "seen": true
+  }
+]
