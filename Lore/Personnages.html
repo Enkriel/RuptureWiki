@@ -348,6 +348,8 @@
         </div>
 
         <section class="tier-section">
+            <div id="toolsContainer"></div>
+
             <div class="search-wrapper">
                 <input 
                     type="text" 
@@ -364,15 +366,6 @@
         <div id="noResults" class="no-results" style="display:none;">
             Aucun personnage ne correspond à votre recherche.
         </div>
-
-        <div class="tools">
-            <button id="btnOpenFile">Ouvrir fichier personnage.json</button>
-            <button id="btnSaveFile">Enregistrer sur disque</button>
-            <button id="btnExport">Exporter JSON</button>
-            <button id="btnImport">Importer JSON</button>
-            <button id="btnReset">Réinitialiser depuis fichier</button>
-            <input id="importFile" type="file" accept=".json" style="display:none">
-        </div>
     </div>
 
     <!-- Modal d'édition -->
@@ -383,6 +376,14 @@
                 <button class="modal-close" onclick="closeModal()">&times;</button>
             </div>
             <form id="editForm">
+                <div class="form-group">
+                    <label for="editNom">Nom</label>
+                    <input type="text" id="editNom" required>
+                </div>
+                <div class="form-group">
+                    <label for="editMotClef">Mots-clés (séparés par des virgules)</label>
+                    <input type="text" id="editMotClef" placeholder="ex: Guilde, Guerrier, Silent Howl">
+                </div>
                 <div class="form-group">
                     <label for="editAge">Âge</label>
                     <input type="number" id="editAge" required>
@@ -416,6 +417,27 @@
 
         async function loadPersonnages() {
             try {
+                // Créer les boutons dev si nécessaire
+                if (isDev) {
+                    const toolsContainer = document.getElementById('toolsContainer');
+                    toolsContainer.innerHTML = `
+                        <div class="tools">
+                            <button id="btnNewPerso">➕ Nouveau personnage</button>
+                            <button id="btnOpenFile">📂 Ouvrir fichier personnage.json</button>
+                            <button id="btnSaveFile">💾 Enregistrer sur disque</button>
+                            <button id="btnReset">🔄 Réinitialiser depuis fichier</button>
+                            <input id="importFile" type="file" accept=".json" style="display:none">
+                        </div>
+                    `;
+                    
+                    // Attacher les listeners APRÈS création
+                    document.getElementById('btnNewPerso').addEventListener('click', createNewPersonnage);
+                    document.getElementById('btnOpenFile').addEventListener('click', openFileWithPicker);
+                    document.getElementById('btnSaveFile').addEventListener('click', saveToPickedFile);
+                    document.getElementById('btnReset').addEventListener('click', resetFromFile);
+                    document.getElementById('importFile').addEventListener('change', handleImportFile);
+                }
+
                 const res = await fetch('../personnage.json');
                 personnages = res.ok ? await res.json() : [];
                 renderPersonnages(personnages);
@@ -539,9 +561,12 @@
         function openModal(id) {
             const perso = personnages.find(p => p.id === id);
             if (!perso) return;
-
+ 
             currentEditId = id;
-            document.getElementById('editName').textContent = perso.Nom;
+            document.getElementById('editName').textContent = perso.Nom || 'Sans nom';
+            document.getElementById('editNom').value = perso.Nom || '';
+            document.getElementById('editMotClef').value = (perso.motClef || []).join(', ');
+ 
             document.getElementById('editAge').value = perso.age;
             document.getElementById('editInfoPublique').value = perso.infoPublique;
             document.getElementById('editInfoMJ').value = perso.infoMJ || '';
@@ -565,6 +590,17 @@
             if (!perso) return;
 
             // Mettre à jour les champs
+            const newName = document.getElementById('editNom').value.trim();
+            if (newName) {
+                perso.Nom = newName;
+            }
+
+            // parse motClef (comma separated)
+            const rawMot = document.getElementById('editMotClef').value || '';
+            perso.motClef = rawMot.split(',')
+                .map(s => s.trim())
+                .filter(Boolean);
+
             perso.age = parseInt(document.getElementById('editAge').value) || perso.age;
             perso.infoPublique = document.getElementById('editInfoPublique').value;
             perso.seen = document.getElementById('editSeen').checked;
@@ -669,19 +705,69 @@
             alert('Téléchargement prêt — remplace manuellement personnage.json si nécessaire.');
         }
 
-        // Hook boutons
-        document.getElementById('btnOpenFile').addEventListener('click', openFileWithPicker);
-        document.getElementById('btnSaveFile').addEventListener('click', saveToPickedFile);
+        // Nouveau personnage
+        function createNewPersonnage() {
+            const newId = Math.max(...personnages.map(p => p.id || 0), 0) + 1;
+            const newPerso = {
+                id: newId,
+                Nom: "",
+                motClef: [],
+                age: 30,
+                image: "none",
+                infoPublique: "",
+                infoMJ: "",
+                seen: false
+            };
+            personnages.push(newPerso);
+            renderPersonnages(personnages);
+            // ouvrir modal et laisser l'utilisateur saisir le nom directement
+            openModal(newId);
+        }
 
-        // import input fallback (when user uses the input file)
-        document.getElementById('importFile').addEventListener('change', (e) => {
+        // Hook boutons
+        if (document.getElementById('btnOpenFile')) {
+            document.getElementById('btnOpenFile').addEventListener('click', openFileWithPicker);
+        }
+        if (document.getElementById('btnSaveFile')) {
+            document.getElementById('btnSaveFile').addEventListener('click', saveToPickedFile);
+        }
+        const importEl = document.getElementById('importFile');
+        if (importEl) {
+            importEl.addEventListener('change', (e) => {
+                const f = e.target.files[0];
+                if (!f) return;
+                const reader = new FileReader();
+                reader.onload = () => {
+                    try {
+                        const data = JSON.parse(reader.result);
+                        if (!Array.isArray(data)) throw new Error('Format invalide (tableau attendu)');
+                        personnages = data;
+                        renderPersonnages(personnages);
+                        alert('Import OK');
+                    } catch (err) {
+                        alert('Erreur import: ' + (err.message || err));
+                    }
+                };
+                reader.readAsText(f);
+                e.target.value = '';
+            });
+        }
+
+        // ✅ GARDE SEULEMENT LES DÉFINITIONS DE FONCTIONS :
+        function resetFromFile() {
+            if (!confirm('Réinitialiser depuis personnage.json et perdre les modifications ?')) return;
+            loadPersonnages();
+            alert('Réinitialisé depuis personnage.json');
+        }
+        
+        function handleImportFile(e) {
             const f = e.target.files[0];
             if (!f) return;
             const reader = new FileReader();
             reader.onload = () => {
                 try {
                     const data = JSON.parse(reader.result);
-                    if (!Array.isArray(data)) throw new Error('Format invalide (tableau attendu)');
+                    if (!Array.isArray(data)) throw new Error('Format invalide');
                     personnages = data;
                     renderPersonnages(personnages);
                     alert('Import OK');
@@ -691,10 +777,9 @@
             };
             reader.readAsText(f);
             e.target.value = '';
-        });
+        }
 
-        // si tu gardes persistLocal(), ajuste persistLocalIfNeeded() pour ne pas utiliser localStorage si tu ne veux pas
-        function persistLocalIfNeeded() { /* optional no-op or keep for export/import UX */ }
+        function persistLocalIfNeeded() { /* optional no-op */ }
 
         // Charger les personnages
         loadPersonnages();
