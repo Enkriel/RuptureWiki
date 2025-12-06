@@ -58,5 +58,49 @@
     "infoPublique": "Médecin de la guilde c'est un expert en poison",
     "infoMJ": "Il vient de Érivale, en tant que médecin ambassadeur, en travaillant ici tout Silent Howl accepte de prendre un moins grand pourcentage sur les quête de Érivale ",
     "seen": false
+  },
+  {
+    "id": 5,
+    "Nom": "Darius Kaelborn",
+    "motClef": [
+      "Solhéon",
+      "Forgeron",
+      "Prisonier",
+      "Homme"
+    ],
+    "age": 84,
+    "image": "none",
+    "infoPublique": "Maitre-forgeron qui à crée la première armure pokémon il a formé Seliane Veyra, Kaelen Dravik et Mirek Veyra, il a trahi le pontife en demandant à ses apprenti de rependre la forge sur tout le continent il est encore enfermé dans la tour du jugement ",
+    "infoMJ": "",
+    "seen": false
+  },
+  {
+    "id": 6,
+    "Nom": "Seliane Veyra",
+    "motClef": [
+      "Femme",
+      "Forgeron",
+      "Rivargent"
+    ],
+    "age": 54,
+    "image": "none",
+    "infoPublique": "Formé par Darius Kaelborn elle est considéré aujourd'hui comme la meilleur forgeron du monde. Elle a suivi la volonté de son maitre et c'est consacré à son art et formé différent apprenti.",
+    "infoMJ": "Elle à formé Alina",
+    "seen": false
+  },
+  {
+    "id": 7,
+    "Nom": "Alina Ezonrb",
+    "motClef": [
+      "Silent Howl",
+      "Guilde",
+      "Forgeron",
+      "Femme"
+    ],
+    "age": 25,
+    "image": "Perso/Alina.jpg",
+    "infoPublique": "Alina est la forgeronne de Silent Howl elle a un caractère bien trempé et souhaite montré à tout le monde qu'elle est de loin la meilleur",
+    "infoMJ": "Formé par Seliane à ses 15 ans en l'an 33 elle est parti par ego pour lui prouver que aujourd'hui c'est elle la meilleur et non pas l'autre forgeron formé en meme temps, elle a remplacer l'ancien forgeron qui a quitté la guilde pour rejoindre Solhéon",
+    "seen": false
   }
 ]
