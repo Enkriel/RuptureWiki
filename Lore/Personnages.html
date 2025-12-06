@@ -459,6 +459,9 @@
             noResults.style.display = 'none';
 
             toRender.forEach(perso => {
+                // Ne pas afficher du tout les personnages non rencontrés pour les visiteurs
+                if (!isDev && perso.seen === false) return;
+
                 const card = document.createElement('div');
                 card.className = `personnage-card ${!perso.seen ? 'unseen' : ''}`;
 
@@ -483,7 +486,7 @@
                                 <h3>${perso.Nom}${isDev ? '<span class="dev-badge">DEV</span>' : ''}</h3>
                                 <div class="perso-age">🎂 ${perso.age} ans</div>
                             </div>
-                            <button type="button" class="perso-edit-btn" onclick="openModal(${perso.id})">✏️ Éditer</button>
+                            ${isDev ? `<button type="button" class="perso-edit-btn" onclick="openModal(${perso.id})">✏️ Éditer</button>` : ''}
                         </div>
                         ${perso.motClef && perso.motClef.length > 0 ? `
                             <div class="perso-motcles">
