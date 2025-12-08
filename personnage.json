@@ -10,7 +10,7 @@
       "Guerrier",
       "Femme"
     ],
-    "infoPublique": "Lors de la Rupture, elle n’avait que neuf ans. Sa famille fut décimée lors de l’assaut des Pokémon Alpha, elle veut d'abattre Mewtwo.  Blessure grave  épaule droite face à un Grolem Alpha.\nElle fonda Silent Howl avec Coan Voss pour continuer le combat",
+    "infoPublique": "Lors de la Rupture, elle n’avait que neuf ans. Sa famille fut décimée lors de l’assaut des Pokémon Alpha, elle veut d'abattre Mewtwo.  Elle écopa d'une blessure grave à l'épaule droite et au thorax face à un Grolem Alpha.\nElle fonda Silent Howl avec Coan Voss pour continuer le combat.",
     "infoMJ": "Son pere l'appellais mon petit feunard, un pokémon connu pour sa ruse son intelligence mais aussi sa rancune, le jour ou son père est mort devant elle elle n'as pu faire aucun son d'ou le nom de la guilde",
     "seen": true
   },
@@ -25,13 +25,13 @@
       "Assassin",
       "Homme"
     ],
-    "infoPublique": "Coan est née l'année de la Rupture, il souhaite que les grande villes aient moins d'influence sur le continent.\nIl a fondé Silent Howl avec Lyandra pour aider les plus petites villes et met à point d'honneur à aider ceux qui sont dans le besoin.",
+    "infoPublique": "Coan est né l'année de la Rupture, il souhaite que les grande villes aient moins d'influence sur le continent.\nIl a fondé Silent Howl avec Lyandra pour aider les plus petites villes et met un point d'honneur à aider ceux qui sont dans le besoin.",
     "infoMJ": "Il est né à Rivargent et sa mère est morte avant l'arriver des armures dans la villes, il en veux particulièrement à Solhéon et au pontif.\nC'est un assassin expert en poison extrement fort mais se fait passer pour pas très fort\n",
     "seen": true
   },
   {
     "id": 3,
-    "Nom": "Pontife Elior",
+    "Nom": "Pontife Élior",
     "motClef": [
       "Pontife",
       "Solhéon",
@@ -39,7 +39,7 @@
     ],
     "age": 78,
     "image": "elior.jpg",
-    "infoPublique": "Dirigeant de la ville de Solhéon, il l'a invoqué en priant 2 ans Arceus.\nIl a reçu son armure avec la ville et le parchemin permetant d'en créer à partir des Pokémon Alpha.\nIl a aujourd'hui pour mission de recrée une Pokéball et de réunir les 18 plaques d'Arceus",
+    "infoPublique": "Dirigeant de la ville de Solhéon, il l'a invoquée en priant Arceus pendant 2 ans.\nIl a reçu son armure avec la ville et le parchemin permettant d'en créer à partir des Pokémon Alpha.\nIl a aujourd'hui pour mission de recréer une Pokéball et de réunir les 18 plaques d'Arceus.",
     "infoMJ": "Il a au final prié Giratina Arceus n'en a rien a faire c'est un simple observateur, Giratina est celui qui à crée les humains c'est lui qui veut les proteger.\n\nGrace aux plaques Giratina pour être libre",
     "seen": true
   },
@@ -54,7 +54,7 @@
       "Soigneur",
       "Homme"
     ],
-    "infoPublique": "Médecin de la guilde c'est un expert en poison",
+    "infoPublique": "Médecin de la guilde c'est un expert en poison.",
     "infoMJ": "Il vient de Érivale, en tant que médecin ambassadeur, en travaillant ici tout Silent Howl accepte de prendre un moins grand pourcentage sur les quête de Érivale ",
     "seen": true
   },
@@ -69,7 +69,7 @@
     ],
     "age": 84,
     "image": "none",
-    "infoPublique": "Maitre-forgeron qui à crée la première armure pokémon il a formé Seliane Veyra, Kaelen Dravik et Mirek Veyra, il a trahi le pontife en demandant à ses apprenti de rependre la forge sur tout le continent il est encore enfermé dans la tour du jugement ",
+    "infoPublique": "Maitre-forgeron qui a créé la première armure Pokémon, il a formé Seliane Veyra, Kaelen Dravik et Mirek Veyra, il a trahi le pontife en demandant à ses apprentis de répandre la forge sur tout le continent.\nIl est encore enfermé dans la Tour du Jugement.",
     "infoMJ": "",
     "seen": true
   },
@@ -83,7 +83,7 @@
     ],
     "age": 54,
     "image": "none",
-    "infoPublique": "Formé par Darius Kaelborn elle est considéré aujourd'hui comme la meilleur forgeron du monde. Elle a suivi la volonté de son maitre et c'est consacré à son art et formé différent apprenti.",
+    "infoPublique": "Formée par Darius Kaelborn, elle est considéré aujourd'hui comme la meilleure forgeronne du monde. Elle a suivi la volonté de son maitre et s'est consacrée à son art et a formé différents apprentis.",
     "infoMJ": "Elle à formé Alina",
     "seen": true
   },
@@ -98,7 +98,7 @@
     ],
     "age": 25,
     "image": "Perso/Alina.jpg",
-    "infoPublique": "Alina est la forgeronne de Silent Howl elle a un caractère bien trempé et souhaite montré à tout le monde qu'elle est de loin la meilleur",
+    "infoPublique": "Alina est la forgeronne de Silent Howl elle a un caractère bien trempé et souhaite montrer à tout le monde qu'elle est la meilleure forgeronne de sa génération.",
     "infoMJ": "Formé par Seliane à ses 15 ans en l'an 33 elle est parti par ego pour lui prouver que aujourd'hui c'est elle la meilleur et non pas l'autre forgeron formé en meme temps, elle a remplacer l'ancien forgeron qui a quitté la guilde pour rejoindre Solhéon",
     "seen": true
   },
@@ -114,7 +114,7 @@
     ],
     "age": 23,
     "image": "none",
-    "infoPublique": "Il travaille à la guilde en tant qu'indentant des quêtes avec sa sœur.\nIl est en fauteuil roulant",
+    "infoPublique": "Il travaille à la guilde en tant qu'indentant des quêtes avec sa sœur.\nIl est en fauteuil roulant.",
     "infoMJ": "C'est un ancien Hunter, blesser lors de sa 2ème quête contre, un Médhyéna Alpha il va lui même proposer une quête pour se venger.",
     "seen": true
   },
@@ -124,7 +124,7 @@
     "motClef": [],
     "age": 27,
     "image": "none",
-    "infoPublique": "Intendante principale des quêtes de Silent Howl",
+    "infoPublique": "Intendante principale des quêtes de Silent Howl.",
     "infoMJ": "C'est elle qui a permis à Henri d'avoir son poste, elle est très protectrice depuis qu'il c'est blessé.",
     "seen": true
   }

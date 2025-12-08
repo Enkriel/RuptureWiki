@@ -1148,6 +1148,46 @@
         "id": 307,
         "Name": "Descendant du ranger - Repos Long",
         "description" : "Vous pouvez placer une marque qui dure 2 tours sur un Pokémon Alpha si ses pv tombe à 0 alors qu'il porte la marque il générera un oeuf de son espèce"
+    },
+    {
+        "id": 308,
+        "Name": "Impunité",
+        "description" : "Si vous n'avez pas été touché durant ce combat gagné +2 à vos jets de touche"
+    },
+    {
+        "id": 309,
+        "Name": "Pas Chassé",
+        "description" : "Vous pouvez vous déplacer dans un cadran voisin après unee esquive"
+    },
+    {
+        "id": 310,
+        "Name": "Frappe Agile - Repos Court",
+        "description" : "Faite une attaque et activer Vigilence (voir système d'action)"
+    },
+    {
+        "id": 311,
+        "Name": "Ça compte pas - Réaction - Repos Long",
+        "description" : "Après avoir perdu Impunité vous pouvez la réactivé de suite"
+    },
+    {
+        "id": 312,
+        "Name": "Insaissisable",
+        "description" : "+1 en esquive"
+    },
+    {
+        "id": 313,
+        "Name": "Pirouette - portée 1 - Déplacement - Repos Court",
+        "description" : "Vous déplace dans le cadran opposé de votre cible puis assene une attaque"
+    },
+    {
+        "id": 313,
+        "Name": "Risque Tout - Réaction",
+        "description" : "Quand on vous attaque vous, pouvez réduire votre valeur d'esquive de moitié, si vous esquiver malgrès tout vous pouvez contre attaquer par une attaque"
+    },
+    {
+        "id": 314,
+        "Name": "Pas Final",
+        "description" : "Si vous avez Impunité, vous pouvez la désactivé pour gagner une action supplémentaire"
     }
 ]
 
