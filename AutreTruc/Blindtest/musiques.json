@@ -1,0 +1,14 @@
+[
+  {
+    "reponse": "Super Mario Galaxy",
+    "dur": "Musiques/Super Mario Galaxy Soundtrack - Megaleg.mp3",
+    "moyen": "Musiques/Super Mario Galaxy Soundtrack - Rosalinas Story.mp3",
+    "facile": "Musiques/Super Mario Galaxy Soundtrack - Title Screen.mp3"
+  },
+  {
+    "reponse": "Final Fantasy VII",
+    "dur": "audio/ff7_dur.mp3",
+    "moyen": "audio/ff7_moyen.mp3",
+    "facile": "audio/ff7_facile.mp3"
+  }
+]
