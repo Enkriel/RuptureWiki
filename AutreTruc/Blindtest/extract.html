@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Extraire 20 secondes de musique</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #1e1e2f;
+    color: white;
+}
+
+.container {
+    background: #2b2b3c;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+input[type="file"] {
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #4a4aff;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+audio {
+    margin-top: 15px;
+    width: 100%;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Extraire 20 secondes d'une musique</h1>
+    <input type="file" id="fileInput" accept="audio/*">
+    <br>
+    <button id="processBtn">Extraire 20 secondes</button>
+    <br>
+    <a id="downloadLink" style="display:none;">Télécharger le snippet</a>
+    <audio id="audioPreview" controls></audio>
+</div>
+
+<script>
+const fileInput = document.getElementById("fileInput");
+const processBtn = document.getElementById("processBtn");
+const downloadLink = document.getElementById("downloadLink");
+const audioPreview = document.getElementById("audioPreview");
+
+processBtn.addEventListener("click", () => {
+    const file = fileInput.files[0];
+    if (!file) {
+        alert("Veuillez sélectionner un fichier audio !");
+        return;
+    }
+
+    const reader = new FileReader();
+    reader.readAsArrayBuffer(file);
+
+    reader.onload = async (e) => {
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        const arrayBuffer = e.target.result;
+        const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+
+        // Durée à extraire : 20 secondes max
+        const duration = Math.min(20, audioBuffer.duration);
+
+        // Créer un nouveau buffer avec 20 secondes
+        const newBuffer = audioContext.createBuffer(
+            audioBuffer.numberOfChannels,
+            duration * audioBuffer.sampleRate,
+            audioBuffer.sampleRate
+        );
+
+        for (let channel = 0; channel < audioBuffer.numberOfChannels; channel++) {
+            const oldData = audioBuffer.getChannelData(channel);
+            const newData = newBuffer.getChannelData(channel);
+            newData.set(oldData.subarray(0, newData.length));
+        }
+
+        // Exporter en WAV
+        const wavBlob = bufferToWav(newBuffer);
+        const url = URL.createObjectURL(wavBlob);
+        downloadLink.href = url;
+        downloadLink.download = "snippet.wav";
+        downloadLink.style.display = "inline";
+        downloadLink.textContent = "Télécharger le snippet";
+
+        audioPreview.src = url;
+    };
+});
+
+// Fonction pour convertir AudioBuffer en WAV
+function bufferToWav(buffer) {
+    const numChannels = buffer.numberOfChannels;
+    const sampleRate = buffer.sampleRate;
+    const format = 1; // PCM
+    const bitDepth = 16;
+
+    let buffers = [];
+    for (let channel = 0; channel < numChannels; channel++) {
+        buffers.push(buffer.getChannelData(channel));
+    }
+
+    const interleaved = interleave(buffers);
+    const dataview = encodeWAV(interleaved, numChannels, sampleRate, bitDepth);
+    return new Blob([dataview], { type: "audio/wav" });
+}
+
+// Interleaving des canaux
+function interleave(channels) {
+    const length = channels[0].length;
+    const result = new Float32Array(length * channels.length);
+    for (let i = 0; i < length; i++) {
+        for (let ch = 0; ch < channels.length; ch++) {
+            result[i * channels.length + ch] = channels[ch][i];
+        }
+    }
+    return result;
+}
+
+// Encode WAV 16-bit PCM
+function encodeWAV(samples, numChannels, sampleRate, bitDepth) {
+    const bytesPerSample = bitDepth / 8;
+    const buffer = new ArrayBuffer(44 + samples.length * bytesPerSample);
+    const view = new DataView(buffer);
+
+    function writeString(view, offset, string) {
+        for (let i = 0; i < string.length; i++) {
+            view.setUint8(offset + i, string.charCodeAt(i));
+        }
+    }
+
+    // Header WAV
+    writeString(view, 0, 'RIFF');
+    view.setUint32(4, 36 + samples.length * bytesPerSample, true);
+    writeString(view, 8, 'WAVE');
+    writeString(view, 12, 'fmt ');
+    view.setUint32(16, 16, true); // Subchunk1Size
+    view.setUint16(20, 1, true);  // PCM
+    view.setUint16(22, numChannels, true);
+    view.setUint32(24, sampleRate, true);
+    view.setUint32(28, sampleRate * numChannels * bytesPerSample, true); // Byte rate
+    view.setUint16(32, numChannels * bytesPerSample, true); // Block align
+    view.setUint16(34, bitDepth, true);
+    writeString(view, 36, 'data');
+    view.setUint32(40, samples.length * bytesPerSample, true);
+
+    // Convert float à 16-bit PCM
+    let offset = 44;
+    for (let i = 0; i < samples.length; i++, offset += 2) {
+        let s = Math.max(-1, Math.min(1, samples[i]));
+        view.setInt16(offset, s < 0 ? s * 0x8000 : s * 0x7FFF, true);
+    }
+
+    return view;
+}
+</script>
+
+</body>
+</html>
