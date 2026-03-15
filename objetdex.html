@@ -167,7 +167,7 @@ function filterAndRender(){
     const isYes = secret === 'yes';
 
     if (isGithubPage) {
-      if (!isNo && !isHalf && !isYes) return false;
+      if (!isNo && !isHalf) return false;
     }
 
     const craft = String(o.Craft || '').toLowerCase();
