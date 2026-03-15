@@ -1122,7 +1122,7 @@
     {
         "id": 303,
         "Name": "Precision de l'Assassin",
-        "description" : "Vos jet de touche gagne +2 si vous attaquer un ennemi dans le son cadran arrière"
+        "description" : "(Nécessite une arme avec le mot-clé Finesse) : Vos jet de touche gagne +2 si vous attaquer un ennemi dans le son cadran arrière"
     },
     {
         "id": 304,
@@ -1136,7 +1136,7 @@
     },
     {
         "id": 306,
-        "Name": "Brise-Dos",
+        "Name": "Brise-Dos - Action Bonus",
         "description" : "Brise un cadran arrière qui à 0 pv"
     },
     {
@@ -1157,7 +1157,7 @@
     {
         "id": 309,
         "Name": "Pas Chassé",
-        "description" : "Vous pouvez vous déplacer dans un cadran voisin après unee esquive"
+        "description" : "Vous pouvez vous déplacer dans un cadran adjacent après une esquive"
     },
     {
         "id": 310,
@@ -1188,6 +1188,106 @@
         "id": 314,
         "Name": "Pas Final",
         "description" : "Si vous avez Impunité, vous pouvez la désactivé pour gagner une action supplémentaire"
+    },
+    {
+        "id": 315,
+        "Name": "Precision +",
+        "description" : "Le bonus de précision de vos attaques dans le dos monte à +4"
+    },
+    {
+        "id": 316,
+        "Name": "Expert Armement",
+        "description": "Pendant votre action de confection, la difficulté pour réaliser des armes et armures est grandement réduite."
+    },
+    {
+        "id": 317,
+        "Name": "Modification d'Equipement",
+        "description": "Lors de votre action de confection, vous pouvez modifier une arme ou une armure avec des matériaux. Choisissez une option :<ul><li>Changer l’élément de l’arme vers l’autre élément possible (si applicable).</li><li>Changer une capacité d’arme par une autre capacité du même tier que le Pokémon peut apprendre.</li><li>Transformer une arme existante en une arme du tier supérieur.</li><li>Changer le passif d’une armure par un autre passif dans une liste de possibilités.</li></ul>"
+    },
+    {
+        "id": 318,
+        "Name": "Tourelle de Combat",
+        "description": "En utilisant 2 matériaux adaptés de tier égal ou supérieur à votre arme, créez une tourelle (3 PV) dont l’attaque est équivalente à celle de votre arme, attaquant automatiquement l’ennemi le plus proche. <ul><li><b>Tourelle Rempart</b> : portée 1, armure 8/13, éléments : Acier, Roche, Sol, Dragon, Combat, Glace.</li><li><b>Tourelle Adaptative</b> : portée 2, armure 7/11, éléments : Normal, Feu, Eau, Poison, Ténèbres, Plante.</li><li><b>Tourelle Sniper</b> : portée 3, armure 5/8, éléments : Vol, Électricité, Psy, Insecte, Fée, Spectre.</li></ul> Dégâts : neutre perçant. Maximum : <b>2 tourelles actives</b> en même temps."
+    },
+    {
+        "id": 323,
+        "Name": "Rechargement de Groupe",
+        "description": "Ciblez jusqu'à 3 cibles (vous compris) à portée 3 et rechargez 1 capacité d'arme sur chacune."
+    },
+    {
+        "id": 324,
+        "Name": "Tourelle Améliorée",
+        "description": "Vos tourelles gagnent un bonus d’armure et ont une nouvelle action : <ul><li><b>Tourelle Rempart</b> armure 10/16 : Grappin attire une cible à portée 3 sur la cellule de la tourelle.</li><li><b>Tourelle Adaptative</b> armure 8/13 : Bouclier double les valeurs d’armure jusqu’au prochain tour.</li><li><b>Tourelle Sniper</b> armure 7/11 : Tir perçant AoE ligne 4.</li></ul>"
+    },
+    {
+        "id": 325,
+        "Name": "Repositionnement Balistique",
+        "description": "Repositionnez une tourelle sur votre cellule. Améliore les armures des tourelles : Rempart 12/20, Adaptative 9/15, Sniper 7/11."
+    },
+    {
+        "id": 326,
+        "Name": "Bombe Artisanale",
+        "description": "Créez une bombe avec 1 à 5 matériaux. Dégâts = (somme des tiers) * 2. Explose après un nombre de tours choisi ou si elle subit des dégâts. Peut être jetée en action bonus (jet de force selon le poids)."
+    },
+    {
+        "id": 327,
+        "Name": "Point Friable",
+        "description": "Vous avez l'avantage pour déterminer comment détruire un élément."
+    },
+    {
+        "id": 328,
+        "Name": "Roi de la Récup",
+        "description": "Quand une bombe explose, récupérez un matériau aléatoire sur sa cellule."
+    },
+    {
+        "id": 329,
+        "Name": "Folie Explosive - Réaction",
+        "description": "Quand une bombe détruit une partie d'un Pokémon, gagnez immédiatement une bombe bonus liée à la partie détruite."
+    },
+    {
+        "id": 330,
+        "Name": "Champs de Mine",
+        "description": "3 cellules vides au hasard deviennent des pièges connus seulement de vous. Elles explosent quand une présence est détectée et infligent 2d10 + 4."
+    },
+    {
+        "id": 331,
+        "Name": "Fusion Médicale",
+        "description": "Quand vous utilisez Fusion pour créer un objet de soin, vous en créez un deuxième gratuitement."
+    },
+    {
+        "id": 332,
+        "Name": "Lance Seringue",
+        "description": "Vous obtenez un lance-seringue. En action bonus, vous pouvez charger un remède ou tirer jusqu'à portée 3."
+    },
+    {
+        "id": 333,
+        "Name": "Effet Secondaire",
+        "description": "Quand vous utilisez la seringue sur un allié, il gagne +1 esquive et +1 précision ; un ennemi ciblé subit au contraire -1."
+    },
+    {
+        "id": 334,
+        "Name": "Remède Aléatoire - Action Bonus",
+        "description": "Récupérez des éléments variés pour fabriquer un remède et remplir votre lance-seringue."
+    },
+    {
+        "id": 335,
+        "Name": "Double Dose",
+        "description": "Vous pouvez charger deux éléments en même temps dans votre seringue."
+    },
+    {
+        "id": 336,
+        "Name": "Idée Brillante",
+        "description": "Pendant un repos court, vous obtenez l'action de confection : combinez plusieurs éléments pour tenter de créer un objet, avec une difficulté qui augmente selon les matériaux et la quantité."
+    },
+    {
+        "id": 337,
+        "Name": "Désassemblage",
+        "description": "Vous pouvez détruire un objet pour récupérer des matériaux, plus ou moins utiles selon l'objet."
+    },
+    {
+        "id": 338,
+        "Name": "Fusion Matérielle",
+        "description": "Combinez deux éléments classiques de Pokémon pour obtenir un objet défini."
     }
 ]
 

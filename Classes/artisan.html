@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rogue - Rupture JDR</title>
+    <title>Artisan - Rupture JDR</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -12,19 +12,19 @@
 
     <div class="content-wrapper">
         <div class="header">
-            <h1>Rogue</h1>
-            <p>Le rogue est une guerrier agile qui se faufile dans le dos de ses victimes</p>
+            <h1>L'Artisan</h1>
+            <p>L'Artisan est un expert des crafts et des techniques de fabrication il peut transformer vos matériaux non utilisés en ressources fantastiques</p>
         </div>
 
         <div class="stats-section">
             <h2>Statistiques de base</h2>
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-value">11</div>
+                    <div class="stat-value">9</div>
                     <div class="stat-label">Évasion</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-value">5</div>
+                    <div class="stat-value">7</div>
                     <div class="stat-label">PV</div>
                 </div>
             </div>
@@ -45,13 +45,13 @@
         <div class="archetype-buttons" id="archetype-buttons">
             <p>Choisissez un archétype pour débloquer ses capacités :</p>
             <button class="archetype-btn archetype-unique" data-archetype="unique">
-                Assassin <br><span>Spécialiste des attaques dans le dos ils ne lachent jamais leur proie</span>
+                Forgeron <br><span>Il fait parti des raresà pouvoir forger armes et armures et modifier celle déjà existante il se bat avec des tourelles qu'il place sur le champs de batailles</span>
             </button>
             <button class="archetype-btn archetype-meute" data-archetype="meute">                
-                Bretteur  <br><span>Spécialiste de l'esquive ils dansent autour de leur cible</span>
+                Artificier  <br><span>Spécialiste des explosifs aucun obtacle ne lui survit</span>
             </button>
             <button class="archetype-btn archetype-pacte" data-archetype="pacte">
-                Jack <br><span>WIP</span>
+                Médecin de combat <br><span>Expert en remede il utilise son lance seringue pour etre efficace meme a distance</span>
             </button>
         </div>
 
@@ -64,11 +64,12 @@
 
     const levelAbilities = {
         1: [
-            "Precision de l'Assassin",
-            "Initiative"
+            "Fusion Matérielle",
+            "Poids de Charge"
         ],
         2: [
-            "Réflexe Agile - Réaction - Repos Court"
+            "Idée Brillante",
+            "Désassemblage"
         ],
         4: [
             "Amélioration de Caractéristiques",
@@ -87,7 +88,7 @@
             "Amélioration Défensive"
         ],
         9: [
-            "Inflexible - Réaction - Repos Long"
+            "WIP"
         ],
         10: [
             "Expertise Libre"
@@ -96,22 +97,22 @@
 
     const archetypeAbilities = {
         unique: {
-            3: ["Acharné - Réaction - Repos Court", "Precision +"],
-            5: ["Instint meurtier", "Brise-Dos - Action Bonus"],
-            7: ["Meurtrier"],
+            3: ["Expert Armement", "Modification d'Equipement", "Tourelle de Combat"],
+            5: ["Rechargement de Groupe", "Tourelle Améliorée"],
+            7: ["Repositionnement Balistique"],
             10:[""]
         },
         meute: {
-            3: ["Insaissisable", "Pas Chassé", "Impunité"],
-            5: ["Frappe Agile - Repos Court", "Ça compte pas - Réaction - Repos Long"],
-            7: ["Pirouette - portée 1 - Déplacement - Repos Court", "Risque Tout - Réaction"],
-            10:["Pas Final"]
+            3: ["Bombe Artisanale", "Point Friable"],
+            5: ["Roi de la Récup", "Folie Explosive - Réaction"],
+            7: ["Champs de Mine"],
+            10:[""]
         },
         pacte: {
-            3: ["Maîtrise d'arme", "Fougue Diversifiée"],
-            5: ["Changement Mobile", "Chasseur Casseur - Action Bonus - Repos Court"],
-            7: ["Analyse des Géants - Action Bonus - Repos Court", "Expertise Martiale"],
-            10:["Maîtrise d'arme", "Frénésie de Gilgamesh - Action de Déplacement - Repos Long"]
+            3: ["Fusion Médicale", "Lance Seringue"],
+            5: ["Effet Secondaire", "Remède Aléatoire - Action Bonus"],
+            7: ["Double Dose"],
+            10:[""]
         }
     };
 

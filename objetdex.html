@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Objets - Référentiel</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+  .wrapper { max-width: 1200px; margin: 0 auto; padding: 20px; }
+  h1 { text-align: center; margin: 16px 0; }
+  .subtitle { text-align: center; margin-bottom: 18px; opacity: 0.9; }
+  .controls { justify-content: center; }
+  #list { margin-top: 10px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+  .card { background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.25); }
+  .card h3 { font-size: 1.2rem; margin-bottom: 6px; }
+  .flag { font-size: 0.76rem; }
+  .field strong { width: 64px; display: inline-block; }
+  .value { color: #fff; }
+  .highlight { text-decoration: underline dotted; cursor: help; color: #ffeb3b; font-weight: 600; }
+  .tooltip { pointer-events:auto; background: rgba(7, 12, 26, 0.95); border: 1px solid rgba(255,255,255,0.2); }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Objets</h1>
+  <p class="subtitle">Référentiel d'objets. Recherche par craft et filtre secret.</p>
+</div>
+<div class="controls">
+  <input id="search" class="search-bar" placeholder="Rechercher un objet ou un craft (ex: plante)" />
+  <label style="color:#fff; margin-left:8px;"><input id="show-secret" type="checkbox" style="margin-right:4px;" />Afficher secrets (local)</label>
+</div>
+<div id="list"></div>
+<div id="empty" class="zero hidden">Aucun objet trouvé.</div>
+<div class="note">Secret yes : seulement local. Secret half : nom visible, le reste = ???.</div>
+  <p class="subtitle">Référentiel d'objets. Recherche par craft et filtre secret.</p>
+  <div class="controls">
+    <input id="search" placeholder="Rechercher un objet ou un craft (ex: plante)" />
+    <label><input id="show-secret" type="checkbox" /> Afficher objets secrets (local uniquement)</label>
+  </div>
+  <div id="list" class="list"></div>
+
+</div>
+<div id="tooltip" class="tooltip" aria-hidden="true"></div>
+<script>
+const listEl = document.getElementById('list');
+const searchInput = document.getElementById('search');
+const showSecretCheckbox = document.getElementById('show-secret');
+const emptyEl = document.getElementById('empty');
+const tooltip = document.getElementById('tooltip');
+
+let objets = [];
+let statusData = [];
+let passifsData = [];
+
+const isLocal = location.protocol === 'file:';
+
+function sanitizeHtml(str){
+  const d = document.createElement('div');
+  d.textContent = str;
+  return d.innerHTML;
+}
+
+function renderEffect(effect, item){
+  if(!effect) return '—';
+  let html = effect;
+
+  // Replace status/passif tags if present
+  html = html.replace(/<b class=['\"]data-status['\"] data-status-name=['\"]([^'\"]+)['\"]>([^<]+)<\/b>/g, (m, name, text) => {
+    return `<span class="highlight" data-tooltip-type="status" data-tooltip-name="${name}">${text}</span>`;
+  });
+  html = html.replace(/<b class=['\"]data-passifs['\"] data-passifs-name=['\"]([^'\"]+)['\"]>([^<]+)<\/b>/g, (m, name, text) => {
+    return `<span class="highlight" data-tooltip-type="passif" data-tooltip-name="${name}">${text}</span>`;
+  });
+
+  // Try to detect status/passif names in plain text (word boundaries)
+  const allWords = [...statusData.map(s=>s.Nom), ...passifsData.map(p=>p.Nom)].sort((a,b)=>b.length-a.length);
+  allWords.forEach(name => {
+    const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`\\b${escaped}\\b`, 'gi');
+    html = html.replace(regex, match => {
+      // avoid wrapping inside existing tags
+      if(match.indexOf('<')>=0 || match.indexOf('>')>=0) return match;
+      const isStatus = statusData.find(s=>s.Nom.toLowerCase()===name.toLowerCase());
+      const isPassif = passifsData.find(p=>p.Nom.toLowerCase()===name.toLowerCase());
+      if(isStatus){
+        return `<span class="highlight" data-tooltip-type="status" data-tooltip-name="${isStatus.Nom}">${match}</span>`;
+      }
+      if(isPassif){
+        return `<span class="highlight" data-tooltip-type="passif" data-tooltip-name="${isPassif.Nom}">${match}</span>`;
+      }
+      return match;
+    });
+  });
+
+  return html;
+}
+
+function buildCard(obj) {
+  const card = document.createElement('div');
+  card.className = 'card';
+
+  const isSecretYes = String(obj.Secret || '').toLowerCase() === 'yes';
+  const isHalf = String(obj.Secret || '').toLowerCase() === 'half';
+
+  const nom = document.createElement('h3');
+  nom.textContent = obj.nom || 'Objet';
+  card.appendChild(nom);
+
+  const flags = document.createElement('div');
+  flags.style.marginBottom = '8px';
+  flags.innerHTML = `<span class="flag">Tier: ${obj.Tier || '—'}</span> <span class="flag">Secret: ${obj.Secret || 'no'}</span>`;
+  card.appendChild(flags);
+
+  const effectField = document.createElement('div');
+  effectField.className = 'field';
+  effectField.innerHTML = `<strong>Effet</strong> <div class="value">${isHalf ? '???' : renderEffect(obj.effet || '—', obj)}</div>`;
+  card.appendChild(effectField);
+
+  const craftField = document.createElement('div');
+  craftField.className = 'field';
+  craftField.innerHTML = `<strong>Craft</strong> <div class="value">${isHalf ? '???' : sanitizeHtml(obj.Craft || '—')}</div>`;
+  card.appendChild(craftField);
+
+  const prixField = document.createElement('div');
+  prixField.className = 'field';
+  prixField.innerHTML = `<strong>Prix</strong> <div class="value">${isHalf ? '???' : sanitizeHtml(obj.Prix || '—')}</div>`;
+  card.appendChild(prixField);
+
+  return card;
+}
+
+function showTooltip(event){
+  const target = event.target.closest('.highlight');
+  if(!target) return;
+  const type = target.dataset.tooltipType;
+  const name = target.dataset.tooltipName;
+  if(!name) return;
+  const dataSource = (type === 'passif') ? passifsData : statusData;
+  const data = dataSource.find(x => x.Nom.toLowerCase() === name.toLowerCase());
+  const desc = data ? data.description : 'Description introuvable.';
+  tooltip.innerHTML = `<strong>${data ? data.Nom : name}</strong>${sanitizeHtml(desc)}`;
+  tooltip.style.display = 'block';
+  tooltip.setAttribute('aria-hidden', 'false');
+  const x = event.pageX + 14;
+  const y = event.pageY + 8;
+  tooltip.style.left = x + 'px';
+  tooltip.style.top = y + 'px';
+}
+
+function hideTooltip(){
+  tooltip.style.display = 'none';
+  tooltip.setAttribute('aria-hidden', 'true');
+}
+
+function filterAndRender(){
+  const q = searchInput.value.trim().toLowerCase();
+  const showSecret = showSecretCheckbox.checked;
+
+  const filtered = objets.filter(o => {
+    const isYes = String(o.Secret || '').toLowerCase() === 'yes';
+    const isHalf = String(o.Secret || '').toLowerCase() === 'half';
+    if(isYes && !isLocal && !showSecret) return false;
+
+    const craft = String(o.Craft || '').toLowerCase();
+    const name = String(o.nom || '').toLowerCase();
+    if(!q) return true;
+    return craft.includes(q) || name.includes(q);
+  });
+
+  listEl.innerHTML = '';
+  if(filtered.length === 0){
+    emptyEl.classList.remove('hidden');
+  } else {
+    emptyEl.classList.add('hidden');
+    filtered.forEach(o => {
+      const card = buildCard(o);
+      listEl.appendChild(card);
+    });
+  }
+}
+
+async function loadAll(){
+  const [resObj, resStatus, resPassifs] = await Promise.all([
+    fetch('objet.json').then(r=>r.ok ? r.json() : []),
+    fetch('status.json').then(r=>r.ok ? r.json() : []),
+    fetch('passifs.json').then(r=>r.ok ? r.json() : [])
+  ]);
+
+  objets = Array.isArray(resObj) ? resObj : [];
+  statusData = Array.isArray(resStatus) ? resStatus : [];
+  passifsData = Array.isArray(resPassifs) ? resPassifs : [];
+
+  filterAndRender();
+}
+
+searchInput.addEventListener('input', filterAndRender);
+showSecretCheckbox.addEventListener('change', filterAndRender);
+
+document.addEventListener('mouseover', e => {
+  const target = e.target.closest('.highlight');
+  if (!target) return;
+  const type = target.dataset.tooltipType;
+  const name = target.dataset.tooltipName;
+  if (!name || !type) return;
+  const dataSource = type === 'passif' ? passifsData : statusData;
+  const data = dataSource.find(x => x.Nom.toLowerCase() === name.toLowerCase());
+  const desc = data ? data.description : 'Description introuvable.';
+  tooltip.innerHTML = `<strong>${sanitizeHtml(data ? data.Nom : name)}</strong><div>${sanitizeHtml(desc)}</div>`;
+  const rect = target.getBoundingClientRect();
+  const x = Math.min(window.scrollX + window.innerWidth - tooltip.offsetWidth - 12, rect.left + window.scrollX + 10);
+  let y = rect.bottom + window.scrollY + 8;
+  if (y + tooltip.offsetHeight + 10 > window.scrollY + window.innerHeight) {
+    y = Math.max(window.scrollY + 10, rect.top + window.scrollY - tooltip.offsetHeight - 8);
+  }
+  tooltip.style.left = x + 'px';
+  tooltip.style.top = y + 'px';
+  tooltip.style.display = 'block';
+  tooltip.setAttribute('aria-hidden', 'false');
+});
+
+document.addEventListener('mouseout', e => {
+  const target = e.target.closest('.highlight');
+  if(!target) return;
+  const related = e.relatedTarget;
+  if (related && related.closest && related.closest('.highlight')) return;
+  tooltip.style.display = 'none';
+  tooltip.setAttribute('aria-hidden', 'true');
+});
+
+document.addEventListener('click', e => {
+  if(!e.target.closest('.highlight')) {
+    tooltip.style.display = 'none';
+    tooltip.setAttribute('aria-hidden', 'true');
+  }
+});
+
+loadAll();
+</script>
+</body>
+</html>
