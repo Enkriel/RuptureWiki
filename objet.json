@@ -4,111 +4,126 @@
     "nom": "Potion",
     "effet" : "Restaure TIER pv",
     "Craft": "plante + eau",
-    "Prix": "tier * 15 pieces"
+    "Prix": "tier * 15 pieces",
+    "Secret" : "no"
   },
   {
     "id": 2,
     "nom": "Antidote",
     "effet" : "Guérit un poison infligé par une compétence de tier TIER ou inférieur.",
     "Craft": "poison + eau",
-    "Prix": "tier * 15 pieces"
+    "Prix": "tier * 15 pieces",
+    "Secret" : "no"
   },
   {
     "id": 3,
     "nom": "Anti-brûle",
     "effet" : "Guérit un brûlure infligé par une compétence de tier TIER ou inférieur.",
     "Craft": "Feu + Fée",
-    "Prix": "tier * 15 pieces"
+    "Prix": "tier * 15 pieces",
+    "Secret" : "no"
   },
   {
     "id": 4,
     "nom": "Anti-para",
     "effet" : "Guérit un paralysie infligé par une compétence de tier TIER ou inférieur.",
     "Craft": "Électrique + Fée",
-    "Prix": "tier * 15 pieces"
+    "Prix": "tier * 15 pieces",
+    "Secret" : "no"
   },
   {
     "id": 5,
     "nom": "Dégel",
     "effet" : "Guérit un gel infligé par une compétence de tier TIER ou inférieur.",
     "Craft": "Glace + Vol",
-    "Prix": "tier * 15 pieces"
+    "Prix": "tier * 15 pieces",
+    "Secret" : "no"
   },
   {
     "id": 6,
     "nom": "Bombe fumigène",
-    "effet" : "AoE 1 rend les personne dans la zone <b class='data-status' data-status-name='Aveuglé'>aveugle</b> et <b class='data-status' data-status-name='Flou'>flou</b>.",
-    "Craft": "Ténèbres + Spectre",
-    "Prix": "tier * 25 pieces"
+    "effet" : "AoE 1 rend les personne dans la zone <b class='data-status' data-status-name='Aveuglé'>aveugle</b> et flou.",
+    "Prix": "tier * 25 pieces",
+    "Secret" : "yes"
   },
   {
     "id": 7,
     "nom": "Miel",
     "effet" : "Soigne légèrement et peut ralentir une cible.",
     "Craft": "Insecte + Plante",
-    "Prix": "tier * 18 pieces"
+    "Prix": "tier * 18 pieces",
+    "Secret" : "half"
   },
   {
     "id": 8,
     "nom": "Mini bombe",
     "effet" : "Inflige des dégâts de zone faibles.",
     "Craft": "Feu + Dragon",
-    "Prix": "tier * 30 pieces"
+    "Prix": "tier * 30 pieces",
+    "Secret" : "half"
   },
   {
     "id": 9,
     "nom": "Aiguisoir",
     "effet" : "Augmente légèrement la précision et les dégâts de l'arme.",
     "Craft": "Roche + Sol",
-    "Prix": "tier * 15 pieces"
+    "Prix": "tier * 15 pieces",
+    "Secret" : "half"
   },
   {
     "id": 10,
     "nom": "Pack de réparation",
     "effet" : "Répare partiellement une arme ou un objet métallique.",
     "Craft": "Acier + Normal",
-    "Prix": "tier * 20 pieces"
+    "Prix": "tier * 20 pieces",
+    "Secret" : "half"
   },
   {
     "id": 11,
     "nom": "Couteau à lancé",
     "effet" : "Projectile de combat léger.",
     "Craft": "Normal + Acier",
-    "Prix": "tier * 12 pieces"
+    "Prix": "tier * 12 pieces",
+    "Secret" : "half"
   },
   {
     "id": 12,
     "nom": "Poids à lancé",
     "effet" : "Projectile lourd, inflige des dégâts d'impact.",
     "Craft": "Roche + Combat",
-    "Prix": "tier * 12 pieces"
+    "Prix": "tier * 12 pieces",
+    "Secret" : "half"
   },
   {
     "id": 13,
     "nom": "Dard à lancé",
     "effet" : "Projectile rapide et précis.",
     "Craft": "Vol + Ténèbres",
-    "Prix": "tier * 12 pieces"
+    "Prix": "tier * 12 pieces",
+    "Secret" : "half"
   },
   {
     "id": 14,
     "nom": "Piège",
     "effet" : "Pose un piège qui active quand un ennemi passe dessus.",
     "Craft": "Insecte + Sol",
-    "Prix": "tier * 18 pieces"
+    "Prix": "tier * 18 pieces",
+    "Secret" : "half"
   },
   {
     "id": 15,
     "nom": "Fiole de sagesse",
     "effet" : "Donne surpuissance contrôlée pour un tour.",
     "Craft": "Psy + Combat",
-    "Prix": "tier * 22 pieces"
+    "Prix": "tier * 22 pieces",
+    "Secret" : "half"
   },
   {
     "id": 16,
     "nom": "Batterie",
     "effet" : "Recharge un dispositif électrique ou une capacité.",
     "Craft": "Électrique + Psy",
-    "Prix": "tier * 20 pieces"
+    "Prix": "tier * 20 pieces",
+    "Secret" : "yes"
   }
 ]
