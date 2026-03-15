@@ -54,6 +54,7 @@ let statusData = [];
 let passifsData = [];
 
 const isLocal = location.protocol === 'file:';
+const isGithubPage = location.hostname.includes('github.io') || location.href.includes('enkriel.github.io');
 
 function sanitizeHtml(str){
   const d = document.createElement('div');
@@ -100,8 +101,11 @@ function buildCard(obj) {
   const card = document.createElement('div');
   card.className = 'card';
 
-  const isSecretYes = String(obj.Secret || '').toLowerCase() === 'yes';
-  const isHalf = String(obj.Secret || '').toLowerCase() === 'half';
+  const secret = String(obj.Secret || '').toLowerCase();
+  const isHalf = secret === 'half';
+  const isNo = secret === 'no';
+  const isYes = secret === 'yes';
+  const showFull = (!isGithubPage) || isNo || isYes;
 
   const nom = document.createElement('h3');
   nom.textContent = obj.nom || 'Objet';
@@ -114,17 +118,17 @@ function buildCard(obj) {
 
   const effectField = document.createElement('div');
   effectField.className = 'field';
-  effectField.innerHTML = `<strong>Effet</strong> <div class="value">${isHalf ? '???' : renderEffect(obj.effet || '—', obj)}</div>`;
+  effectField.innerHTML = `<strong>Effet</strong> <div class="value">${showFull ? renderEffect(obj.effet || '—', obj) : (isHalf ? '???' : '—')}</div>`;
   card.appendChild(effectField);
 
   const craftField = document.createElement('div');
   craftField.className = 'field';
-  craftField.innerHTML = `<strong>Craft</strong> <div class="value">${isHalf ? '???' : sanitizeHtml(obj.Craft || '—')}</div>`;
+  craftField.innerHTML = `<strong>Craft</strong> <div class="value">${showFull ? sanitizeHtml(obj.Craft || '—') : (isHalf ? '???' : '—')}</div>`;
   card.appendChild(craftField);
 
   const prixField = document.createElement('div');
   prixField.className = 'field';
-  prixField.innerHTML = `<strong>Prix</strong> <div class="value">${isHalf ? '???' : sanitizeHtml(obj.Prix || '—')}</div>`;
+  prixField.innerHTML = `<strong>Prix</strong> <div class="value">${showFull ? sanitizeHtml(obj.Prix || '—') : (isHalf ? '???' : '—')}</div>`;
   card.appendChild(prixField);
 
   return card;
@@ -155,12 +159,16 @@ function hideTooltip(){
 
 function filterAndRender(){
   const q = searchInput.value.trim().toLowerCase();
-  const showSecret = showSecretCheckbox.checked;
 
   const filtered = objets.filter(o => {
-    const isYes = String(o.Secret || '').toLowerCase() === 'yes';
-    const isHalf = String(o.Secret || '').toLowerCase() === 'half';
-    if(isYes && !isLocal && !showSecret) return false;
+    const secret = String(o.Secret || '').toLowerCase();
+    const isHalf = secret === 'half';
+    const isNo = secret === 'no';
+    const isYes = secret === 'yes';
+
+    if (isGithubPage) {
+      if (!isNo && !isHalf && !isYes) return false;
+    }
 
     const craft = String(o.Craft || '').toLowerCase();
     const name = String(o.nom || '').toLowerCase();
