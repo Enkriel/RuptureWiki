@@ -24,6 +24,18 @@
     "Secret": "no"  
   },
   {
+    "id": 10003,
+    "Nom": "Tissu Angelique",
+    "type": "Légère",
+    "tier": 0,
+    "Element": "Fée",
+    "Armure": "1",
+    "Paliers": "3/6",
+    "Effets": "",
+    "Craft": "3 matériaux Fée",
+    "Secret": "no"  
+  },
+  {
     "id": 20001,
     "Nom": "Armure de lianes",
     "type": "Moyenne",

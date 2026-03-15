@@ -211,6 +211,20 @@
     "Secret": "yes"   
   },
   {
+    "id": 60001,
+    "Nom": "Griffe abyssale",
+    "type": "DS",
+    "tier": 0,
+    "Element": "Ténèbres",
+    "Dégât": "1d4 + 1",
+    "MotClef": "Court, Double, Finesse, Coupant",
+    "ability1": "Coup Bas",
+    "ability2": "Eau Revoir",
+    "ability3": "",
+    "Craft": "2 matériaux Ténèbres 1 Eau",
+    "Secret": "no"   
+  },
+  {
     "id": 61001,
     "Nom": "Griffes du vengueur psionique",
     "type": "DS",
