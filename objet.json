@@ -43,45 +43,46 @@
     "id": 6,
     "nom": "Bombe fumigène",
     "effet" : "AoE 1 rend les personne dans la zone <b class='data-status' data-status-name='Aveuglé'>aveugle</b> et flou.",
+    "Craft": "Spectre + Ténèbres",
     "Prix": "tier * 25 pieces",
     "Secret" : "yes"
   },
   {
     "id": 7,
     "nom": "Miel",
-    "effet" : "Soigne légèrement et peut ralentir une cible.",
+    "effet" : "Attire des pokémons.",
     "Craft": "Insecte + Plante",
-    "Prix": "tier * 18 pieces",
-    "Secret" : "half"
+    "Prix": "tier * 10 pieces",
+    "Secret" : "no"
   },
   {
     "id": 8,
     "nom": "Mini bombe",
-    "effet" : "Inflige des dégâts de zone faibles.",
+    "effet" : "AoE 1 TierD4+8.",
     "Craft": "Feu + Dragon",
     "Prix": "tier * 30 pieces",
-    "Secret" : "half"
+    "Secret" : "no"
   },
   {
     "id": 9,
     "nom": "Aiguisoir",
-    "effet" : "Augmente légèrement la précision et les dégâts de l'arme.",
+    "effet" : "Restaure un competence d'arme.",
     "Craft": "Roche + Sol",
     "Prix": "tier * 15 pieces",
-    "Secret" : "half"
+    "Secret" : "no"
   },
   {
     "id": 10,
     "nom": "Pack de réparation",
-    "effet" : "Répare partiellement une arme ou un objet métallique.",
-    "Craft": "Acier + Normal",
+    "effet" : "Redonne 1 point d'armure à une Armure.",
+    "Craft": "Acier + Feu",
     "Prix": "tier * 20 pieces",
     "Secret" : "half"
   },
   {
     "id": 11,
     "nom": "Couteau à lancé",
-    "effet" : "Projectile de combat léger.",
+    "effet" : "Projectile de combat léger infligeant des dégâts coupants.",
     "Craft": "Normal + Acier",
     "Prix": "tier * 12 pieces",
     "Secret" : "half"
@@ -89,7 +90,7 @@
   {
     "id": 12,
     "nom": "Poids à lancé",
-    "effet" : "Projectile lourd, inflige des dégâts d'impact.",
+    "effet" : "Projectile lourd, inflige des dégâts d'impact infligeant des dégâts contondants.",
     "Craft": "Roche + Combat",
     "Prix": "tier * 12 pieces",
     "Secret" : "half"
@@ -97,15 +98,15 @@
   {
     "id": 13,
     "nom": "Dard à lancé",
-    "effet" : "Projectile rapide et précis.",
+    "effet" : "Projectile rapide et précis infligeant des dégâts perçants.",
     "Craft": "Vol + Ténèbres",
     "Prix": "tier * 12 pieces",
     "Secret" : "half"
   },
   {
     "id": 14,
-    "nom": "Piège",
-    "effet" : "Pose un piège qui active quand un ennemi passe dessus.",
+    "nom": "Piège Simple",
+    "effet" : "Pose un piège inflige 1d4 + 2 et <b class='data-status' data-status-name='Immobilisé'>immobilise</b> la cible.",
     "Craft": "Insecte + Sol",
     "Prix": "tier * 18 pieces",
     "Secret" : "half"
@@ -121,9 +122,49 @@
   {
     "id": 16,
     "nom": "Batterie",
-    "effet" : "Recharge un dispositif électrique ou une capacité.",
+    "effet" : "Recharge un dispositif électrique.",
     "Craft": "Électrique + Psy",
     "Prix": "tier * 20 pieces",
+    "Secret" : "yes"
+  },
+  {
+    "id": 17,
+    "nom": "Stase protectrice",
+    "effet" : "Bloc de glace qui si il se brise applique stase en AoE 0 à toutes les cibles de tier égale ou inférieur pendant 2 tours",
+    "Craft": "Dragon + Glace",
+    "Prix": "tier * 30 pieces",
+    "Secret" : "yes"
+  },
+  {
+    "id": 18,
+    "nom": "Hurleur",
+    "effet" : "Imite le cri peut infliger peur ou d'autre status en fonction de la situation et de la proximité.",
+    "Craft": "Spectre + Normal",
+    "Prix": "tier * 15 pieces",
+    "Secret" : "yes"
+  },
+  {
+    "id": 18,
+    "nom": "Acide Chlorydrique",
+    "effet" : "Liquide capable de faire fondre l'acier.",
+    "Craft": "Acier + Poison",
+    "Prix": "tier * 18 pieces",
+    "Secret" : "yes"
+  },
+  {
+    "id": 19,
+    "nom": "Rappel",
+    "effet" : "Sort immédiatemment un cible  <b>Mise à Terre</b> de TIER tier ou inférieur et lui redonne 3 pv.",
+    "Craft": "Plante + Spectre + Feu + Dragon",
+    "Prix": "tier * 50 pieces",
+    "Secret" : "half"
+  },
+  {
+    "id": 20,
+    "nom": "Rappel Max",
+    "effet" : "Sort immédiatemment un cible  <b>Mise à Terre</b> de TIER tier ou inférieur et lui redonne 6 pv.",
+    "Craft": "Plante + Spectre + Feu + Dragon + Glace + Sol + Vol",
+    "Prix": "tier * 50 pieces",
     "Secret" : "yes"
   }
 ]

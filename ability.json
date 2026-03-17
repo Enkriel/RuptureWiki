@@ -1277,7 +1277,7 @@
     {
         "id": 336,
         "Name": "Idée Brillante",
-        "description": "Pendant un repos court, vous obtenez l'action de confection : combinez plusieurs éléments pour tenter de créer un objet, avec une difficulté qui augmente selon les matériaux et la quantité."
+        "description": "Pendant vos repos, vous obtenez l'action de <b>Reflexion</b> : vous pouvez faire un jet adapté pour tenter d'obtenir un plan pour la création de votre choix."
     },
     {
         "id": 337,
@@ -1287,7 +1287,7 @@
     {
         "id": 338,
         "Name": "Fusion Matérielle",
-        "description": "Combinez deux éléments classiques de Pokémon pour obtenir un objet défini."
+        "description": "Quand vous utiliser l'action de repos <b>Craft</b> vous pouvez tenter de créer un objet sans plan."
     }
 ]
 

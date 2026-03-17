@@ -158,5 +158,10 @@
     "id": 33,
     "Nom": "Appaisé",
     "description": "Vous perdez tout envie de combattre, vous avez désavantage à tout vos effets offensif et vous avez -2 à vos js de Charisme."
+  },
+  {
+    "id": 34,
+    "Nom": "Stase",
+    "description": "Vous ne pouvez plus rien et plus rien ne peux vous affecter."
   }
 ]
