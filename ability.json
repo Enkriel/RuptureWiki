@@ -1021,8 +1021,8 @@
     },
     {
         "id": 283,
-        "Name": "Expertise armure legère",
-        "description": "Vous pouvez consommer 1 point d'armure pour recharger une capacité d'arme"
+        "Name": "Expertise armure legère - Reaction - Repos Court",
+        "description": "Si une attaque vous touche, vous pouvez consommer 1 comptétence d'arme aléatoire pour esquiver une attaque."
     },
     {
         "id": 284,
@@ -1031,8 +1031,8 @@
     },
     {
         "id": 285,
-        "Name": "Expertise armure moyenne",
-        "description": "Vous pouvez consommer 1 point d'armure pour relancer un jet de touche ou de sauvegarde"
+        "Name": "Expertise armure moyenne - Reaction - Repos Court",
+        "description": "Quand vous êtes ciblé par une attaque vous pouvez augmenter la blessure que cette attaque va infliger de 1 puis faire un jet de sauvegarde d'Acrobatie(Dex) en cas de reussite vous pouvez redirigé l'attque vers une cible à portée"
     },
     {
         "id": 286,
@@ -1046,8 +1046,8 @@
     },
     {
         "id": 287,
-        "Name": "Expertise armure lourde",
-        "description": "Vous pouvez consommer 1 point d'armure pour relancer un dé de dégât"
+        "Name": "Expertise armure lourde - Reaction - Repos Court",
+        "description": "Quand vous êtes ciblé par une attaque vous pouvez accepter de prendre l'attaque de plein fouet si vous le faites contre attaquer immédiatement avec une attaque simple."
     },
     {
         "id": 288,
@@ -1288,6 +1288,56 @@
         "id": 338,
         "Name": "Fusion Matérielle",
         "description": "Quand vous utiliser l'action de repos <b>Craft</b> vous pouvez tenter de créer un objet sans plan."
+    },
+    {
+        "id": 339,
+        "Name": "Paratonnerre",
+        "description": "Vous intercepter les attaques electrique qui finissent sur votre cellule."
+    },
+    {
+        "id": 339,
+        "Name": "Paratonnerre",
+        "description": "Vous intercepter les attaques electrique qui finissent sur votre cellule."
+    },
+    {
+        "id": 340,
+        "Name": "Illusion",
+        "description": "(Jet d'intelligence contre Sagesse) Fait apparaître un objet ou une créature de petite taille intangible, il est possible de manipuler l'illusion via des actions bonus."
+    },
+    {
+        "id": 341,
+        "Name": "Imposteur",
+        "description": "(Jet d'intelligence contre Sagesse) Prend l'apparence d'une créature ou d'un objet, se dissipe en cas de dégat subit. <br> Contre les cibles qui ont n'ont pas démasqué votre déquisement <ul><li>Toutes vos attaques on le mot clef <b class='data-passifs' data-passifs-name='Attaque Surprise'>Attaque Surprise</b></li><li>vos jet de touche utilise votre modificateur d'Intelligence pour toucher en plus de celui initiale</li></ul>"
+    },
+    {
+        "id": 342,
+        "Name": "It was me ! - Action Bonus",
+        "description": "Vous pouvez casser volontairement votre déguisement pour effectuer une attaque normale contre une cible qui n'a pas démasqué votre déguisement."
+    },
+    {
+        "id": 343,
+        "Name": "Clonage",
+        "description": "Quand vous utiliser Illusion vous pouvez donner autant de vos pv a celle-ci que vous le souhaitez l'Illusion devient alors tangible et cherchera à vous proteger par défault."
+    },
+    {
+        "id": 344,
+        "Name": "Manipulation de l'image",
+        "description": "Vous pouvez transformer l'apparence d'un objet en un autre, plus celui-ci ressemble à l'original plus le jet d'intelligence est facile."
+    },
+    {
+        "id": 345,
+        "Name": "Illusion Moyenne",
+        "description": "Illusion peut désormais prendre la taille de créature moyenne (comme un humain)"
+    },
+    {
+        "id": 346,
+        "Name": "Déguisement Solide  - Réaction - Repos Court",
+        "description": "Quand vous subbissez une attaque, vous pouvez garder votre déguisement"
+    },
+    {
+        "id": 347,
+        "Name": "Fourberie",
+        "description": "Vos <b class='data-passifs' data-passifs-name='Attaque Surprise'>Attaque Surprise</b> deviennent <b class='data-passifs' data-passifs-name='Attaque Surprise Améliorée'>Attaque Surprise Améliorée</b>"
     }
 ]
 

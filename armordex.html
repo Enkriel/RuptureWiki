@@ -159,7 +159,7 @@ function renderArmors(){
 
       const thead = document.createElement('thead');
       thead.innerHTML = `<tr>
-        <th>Nom</th><th>Type</th><th>Élément</th><th>Armure</th><th>Paliers</th><th>Effets</th><th>Recette</th>
+        <th>Nom</th><th>Type</th><th>Élément</th><th>Paliers</th><th>Effets</th><th>Recette</th>
       </tr>`;
       table.appendChild(thead);
 
@@ -171,7 +171,6 @@ function renderArmors(){
         tr.appendChild(td(a.Nom));
         tr.appendChild(td(mapType(a.type)));
         tr.appendChild(td(a.Element));
-        tr.appendChild(td(a["Armure"]));
         tr.appendChild(td(a.Paliers));
 
         const eff = document.createElement('td');

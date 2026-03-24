@@ -438,7 +438,7 @@
     "type": "Sol",
     "tier": 1,
     "portée": "3 - Dex",
-    "description": "Jette du sable. Si l'attaque touche le cadran avant d'une cible, celle-ci est <b class='data-status' data-status-name='Obscurci'>obscurcie</b>."
+    "description": "Jette du sable. Si l'attaque touche le cadran avant d'une cible, celle-ci est <b class='data-status' data-status-name='Vision Obscurcie'>vision obscurcie</b>."
   },
   {
     "id": 5102,
@@ -462,7 +462,7 @@
     "type": "Sol",
     "tier": 2,
     "portée": "3 - Int - AoE 0",
-    "description": "Projette un tas de boue infligeant 2d6 et <b class='data-status' data-status-name='Obscurci'>obscurcissant</b> les cibles."
+    "description": "Projette un tas de boue infligeant 2d6 et <b class='data-status' data-status-name='Vision Obscurcie'>vision obscurcie</b> les cibles."
   },
   {
     "id": 5202,
@@ -926,7 +926,7 @@
     "type": "Eau",
     "tier": 2,
     "portée": "3 - Int - Projectile",
-    "description": "Inflige 1d10. Projette de l’eau boueuse qui applique <b class='data-status' data-status-name='Trempé'>trempé</b> et <b class='data-status' data-status-name='Obscurci'>obscurci</b> à la cible."
+    "description": "Inflige 1d10. Projette de l’eau boueuse qui applique <b class='data-status' data-status-name='Trempé'>trempé</b> et <b class='data-status' data-status-name='Vision Obscurcie'>vision obscurcie</b> à la cible."
   },
   {
     "id": 11301,

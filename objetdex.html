@@ -26,7 +26,7 @@
 <script src="../navbar.js"></script>
 <div class="header">
   <h1>Objets</h1>
-  <p class="subtitle">Référentiel d'objets. Recherche par craft et filtre secret.</p>
+  <p class="subtitle">Référentiel d'objets. Recherche par craft et filtre.</p>
 </div>
 <div class="controls">
   <input id="search" class="search-bar" placeholder="Rechercher un objet ou un craft (ex: plante)" />
@@ -111,7 +111,7 @@ function buildCard(obj) {
 
   const flags = document.createElement('div');
   flags.style.marginBottom = '8px';
-  flags.innerHTML = `<span class="flag">Tier: ${obj.Tier || '—'}</span> <span class="flag">Secret: ${obj.Secret || 'no'}</span>`;
+  flags.innerHTML = `<span class="flag">Tier: ${obj.Tier || '—'}</span>`;
   card.appendChild(flags);
 
   const effectField = document.createElement('div');

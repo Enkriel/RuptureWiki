@@ -135,6 +135,11 @@
     "description": "Si l’attaque est effectuée sans que votre cible vous ait remarqué, augmentez le palier des dés de dégâts."
   },
   {
+    "id": 981,
+    "Nom": "Attaque Surprise Améliorée",
+    "description": "Si l’attaque est effectuée sans que votre cible vous ait remarqué, augmentez le palier des dés de dégâts 2 fois."
+  },
+  {
     "id": 99,
     "Nom": "Tyran",
     "description": "Si vous pesez plus lourd que votre cible augmenter vos dé de dégâts d'1 tier (<b class='data-passifs' data-passifs-name='Poids Leger'>Poids Leger</b>, sans mot clef de poids, <b class='data-passifs' data-passifs-name='Poids Lourd'>Poids Lourd</b>)."

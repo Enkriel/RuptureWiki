@@ -71,13 +71,13 @@
   },
   {
     "id": 19,
-    "Nom": "Obscurci",
+    "Nom": "Vision Obscurcie",
     "description": "Vous avez -2 a vos jets de touche et de perception."
   },
   {
     "id": 15,
     "Nom": "Aveuglé",
-    "description": "Vous avez un désavantage à vos jets d'attaque et à tout autre jet demandant de la précision."
+    "description": "Vous avez un désavantage à vos jets de touche et à tout autre jet demandant de la précision et de la perception."
   },
   {
     "id": 16,
@@ -122,7 +122,7 @@
   {
     "id": 24,
     "Nom": "Trempé",
-    "description": "Les attaques Electrique et Glace gagnent 1 dé de dégats, les attaques Feu perde un dé de dégats, disparait si subbit une attaque feu, electrique ou glace"
+    "description": "Les attaques Électriques et Glace gagnent 1 dé de dégâts. Les attaques Feu perdent 1 dé de dégâts. L’effet disparaît si la cible subit une attaque Feu, Électrique ou Glace."
   },
   {
     "id": 25,

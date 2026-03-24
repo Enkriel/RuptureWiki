@@ -51,10 +51,11 @@
                 Bretteur  <br><span>Spécialiste de l'esquive ils dansent autour de leur cible</span>
             </button>
             <button class="archetype-btn archetype-pacte" data-archetype="pacte">
-                Jack <br><span>WIP</span>
+                Ombre de Zoroark<br><span>Spécialiste du déguisement, ils surprennent leur adversaires qui ignoraient leur présence</span>
             </button>
         </div>
-
+        <div id="attack-tooltip" style="position:absolute; display:none; pointer-events:none; z-index:1000; max-width:300px; padding:8px; background:rgba(0,0,0,0.85); color:#fff; border-radius:5px; font-size:0.9em; box-shadow:0 0 5px #000;"></div>
+    
         <div class="level-progression" id="level-progression">
             <!-- Les niveaux et abilities seront générés ici -->
         </div>
@@ -108,10 +109,10 @@
             10:["Pas Final"]
         },
         pacte: {
-            3: ["Maîtrise d'arme", "Fougue Diversifiée"],
-            5: ["Changement Mobile", "Chasseur Casseur - Action Bonus - Repos Court"],
-            7: ["Analyse des Géants - Action Bonus - Repos Court", "Expertise Martiale"],
-            10:["Maîtrise d'arme", "Frénésie de Gilgamesh - Action de Déplacement - Repos Long"]
+            3: ["Illusion", "Imposteur"],
+            5: ["It was me !", "Clonage", "Manipulation de l'image"],
+            7: ["Illusion Moyenne", "Déguisement Solide  - Réaction - Repos Court", "Fourberie"],
+            10:[""]
         }
     };
 
@@ -188,6 +189,80 @@
             });
         });
     });
+
+    let passifsData = {};
+    const tooltip = document.getElementById('attack-tooltip');
+
+    async function loadDataFiles() {
+        try {
+            const passifsRes = await fetch('../passifs.json');
+            const passifses = passifsRes.ok ? await passifsRes.json() : [];
+            passifses.forEach(s => {
+                if (s.Nom && s.description) passifsData[s.Nom.toLowerCase()] = s.description;
+            });
+        } catch (err) {
+            console.error("Erreur chargement JSON passifs/passifs", err);
+        }
+    }
+
+    // affichage de la tooltip
+    function showTooltip(event, content) {
+        tooltip.innerHTML = content;
+        tooltip.style.display = 'block';
+        positionTooltip(event);
+    }
+    function hideTooltip() { tooltip.style.display = 'none'; }
+    function positionTooltip(event) {
+        const pageX = event.pageX ?? (event.touches && event.touches[0] && event.touches[0].pageX) ?? 0;
+        const pageY = event.pageY ?? (event.touches && event.touches[0] && event.touches[0].pageY) ?? 0;
+        const offset = 12;
+        tooltip.style.left = (pageX + offset) + 'px';
+        tooltip.style.top = (pageY + offset) + 'px';
+        const rect = tooltip.getBoundingClientRect();
+        const maxRight = window.innerWidth - 8;
+        const maxBottom = window.innerHeight - 8;
+        let left = pageX + offset, top = pageY + offset;
+        if (rect.width && left + rect.width > maxRight) left = pageX - rect.width - offset;
+        if (rect.height && top + rect.height > maxBottom) top = pageY - rect.height - offset;
+        if (left < 8) left = 8;
+        if (top < 8) top = 8;
+        tooltip.style.left = left + 'px';
+        tooltip.style.top = top + 'px';
+    }
+
+    // déléguation : un seul handler pour tous les .data-passifs présents ou futurs
+    function setupDelegatedpassifsTooltips() {
+        // mouseenter/mousemove/leave via pointer events
+        document.addEventListener('pointermove', (e) => {
+            const el = e.target.closest && e.target.closest('.data-passifs');
+            if (el) {
+                const nameAttr = el.dataset.passifsName || el.getAttribute('data-passifs-name') || '';
+                const key = nameAttr.toLowerCase();
+                const desc = passifsData[key] || '<em>Description non disponible.</em>';
+                const title = nameAttr || 'Statut';
+                showTooltip(e, `<strong style="display:block;margin-bottom:6px;">${title}</strong><div style="line-height:1.25">${desc}</div>`);
+            } else {
+                // si on n'est plus sur un .data-passifs, masquer
+                hideTooltip();
+            }
+        }, {passive: true});
+
+        // tactile : afficher au tap sur .data-passifs
+        document.addEventListener('touchstart', (ev) => {
+            const el = ev.target.closest && ev.target.closest('.data-passifs');
+            if (!el) return;
+            const nameAttr = el.dataset.passifsName || el.getAttribute('data-passifs-name') || '';
+            const key = nameAttr.toLowerCase();
+            const desc = passifsData[key] || '<em>Description non disponible.</em>';
+            const title = nameAttr || 'Statut';
+            showTooltip(ev, `<strong style="display:block;margin-bottom:6px;">${title}</strong><div style="line-height:1.25">${desc}</div>`);
+            setTimeout(hideTooltip, 3000);
+        }, {passive: true});
+    }
+
+    // initialisation
+    loadDataFiles();
+    setupDelegatedpassifsTooltips();
     </script>
 </body>
 </html>
