@@ -74,6 +74,11 @@ async function loadJSON(url){
 let armors = [];
 let passifsData = [];
 
+function isLocalDevHost(){
+  const h = window.location.host.toLowerCase();
+  return h === '127.0.0.1:5500' || h === 'localhost:5500' || h === '127.0.0.1' || h === 'localhost';
+}
+
 /* ------------------ types ------------------ */
 const armorTypes = ["Légère","Moyenne","Lourde","Extrêmement Lourde"];
 
@@ -168,20 +173,30 @@ function renderArmors(){
         const tr = document.createElement('tr');
         const td = txt => { const c = document.createElement('td'); c.textContent = txt || '—'; return c; };
 
+        const isSecret = (a.Secret && a.Secret.toLowerCase() !== 'no');
+        const showSecret = isLocalDevHost();
+
         tr.appendChild(td(a.Nom));
         tr.appendChild(td(mapType(a.type)));
         tr.appendChild(td(a.Element));
-        tr.appendChild(td(a.Paliers));
+
+        const paliersTd = document.createElement('td');
+        if(!isSecret || showSecret){
+          paliersTd.textContent = a.Paliers || '—';
+        } else {
+          paliersTd.textContent = '???';
+          paliersTd.style.color = 'purple';
+        }
+        tr.appendChild(paliersTd);
 
         const eff = document.createElement('td');
         if(a.Effets){
-          if(a.Secret == "no"){
+          if(!isSecret || showSecret){
              a.Effets.split(',').forEach(e=>{
               eff.appendChild(renderPassifDOM(e));
               eff.appendChild(document.createTextNode(' '));
             });           
-          }
-          else{
+          } else {
             eff.style.color = "purple";
             eff.textContent = '???';
           }

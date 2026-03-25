@@ -122,11 +122,29 @@
     "esquive": "11",
     "armor": "2/8",
     "type": ["Eau"],
-    "attacks": ["Trempette", "Charge"],
+    "attacks": ["Trempette", "Charge", "Fléau"],
     "passifs": ["Trempette Surprise"],
     "status" : "unlock",
     "comportement" : "1 action sur 2 magicarpe est obligé de faire <b>Trempette</b>",
     "alpha" : "no"
+  },
+  {
+    "id": 129,
+    "name": "Magicarpe Alpha",
+    "image" : "https://img.pokemondb.net/sprites/home/normal/2x/avif/magikarp.avif",
+    "tier": 1,
+    "hp": 30,
+    "esquive": "11",
+    "armor": "2/4/8",
+    "type": ["Eau"],
+    "attacks": ["Trempette", "Charge", "Fléau"],
+    "passifs": [],
+    "status" : "hide",
+    "comportement" : "1 action sur 2 magicarpe est obligé de faire <b>Trempette</b>",
+    "alpha" : "yes",
+    "front" : "5 - Contondant - Couronne du Roi Rouge - Charge",
+    "sides" : "5 - Contondant - Nageoire Fragile",
+    "back" : "5 - Contondant - Caudale Rouge"
   },
   {
     "id": 129,
@@ -137,14 +155,14 @@
     "esquive": "11",
     "armor": "2/4/8",
     "type": ["Eau/Spectre"],
-    "attacks": ["Charge", "Disparition", "Ombre Nocturne", "Trempette", "Eau Revoir"],
+    "attacks": ["Charge", "Disparition", "Ombre Nocturne", "Trempette", "Eau Revoir", "Fléau"],
     "passifs": ["Trempette des revenants", "Fragilité Contondante", "Resistance Percante"],
     "status" : "hide",
     "comportement" : "1 action sur 2 magicarpe est obligé de faire <b>Trempette</b>, attaque l'ennemi le plus proche et fait Eau Revoir dès qu'un ennemi se trouve dans sa zone Au Contact ou Proche",
     "alpha" : "yes",
     "front" : "5 - Contondant - Barbillon Osseux - Charge",
     "sides" : "4 - Coupant - Membrane Perpétuelle - Eau Revoir",
-    "back" : "5 - Contondant - Os Codale - Ombre Nocturne"
+    "back" : "5 - Contondant - Os Caudale - Ombre Nocturne"
   },
   {
     "id": 161,

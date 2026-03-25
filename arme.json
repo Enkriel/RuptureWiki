@@ -127,7 +127,7 @@
   },
   {
     
-    "id": 40002,
+    "id": 50002,
     "Nom": "Poing d'entrainement",
     "type": "Fist",
     "tier": 0,
@@ -210,6 +210,20 @@
     "Craft": "Membrane Perpétuelle, 3 matériaux Eau",
     "Secret": "yes"   
   },
+    {
+    "id": 41001,
+    "Nom": "Harpon du Roi Rouge",
+    "type": "Spr",
+    "tier": 1,
+    "Element": "Eau",
+    "Dégât": "1d8 + 3",
+    "MotClef": "Finesse, Allonge, Perçant, Trempette volante",
+    "ability1": "Trempette",
+    "ability2": "Charge",
+    "ability3": "Fléau",
+    "Craft": "1 Couronne du Roi Rouge, 3 matériaux Eau",
+    "Secret": "yes"   
+  },
   {
     "id": 60001,
     "Nom": "Griffe abyssale",
@@ -263,7 +277,7 @@
     "ability1": "Pistolet à O",
     "ability2": "Ombre Nocturne",
     "ability3": "Ombre Nocturne",
-    "Craft": "Os Codale, 2 matériaux Spectre, 1 Eau",
+    "Craft": "Os Caudale, 2 matériaux Spectre, 1 Eau",
     "Secret": "yes"   
   },
   {

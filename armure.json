@@ -164,7 +164,7 @@
     "Armure": "3",
     "Paliers": "8/13",
     "Effets": "Gain Trempette, Trempette des revenants, Trempette du Peureux",
-    "Craft": "Os Codale + 2 matériaux Eau",
+    "Craft": "Os Caudale + 2 matériaux Eau",
     "Secret": "yes"
   },
   {
@@ -177,6 +177,18 @@
     "Paliers": "8/13",
     "Effets": "Armure Robotique",
     "Craft": "Casque à oreille Rose + 2 matériaux Normaux",
+    "Secret": "yes"
+  },
+  {
+    "id": 31003,
+    "Nom": "Armure du Roi Rouge",
+    "type": "Lourde",
+    "tier": 1,
+    "Element": "Spectre",
+    "Armure": "3",
+    "Paliers": "8/13",
+    "Effets": "",
+    "Craft": "Caudale Rouge + 2 matériaux Eau",
     "Secret": "yes"
   },
   {

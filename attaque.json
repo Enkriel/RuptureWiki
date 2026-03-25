@@ -40,6 +40,14 @@
     "description": "JS Sag réduit de 3 tous les dégats infligé du prochain tour."
   },
   {
+    "id": 1105,
+    "Nom": "Fléau",
+    "type": "Normal",
+    "tier": 1,
+    "portée": "1 - For - Contondant",
+    "description": "Si vous avez 1 pv inflige une blessure sévère. Si vous avez 2 pv inflige une blessure majeur. Si vous avez 3 pv inflige une blessure mineure. Sinon ne fait rien"
+  },
+  {
     "id": 1201,
     "Nom": "Présent",
     "type": "Normal",

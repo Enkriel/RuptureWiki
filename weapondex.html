@@ -68,6 +68,11 @@ let attaqueData = [];
 let statusData = [];
 let passifsData = [];
 
+function isLocalDevHost(){
+  const h = window.location.host.toLowerCase();
+  return h === '127.0.0.1:5500' || h === 'localhost:5500' || h === '127.0.0.1' || h === 'localhost';
+}
+
 /* ------------------ mappings & types ------------------ */
 const weaponTypes = [
   "Espadon","Marteau","Katana","Hallebarde","Poings","Double lames",
@@ -190,22 +195,40 @@ function renderWeapons(){
         const tr = document.createElement('tr');
         const td = txt => { const c = document.createElement('td'); c.textContent = txt || '—'; return c; };
 
+        const isSecret = (w.Secret && w.Secret.toLowerCase() !== 'no');
+        const showSecret = isLocalDevHost();
+
         tr.appendChild(td(w.Nom));
         tr.appendChild(td(mapType(w.type)));
         tr.appendChild(td(w.Element));
         tr.appendChild(td(w["Dégât"]));
         const tdMot = document.createElement('td');
-        if(w.Secret == "no")
+        if(!isSecret || showSecret){
           tdMot.appendChild(renderMotClefDOM(w.MotClef));
-        else{
+        } else {
           tdMot.appendChild(renderMotClefDOM("???"));
           tdMot.style.color = "purple";
         }
         tr.appendChild(tdMot);
 
-        const a1 = document.createElement('td'); a1.appendChild(renderAbilityDOM(w.ability1)); tr.appendChild(a1);
-        const a2 = document.createElement('td'); a2.appendChild(renderAbilityDOM(w.ability2)); tr.appendChild(a2);
-        const a3 = document.createElement('td'); a3.appendChild(renderAbilityDOM(w.ability3)); tr.appendChild(a3);
+        const a1 = document.createElement('td');
+        const a2 = document.createElement('td');
+        const a3 = document.createElement('td');
+
+        if(!isSecret || showSecret){
+          a1.appendChild(renderAbilityDOM(w.ability1));
+          a2.appendChild(renderAbilityDOM(w.ability2));
+          a3.appendChild(renderAbilityDOM(w.ability3));
+        } else {
+          a1.textContent = '???';
+          a2.textContent = '???';
+          a3.textContent = '???';
+          a1.style.color = a2.style.color = a3.style.color = 'purple';
+        }
+
+        tr.appendChild(a1);
+        tr.appendChild(a2);
+        tr.appendChild(a3);
 
         tr.appendChild(td(w.Craft));
         tbody.appendChild(tr);
