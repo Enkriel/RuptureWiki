@@ -3,8 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rupture Wiki</title>
+    <title>Rupture Wiki - Map</title>
     <link rel="stylesheet" href="../style.css">
+    <style>
+        .map-container {
+            margin: 20px auto;
+            max-width: 900px;
+            padding: 20px;
+        }
+
+        .map-points-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .map-points-table th,
+        .map-points-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .map-points-table th {
+            background-color: #333;
+            color: white;
+            font-weight: bold;
+        }
+
+        .map-points-table tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .map-image-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .map-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .map-point {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            font-weight: bold;
+            color: black;
+            white-space: nowrap;
+            user-select: none;
+            transition: all 0.2s ease;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+        }
+
+        .map-point:hover {
+            color: white;
+            text-shadow: 
+                -1px -1px 0 white,
+                1px -1px 0 white,
+                -1px 1px 0 white,
+                1px 1px 0 white,
+                0 -1px 0 white,
+                0 1px 0 white,
+                -1px 0 0 white,
+                1px 0 0 white;
+            font-size: 1.1em;
+            filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.8));
+        }
+
+        .map-point a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .map-point a:hover {
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar injectée -->
@@ -13,8 +91,46 @@
 
     <div class="header">
         <h1>Rupture JDR</h1>
-        <p>Page d'accueil</p>
-        <img src="../img/map.jpg" alt="Logo de Rupture" class="logo">
+        <p>Carte du Monde</p>
     </div>
+
+    <div class="map-container">
+        <!-- Carte avec les points interactifs -->
+        <div class="map-image-container">
+            <img src="../img/map.jpg" alt="Carte de Rupture">
+            <div id="mapPointsContainer"></div>
+        </div>
+    </div>
+
+    <script>
+        // Configuration des points de repère
+        const mapPoints = [
+            { name: 'Solhéon', x: 52, y: 65, link: '../Clans/solheon.html' },
+            { name: 'Rivargent', x: 63, y: 45, link: '../Clans/rivargent.html' },
+            { name: 'L Atre', x: 38, y: 49, link: '../Clans/atre.html' },
+            { name: 'Erivale', x: 30, y: 28, link: '../Clans/erivale.html' },
+            { name: 'Kaer Nor', x: 70, y: 16, link: '../Clans/kaernor.html' }
+            
+        ];
+
+        function initMap() {
+            const container = document.getElementById('mapPointsContainer');
+            container.innerHTML = '';
+
+            mapPoints.forEach(point => {
+                const pointElement = document.createElement('a');
+                pointElement.href = point.link;
+                pointElement.className = 'map-point';
+                pointElement.style.left = point.x + '%';
+                pointElement.style.top = point.y + '%';
+                pointElement.textContent = point.name;
+                pointElement.title = point.name;
+
+                container.appendChild(pointElement);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', initMap);
+    </script>
 </body>
 </html>
