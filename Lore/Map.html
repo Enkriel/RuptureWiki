@@ -10,35 +10,15 @@
             margin: 20px auto;
             max-width: 900px;
             padding: 20px;
-        }
-
-        .map-points-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 30px;
-        }
-
-        .map-points-table th,
-        .map-points-table td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: left;
-        }
-
-        .map-points-table th {
-            background-color: #333;
-            color: white;
-            font-weight: bold;
-        }
-
-        .map-points-table tr:hover {
-            background-color: #f5f5f5;
+            position: relative;
+            overflow: hidden; /* Pour cacher les bords de l'image lorsqu'elle est déplacée */
         }
 
         .map-image-container {
             position: relative;
             display: inline-block;
-            width: 100%;
+            transition: transform 0.2s ease;
+            cursor: grab; /* Curseur pour le déplacement */
         }
 
         .map-image-container img {
@@ -57,10 +37,15 @@
             user-select: none;
             transition: all 0.2s ease;
             text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+            display: none; /* Masquer par défaut */
         }
 
+        .map-point.visible {
+            display: block; /* Afficher quand zoomé */
+        }
+
+        /* Styles pour le hover des points */
         .map-point:hover {
-            color: white;
             text-shadow: 
                 -1px -1px 0 white,
                 1px -1px 0 white,
@@ -95,42 +80,128 @@
     </div>
 
     <div class="map-container">
-        <!-- Carte avec les points interactifs -->
-        <div class="map-image-container">
+        <div class="map-image-container" id="mapImageContainer">
             <img src="../img/map.jpg" alt="Carte de Rupture">
             <div id="mapPointsContainer"></div>
         </div>
     </div>
 
     <script>
-        // Configuration des points de repère
-        const mapPoints = [
-            { name: 'Solhéon', x: 52, y: 65, link: '../Clans/solheon.html' },
-            { name: 'Rivargent', x: 63, y: 45, link: '../Clans/rivargent.html' },
-            { name: 'L Atre', x: 38, y: 49, link: '../Clans/atre.html' },
-            { name: 'Erivale', x: 30, y: 28, link: '../Clans/erivale.html' },
-            { name: 'Kaer Nor', x: 70, y: 16, link: '../Clans/kaernor.html' }
-            
-        ];
+    
+    // minZoom : zoom minimal pour afficher le point
+    //   0   = toujours visible dès le départ
+    //   1   = visible au zoom par défaut (1x)
+    //   1.5 = visible seulement après avoir zoomé à 1.5x
+    //   etc.
+    const mapPoints = [
+        { name: 'Solhéon',   x: 52, y: 65, link: '../Clans/solheon.html',   minZoom: 0   },
+        { name: 'Rivargent', x: 63, y: 45, link: '../Clans/rivargent.html', minZoom: 0   },
+        { name: 'L Atre',    x: 38, y: 49, link: '../Clans/atre.html',      minZoom: 0 },
+        { name: 'Erivale',   x: 30, y: 28, link: '../Clans/erivale.html',   minZoom: 0 },
+        { name: 'Kaer Nor',  x: 70, y: 16, link: '../Clans/kaernor.html',   minZoom: 0   },
+        { name: 'Port de la rivière',  x: 71, y: 40, link: '',   minZoom: 2   }
+    ];
 
-        function initMap() {
-            const container = document.getElementById('mapPointsContainer');
-            container.innerHTML = '';
-
-            mapPoints.forEach(point => {
-                const pointElement = document.createElement('a');
+    let scale = 1;
+    const dragSpeed = 30;
+   const mapImageContainer = document.getElementById('mapImageContainer');
+ 
+    function initMap() {
+        const container = document.getElementById('mapPointsContainer');
+        container.innerHTML = '';
+ 
+        mapPoints.forEach(point => {
+            const pointElement = point.link
+                ? document.createElement('a')
+                : document.createElement('span');
+ 
+            if (point.link) {
                 pointElement.href = point.link;
-                pointElement.className = 'map-point';
-                pointElement.style.left = point.x + '%';
-                pointElement.style.top = point.y + '%';
-                pointElement.textContent = point.name;
                 pointElement.title = point.name;
-
-                container.appendChild(pointElement);
-            });
+            } else {
+                pointElement.style.cursor = 'default';
+            }
+ 
+            pointElement.className = 'map-point';
+            pointElement.style.left = point.x + '%';
+            pointElement.style.top = point.y + '%';
+            pointElement.textContent = point.name;
+            pointElement.dataset.minZoom = point.minZoom ?? 1.2;
+ 
+            container.appendChild(pointElement);
+        });
+ 
+        updatePointsVisibility();
+    }
+ 
+    function updatePointsVisibility() {
+        const points = document.querySelectorAll('.map-point');
+        points.forEach(point => {
+            const minZoom = parseFloat(point.dataset.minZoom);
+            const visible = scale >= minZoom;
+            point.classList.toggle('visible', visible);
+            // Compenser le zoom de la map pour garder une taille de texte constante à l'écran
+            point.style.fontSize = (1 / scale) + 'em';
+        });
+    }
+ 
+    // Zoom à la molette
+    mapImageContainer.addEventListener('wheel', (event) => {
+        event.preventDefault();
+        const rect = mapImageContainer.getBoundingClientRect();
+        const mouseX = event.clientX - rect.left;
+        const mouseY = event.clientY - rect.top;
+ 
+        const scaleChange = event.deltaY > 0 ? -0.1 : 0.1;
+        const newScale = Math.min(Math.max(scale + scaleChange, 0.5), 3);
+ 
+        const scaleFactor = newScale / scale;
+        const offsetX = mouseX * (1 - scaleFactor);
+        const offsetY = mouseY * (1 - scaleFactor);
+ 
+        scale = newScale;
+        const currentTransform = getComputedStyle(mapImageContainer).transform;
+        const matrix = new DOMMatrix(currentTransform);
+        mapImageContainer.style.transform = `matrix(${scale}, 0, 0, ${scale}, ${matrix.e + offsetX}, ${matrix.f + offsetY})`;
+ 
+        updatePointsVisibility();
+    });
+ 
+    // Déplacement au clic droit
+    let isDragging = false;
+    let startX, startY;
+ 
+    mapImageContainer.addEventListener('mousedown', (event) => {
+        if (event.button === 2) {
+            isDragging = true;
+            startX = event.clientX;
+            startY = event.clientY;
+            mapImageContainer.style.cursor = 'grabbing';
         }
-
-        document.addEventListener('DOMContentLoaded', initMap);
+    });
+ 
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        mapImageContainer.style.cursor = 'grab';
+    });
+ 
+    document.addEventListener('mousemove', (event) => {
+        if (isDragging) {
+            const dx = (event.clientX - startX) * dragSpeed;
+            const dy = (event.clientY - startY) * dragSpeed;
+            const currentTransform = getComputedStyle(mapImageContainer).transform;
+            const matrix = new DOMMatrix(currentTransform);
+            mapImageContainer.style.transform = `matrix(${scale}, 0, 0, ${scale}, ${matrix.e + dx}, ${matrix.f + dy})`;
+            startX = event.clientX;
+            startY = event.clientY;
+        }
+    });
+ 
+    document.addEventListener('contextmenu', (event) => {
+        event.preventDefault();
+    });
+ 
+    document.addEventListener('DOMContentLoaded', initMap);
     </script>
 </body>
 </html>
