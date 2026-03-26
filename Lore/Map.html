@@ -145,7 +145,17 @@
         });
     }
  
-    // Zoom à la molette
+    function applyTransform(newScale, tx, ty) {
+        scale = Math.min(Math.max(newScale, 0.5), 3);
+        mapImageContainer.style.transform = `matrix(${scale}, 0, 0, ${scale}, ${tx}, ${ty})`;
+        updatePointsVisibility();
+    }
+ 
+    function getMatrix() {
+        return new DOMMatrix(getComputedStyle(mapImageContainer).transform);
+    }
+ 
+    // ── Desktop : molette ──────────────────────────────────────────────
     mapImageContainer.addEventListener('wheel', (event) => {
         event.preventDefault();
         const rect = mapImageContainer.getBoundingClientRect();
@@ -154,20 +164,12 @@
  
         const scaleChange = event.deltaY > 0 ? -0.1 : 0.1;
         const newScale = Math.min(Math.max(scale + scaleChange, 0.5), 3);
- 
         const scaleFactor = newScale / scale;
-        const offsetX = mouseX * (1 - scaleFactor);
-        const offsetY = mouseY * (1 - scaleFactor);
+        const m = getMatrix();
+        applyTransform(newScale, m.e + mouseX * (1 - scaleFactor), m.f + mouseY * (1 - scaleFactor));
+    }, { passive: false });
  
-        scale = newScale;
-        const currentTransform = getComputedStyle(mapImageContainer).transform;
-        const matrix = new DOMMatrix(currentTransform);
-        mapImageContainer.style.transform = `matrix(${scale}, 0, 0, ${scale}, ${matrix.e + offsetX}, ${matrix.f + offsetY})`;
- 
-        updatePointsVisibility();
-    });
- 
-    // Déplacement au clic droit
+    // ── Desktop : clic droit pour déplacer ────────────────────────────
     let isDragging = false;
     let startX, startY;
  
@@ -186,19 +188,87 @@
     });
  
     document.addEventListener('mousemove', (event) => {
-        if (isDragging) {
-            const dx = (event.clientX - startX) * dragSpeed;
-            const dy = (event.clientY - startY) * dragSpeed;
-            const currentTransform = getComputedStyle(mapImageContainer).transform;
-            const matrix = new DOMMatrix(currentTransform);
-            mapImageContainer.style.transform = `matrix(${scale}, 0, 0, ${scale}, ${matrix.e + dx}, ${matrix.f + dy})`;
-            startX = event.clientX;
-            startY = event.clientY;
-        }
+        if (!isDragging) return;
+        const dx = (event.clientX - startX) * dragSpeed;
+        const dy = (event.clientY - startY) * dragSpeed;
+        const m = getMatrix();
+        applyTransform(scale, m.e + dx, m.f + dy);
+        startX = event.clientX;
+        startY = event.clientY;
     });
  
-    document.addEventListener('contextmenu', (event) => {
+    document.addEventListener('contextmenu', (event) => event.preventDefault());
+ 
+    // ── Mobile : pinch-to-zoom + glissement 1 doigt ───────────────────
+    let lastTouchDist = null;
+    let lastTouchMid  = null;
+    let touchStartX, touchStartY;
+ 
+    function getTouchDist(t) {
+        const dx = t[0].clientX - t[1].clientX;
+        const dy = t[0].clientY - t[1].clientY;
+        return Math.hypot(dx, dy);
+    }
+ 
+    function getTouchMid(t) {
+        return {
+            x: (t[0].clientX + t[1].clientX) / 2,
+            y: (t[0].clientY + t[1].clientY) / 2
+        };
+    }
+ 
+    mapImageContainer.addEventListener('touchstart', (event) => {
+        if (event.touches.length === 2) {
+            event.preventDefault();
+            lastTouchDist = getTouchDist(event.touches);
+            lastTouchMid  = getTouchMid(event.touches);
+        } else if (event.touches.length === 1) {
+            touchStartX = event.touches[0].clientX;
+            touchStartY = event.touches[0].clientY;
+        }
+    }, { passive: false });
+ 
+    mapImageContainer.addEventListener('touchmove', (event) => {
         event.preventDefault();
+ 
+        if (event.touches.length === 2) {
+            // Pinch-to-zoom
+            const dist = getTouchDist(event.touches);
+            const mid  = getTouchMid(event.touches);
+            const rect = mapImageContainer.getBoundingClientRect();
+ 
+            const pinchX = mid.x - rect.left;
+            const pinchY = mid.y - rect.top;
+ 
+            const newScale    = Math.min(Math.max(scale * (dist / lastTouchDist), 0.5), 3);
+            const scaleFactor = newScale / scale;
+            const m = getMatrix();
+ 
+            applyTransform(
+                newScale,
+                m.e + pinchX * (1 - scaleFactor) + (mid.x - lastTouchMid.x),
+                m.f + pinchY * (1 - scaleFactor) + (mid.y - lastTouchMid.y)
+            );
+ 
+            lastTouchDist = dist;
+            lastTouchMid  = mid;
+ 
+        } else if (event.touches.length === 1) {
+            // Glissement 1 doigt
+            const dx = event.touches[0].clientX - touchStartX;
+            const dy = event.touches[0].clientY - touchStartY;
+            const m = getMatrix();
+            applyTransform(scale, m.e + dx, m.f + dy);
+            touchStartX = event.touches[0].clientX;
+            touchStartY = event.touches[0].clientY;
+        }
+    }, { passive: false });
+ 
+    mapImageContainer.addEventListener('touchend', (event) => {
+        if (event.touches.length < 2) {
+            lastTouchDist = null;
+            lastTouchMid  = null;
+        }
     });
  
     document.addEventListener('DOMContentLoaded', initMap);
