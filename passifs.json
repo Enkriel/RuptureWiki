@@ -423,5 +423,15 @@
     "id": 116,
     "Nom": "Trempette Volante",
     "description": "Quand vous lancer l'attaque <b>Trempette</b> vous avez 1 chance sur 2 de sauter extremement haut (saut de 5m) et de retomber en piqué infligeant 2d8 dégat à une cible à distance 3"
+  },
+  {
+    "id": 117,
+    "Nom": "Eclair Perçant",
+    "description": "Votre attaque <b>Eclair</b> à le mot-clef perçant et inflige 1 dégat supplémentaire"
+  },
+  {
+    "id": 118,
+    "Nom": "Invisible aux Fous",
+    "description": "Les attaques de cible confuse ne peuvent pas vous cibler"
   }
 ]

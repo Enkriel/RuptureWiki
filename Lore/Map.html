@@ -99,12 +99,13 @@
         { name: 'L Atre',    x: 38, y: 49, link: '../Clans/atre.html',      minZoom: 0 },
         { name: 'Erivale',   x: 30, y: 28, link: '../Clans/erivale.html',   minZoom: 0 },
         { name: 'Kaer Nor',  x: 70, y: 16, link: '../Clans/kaernor.html',   minZoom: 0   },
-        { name: 'Port de la rivière',  x: 71, y: 40, link: '',   minZoom: 2   }
+        { name: 'Port Lutsa',  x: 71, y: 40, link: '',   minZoom: 2   },
+        { name: 'Silent Howl',   x: 78, y: 44, link: '../Lore/SilentHowl.html',   minZoom: 0 }
     ];
 
     let scale = 1;
     const dragSpeed = 30;
-   const mapImageContainer = document.getElementById('mapImageContainer');
+    const mapImageContainer = document.getElementById('mapImageContainer');
  
     function initMap() {
         const container = document.getElementById('mapPointsContainer');
@@ -146,7 +147,7 @@
     }
  
     function applyTransform(newScale, tx, ty) {
-        scale = Math.min(Math.max(newScale, 0.5), 3);
+        scale = Math.min(Math.max(newScale, 1), 3);
         mapImageContainer.style.transform = `matrix(${scale}, 0, 0, ${scale}, ${tx}, ${ty})`;
         updatePointsVisibility();
     }

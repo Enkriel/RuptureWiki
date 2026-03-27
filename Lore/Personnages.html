@@ -487,6 +487,9 @@
                                 <div class="perso-age">🎂 ${perso.age} ans</div>
                             </div>
                             ${isDev ? `<button type="button" class="perso-edit-btn" onclick="openModal(${perso.id})">✏️ Éditer</button>` : ''}
+                            ${isDev && perso.lien && perso.lien !== "none" 
+                            ? `<a href="${perso.lien}" target="_blank" class="perso-edit-btn">Fiche</a>` 
+                            : ''}
                         </div>
                         ${perso.motClef && perso.motClef.length > 0 ? `
                             <div class="perso-motcles">

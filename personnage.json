@@ -12,6 +12,7 @@
     ],
     "infoPublique": "Lors de la Rupture, elle n’avait que neuf ans. Sa famille fut décimée lors de l’assaut des Pokémon Alpha, elle veut d'abattre Mewtwo.  Elle écopa d'une blessure grave à l'épaule droite et au thorax face à un Grolem Alpha.\nElle fonda Silent Howl avec Coan Voss pour continuer le combat.",
     "infoMJ": "Son pere l'appellais mon petit feunard, un pokémon connu pour sa ruse son intelligence mais aussi sa rancune, le jour ou son père est mort devant elle elle n'as pu faire aucun son d'ou le nom de la guilde",
+    "lien": "none",
     "seen": true
   },
   {
@@ -27,6 +28,7 @@
     ],
     "infoPublique": "Coan est né l'année de la Rupture, il souhaite que les grande villes aient moins d'influence sur le continent.\nIl a fondé Silent Howl avec Lyandra pour aider les plus petites villes et met un point d'honneur à aider ceux qui sont dans le besoin.",
     "infoMJ": "Il est né à Rivargent et sa mère est morte avant l'arriver des armures dans la villes, il en veux particulièrement à Solhéon et au pontif.\nC'est un assassin expert en poison extrement fort mais se fait passer pour pas très fort\n",
+    "lien": "none",
     "seen": true
   },
   {
@@ -41,6 +43,7 @@
     "image": "elior.jpg",
     "infoPublique": "Dirigeant de la ville de Solhéon, il l'a invoquée en priant Arceus pendant 2 ans.\nIl a reçu son armure avec la ville et le parchemin permettant d'en créer à partir des Pokémon Alpha.\nIl a aujourd'hui pour mission de recréer une Pokéball et de réunir les 18 plaques d'Arceus.",
     "infoMJ": "Il a au final prié Giratina Arceus n'en a rien a faire c'est un simple observateur, Giratina est celui qui à crée les humains c'est lui qui veut les proteger.\n\nGrace aux plaques Giratina pour être libre",
+    "lien": "none",
     "seen": true
   },
   {
@@ -56,6 +59,7 @@
     ],
     "infoPublique": "Médecin de la guilde c'est un expert en poison.",
     "infoMJ": "Il vient de Érivale, en tant que médecin ambassadeur, en travaillant ici tout Silent Howl accepte de prendre un moins grand pourcentage sur les quête de Érivale ",
+    "lien": "none",
     "seen": true
   },
   {
@@ -71,6 +75,7 @@
     "image": "none",
     "infoPublique": "Maitre-forgeron qui a créé la première armure Pokémon, il a formé Seliane Veyra, Kaelen Dravik et Mirek Veyra, il a trahi le pontife en demandant à ses apprentis de répandre la forge sur tout le continent.\nIl est encore enfermé dans la Tour du Jugement.",
     "infoMJ": "",
+    "lien": "none",
     "seen": true
   },
   {
@@ -85,6 +90,7 @@
     "image": "none",
     "infoPublique": "Formée par Darius Kaelborn, elle est considéré aujourd'hui comme la meilleure forgeronne du monde. Elle a suivi la volonté de son maitre et s'est consacrée à son art et a formé différents apprentis.",
     "infoMJ": "Elle à formé Alina",
+    "lien": "none",
     "seen": true
   },
   {
@@ -100,6 +106,7 @@
     "image": "Perso/Alina.jpg",
     "infoPublique": "Alina est la forgeronne de Silent Howl elle a un caractère bien trempé et souhaite montrer à tout le monde qu'elle est la meilleure forgeronne de sa génération.",
     "infoMJ": "Formé par Seliane à ses 15 ans en l'an 33 elle est parti par ego pour lui prouver que aujourd'hui c'est elle la meilleur et non pas l'autre forgeron formé en meme temps, elle a remplacer l'ancien forgeron qui a quitté la guilde pour rejoindre Solhéon",
+    "lien": "none",
     "seen": true
   },
   {
@@ -116,6 +123,7 @@
     "image": "none",
     "infoPublique": "Il travaille à la guilde en tant qu'indentant des quêtes avec sa sœur.\nIl est en fauteuil roulant.",
     "infoMJ": "C'est un ancien Hunter, blesser lors de sa 2ème quête contre, un Médhyéna Alpha il va lui même proposer une quête pour se venger.",
+    "lien": "none",
     "seen": true
   },
   {
@@ -126,6 +134,51 @@
     "image": "none",
     "infoPublique": "Intendante principale des quêtes de Silent Howl.",
     "infoMJ": "C'est elle qui a permis à Henri d'avoir son poste, elle est très protectrice depuis qu'il c'est blessé.",
+    "lien": "none",
+    "seen": true
+  },
+  {
+    "id": 10,
+    "Nom": "Merl Ondgrise",
+    "motClef": [
+      "Port Lutsa",
+      "Guerrier",
+      "Magicarpe"
+    ],
+    "age": "Morte à 73 ans",
+    "image": "Perso/Merl_Ondgrise.png",
+    "infoPublique": "Héroine du Port Lutsa, elle à vaincu un Magicarpe Alpha.",
+    "infoMJ": "Grand Mère de James Ondgrise.",
+    "lien": "https://docs.google.com/spreadsheets/d/1GE3Nj6e5SzTgTqtuvXOhfwPTUP_ZDmCkWeJG3Lod97E/edit?gid=222453084#gid=222453084",
+    "seen": true
+  },
+  {
+    "id": 11,
+    "Nom": "James Ondgrise",
+    "motClef": [
+      "Port Lutsa",
+      "Pecheur",
+      "Magicarpe"
+    ],
+    "age": 21,
+    "image": "Perso/James_Ondgrise.jpeg",
+    "infoPublique": "Pecheur du Port Lutsa.",
+    "infoMJ": "Petit fils de Merl Ondgrise, l'héroine du port.",
+    "seen": true
+  },
+  {
+    "id": 12,
+    "Nom": "Olhm Ondgrise",
+    "motClef": [
+      "Port Lutsa",
+      "Maire"
+    ],
+    "age": "78",
+    "image": "Perso/Olhm_Ondgrise.png",
+    "infoPublique": "Maire du Port Lutsa.",
+    "infoMJ": "Grand père de James Ondgrise et veuf de l'héroine.",
+    "lien": "none",
     "seen": true
   }
+
 ]

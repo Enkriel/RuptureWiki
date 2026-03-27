@@ -183,7 +183,7 @@
     "Secret": "no"
   },
   {
-    "id": 130002,
+    "id": 130001,
     "Nom": "Mouffle Coeur de Feu",
     "type": "Cata",
     "tier": 0,
@@ -194,6 +194,20 @@
     "ability2": "Flammèche",
     "ability3": "Calcination",
     "Craft": "2 matériaux Fée, 1 Feu",
+    "Secret": "no"   
+  },
+  {
+    "id": 130002,
+    "Nom": "Peluche Dedenne made in l'Atre",
+    "type": "Cata",
+    "tier": 0,
+    "Element": "Electrik",
+    "Dégât": "1d6 + 2",
+    "MotClef": "Magique, Eclair Perçant",
+    "ability1": "Éclair",
+    "ability2": "Éclair",
+    "ability3": "",
+    "Craft": "3 matériaux Electrik",
     "Secret": "no"   
   },
   {

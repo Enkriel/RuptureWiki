@@ -36,6 +36,18 @@
     "Secret": "no"  
   },
   {
+    "id": 10004,
+    "Nom": "Toge de l'érudite",
+    "type": "Légère",
+    "tier": 0,
+    "Element": "Psy",
+    "Armure": "1",
+    "Paliers": "4/7",
+    "Effets": "Invisible aux Fous",
+    "Craft": "3 matériaux Psy",
+    "Secret": "no"  
+  },
+  {
     "id": 20001,
     "Nom": "Armure de lianes",
     "type": "Moyenne",
@@ -184,7 +196,7 @@
     "Nom": "Armure du Roi Rouge",
     "type": "Lourde",
     "tier": 1,
-    "Element": "Spectre",
+    "Element": "Eau",
     "Armure": "3",
     "Paliers": "8/13",
     "Effets": "",
