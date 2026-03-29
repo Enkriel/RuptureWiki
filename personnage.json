@@ -179,6 +179,37 @@
     "infoMJ": "Grand père de James Ondgrise et veuf de l'héroine.",
     "lien": "none",
     "seen": true
+  },
+  {
+    "id": 13,
+    "Nom": "Elona & Etem Ambellande",
+    "motClef": [
+      "Silent Howl",
+      "Guilde",
+      "Professeur"
+    ],
+    "age": "42 - 45 ans",
+    "image": "Perso/coupleAmbellande.png",
+    "infoPublique": "Couple d'ancien aventuriers et devenu professeurs de d'arme à Silent Howl. La femme, Elona, est une experte sur les armes de corps à corps et de magie, Etem, est un expert en arme à distance.",
+    "infoMJ": "",
+    "lien": "none",
+    "seen": true
+  },
+  {
+    "id": 14,
+    "Nom": "Professeur Emyr",
+    "motClef": [
+      "Silent Howl",
+      "Guilde",
+      "Professeur",
+      "Pokemonologue"
+    ],
+    "age": "34",
+    "image": "Perso/Emyr.png",
+    "infoPublique": "Professeur de pokémonologie à Silent Howl.",
+    "infoMJ": "",
+    "lien": "none",
+    "seen": true
   }
 
 ]
