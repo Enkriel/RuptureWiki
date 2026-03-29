@@ -150,7 +150,7 @@
     "infoPublique": "Héroine du Port Lutsa, elle à vaincu un Magicarpe Alpha.",
     "infoMJ": "Grand Mère de James Ondgrise.",
     "lien": "https://docs.google.com/spreadsheets/d/1GE3Nj6e5SzTgTqtuvXOhfwPTUP_ZDmCkWeJG3Lod97E/edit?gid=222453084#gid=222453084",
-    "seen": true
+    "seen": false
   },
   {
     "id": 11,
@@ -164,7 +164,7 @@
     "image": "Perso/James_Ondgrise.jpeg",
     "infoPublique": "Pecheur du Port Lutsa.",
     "infoMJ": "Petit fils de Merl Ondgrise, l'héroine du port.",
-    "seen": true
+    "seen": false
   },
   {
     "id": 12,
@@ -178,7 +178,7 @@
     "infoPublique": "Maire du Port Lutsa.",
     "infoMJ": "Grand père de James Ondgrise et veuf de l'héroine.",
     "lien": "none",
-    "seen": true
+    "seen": false
   },
   {
     "id": 13,
