@@ -4,7 +4,7 @@
     "nom": "Potion",
     "effet" : "Restaure TIER pv",
     "Craft": "plante + eau",
-    "Prix": "tier * 15 pieces",
+    "Prix": "tier * 18 Pokédollars",
     "Secret" : "no"
   },
   {
@@ -12,7 +12,7 @@
     "nom": "Antidote",
     "effet" : "Guérit un poison infligé par une compétence de tier TIER ou inférieur.",
     "Craft": "poison + eau",
-    "Prix": "tier * 15 pieces",
+    "Prix": "tier * 18 Pokédollars",
     "Secret" : "no"
   },
   {
@@ -20,7 +20,7 @@
     "nom": "Anti-brûle",
     "effet" : "Guérit un brûlure infligé par une compétence de tier TIER ou inférieur.",
     "Craft": "Feu + Fée",
-    "Prix": "tier * 15 pieces",
+    "Prix": "tier * 18 Pokédollars",
     "Secret" : "no"
   },
   {
@@ -28,7 +28,7 @@
     "nom": "Anti-para",
     "effet" : "Guérit un paralysie infligé par une compétence de tier TIER ou inférieur.",
     "Craft": "Électrique + Fée",
-    "Prix": "tier * 15 pieces",
+    "Prix": "tier * 18 Pokédollars",
     "Secret" : "no"
   },
   {
@@ -36,15 +36,15 @@
     "nom": "Dégel",
     "effet" : "Guérit un gel infligé par une compétence de tier TIER ou inférieur.",
     "Craft": "Glace + Vol",
-    "Prix": "tier * 15 pieces",
+    "Prix": "tier * 18 Pokédollars",
     "Secret" : "no"
   },
   {
     "id": 6,
     "nom": "Bombe fumigène",
     "effet" : "AoE 1 rend les personne dans la zone <b class='data-status' data-status-name='Aveuglé'>aveugle</b> et flou.",
-    "Craft": "Spectre + Ténèbres",
-    "Prix": "tier * 25 pieces",
+    "Craft": "2 Ténèbres + Spectre",
+    "Prix": "tier * 27 Pokédollars",
     "Secret" : "yes"
   },
   {
@@ -52,55 +52,55 @@
     "nom": "Miel",
     "effet" : "Attire des pokémons.",
     "Craft": "Insecte + Plante",
-    "Prix": "tier * 10 pieces",
+    "Prix": "tier * 18 Pokédollars",
     "Secret" : "no"
   },
   {
     "id": 8,
     "nom": "Mini bombe",
     "effet" : "AoE 1 TierD4+8.",
-    "Craft": "Feu + Dragon",
-    "Prix": "tier * 30 pieces",
+    "Craft": "2 Feu + Dragon",
+    "Prix": "tier * 27 Pokédollars",
     "Secret" : "no"
   },
   {
     "id": 9,
     "nom": "Aiguisoir",
     "effet" : "Restaure un competence d'arme.",
-    "Craft": "Roche + Sol",
-    "Prix": "tier * 30 pieces",
+    "Craft": "2 Roche + Sol",
+    "Prix": "tier * 27 Pokédollars",
     "Secret" : "no"
   },
   {
     "id": 10,
     "nom": "Pack de réparation",
-    "effet" : "Redonne 1 point d'armure à une Armure.",
+    "effet" : "Permet de réparer Arme ou Armure endommagée.",
     "Craft": "Acier + Feu",
-    "Prix": "tier * 20 pieces",
+    "Prix": "tier * 18 Pokédollars",
     "Secret" : "half"
   },
   {
     "id": 11,
     "nom": "Couteau à lancé",
-    "effet" : "Projectile de combat léger infligeant des dégâts coupants.",
+    "effet" : "Projectile de combat léger infligeant des dégâts coupants selon le tier.",
     "Craft": "Normal + Acier",
-    "Prix": "tier * 12 pieces",
+    "Prix": "tier * 15 Pokédollars",
     "Secret" : "half"
   },
   {
     "id": 12,
     "nom": "Poids à lancé",
-    "effet" : "Projectile lourd, inflige des dégâts d'impact infligeant des dégâts contondants.",
+    "effet" : "Projectile lourd, inflige des dégâts d'impact infligeant des dégâts contondants selon le tier.",
     "Craft": "Roche + Combat",
-    "Prix": "tier * 12 pieces",
+    "Prix": "tier * 15 Pokédollars",
     "Secret" : "half"
   },
   {
     "id": 13,
     "nom": "Dard à lancé",
-    "effet" : "Projectile rapide et précis infligeant des dégâts perçants.",
+    "effet" : "Projectile rapide et précis infligeant des dégâts perçants selon le tier.",
     "Craft": "Vol + Ténèbres",
-    "Prix": "tier * 12 pieces",
+    "Prix": "tier * 15 Pokédollars",
     "Secret" : "half"
   },
   {
@@ -108,7 +108,7 @@
     "nom": "Piège Simple",
     "effet" : "Pose un piège inflige 1d4 + 2 et <b class='data-status' data-status-name='Immobilisé'>immobilise</b> la cible.",
     "Craft": "Insecte + Sol",
-    "Prix": "tier * 18 pieces",
+    "Prix": "tier * 18 Pokédollars",
     "Secret" : "half"
   },
   {
@@ -116,7 +116,7 @@
     "nom": "Fiole de sagesse",
     "effet" : "Donne surpuissance contrôlée pour un tour.",
     "Craft": "Psy + Combat",
-    "Prix": "tier * 22 pieces",
+    "Prix": "tier * 18 Pokédollars",
     "Secret" : "half"
   },
   {
@@ -124,15 +124,15 @@
     "nom": "Batterie",
     "effet" : "Recharge un dispositif électrique.",
     "Craft": "Électrique + Psy",
-    "Prix": "tier * 20 pieces",
+    "Prix": "tier * 15 Pokédollars",
     "Secret" : "yes"
   },
   {
     "id": 17,
     "nom": "Stase protectrice",
     "effet" : "Bloc de glace qui si il se brise applique stase en AoE 0 à toutes les cibles de tier égale ou inférieur pendant 2 tours",
-    "Craft": "Dragon + Glace",
-    "Prix": "tier * 30 pieces",
+    "Craft": "2 Dragon + 2 Glace",
+    "Prix": "tier * 35 Pokédollars",
     "Secret" : "yes"
   },
   {
@@ -140,7 +140,7 @@
     "nom": "Hurleur",
     "effet" : "Imite le cri peut infliger peur ou d'autre status en fonction de la situation et de la proximité.",
     "Craft": "Spectre + Normal",
-    "Prix": "tier * 15 pieces",
+    "Prix": "tier * 18 Pokédollars",
     "Secret" : "yes"
   },
   {
@@ -148,23 +148,23 @@
     "nom": "Acide Chlorydrique",
     "effet" : "Liquide capable de faire fondre l'acier.",
     "Craft": "Acier + Poison",
-    "Prix": "tier * 18 pieces",
+    "Prix": "tier * 18 Pokédollars",
     "Secret" : "yes"
   },
   {
     "id": 19,
     "nom": "Rappel",
     "effet" : "Sort immédiatemment un cible  <b>Mise à Terre</b> de TIER tier ou inférieur et lui redonne 3 pv.",
-    "Craft": "Plante + Spectre + Feu + Dragon",
-    "Prix": "tier * 50 pieces",
+    "Craft": "2 Plante + Spectre + Feu + Dragon",
+    "Prix": "tier * 40 Pokédollars",
     "Secret" : "half"
   },
   {
     "id": 20,
     "nom": "Rappel Max",
-    "effet" : "Sort immédiatemment un cible  <b>Mise à Terre</b> de TIER tier ou inférieur et lui redonne 6 pv.",
-    "Craft": "Plante + Spectre + Feu + Dragon + Glace + Sol + Vol",
-    "Prix": "tier * 50 pieces",
+    "effet" : "Sort immédiatement un cible  <b>Mise à Terre</b> de TIER tier ou inférieur et lui redonne 6 pv.",
+    "Craft": "2 Plante + Spectre + Feu + Dragon + Glace + Sol + Vol",
+    "Prix": "tier * 70 Pokédollars",
     "Secret" : "yes"
   }
 ]
