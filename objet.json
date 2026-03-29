@@ -68,7 +68,7 @@
     "nom": "Aiguisoir",
     "effet" : "Restaure un competence d'arme.",
     "Craft": "Roche + Sol",
-    "Prix": "tier * 15 pieces",
+    "Prix": "tier * 30 pieces",
     "Secret" : "no"
   },
   {

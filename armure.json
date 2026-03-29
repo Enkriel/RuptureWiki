@@ -6,7 +6,7 @@
     "tier": 0,
     "Element": "Normal",
     "Armure": "1",
-    "Paliers": "4/6",
+    "Paliers": "4/7",
     "Effets": "Fragilité Coupante",
     "Craft": "3 matériaux Normaux",
     "Secret": "no"  
@@ -18,7 +18,7 @@
     "tier": 0,
     "Element": "Feu",
     "Armure": "1",
-    "Paliers": "4/6",
+    "Paliers": "4/7",
     "Effets": "",
     "Craft": "3 matériaux Feu",
     "Secret": "no"  
@@ -30,7 +30,7 @@
     "tier": 0,
     "Element": "Fée",
     "Armure": "1",
-    "Paliers": "3/6",
+    "Paliers": "4/6",
     "Effets": "",
     "Craft": "3 matériaux Fée",
     "Secret": "no"  
@@ -42,7 +42,7 @@
     "tier": 0,
     "Element": "Psy",
     "Armure": "1",
-    "Paliers": "4/7",
+    "Paliers": "5/7",
     "Effets": "Invisible aux Fous",
     "Craft": "3 matériaux Psy",
     "Secret": "no"  
@@ -54,7 +54,7 @@
     "tier": 0,
     "Element": "Plante",
     "Armure": "2",
-    "Paliers": "5/8",
+    "Paliers": "5/9",
     "Effets": "Epines",
     "Craft": "3 matériaux Plante",
     "Secret": "no"  
@@ -66,7 +66,7 @@
     "tier": 0,
     "Element": "Sol",
     "Armure": "2",
-    "Paliers": "5/8",
+    "Paliers": "5/9",
     "Effets": "Paratonnerre",
     "Craft": "3 matériaux Sol",
     "Secret": "no"  
@@ -78,7 +78,7 @@
     "tier": 0,
     "Element": "Vol",
     "Armure": "2",
-    "Paliers": "5/8",
+    "Paliers": "5/9",
     "Effets": "",
     "Craft": "3 matériaux Vol",
     "Secret": "no"  
@@ -90,7 +90,7 @@
     "tier": 0,
     "Element": "Feu",
     "Armure": "3",
-    "Paliers": "6/10",
+    "Paliers": "7/11",
     "Effets": "",
     "Craft": "3 matériaux Feu",
     "Secret": "no"  
@@ -102,7 +102,7 @@
     "tier": 0,
     "Element": "Roche",
     "Armure": "3",
-    "Paliers": "6/10",
+    "Paliers": "7/11",
     "Effets": "Recomposition",
     "Craft": "3 matériaux Roche",
     "Secret": "no"  
@@ -114,7 +114,7 @@
     "tier": 0,
     "Element": "Acier",
     "Armure": "3",
-    "Paliers": "7/12",
+    "Paliers": "8/13",
     "Effets": "Poids Lourd, Armure Inflammable, Poids de l'Acier",
     "Craft": "3 matériaux Acier",
     "Secret": "no" 
@@ -126,7 +126,7 @@
     "tier": 0,
     "Element": "Spectre",
     "Armure": "3",
-    "Paliers": "7/11",
+    "Paliers": "8/13",
     "Effets": "Spectre Tangible",
     "Craft": "3 matériaux Spectre",
     "Secret": "no" 
