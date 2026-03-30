@@ -183,6 +183,20 @@
     "Secret": "no"
   },
   {
+    "id": 12002,
+    "Nom": "Baton des diablotins",
+    "type": "Staff",
+    "tier": 0,
+    "Element": "Tenebres",
+    "Dégât": "1d6 + 2",
+    "MotClef": "Contondant, Magique",
+    "ability1": "Morsure",
+    "ability2": "Coup Bas",
+    "ability3": "",
+    "Craft": "3 matériaux Tenebres",
+    "Secret": "no"
+  },
+  {
     "id": 130001,
     "Nom": "Mouffle Coeur de Feu",
     "type": "Cata",

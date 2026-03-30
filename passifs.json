@@ -347,7 +347,7 @@
   {
     "id": 138,
     "Nom": "Spectre Tangible",
-    "description": "Les attaque Combat et Normal sont réduit de 2 tier de dé plutôt que d'^étre totallement annulé"
+    "description": "Les attaque Combat et Normal ne sont réduit d'1 tier de dé plutôt que d'être totallement annulé"
   },
   {
     "id": 139,
