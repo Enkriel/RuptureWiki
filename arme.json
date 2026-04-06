@@ -236,7 +236,7 @@
     "ability2": "Charge",
     "ability3": "Disparition",
     "Craft": "Membrane Perpétuelle, 3 matériaux Eau",
-    "Secret": "yes"   
+    "Secret": "no"   
   },
     {
     "id": 41001,
@@ -306,7 +306,7 @@
     "ability2": "Ombre Nocturne",
     "ability3": "Ombre Nocturne",
     "Craft": "Os Caudale, 2 matériaux Spectre, 1 Eau",
-    "Secret": "yes"   
+    "Secret": "no"   
   },
   {
     "id": 131001,
@@ -334,7 +334,7 @@
     "ability2": "Ombre Nocturne",
     "ability3": "Disparition",
     "Craft": "Barbillon Osseux, 3 matériaux Spectre",
-    "Secret": "yes"   
+    "Secret": "no"   
   },
   {
     "id": 72001,

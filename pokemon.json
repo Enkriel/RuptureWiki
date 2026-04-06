@@ -157,7 +157,7 @@
     "type": ["Eau/Spectre"],
     "attacks": ["Charge", "Disparition", "Ombre Nocturne", "Trempette", "Eau Revoir", "Fléau"],
     "passifs": ["Trempette des revenants", "Fragilité Contondante", "Resistance Percante"],
-    "status" : "hide",
+    "status" : "unlock",
     "comportement" : "1 action sur 2 magicarpe est obligé de faire <b>Trempette</b>, attaque l'ennemi le plus proche et fait Eau Revoir dès qu'un ennemi se trouve dans sa zone Au Contact ou Proche",
     "alpha" : "yes",
     "front" : "5 - Contondant - Barbillon Osseux - Charge",
