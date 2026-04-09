@@ -120,6 +120,18 @@
     "Secret": "no"  
   },
   {
+    "id": 30003,
+    "Nom": "Armure Vibrécaille",
+    "type": "Lourde",
+    "tier": 0,
+    "Element": "Dragon",
+    "Armure": "3",
+    "Paliers": "7/11",
+    "Effets": "Relance Vengeresse",
+    "Craft": "3 matériaux Dragon",
+    "Secret": "no"  
+  },
+  {
     "id": 40001,
     "Nom": "Rempart d'acier",
     "type": "Extrêmement Lourde",
