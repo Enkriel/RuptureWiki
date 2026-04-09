@@ -322,6 +322,20 @@
     "Craft": "Oreilles du Traqueur, 3 matériaux Psy",
     "Secret": "yes"   
   },
+   {
+    "id": 131002,
+    "Nom": "Eventail du revenant",
+    "type": "Cata",
+    "tier": 1,
+    "Element": "Spectre",
+    "Dégât": "1d6+4",
+    "MotClef": "Magique, Téléport Controllé",
+    "ability1": "Ombre Nocturne",
+    "ability2": "Ombre Nocturne",
+    "ability3": "Disparition",
+    "Craft": "Membrane Perpétuelle, 2 matériaux spectre",
+    "Secret": "yes"   
+  },
   {
     "id": 141001,
     "Nom": "Arc en os vivant",
