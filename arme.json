@@ -281,6 +281,20 @@
     "Secret": "Hide"   
   },
   {
+    "id": 61001,
+    "Nom": "Nageoires du revenant",
+    "type": "DS",
+    "tier": 1,
+    "Element": "Eau",
+    "Dégât": "1d6 + 1",
+    "MotClef": "Court, Double, Finesse, Trempette Volante, Coupant",
+    "ability1": "Eau Revoir",
+    "ability2": "Trempette",
+    "ability3": "Étonnement",
+    "Craft": "Griffes Psionique, 3 matériaux Ténèbres",
+    "Secret": "Hide"   
+  },
+  {
     "id": 91001,
     "Nom": "Fouet du guides des plans",
     "type": "Whip",

@@ -661,8 +661,8 @@
     "Nom": "Étonnement",
     "type": "Spectre",
     "tier": 1,
-    "portée": "0 - Dex",
-    "description": "2d4 + 3. Si votre cible ne vous avait pas vu, infligez-lui <b class='data-status' data-status-name='Peur'>peur</b>."
+    "portée": "0 - Dex - <b class='data-passifs' data-passifs-name='Effet sur double'>Effet sur double</b>",
+    "description": "2d4 + 3. En cas de double infligez <b class='data-status' data-status-name='Peur'>peur</b>."
   },
   {
     "id": 8102,
