@@ -438,5 +438,10 @@
     "id": 119,
     "Nom": "Relance Vengeresse",
     "description": "Après avoir subi une blessure, vous pouvez relancer un dé de dégat de votre prochaine attaque."
+  },
+  {
+    "id": 120,
+    "Nom": "Déplacement Explosif",
+    "description": "Lors de votre action de déplacement vous pouvez foncez en ligne droite sans vous arreter sur une portée de 5, si vous toucher quelque chose, votre armure explose infligeant une AoE 1 1d8 dégât feu (vous êtes aussi touché par l'explosion)"
   }
 ]

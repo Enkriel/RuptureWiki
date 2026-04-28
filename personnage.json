@@ -210,6 +210,22 @@
     "infoMJ": "",
     "lien": "none",
     "seen": true
+  },
+  {
+    "id": 14,
+    "Nom": "Gaetan Noviram",
+    "motClef": [
+      "Scieentifique",
+      "Pokemonologue",
+      "Camp des trappeurs"
+    ],
+    "age": "34",
+    "image": "Perso/gaetannoviram.png",
+    "infoPublique": "Personnage emblématique du poste des trappeur il chapote tout ce qui si passe dans le camp, il est aussi un scientifique de renom et un expert en pokémonologie. de nature extrement pressé il parfois du mal à écouter les autres",
+    "infoMJ": "",
+    "lien": "none",
+    "seen": true
   }
+  
 
 ]

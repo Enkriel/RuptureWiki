@@ -204,6 +204,18 @@
     "Secret": "no"
   },
   {
+    "id": 31001,
+    "Nom": "Armure d'un Roi Futur",
+    "type": "Lourde",
+    "tier": 1,
+    "Element": "Feu",
+    "Armure": "3",
+    "Paliers": "8/12",
+    "Effets": "Déplacement Explosif",
+    "Craft": "Propulseur à Explosion + 2 matériaux Feu",
+    "Secret": "no"
+  },
+  {
     "id": 31002,
     "Nom": "Armure rose metallique à belles oreilles",
     "type": "Lourde",
@@ -213,7 +225,7 @@
     "Paliers": "9/14",
     "Effets": "Armure Robotique",
     "Craft": "Casque à oreille Rose + 2 matériaux Normaux",
-    "Secret": "yes"
+    "Secret": "no"
   },
   {
     "id": 31003,

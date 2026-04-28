@@ -761,6 +761,14 @@
     "description": "Permet d’imiter n’importe quel bruit mécanique."
   },
   {
+    "id": 9104,
+    "Nom": "Estocorne",
+    "type": "Acier",
+    "tier": 1,
+    "portée": "1 - Dex - <b class='data-passifs' data-passifs-name='Tyran'>Tyran</b>",
+    "description": "2d6 + 2."
+  },
+  {
     "id": 9201,
     "Nom": "Lame Tachyonique",
     "type": "Acier",

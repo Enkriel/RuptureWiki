@@ -309,6 +309,20 @@
     "Secret": "no"   
   },
   {
+    "id": 121002,
+    "Nom": "Corne de l'embrylex",
+    "type": "Staff",
+    "tier": 1,
+    "Element": "Acier",
+    "Dégât": "2d4 + 2",
+    "MotClef": "Magique, Contondant",
+    "ability1": "Estocorne",
+    "ability2": "Tacle Lourd",
+    "ability3": "Flammèche",
+    "Craft": "Corne de la Larve, 2 matériaux Acier, 1 Feu",
+    "Secret": "no"   
+  },
+  {
     "id": 131001,
     "Nom": "Masque blanc de la tristesse",
     "type": "Cata",
