@@ -212,10 +212,10 @@
     "seen": true
   },
   {
-    "id": 14,
+    "id": 15,
     "Nom": "Gaetan Noviram",
     "motClef": [
-      "Scieentifique",
+      "Scientifique",
       "Pokemonologue",
       "Camp des trappeurs"
     ],
@@ -225,7 +225,35 @@
     "infoMJ": "",
     "lien": "none",
     "seen": true
+  },
+  {
+    "id": 16,
+    "Nom": "Koez",
+    "motClef": [
+      "Guerrier",
+      "Trappeur",
+      "Camp des trappeurs"
+    ],
+    "age": "17",
+    "image": "Perso/Koez.png",
+    "infoPublique": "Jeune trappeur arrogant, il se blesse régulièrement mais trouve toujours une explication héroique à celle ci",
+    "infoMJ": "",
+    "lien": "none",
+    "seen": true
+  },
+  {
+    "id": 17,
+    "Nom": "Boris",
+    "motClef": [
+      "Scientifique",
+      "Pokemonologue",
+      "Camp des trappeurs"
+    ],
+    "age": "41",
+    "image": "Perso/Boris.jpg",
+    "infoPublique": "Scientifique qui à tenter de sauver son Skitty Chatouille en le transformant en robot, il a échoué et Skitty la transformé à son tour en un robot tueur",
+    "infoMJ": "",
+    "lien": "none",
+    "seen": true
   }
-  
-
 ]

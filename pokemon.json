@@ -356,7 +356,7 @@
   {
     "id": 300,
     "name": "Skitty",
-    "image": "../img/pkmn/iron_pawn.jpg",
+    "image": "img/pkmn/iron_pawn.jpg",
     "tier": 1,
     "hp": 3,
     "esquive": "10",
@@ -371,7 +371,7 @@
   {
     "id": 300,
     "name": "Skitty",
-    "image": "../img/pkmn/iron_pawn.jpg",
+    "image": "img/pkmn/iron_pawn.jpg",
     "tier": 1,
     "hp": 21,
     "esquive": "11",
