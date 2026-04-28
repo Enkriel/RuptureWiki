@@ -291,8 +291,8 @@
     "ability1": "Eau Revoir",
     "ability2": "Trempette",
     "ability3": "Étonnement",
-    "Craft": "Griffes Psionique, 3 matériaux Ténèbres",
-    "Secret": "Hide"   
+    "Craft": "Membrane Perpétuelle, 1 matériaux Eau, 1 matriaux Spectre",
+    "Secret": "no"   
   },
   {
     "id": 91001,
