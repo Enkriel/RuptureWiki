@@ -177,7 +177,7 @@
     "Paliers": "5/8",
     "Effets": "Ajout Puissance Contrôlée",
     "Craft": "Oreille du Traqueur + 2 matériaux Ténèbres",
-    "Secret": "yes"
+    "Secret": "hide"
   },
   {
     "id": 21001,
@@ -189,7 +189,7 @@
     "Paliers": "7/11",
     "Effets": "Attaque Surprise Précise",
     "Craft": "Griffes Psionique + 2 matériaux Ténèbres",
-    "Secret": "yes"
+    "Secret": "hide"
   },
   {
     "id": 31001,
@@ -225,7 +225,7 @@
     "Paliers": "9/14",
     "Effets": "Armure Robotique",
     "Craft": "Casque à oreille Rose + 2 matériaux Normaux",
-    "Secret": "no"
+    "Secret": "yes"
   },
   {
     "id": 31003,
@@ -237,7 +237,7 @@
     "Paliers": "8/13",
     "Effets": "",
     "Craft": "Caudale Rouge + 2 matériaux Eau",
-    "Secret": "yes"
+    "Secret": "no"
   },
   {
     "id": 41001,

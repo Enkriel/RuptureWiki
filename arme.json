@@ -250,7 +250,7 @@
     "ability2": "Charge",
     "ability3": "Fléau",
     "Craft": "1 Couronne du Roi Rouge, 3 matériaux Eau",
-    "Secret": "yes"   
+    "Secret": "Hide"   
   },
   {
     "id": 60001,
@@ -278,7 +278,7 @@
     "ability2": "Arrogance",
     "ability3": "Griffe",
     "Craft": "Griffes Psionique, 3 matériaux Ténèbres",
-    "Secret": "yes"   
+    "Secret": "Hide"   
   },
   {
     "id": 91001,
@@ -292,7 +292,7 @@
     "ability2": "Flatterie",
     "ability3": "Téléport",
     "Craft": "Queue du Guide, 3 matériaux Ténèbres",
-    "Secret": "yes"   
+    "Secret": "Hide"   
   },
   {
     "id": 121001,
@@ -334,7 +334,7 @@
     "ability2": "Téléport",
     "ability3": "Choc Mental",
     "Craft": "Oreilles du Traqueur, 3 matériaux Psy",
-    "Secret": "yes"   
+    "Secret": "Hide"   
   },
    {
     "id": 131002,
@@ -348,7 +348,7 @@
     "ability2": "Ombre Nocturne",
     "ability3": "Disparition",
     "Craft": "Membrane Perpétuelle, 2 matériaux spectre",
-    "Secret": "yes"   
+    "Secret": "no"   
   },
   {
     "id": 141001,
@@ -390,6 +390,6 @@
     "ability2": "Double volée",
     "ability3": "Souffle Glacé",
     "Craft": "Queue du Partage, 2 matériaux Glace et 1 Vol",
-    "Secret": "yes"   
+    "Secret": "Hide"   
   }
 ]

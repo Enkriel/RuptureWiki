@@ -169,7 +169,8 @@ function renderWeapons(){
 
     const tierWeapons = weapons.filter(w => w && Number(w.tier) === t &&
       (checkedTypes.length === 0 || checkedTypes.includes(mapType(w.type))) &&
-      (checkedTiers.length === 0 || checkedTiers.includes(t))
+      (checkedTiers.length === 0 || checkedTiers.includes(t)) &&
+      (isLocalDevHost() || w.Secret?.toLowerCase() !== 'hide')
     );
 
     header.querySelector('.count').textContent = tierWeapons.length;
