@@ -36,7 +36,7 @@
     "Nom": "Rugissement",
     "type": "Normal",
     "tier": 1,
-    "portée": "3 - Cha",
+    "portée": "3 - Cha - 2 tours",
     "description": "Réduit de 4 les dégats infligé des 2 prochains tour."
   },
   {
@@ -46,6 +46,22 @@
     "tier": 1,
     "portée": "1 - For - Contondant",
     "description": "Si vous avez 1 pv inflige une blessure sévère. Si vous avez 2 pv inflige une blessure majeur. Si vous avez 3 pv inflige une blessure mineure. Sinon ne fait rien"
+  },
+  {
+    "id": 1106,
+    "Nom": "Coup d'Main",
+    "type": "Normal",
+    "tier": 1,
+    "portée": "2 - Cha - 2 Tour",
+    "description": "Ajoute 1 dé de dégat aux attaque de la cible pendant 2 tours."
+  },
+  {
+    "id": 1107,
+    "Nom": "Météores",
+    "type": "Normal",
+    "tier": 1,
+    "portée": "4 - Int - Projectile - <b class='data-passifs' data-passifs-name='Guidable'>Guidable</b>",
+    "description": "Projette de multiple petite étoile qui infligent 1d8 + 3."
   },
   {
     "id": 1201,
@@ -119,16 +135,9 @@
     "portée": "0 - Con - Réaction",
     "description": "Quand une attaque vous cible vous pouvez faire un jet de constitution en opposition au jet de touche. En cas de réussite (resultat plus grand) l'attaque est annulée."
   },
+  
   {
     "id": 1501,
-    "Nom": "Météores",
-    "type": "Normal",
-    "tier": 5,
-    "portée": "4 - Int - Projectile - <b class='data-passifs' data-passifs-name='Guidable'>Guidable</b>",
-    "description": "Projette de multiple petite étoile qui infligent 2d8 + 4."
-  },
-  {
-    "id": 1502,
     "Nom": "Barrage",
     "type": "Normal",
     "tier": 5,
@@ -172,8 +181,8 @@
     "Nom": "Gonflette",
     "type": "Combat",
     "tier": 1,
-    "portée": "Action Bonus - Cha",
-    "description": "Vos muscles gonflent sans changer votre force, vous gagner 2 lors de vos jets d'intimidation, et parfois en représentation"
+    "portée": "2 - Action - Cha - 2 tours",
+    "description": "Les muscles de votre cible gonflent les attaque de For gagne 4 dégats, vous gagner 2 lors de vos jets d'intimidation, et parfois en représentation"
   },
   {
     "id": 2104,
@@ -280,6 +289,14 @@
     "description": "2d6 + 1 concentre le vent avant de frappé votre cible sur un double la cible <b class='data-status' data-status-name='Chute'>chute</b>"
   },
   {
+    "id": 3105,
+    "Nom": "Vent arrière",
+    "type": "Vol",
+    "tier": 1,
+    "portée": "2 - Cha - 1 Tour",
+    "description": "L'entité visée de la zone ciblé gagne une action de déplacements."
+  }, 
+  {
     "id": 3201,
     "Nom": "Aspiration",
     "type": "Vol",
@@ -352,14 +369,7 @@
     "portée": "3 - Int - AoE 0",
     "description": "2d10 + 3 les entités à 1 portée sont attiré sur la zone sans prendre de degats. JS Con"
   },
-  {
-    "id": 3402,
-    "Nom": "Vent arrière",
-    "type": "Vol",
-    "tier": 4,
-    "portée": "2 - AoE 0 - Action bonus",
-    "description": "Toutes les entités de la zone ciblé gagne une action de déplacements."
-  }, 
+  
   {
     "id": 3501,
     "Nom": "Lame d'air",
@@ -391,6 +401,14 @@
     "tier": 1,
     "portée": "3 - Int - Projectile - <b class='data-passifs' data-passifs-name='Destrucarmure'>Destrucarmure</b>",
     "description": "Inflige 1d6."
+  },
+  {
+    "id": 4104,
+    "Nom": "Chant du Venin",
+    "type": "Poison",
+    "tier": 1,
+    "portée": "3 - Cha - 2 tours",
+    "description": "Enchante une cible pendant 2 tours, ignore 1 d'armure."
   },
   {
     "id": 4201,
@@ -445,7 +463,7 @@
     "Nom": "Jet de Sable",
     "type": "Sol",
     "tier": 1,
-    "portée": "3 - Dex",
+    "portée": "3 - Dex - 2 tours",
     "description": "Jette du sable. Si l'attaque touche le cadran avant d'une cible, celle-ci est <b class='data-status' data-status-name='Vision Obscurcie'>vision obscurcie</b>."
   },
   {
@@ -757,8 +775,8 @@
     "Nom": "Strido-Son",
     "type": "Acier",
     "tier": 1,
-    "portée": "Cha",
-    "description": "Permet d’imiter n’importe quel bruit mécanique."
+    "portée": "3 - Cha - 2 Tour",
+    "description": "Permet d’imiter n’importe quel bruit mécanique. Sur une cible inflige <b class='data-passifs' data-passifs-name='Destrucarmure'>Destrucarmure</b> 2 tours."
   },
   {
     "id": 9104,

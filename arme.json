@@ -169,6 +169,20 @@
     "Secret": "no"
   },
   {
+    "id": 101001,
+    "Nom": "Harmonica Digital Rose",
+    "type": "Harmonium",
+    "tier": 1,
+    "Element": "Normal",
+    "Dégât": "1d6+2",
+    "MotClef": "Magique, Musical, Dressant",
+    "ability1": "Coup D'Main",
+    "ability2": "Strido-Son",
+    "ability3": "Météores",
+    "Craft": "Queue de controle digital, 2 matériaux Acier",
+    "Secret": "no"
+  },
+  {
     "id": 12001,
     "Nom": "Baton des cherubims",
     "type": "Staff",
