@@ -463,5 +463,10 @@
     "id": 124,
     "Nom": "Rugissement Accerbe",
     "description": "Quand vous utilisé <b>Rugissement</b> infligé aussi 1d6 dégat ténèbres"
+  },
+  {
+    "id": 125,
+    "Nom": "Tempo Prolongé",
+    "description": "Quand vous appliqué un effet bénéfique à une autre cible que vous, vous pouvez choisir de la faire durer 1 tour de plus que prévu"
   }
 ]
