@@ -1338,8 +1338,17 @@
         "id": 347,
         "Name": "Fourberie",
         "description": "Vos <b class='data-passifs' data-passifs-name='Attaque Surprise'>Attaque Surprise</b> deviennent <b class='data-passifs' data-passifs-name='Attaque Surprise Améliorée'>Attaque Surprise Améliorée</b>"
+    },
+    {
+        "id": 348,
+        "Name": "Partenaire de Danse - Repos Long",
+        "description": "Vous pouvez choisir un parternaire de danse, la portée de vos comptétence d'arme est multiplié par deux pour le ciblé, vous ne pouvez avoir que 1 partenaire de danse à la fois"
+    },
+    {
+        "id": 349,
+        "Name": "Tempo Prolongé",
+        "description": "Quand vous appliqué un effet bénéfique à une autre cible que vous, vous pouvez choisir de la faire durer 1 tour de plus que prévu"
     }
-    
 ]
 
     
