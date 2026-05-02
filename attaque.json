@@ -36,8 +36,8 @@
     "Nom": "Rugissement",
     "type": "Normal",
     "tier": 1,
-    "portée": "0 - Cha - AoE 2 circulaire",
-    "description": "JS Sag réduit de 3 tous les dégats infligé du prochain tour."
+    "portée": "3 - Cha",
+    "description": "Réduit de 4 les dégats infligé des 2 prochains tour."
   },
   {
     "id": 1105,

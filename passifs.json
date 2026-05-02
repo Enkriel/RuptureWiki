@@ -117,7 +117,7 @@
   {
     "id": 95,
     "Nom": "Musical",
-    "description": "Pour une action bonus vous pouvez jouer une partition"
+    "description": "Les compétence d'arme utilisant le charisme peuvent viser une cible suplémentaire"
   },
   {
     "id": 96,
@@ -443,5 +443,25 @@
     "id": 120,
     "Nom": "Déplacement Explosif",
     "description": "Lors de votre action de déplacement vous pouvez foncez en ligne droite sans vous arreter sur une portée de 5, si vous toucher quelque chose, votre armure explose infligeant une AoE 1 1d8 dégât feu (vous êtes aussi touché par l'explosion)"
+  },
+  {
+    "id": 121,
+    "Nom": "Dressant",
+    "description": "Permet l'utilisation de certaines capacités"
+  },
+  {
+    "id": 122,
+    "Nom": "Partenaire de Danse - Repos Long",
+    "description": "Vous pouvez choisir un parternaire de danse, la portée de vos comptétence d'arme est multiplié par deux pour le ciblé, vous ne pouvez avoir que 1 partenaire de danse à la fois"
+  },
+  {
+    "id": 123,
+    "Nom": "Mélodie curative",
+    "description": "Quand vous utiliser une comptétence de charisme sur une cible plutot que de l'appliqué sur une seconde cible vous pouvez le soigner de votre cible de 1d4 PV"
+  },
+  {
+    "id": 124,
+    "Nom": "Rugissement Accerbe",
+    "description": "Quand vous utilisé <b>Rugissement</b> infligé aussi 1d6 dégat ténèbres"
   }
 ]

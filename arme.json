@@ -337,6 +337,20 @@
     "Secret": "no"   
   },
   {
+    "id": 121002,
+    "Nom": "Baton de tristesse",
+    "type": "Staff",
+    "tier": 1,
+    "Element": "Ténèbres",
+    "Dégât": "2d4 + 2",
+    "MotClef": "Magique, Contondant, Rugissement Accerbe",
+    "ability1": "Morsure",
+    "ability2": "Rugissement",
+    "ability3": "Arrogance",
+    "Craft": "Poche Hurlante, 2 matériaux Ténèbres",
+    "Secret": "no"   
+  },
+  {
     "id": 131001,
     "Nom": "Masque blanc de la tristesse",
     "type": "Cata",
